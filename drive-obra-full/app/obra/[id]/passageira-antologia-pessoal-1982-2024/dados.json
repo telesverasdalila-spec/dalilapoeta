@@ -1,0 +1,22 @@
+{
+  "titulo": "Passageira",
+  "subtitulo": "Antologia Pessoal 1982-2024",
+  "genero": "Poesia (Antologia)",
+  "ano": 2024,
+  "capa": "/imagens/obras-publicadas/poesia/passageira.png",
+  "status_catalogo": "disponivel",
+  "dados": [
+    {
+      "label": "Ano",
+      "valor": "2024"
+    },
+    {
+      "label": "Tipo",
+      "valor": "Antologia Pessoal"
+    },
+    {
+      "label": "Editora",
+      "valor": "Editora Patuá, SP"
+    }
+  ]
+}

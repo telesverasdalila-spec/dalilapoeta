@@ -1,0 +1,149 @@
+{
+  "categoria": "programas_entrevistas",
+  "total_registros": 8,
+  "descricao": "Programas de TV, entrevistas, lives e podcasts",
+  "tags_comuns": [
+    "entrevista",
+    "live",
+    "podcast",
+    "programa",
+    "virtual"
+  ],
+  "registros": [
+    {
+      "id": "prog-001",
+      "numero_ordem": 1,
+      "titulo_evento": "Programa ABC Brasil: A Literatura no ABC",
+      "slug_texto": "",
+      "data": "2000-03-29",
+      "local": "TV São Caetano (Canal 45 UHF)",
+      "cidade": "São Caetano do Sul",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "programas_entrevistas",
+      "tags": [
+        "programa"
+      ],
+      "texto_original": "Participação no programa de TV ABC Brasil, com apresentação de Glenir Santarnecchi."
+    },
+    {
+      "id": "prog-002",
+      "numero_ordem": 2,
+      "titulo_evento": "Entrevista sobre os Congressos de História do ABC",
+      "slug_texto": "",
+      "data": "2020-11-10",
+      "local": "Consórcio Intermunicipal do ABC",
+      "cidade": "Santo André",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "programas_entrevistas",
+      "tags": [
+        "entrevista",
+        "virtual"
+      ],
+      "texto_original": "Entrevista à equipe de comunicação do Consórcio Intermunicipal do ABC, com depoimento sobre a participação no I Congresso de História do ABC (1990) e nos treze que vieram depois."
+    },
+    {
+      "id": "prog-003",
+      "numero_ordem": 3,
+      "titulo_evento": "Podcast especial: Um poema para",
+      "slug_texto": "",
+      "data": "2020-08-19",
+      "local": "Canal de Podcast",
+      "cidade": "Virtual",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "programas_entrevistas",
+      "tags": [
+        "podcast",
+        "virtual"
+      ],
+      "texto_original": "Participação no podcast especial de Olga De Favari, celebrando o 100º episódio com uma fala alargada sobre Fernando Pessoa."
+    },
+    {
+      "id": "prog-004",
+      "numero_ordem": 4,
+      "titulo_evento": "Entrevista com Claudinei Vieira",
+      "slug_texto": "",
+      "data": "2020-07-27",
+      "local": "Youtube (Canal Desconcertos)",
+      "cidade": "São Paulo",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "programas_entrevistas",
+      "tags": [
+        "entrevista",
+        "virtual"
+      ],
+      "texto_original": "Conversa virtual (entrevista) com o poeta e editor Claudinei Vieira, da Desconcertos Editora."
+    },
+    {
+      "id": "prog-005",
+      "numero_ordem": 5,
+      "titulo_evento": "Laive com o poeta Paulo Dantas",
+      "slug_texto": "",
+      "data": "2021-02-16",
+      "local": "Evento Virtual",
+      "cidade": "São Paulo",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "programas_entrevistas",
+      "tags": [
+        "live",
+        "virtual"
+      ],
+      "texto_original": "Live com o poeta Paulo Dantas, com participação de Rosana Chrispim e Tarso de Melo, para lançamento do livro 'Folheto'."
+    },
+    {
+      "id": "prog-006",
+      "numero_ordem": 6,
+      "titulo_evento": "Estreia do Canal Alpharrabio no Youtube: Coletânea Dias Distantes",
+      "slug_texto": "",
+      "data": "2021-01-30",
+      "local": "Youtube (Canal Alpharrabio)",
+      "cidade": "Santo André",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "programas_entrevistas",
+      "tags": [
+        "live",
+        "virtual"
+      ],
+      "texto_original": "Live de estreia do canal para falar da coletânea 'Dias Distantes', com a presença de 20 dos 23 participantes do livro. A conversa durou mais de 2 horas."
+    },
+    {
+      "id": "prog-007",
+      "numero_ordem": 7,
+      "titulo_evento": "Laive com as Fiandeiras sobre a trajetória do grupo",
+      "slug_texto": "",
+      "data": "2022-03-18",
+      "local": "Youtube",
+      "cidade": "Virtual",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "programas_entrevistas",
+      "tags": [
+        "live",
+        "virtual"
+      ],
+      "texto_original": "Programa aconteceu dentro da série Memória do Teatro organizada por Adélia Nicolete e Cassio Castelan."
+    },
+    {
+      "id": "prog-008",
+      "numero_ordem": 8,
+      "titulo_evento": "Entrevista para o portal Agenda Tarsila",
+      "slug_texto": "",
+      "data": "2022-05-25",
+      "local": "Portal Agenda Tarsila (Governo do Estado de SP)",
+      "cidade": "São Paulo",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "programas_entrevistas",
+      "tags": [
+        "entrevista",
+        "virtual"
+      ],
+      "texto_original": "Entrevista concedida à jornalista Miriam Gimenez, ex-Diário do Grande ABC, para a celebração do centenário da Semana de Arte Moderna de 22."
+    }
+  ]
+}

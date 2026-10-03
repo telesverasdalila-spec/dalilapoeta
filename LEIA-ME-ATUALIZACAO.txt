@@ -1,0 +1,62 @@
+ATUALIZAÇÃO RÁPIDA — 04/10/2026 — LEITURAS CRÍTICAS E ESTUDOS CRÍTICOS
+Site memorial Dalila Teles Veras
+======================================================================
+
+O que entra nesta atualização:
+  - A subaba LEITURAS CRÍTICAS (dentro de Resenhas) agora tem 6 páginas,
+    uma por livro, com o texto integral vindo do site antigo:
+      * Estranhas Formas de Vida — Luiz Roberto Alves (2013)
+      * Retratos Falhados — Irene Lucília Andrade (2009) e
+        Álvaro Alves de Faria (Jornal Rascunho, 2008)
+      * À Janela dos Dias — 13 leituras (Joaquim Branco, Francisco Miguel
+        de Moura, j. geraldo neres e outros)
+      * Vestígios — 12 leituras (Deise Assumpção, José de Souza Martins,
+        Nicodemos Sena e outros)
+      * As Artes do Ofício — Luís Alberto de Abreu, Rosana Chrispim,
+        Fabiano Calixto
+      * A Vida Crônica — Tarso de Melo, Caio Porfírio Carneiro,
+        Fabiano Calixto
+  - A subaba ESTUDOS CRÍTICOS agora tem 2 páginas:
+      * Resistência e assimilação em Dalila Teles Veras — Clara Moura
+        Lourenço (Universidade de Coimbra, 2009)
+      * Dalila Teles Veras — texto de José Armando Pereira da Silva (2002)
+  - Cada página usa o mesmo layout das demais (faixa, moldura com a capa
+    do livro nas leituras, seções douradas) e os textos são fiéis ao
+    original, palavra por palavra.
+  - Nenhuma pasta precisa ser apagada nesta atualização.
+
+Arquivos: 2 alterados + 8 pastas novas (tudo dentro do zip).
+
+======================================================================
+PASSO A PASSO (Windows)
+======================================================================
+
+1) Localize o zip baixado (Chrome: Ctrl+J > "Mostrar na pasta").
+
+2) Clique com o BOTÃO DIREITO no zip > "Extrair tudo..." > no destino
+   digite exatamente a pasta do projeto no seu Desktop:
+
+   C:\Users\Windows 10\Desktop
+
+   (O zip já vem com a pastinha "dalila-teles-veras" dentro, então extrair
+   no Desktop faz os arquivos caírem no lugar certo.)
+
+   ATENÇÃO: se depois de extrair aparecer uma pasta "dalila-teles-veras (2)"
+   no Desktop, deu errado — apague a pasta "(2)" e refaça a extração
+   no Desktop, conforme o passo 2.
+
+3) Se o Windows perguntar "Substituir ou Ignorar arquivos?":
+   > Marque "Faça isso para os itens restantes" e clique em SUBSTITUIR.
+   Se perguntar sobre "Mesclar" pastas: confirme MESCLAR.
+
+4) No VS Code, se o servidor estiver rodando, ele recarrega sozinho.
+   Se não estiver: terminal do VS Code (Ctrl+ç) e rode:
+
+   npx next dev -p 3000
+
+5) Abra http://localhost:3000 > eixo Obra > aba Resenhas:
+   - Leituras Críticas e Estudos Críticas agora mostram as linhas com
+     o link "Leia o texto →".
+
+PS: se você ainda não aplicou a "Atualização rápida — 04/10/2026 (rodapé)",
+pode aplicar as duas em qualquer ordem — não conflitam.

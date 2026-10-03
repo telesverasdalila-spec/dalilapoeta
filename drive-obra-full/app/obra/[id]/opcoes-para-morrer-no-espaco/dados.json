@@ -1,0 +1,26 @@
+{
+  "titulo": "Opções para Morrer no Espaço",
+  "subtitulo": "",
+  "genero": "Poesia",
+  "ano": 2024,
+  "capa": "/imagens/obras-publicadas/poesia/2024-capa-opcoes.jpg",
+  "status_catalogo": "disponivel",
+  "dados": [
+    {
+      "label": "Ano",
+      "valor": "2024"
+    },
+    {
+      "label": "Tipo",
+      "valor": "Livro"
+    },
+    {
+      "label": "Editora",
+      "valor": "Editora Patuá, SP"
+    },
+    {
+      "label": "ISBN",
+      "valor": "978-65-5864869-7"
+    }
+  ]
+}

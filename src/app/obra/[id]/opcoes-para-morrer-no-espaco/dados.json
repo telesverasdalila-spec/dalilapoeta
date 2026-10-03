@@ -1,0 +1,51 @@
+{
+  "titulo": "Opções para morrer no espaço",
+  "subtitulo": "Poemas de Dalila Teles Veras",
+  "genero": "Poesia",
+  "ano": 2024,
+  "capa": "/imagens/obras-publicadas/poesia/2024-capa-opcoes.jpg",
+  "status_catalogo": "disponivel",
+  "sobre": "É no campo de batalha que os poemas de 'opções para morrer no espaço' se encontram, machucados e fortes, lutando contra novos inimigos moderníssimos (o ultracapitalismo, a pandemia, a i.a.) e, sobretudo, a favor da democratização da mesma literatura. Poesia democratizada e democratizante, em escuta e solidariedade, cuja pátria é a língua portuguesa em suas totalidades. Leitura que busca a poesia das coisas no \"escaninho da memória\", e o próprio livro ser ele mesmo um grande acervo de memórias para o futuro.",
+  "orelha": "Nascido na \"sebenta de capa azul-anjinho\", de excertos de falas alheias e de notícias do jornal, acompanhado de uma multidão silenciosa de outros grandes livros, palavras \"a palo seco\", \"mas sem remendos\", não há como não ser autêntico. Mas afinal, há uma forma escolhida de morrer no espaço? Dalila já respondeu: \"quero permanecer a vagar na órbita do sol / mínima e incapturável\". Mas acontece que Dalila é grande.",
+  "autorOrelha": "Amanda Vital",
+  "dados": [
+    {
+      "label": "Prêmio",
+      "valor": "Semifinalista do Prêmio Oceanos 2025"
+    },
+    {
+      "label": "Prêmio",
+      "valor": "Semifinalista do Prêmio Oceanos 2025"
+    },
+    {
+      "label": "Ano",
+      "valor": "2024"
+    },
+    {
+      "label": "Tipo",
+      "valor": "Livro"
+    },
+    {
+      "label": "Editora",
+      "valor": "Editora Patuá, SP"
+    },
+    {
+      "label": "ISBN",
+      "valor": "978-65-5864869-7"
+    }
+  ],
+  "trechos": [
+    {
+      "titulo": "III",
+      "texto": "até o ano dois mil e vinte e dois a nasa\ndescobriu duzentos e dezenove exoplanetas\ne abre caminho para a descoberta de vida\nextraterrestre fora do nosso sistema solar\n\nno minúsculo planeta onde está situada\nmegainvestidores magnatas do dinheiro\ne do poder miram nos indefesos terráqueos\no seu já muito bem planejado metaverso\n\nmeta das metas e em meta já nominado\nmarca antecipadora do ainda desconhecido\nà meta logomarca prévia acrescentar-se-á\no vocábulo verso e aí adeus será tarde\n\nsuas vítimas atraídas tela adentro da i.a.\ncérebros remexidos e em zumbis trans\nformadas\ndali sairão sem saber o que são\n\nesse tal verso nem poesia é muito menos ficção\nrealidade não é qualquer outra coisa outra coisa\nmenos música poema arte literatura gente"
+    },
+    {
+      "titulo": "XVII",
+      "texto": "não são de hoje as noites insones e maquinações\ndas quais saio enriquecida de mais horrores\ninquietações e questionamentos sem resposta\n\ncomo construir uma arca anfíbia carregada\ndestroços com ilimitada capacidade de\nvoo sem necessidade de abastecimento\nsem destino definido e a zilhões de anos-luz\n\ncomo inventar uma máquina recuperadora\nde cérebros em evidente estado de deterioração\n\ncomo reinventar a humanidade que não deu certo\n\ncomo\n?"
+    },
+    {
+      "titulo": "XXXIV",
+      "texto": "montava num inimaginável e minúsculo motociclo\ncaminho adentro vencia ladeiras estradas acidentadas\ndisparava ante os olhares incrédulos dos passantes\n\nquase rente ao chão os pés no lugar dos pedais de freio\nlembrava-se da vergonha dos vestidos rasgados nas reais\ncorridas em declive dos carrinhos de rolimã na infância\n\nvelha dama motivada pela força do desejo não concretizado\nreafirma sua capacidade para inventos e velocidades\nmas quem ali corria era apenas a alma o corpo à espreita\n\nfreud certamente daria conta de analisar esta proeza\ncomo também aquelas outras de voar sem aparelhos\ne navegar sobre as águas de um rio estreito e veloz"
+    }
+  ]
+}

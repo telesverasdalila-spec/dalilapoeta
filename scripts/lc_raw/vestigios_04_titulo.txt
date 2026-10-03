@@ -1,0 +1,143 @@
+
+    <p style="text-align: justify; word-spacing: 0; line-height: 120%; text-indent: 10; margin-left: 0; margin-top: 0; margin-bottom: 2">&nbsp;</p>
+    <p style="text-align: justify; word-spacing: 0; line-height: 120%; text-indent: 10; margin-left: 10; margin-right: 10; margin-top: 0; margin-bottom: 2"><font face="Arial" size="2" color="#FFFFFF"><span style="mso-bidi-font-size: 10.0pt">Lendo
+    e ouvindo </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">seus</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> “</span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">Vestígios</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">” </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">me</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> surpreendi </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">diante</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> de </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">um</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">livro</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> de </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">Blues</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">. </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">Poesias</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> &amp; </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">poemas</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> arrancados da </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">íntima</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> </span><st2:dm>
+    <span style="mso-bidi-font-size: 10.0pt">solidão</span></st2:dm>
+    <span style="mso-bidi-font-size: 10.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">sobre</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> a </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">perda</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> de </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">um</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> </span><st2:hm>
+    <span style="mso-bidi-font-size: 10.0pt">ser</span></st2:hm>
+    <span style="mso-bidi-font-size: 10.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">amado</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">, num </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">diálogo</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">franco</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> de </span><st2:dm>
+    <span style="mso-bidi-font-size: 10.0pt">aceitação</span></st2:dm>
+    <span style="mso-bidi-font-size: 10.0pt"> &amp; recusa do “</span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">rito</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> de </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">passagem</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">”. </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">Eis</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">aí</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> a </span><st2:dm>
+    <span style="mso-bidi-font-size: 10.0pt">beleza</span></st2:dm>
+    <span style="mso-bidi-font-size: 10.0pt"> do </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">blues</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">, o </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">sentimento</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">bruto</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> lapidado &amp; revestido de </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">acordes</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> &amp; </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">harmonias</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> rebrilhando os </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">lamentos</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"><span style="mso-spacerun:yes">&nbsp;
+    </span>&amp; confortando a </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">dor</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> na </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">plena</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">lucidez</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> da </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">canção</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">ou</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">poema</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">. (...) Há </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">muitos</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">caminhos</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> a serem percorridos </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">por</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">dentro</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> dos </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">seus</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> “</span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">Vestígios</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">”, </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">mas</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> prefiro a </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">pausa</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> (leia-se </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">silêncio</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> de </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">partitura</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">) </span><st2:dm>
+    <span style="mso-bidi-font-size: 10.0pt">pelo</span></st2:dm>
+    <span style="mso-bidi-font-size: 10.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">fato</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> de, nesse </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">nosso</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">espaço</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> de com-vivência, </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">termos</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> sido </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">companheiros</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">em</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">despedidas</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> às nossas </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">mães</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">. </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">Poesia</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">com</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">poesia</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> se </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">paga</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">mesmo</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">quando</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">não</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> somos </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">devedores</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">.<o:p>
+    </o:p>
+    </span></font></p>
+    <p style="word-spacing: 0; line-height: 120%; margin-left: 10; margin-right: 10; margin-top: 0; margin-bottom: 2" align="right"><font face="Arial" size="2" color="#FFFFFF"><b><span style="mso-bidi-font-size: 10.0pt">Zhô
+    Bertholini</span></b><span style="mso-bidi-font-size: 10.0pt">, </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">Santo</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> André, SP<o:p>
+    </o:p>
+    </span></font></p>
+    <p style="word-spacing: 0; line-height: 120%; margin: 0" align="right"><font face="Arial" size="2" color="#FFFFFF"><o:p>
+    </o:p>
+    </font>
+   

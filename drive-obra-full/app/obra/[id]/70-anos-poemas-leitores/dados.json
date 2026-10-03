@@ -1,0 +1,22 @@
+{
+  "titulo": "70 anos, poemas, leitores",
+  "subtitulo": "",
+  "genero": "Homenagem",
+  "ano": 2016,
+  "capa": "/imagens/obras-publicadas/poesia/70-anos-poemas-leitores.jpg",
+  "status_catalogo": "esgotado",
+  "dados": [
+    {
+      "label": "Ano",
+      "valor": "2016"
+    },
+    {
+      "label": "Tipo",
+      "valor": "Livro (Antologia)"
+    },
+    {
+      "label": "Editora",
+      "valor": "Alpharrabio Edições, SP"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "categoria": "encontros_atividades_culturais",
+  "total_registros": 1,
+  "descricao": "Encontros e atividades culturais",
+  "tags_comuns": [
+    "encontro"
+  ],
+  "registros": [
+    {
+      "id": "enct-001",
+      "numero_ordem": 1,
+      "titulo_evento": "Encontro com a escritora Dalila Teles Veras",
+      "slug_texto": "",
+      "data": "2005-11-25",
+      "local": "Biblioteca Interativa de Inclusão Nogueira",
+      "cidade": "Diadema",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "encontros_atividades_culturais",
+      "tags": [
+        "encontro"
+      ],
+      "texto_original": "Encontro de conversa e interação com a comunidade local sobre a trajetória literária."
+    }
+  ]
+}

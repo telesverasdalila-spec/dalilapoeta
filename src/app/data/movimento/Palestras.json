@@ -1,0 +1,91 @@
+{
+  "categoria": "palestras",
+  "total_registros": 5,
+  "descricao": "Palestras e conferências da autora",
+  "tags_comuns": [
+    "conferencia",
+    "palestra"
+  ],
+  "registros": [
+    {
+      "id": "pale-001",
+      "numero_ordem": 1,
+      "titulo_evento": "A Poesia como Reflexão de Mundo",
+      "slug_texto": "",
+      "data": "1984-10-00",
+      "local": "Assembleia Legislativa de Goiás",
+      "cidade": "Goiânia",
+      "estado": "GO",
+      "pais": "Brasil",
+      "categoria_principal": "palestras",
+      "tags": [
+        "palestra"
+      ],
+      "texto_original": "Palestra proferida quando da homenagem recebida pela indicação de Cora Coralina ao prêmio Juca Pato."
+    },
+    {
+      "id": "pale-002",
+      "numero_ordem": 2,
+      "titulo_evento": "A relação do poeta com a Cidade",
+      "slug_texto": "",
+      "data": "2009-04-16",
+      "local": "Museu de Santo André Dr. Octaviano A. Gaiarsa",
+      "cidade": "Santo André",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "palestras",
+      "tags": [
+        "palestra"
+      ],
+      "texto_original": "Palestra proferida no Museu de Santo André sobre a relação entre a produção poética e o espaço urbano."
+    },
+    {
+      "id": "pale-003",
+      "numero_ordem": 3,
+      "titulo_evento": "Os Congressos de História do Grande ABC e as Tarefas da Poesia",
+      "slug_texto": "",
+      "data": "2015-09-23",
+      "local": "Faculdades Integradas de Ribeirão Pires (FIRP/Uniesp)",
+      "cidade": "Ribeirão Pires",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "palestras",
+      "tags": [
+        "conferencia"
+      ],
+      "texto_original": "Conferência de abertura do 13º Congresso de História do Grande ABC. Primeira vez que essa tradicional palestra de abertura é proferida por uma pesquisadora espontânea, não acadêmica."
+    },
+    {
+      "id": "pale-004",
+      "numero_ordem": 4,
+      "titulo_evento": "Emigração, Memória e as tarefas da poesia",
+      "slug_texto": "",
+      "data": "2016-11-10",
+      "local": "Centro de Estudos História do Atlântico",
+      "cidade": "Funchal",
+      "estado": "",
+      "pais": "Portugal",
+      "categoria_principal": "palestras",
+      "tags": [
+        "palestra"
+      ],
+      "texto_original": "Palestra no Colóquio Mobilidades Madeirenses, promovido pelo Centro de Estudos História do Atlântico, na Madeira."
+    },
+    {
+      "id": "pale-005",
+      "numero_ordem": 5,
+      "titulo_evento": "Experiências transformadoras de Extensão e Cultura",
+      "slug_texto": "",
+      "data": "2019-06-07",
+      "local": "UFABC - Campus São Bernardo do Campo",
+      "cidade": "São Bernardo do Campo",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "palestras",
+      "tags": [
+        "palestra"
+      ],
+      "texto_original": "Palestra proferida no V Congresso de Extensão Universitária da UFABC."
+    }
+  ]
+}

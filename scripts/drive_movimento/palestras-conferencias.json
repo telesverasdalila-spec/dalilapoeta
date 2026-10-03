@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "titulo": "A Poesia como Reflexão de Mundo",
+    "tipo": "Palestra",
+    "modalidade": "presencial",
+    "ano": 1984,
+    "dataCompleta": "Outubro de 1984",
+    "local": "Assembleia Legislativa de Goiás",
+    "cidade": "Goiânia",
+    "estado": "GO",
+    "descricao": "Palestra proferida quando da homenagem recebida pela indicação de Cora Coralina ao prêmio Juca Pato."
+  },
+  {
+    "id": 2,
+    "titulo": "A relação do poeta com a Cidade",
+    "tipo": "Palestra",
+    "modalidade": "presencial",
+    "ano": 2009,
+    "dataCompleta": "16 de abril de 2009",
+    "local": "Museu de Santo André Dr. Octaviano A. Gaiarsa",
+    "cidade": "Santo André",
+    "estado": "SP",
+    "descricao": "Palestra proferida no Museu de Santo André sobre a relação entre a produção poética e o espaço urbano."
+  },
+  {
+    "id": 3,
+    "titulo": "Os Congressos de História do Grande ABC e as Tarefas da Poesia",
+    "tipo": "Conferência",
+    "modalidade": "presencial",
+    "ano": 2015,
+    "dataCompleta": "23 de setembro de 2015",
+    "local": "Faculdades Integradas de Ribeirão Pires (FIRP/Uniesp)",
+    "cidade": "Ribeirão Pires",
+    "estado": "SP",
+    "descricao": "Conferência de abertura do 13º Congresso de História do Grande ABC. Primeira vez que essa tradicional palestra de abertura é proferida por uma pesquisadora espontânea, não acadêmica."
+  },
+  {
+    "id": 4,
+    "titulo": "Emigração, Memória e as tarefas da poesia",
+    "tipo": "Palestra",
+    "modalidade": "presencial",
+    "ano": 2016,
+    "dataCompleta": "10 de novembro de 2016",
+    "local": "Centro de Estudos História do Atlântico",
+    "cidade": "Funchal",
+    "estado": "Internacional",
+    "descricao": "Palestra no Colóquio Mobilidades Madeirenses, promovido pelo Centro de Estudos História do Atlântico, na Madeira."
+  },
+  {
+    "id": 5,
+    "titulo": "Experiências transformadoras de Extensão e Cultura",
+    "tipo": "Palestra",
+    "modalidade": "presencial",
+    "ano": 2019,
+    "dataCompleta": "7 de junho de 2019",
+    "local": "UFABC - Campus São Bernardo do Campo",
+    "cidade": "São Bernardo do Campo",
+    "estado": "SP",
+    "descricao": "Palestra proferida no V Congresso de Extensão Universitária da UFABC."
+  }
+]

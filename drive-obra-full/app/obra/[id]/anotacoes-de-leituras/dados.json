@@ -1,0 +1,22 @@
+{
+  "titulo": "Anotações de Leituras",
+  "subtitulo": "",
+  "genero": "Prosa",
+  "ano": 2006,
+  "capa": "/imagens/obras-publicadas/poesia/2006-capa-anotacoesdeleituras.jpg",
+  "status_catalogo": "esgotado",
+  "dados": [
+    {
+      "label": "Ano",
+      "valor": "2006"
+    },
+    {
+      "label": "Tipo",
+      "valor": "Plaquete"
+    },
+    {
+      "label": "Editora",
+      "valor": "Alpharrabio Edições, SP"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "categoria": "conferencias_mesas",
+  "total_registros": 4,
+  "descricao": "Mesas de debate e rodas de conversa",
+  "tags_comuns": [
+    "mesa_de_debates",
+    "roda_de_conversa",
+    "virtual"
+  ],
+  "registros": [
+    {
+      "id": "conf-001",
+      "numero_ordem": 1,
+      "titulo_evento": "OS INDEPENDENTES HOJE",
+      "slug_texto": "",
+      "data": "1983-10-00",
+      "local": "Faculdade de Letras da Fundação Santo André",
+      "cidade": "Santo André",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "conferencias_mesas",
+      "tags": [
+        "mesa_de_debates"
+      ],
+      "texto_original": "Mesa com outros integrantes do Grupo Livrespaço de Poesia, tendo 'A Literatura Independente' como tema geral."
+    },
+    {
+      "id": "conf-002",
+      "numero_ordem": 2,
+      "titulo_evento": "Diálogos entre cultura popular e contemporânea",
+      "slug_texto": "",
+      "data": "2007-11-15",
+      "local": "I Jornada ABCDMAIOR de ações culturais",
+      "cidade": "Santo André",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "conferencias_mesas",
+      "tags": [
+        "mesa_de_debates"
+      ],
+      "texto_original": "Mesa de Debates com Toninho Macedo (Abaçaí), Nelson Triunfo (Hip Hop), Marcelo Manzatti e Pablo Nabarret Bastos.",
+      "data_fim": "2007-11-17"
+    },
+    {
+      "id": "conf-003",
+      "numero_ordem": 3,
+      "titulo_evento": "Estranhos Estrangeiros",
+      "slug_texto": "",
+      "data": "2017-08-07",
+      "local": "Biblioteca Pública Monteiro Lobato",
+      "cidade": "São Bernardo do Campo",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "conferencias_mesas",
+      "tags": [
+        "mesa_de_debates"
+      ],
+      "texto_original": "Mesa com Marcelo Maluf, Carola Saavedra e Marcelino Freire, mediados por Leonardo Tonus, da Universidade Sorbonne (projeto MIGRA)."
+    },
+    {
+      "id": "conf-004",
+      "numero_ordem": 4,
+      "titulo_evento": "Mulheres editoras, livreiras, divulgadoras de outras mulheres",
+      "slug_texto": "",
+      "data": "2020-09-06",
+      "local": "Evento Virtual",
+      "cidade": "Santos",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "conferencias_mesas",
+      "tags": [
+        "roda_de_conversa",
+        "virtual"
+      ],
+      "texto_original": "Roda de conversa inserida na programação do II Encontro Mulherio das Letras Baixada Santista, com mediação de Eunice Tomé e Vanessa Ratton."
+    }
+  ]
+}

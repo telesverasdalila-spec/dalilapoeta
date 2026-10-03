@@ -1,0 +1,22 @@
+{
+  "titulo": "As Artes do Ofício - Um olhar sobre o ABC",
+  "subtitulo": "",
+  "genero": "Prosa",
+  "ano": 2000,
+  "capa": "/imagens/obras-publicadas/poesia/2000-capa-artesdooficio.jpg",
+  "status_catalogo": "esgotado",
+  "dados": [
+    {
+      "label": "Ano",
+      "valor": "2000"
+    },
+    {
+      "label": "Tipo",
+      "valor": "Livro"
+    },
+    {
+      "label": "Editora",
+      "valor": "Alpharrabio Edições, SP"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "titulo": "Ínsulas",
+  "subtitulo": "Dalila Teles Veras",
+  "genero": "Poesia",
+  "ano": 2026,
+  "capa": "/insulas.png",
+  "sobre": "Os breves poemas que formam Ínsulas, de Dalila Teles Veras, sintetizam as linhas de força de uma voz admirável que, em mais de quatro décadas de intensa atividade poética, política e cultural (que sempre estão, para ela, numa mesma dimensão), se apurou e espraiou em versos, poemas em prosa, crônicas, diários e ensaios.\n\nA palavra \"ínsula\" remete à origem latina de \"ilha\", mas também carrega outro sentido muito pertinente aqui: \"ínsula\" (ou córtex insular) é a região do cérebro em que as sensações corporais se conectam com as emoções e com os sentimentos, ou seja, em que a mente traduz as mensagens do corpo. Nos poemas da plaquete, esses dois sentidos se projetam porque, junto à insularidade evocada pela poeta (nascida numa ilha portuguesa), há o testemunho de uma mulher que rompe o isolamento ao se identificar e multiplicar junto a outras mulheres e, também, ao lidar com a forma como a passagem do tempo inscreve, no corpo e na mente, outra vida, outro modo de viver.\n\nNa primeira parte, os poemas tratam da percepção particular do mundo que decorre não apenas de ter nascido e vivido a infância numa ilha, mas do fato de partir em direção ao exílio — a ilha, assim, é lugar no espaço, lá fora, mas também algo que se carrega por dentro e, claro, na escrita (\"todo um arquipélago a compor a poeta e a poesia\"). Na segunda, \"Infusões\", o olhar se abre para retratar a força das mulheres ao redor: anfíbias, engenheiras, ambientalistas, magas, artilheiras, ambidestras, ilusionistas — \"que ninguém se iluda com a fragilidade aparente\". Na terceira, \"Faces, fases\", a poeta volta-se para o \"novo/velho corpo\", em que os músculos e a memória se transformam, mas, \"ostra agarrada ao tempo\", flagra o que ainda a faz criar e desejar.",
+  "dados": [
+    {
+      "label": "ISBN",
+      "valor": "9786561391061"
+    },
+    {
+      "label": "Ano",
+      "valor": "2026"
+    },
+    {
+      "label": "Formato",
+      "valor": "13,5 x 20 cm"
+    },
+    {
+      "label": "Tipo",
+      "valor": "Plaquete"
+    },
+    {
+      "label": "Editora",
+      "valor": "Ed. Fósforo"
+    },
+    {
+      "label": "Coleção",
+      "valor": "Círculo de Poemas"
+    }
+  ],
+  "trechos": [
+    {
+      "titulo": "Trecho 1",
+      "texto": "Constroem casas dentro de suas próprias casas.\nArquitetam e fundam mundos, dos quais apenas elas\nconhecem a cartografia, as ciladas dos caminhos,\no segredo dos portais. Mulheres são engenheiras."
+    },
+    {
+      "titulo": "Trecho 2",
+      "texto": "O eco da ilha esvai-se mar afora e jamais alcança aquela\nlinha tripla de azuis, onde o mar encontra o firmamento."
+    },
+    {
+      "titulo": "Trecho 3",
+      "texto": "As ondas, o sal e o aro à volta sufocam e esganam.\nPerceber a ilha é o primeiro passo em direção ao cais."
+    }
+  ]
+}

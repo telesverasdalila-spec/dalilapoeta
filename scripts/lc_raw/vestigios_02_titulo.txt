@@ -1,0 +1,173 @@
+
+    <p style="word-spacing: 0; line-height: 120%; text-indent: 10; margin: 0"><st1:verbetes>
+    </p>
+    <p style="word-spacing: 0; line-height: 120%; text-indent: 10; margin-left: 10; margin-right: 10; margin-top: 0; margin-bottom: 0"><font size="2" color="#FFFFFF"><span style="font-family:Arial">Ontem</span></st1:verbetes>
+    <span style="font-family:
+Arial"> à </span><st1:verbetes>
+    <span style="font-family:Arial">noite</span></st1:verbetes>
+    <span style="font-family:Arial"> terminei de </span><st2:hm>
+    <span style="font-family:
+ Arial">ler</span></st2:hm>
+    <span style="font-family:Arial"> o </span><st1:verbetes>
+    <span style="font-family:Arial">seu</span></st1:verbetes>
+    <span style="font-family:
+Arial">&nbsp; </span><st1:verbetes>
+    <span style="font-family:Arial">livro</span></st1:verbetes>
+    <span style="font-family:Arial"> </span><st1:verbetes>
+    <span style="font-family:Arial">VESTÍGIOS</span></st1:verbetes>
+    <span style="font-family:Arial">. </span><st1:verbetes>
+    <span style="font-family:Arial">Todos</span></st1:verbetes>
+    <span style="font-family:Arial"> os </span><st1:verbetes>
+    <span style="font-family:
+ Arial">poemas</span></st1:verbetes>
+    <span style="font-family:Arial"> </span><st1:verbetes>
+    <span style="font-family:Arial">me</span></st1:verbetes>
+    <span style="font-family:
+Arial"> tocaram </span><st1:verbetes>
+    <span style="font-family:Arial">profundamente</span></st1:verbetes>
+    <span style="font-family:Arial">. </span><st1:verbetes>
+    <span style="font-family:Arial">Porque</span></st1:verbetes>
+    <span style="font-family:Arial"> vivi </span><st1:verbetes>
+    <span style="font-family:
+ Arial">cada</span></st1:verbetes>
+    <span style="font-family:Arial">&nbsp;&nbsp; uma dessas </span><st1:verbetes>
+    <span style="font-family:Arial">horas</span></st1:verbetes>
+    <span style="font-family:Arial"> </span><st1:verbetes>
+    <span style="font-family:Arial">que</span></st1:verbetes>
+    <span style="font-family:Arial"> descreve no&nbsp; </span><st1:verbetes>
+    <span style="font-family:Arial">seu</span></st1:verbetes>
+    <span style="font-family:
+Arial"> percurso de </span><st1:verbetes>
+    <span style="font-family:Arial">dor</span></st1:verbetes>
+    <span style="font-family:Arial">&nbsp; e </span><st1:verbetes>
+    <span style="font-family:
+ Arial">perda</span></st1:verbetes>
+    <span style="font-family:Arial">. </span><st1:verbetes>
+    <span style="font-family:Arial">Já</span></st1:verbetes>
+    <span style="font-family:
+Arial"> se passaram </span><st2:dm>
+    <span style="font-family:Arial">dois</span></st2:dm>
+    <span style="font-family:Arial"> </span><st1:verbetes>
+    <span style="font-family:Arial">anos</span></st1:verbetes>
+    <span style="font-family:Arial"> </span><st1:verbetes>
+    <span style="font-family:Arial">sobre</span></st1:verbetes>
+    <span style="font-family:Arial"> o </span><st1:verbetes>
+    <span style="font-family:
+ Arial">falecimento</span></st1:verbetes>
+    <span style="font-family:Arial"> da </span><st1:verbetes>
+    <span style="font-family:Arial">minha</span></st1:verbetes>
+    <span style="font-family:
+Arial"> </span><st1:verbetes>
+    <span style="font-family:Arial">mãe</span></st1:verbetes>
+    <span style="font-family:Arial">, </span><st1:verbetes>
+    <span style="font-family:Arial">mas</span></st1:verbetes>
+    <span style="font-family:Arial">, </span><st1:verbetes>
+    <span style="font-family:Arial">além</span></st1:verbetes>
+    <span style="font-family:Arial"> de umas &quot;</span><st1:verbetes>
+    <span style="font-family:Arial">cartas</span></st1:verbetes>
+    <span style="font-family:
+Arial">&quot; </span><st2:dm>
+    <span style="font-family:Arial">para</span></st2:dm>
+    <span style="font-family:Arial"> </span><st1:verbetes>
+    <span style="font-family:Arial">ela</span></st1:verbetes>
+    <span style="font-family:Arial">, </span><st1:verbetes>
+    <span style="font-family:Arial">não</span></st1:verbetes>
+    <span style="font-family:Arial"> consegui&nbsp; escrever-lhe uma&nbsp;&nbsp;
+    </span><st1:verbetes>
+    <span style="font-family:Arial">única</span></st1:verbetes>
+    <span style="font-family:
+Arial">&nbsp; </span><st2:dm>
+    <span style="font-family:Arial">elegia</span></st2:dm>
+    <span style="font-family:Arial">. </span><st2:dm>
+    <span style="font-family:Arial">Pois</span></st2:dm>
+    <span style="font-family:Arial"> </span><st1:verbetes>
+    <span style="font-family:Arial">ainda</span></st1:verbetes>
+    <span style="font-family:Arial"> </span><st1:verbetes>
+    <span style="font-family:Arial">me</span></st1:verbetes>
+    <span style="font-family:Arial"> dói </span><st1:verbetes>
+    <span style="font-family:
+ Arial">muito</span></st1:verbetes>
+    <span style="font-family:Arial"> </span><st2:hm>
+    <span style="font-family:Arial">admitir</span></st2:hm>
+    <span style="font-family:
+Arial"> a </span><st1:verbetes>
+    <span style="font-family:Arial">sua</span></st1:verbetes>
+    <span style="font-family:Arial"> </span><st1:verbetes>
+    <span style="font-family:Arial">ausência</span></st1:verbetes>
+    <span style="font-family:Arial">. Louvo, </span><st2:dm>
+    <span style="font-family:
+ Arial">pois</span></st2:dm>
+    <span style="font-family:Arial">, </span><st1:verbetes>
+    <span style="font-family:Arial">além</span></st1:verbetes>
+    <span style="font-family:
+Arial"> da </span><st1:verbetes>
+    <span style="font-family:Arial">sua</span></st1:verbetes>
+    <span style="font-family:Arial"> </span><st1:verbetes>
+    <span style="font-family:Arial">ótima</span></st1:verbetes>
+    <span style="font-family:Arial"> </span><st1:verbetes>
+    <span style="font-family:Arial">poesia</span></st1:verbetes>
+    <span style="font-family:Arial">, </span><st1:verbetes>
+    <span style="font-family:Arial">sempre</span></st1:verbetes>
+    <span style="font-family:Arial"> </span><st1:verbetes>
+    <span style="font-family:Arial">tão</span></st1:verbetes>
+    <span style="font-family:Arial"> </span><st1:verbetes>
+    <span style="font-family:Arial">concisa</span></st1:verbetes>
+    <span style="font-family:Arial"> e </span><st1:verbetes>
+    <span style="font-family:
+ Arial">forte</span></st1:verbetes>
+    <span style="font-family:Arial">, a </span><st1:verbetes>
+    <span style="font-family:Arial">sua</span></st1:verbetes>
+    <span style="font-family:
+Arial"> </span><st2:dm>
+    <span style="font-family:Arial">coragem</span></st2:dm>
+    <span style="font-family:Arial"> </span><st1:verbetes>
+    <span style="font-family:Arial">em</span></st1:verbetes>
+    <span style="font-family:Arial"> escrevê-la, voltando-se </span><st2:dm>
+    <span style="font-family:Arial">para</span></st2:dm>
+    <span style="font-family:Arial">&nbsp;&nbsp; </span><st1:verbetes>
+    <span style="font-family:Arial">temática</span></st1:verbetes>
+    <span style="font-family:Arial"> </span><st1:verbetes>
+    <span style="font-family:Arial">tão</span></st1:verbetes>
+    <span style="font-family:Arial"> </span><st1:verbetes>
+    <span style="font-family:Arial">dolorosa</span></st1:verbetes>
+    <span style="font-family:Arial">. </span><st1:verbetes>
+    <span style="font-family:Arial">Mais</span></st1:verbetes>
+    <span style="font-family:Arial"> uma </span><st1:verbetes>
+    <span style="font-family:
+ Arial">vez</span></st1:verbetes>
+    <span style="font-family:Arial">&nbsp; agradeço o </span><st1:verbetes>
+    <span style="font-family:Arial">volume</span></st1:verbetes>
+    <span style="font-family:Arial"> numerado </span><st1:verbetes>
+    <span style="font-family:Arial">pela</span></st1:verbetes>
+    <span style="font-family:
+Arial"> autora. Fico </span><st2:dm>
+    <span style="font-family:Arial">feliz</span></st2:dm>
+    <span style="font-family:Arial"> </span><st1:verbetes>
+    <span style="font-family:Arial">por</span></st1:verbetes>
+    <span style="font-family:Arial"> </span><st2:hm>
+    <span style="font-family:Arial">estar</span></st2:hm>
+    <span style="font-family:Arial"> </span><st1:verbetes>
+    <span style="font-family:Arial">entre</span></st1:verbetes>
+    <span style="font-family:Arial"> os 200 </span><st1:verbetes>
+    <span style="font-family:
+ Arial">que</span></st1:verbetes>
+    <span style="font-family:Arial"> o mereceram. </span><st1:verbetes>
+    <span style="font-family:Arial">Grande</span></st1:verbetes>
+    <span style="font-family:
+Arial"> e </span><st1:verbetes>
+    <span style="font-family:Arial">fraterno</span></st1:verbetes>
+    <span style="font-family:Arial"> </span><st1:verbetes>
+    <span style="font-family:Arial">abraço</span></st1:verbetes>
+    <span style="font-family:Arial"> da&nbsp;</span></font></p>
+    <p style="word-spacing: 0; line-height: 120%; text-indent: 10; margin-left: 10; margin-right: 10; margin-top: 0; margin-bottom: 0" align="right">&nbsp;</p>
+    <p style="word-spacing: 0; line-height: 120%; text-indent: 10; margin-left: 10; margin-right: 10; margin-top: 0; margin-bottom: 0" align="right"><font size="2"><font color="#FFFFFF"><span style="font-family:Arial">Lourdinha
+    (<b>Maria de Lourdes </b></span><st1:verbetes>
+    <b><span style="font-family:Arial">Hortas</span></b></st1:verbetes>
+    <span style="font-family:Arial">) </span><st1:verbetes>
+    <span style="font-family:Arial">Recife</span></st1:verbetes>
+    </font></font><span style="font-family:Arial"><font size="2" color="#FFFFFF">
+    (PE)</font></span></p>
+    <p style="word-spacing: 0; line-height: 120%; text-indent: 10; margin-left: 10; margin-right: 10; margin-top: 0; margin-bottom: 0" align="right"><span style="font-family:Arial"><o:p>
+    </o:p>
+    </span>
+   

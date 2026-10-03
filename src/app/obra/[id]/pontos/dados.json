@@ -1,0 +1,22 @@
+{
+  "titulo": "ponto(s)",
+  "subtitulo": "",
+  "genero": "Poesia",
+  "ano": 2022,
+  "capa": "/imagens/obras-publicadas/poesia/pontos.jpg",
+  "status_catalogo": "esgotado",
+  "dados": [
+    {
+      "label": "Ano",
+      "valor": "2022"
+    },
+    {
+      "label": "Tipo",
+      "valor": "Plaquete"
+    },
+    {
+      "label": "Editora",
+      "valor": "Alpharrabio Edições, SP"
+    }
+  ]
+}

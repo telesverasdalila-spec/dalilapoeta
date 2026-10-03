@@ -1,0 +1,22 @@
+{
+  "titulo": "A Palavraparte - Pequenas prosas em poemas",
+  "subtitulo": "",
+  "genero": "Poesia",
+  "ano": 1996,
+  "capa": "/imagens/obras-publicadas/poesia/1996-capa-apalavraparte.jpg",
+  "status_catalogo": "esgotado",
+  "dados": [
+    {
+      "label": "Ano",
+      "valor": "1996"
+    },
+    {
+      "label": "Tipo",
+      "valor": "Livro"
+    },
+    {
+      "label": "Editora",
+      "valor": "Alpharrabio Edições, SP"
+    }
+  ]
+}

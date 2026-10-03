@@ -1,0 +1,77 @@
+{
+  "categoria": "congressos_seminarios",
+  "total_registros": 4,
+  "descricao": "Congressos, seminários e simpósios",
+  "tags_comuns": [
+    "congresso",
+    "seminario"
+  ],
+  "registros": [
+    {
+      "id": "cong-001",
+      "numero_ordem": 1,
+      "titulo_evento": "I Congresso de História da Região do ABC",
+      "slug_texto": "",
+      "data": "1990-08-27",
+      "local": "Museu de Santo André",
+      "cidade": "Santo André",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "congressos_seminarios",
+      "tags": [
+        "congresso"
+      ],
+      "texto_original": "Atuação na comissão organizadora, coordenação de mesa e apresentação de comunicação sobre 'A Literatura no ABC'.",
+      "data_fim": "1990-08-31"
+    },
+    {
+      "id": "cong-002",
+      "numero_ordem": 2,
+      "titulo_evento": "ENCONTRO DA DIVERSIDADE CULTURAL DO ABC",
+      "slug_texto": "",
+      "data": "2013-11-21",
+      "local": "SESC Santo André",
+      "cidade": "Santo André",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "congressos_seminarios",
+      "tags": [
+        "seminario"
+      ],
+      "texto_original": "Iniciativa do Fórum Permanente de Debates Culturais do Grande ABC e UFABC. Organização e palestra: Relato de experiência do Fórum e Movimento Cultura Livre.",
+      "data_fim": "2013-11-23"
+    },
+    {
+      "id": "cong-003",
+      "numero_ordem": 3,
+      "titulo_evento": "Seminário Comida, Educação e Arte",
+      "slug_texto": "",
+      "data": "2015-11-11",
+      "local": "UMESP",
+      "cidade": "São Bernardo do Campo",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "congressos_seminarios",
+      "tags": [
+        "seminario"
+      ],
+      "texto_original": "Mesa com participação de Sueli Moraes, Maria Inês e Dalila T. Veras."
+    },
+    {
+      "id": "cong-004",
+      "numero_ordem": 4,
+      "titulo_evento": "III COPEX - Congresso Paulista de Extensão Universitária e CONEXÃO",
+      "slug_texto": "",
+      "data": "2015-05-00",
+      "local": "UFABC - Campus Santo André",
+      "cidade": "Santo André",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "congressos_seminarios",
+      "tags": [
+        "congresso"
+      ],
+      "texto_original": "Mediação da mesa Divulgação Científica, Literatura e Contação de Histórias, com as Profas. Dra. Ana Maria Dietrich, Dra. Kiusam de Oliveira e escritora Simone Alves Pedersen."
+    }
+  ]
+}

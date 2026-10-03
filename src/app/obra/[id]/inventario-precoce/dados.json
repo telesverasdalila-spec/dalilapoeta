@@ -1,0 +1,22 @@
+{
+  "titulo": "Inventário Precoce",
+  "subtitulo": "",
+  "genero": "Poesia",
+  "ano": 1983,
+  "capa": "/imagens/obras-publicadas/poesia/1983-capa-inventario.jpg",
+  "status_catalogo": "esgotado",
+  "dados": [
+    {
+      "label": "Ano",
+      "valor": "1983"
+    },
+    {
+      "label": "Tipo",
+      "valor": "Livro"
+    },
+    {
+      "label": "Editora",
+      "valor": "Pannartz, SP"
+    }
+  ]
+}

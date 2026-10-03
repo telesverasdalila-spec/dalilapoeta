@@ -1,0 +1,22 @@
+{
+  "titulo": "Sonho de Há Pouco",
+  "subtitulo": "",
+  "genero": "Poesia",
+  "ano": 2013,
+  "capa": "/imagens/obras-publicadas/poesia/2013-capa-sonhodehapouco.jpg",
+  "status_catalogo": "esgotado",
+  "dados": [
+    {
+      "label": "Ano",
+      "valor": "2013"
+    },
+    {
+      "label": "Tipo",
+      "valor": "Plaquete / Livro"
+    },
+    {
+      "label": "Editora",
+      "valor": "Não informado"
+    }
+  ]
+}

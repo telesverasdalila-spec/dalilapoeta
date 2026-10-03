@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "titulo": "Leitura de poemas na exposição 'Poetas da língua portuguesa'",
+    "tipo": "Leitura Pública",
+    "modalidade": "presencial",
+    "ano": 2008,
+    "dataCompleta": "Maio de 2008",
+    "local": "Local da Exposição",
+    "cidade": "São Paulo",
+    "estado": "SP",
+    "descricao": "Abertura da exposição de Constança Lucas, com leituras de dez poetas convidados, incluindo Cláudio Willer, Donizete Galvão, Eunice Arruda e Dalila Teles Veras."
+  },
+  {
+    "id": 2,
+    "titulo": "Leitura de poemas na Desvairada – Feira de Poesia",
+    "tipo": "Leitura Pública",
+    "modalidade": "presencial",
+    "ano": 2019,
+    "dataCompleta": "5 de maio de 2019",
+    "local": "Biblioteca Mário de Andrade",
+    "cidade": "São Paulo",
+    "estado": "SP",
+    "descricao": "Participação com leitura de poemas na tradicional Feira de Poesia Desvairada."
+  },
+  {
+    "id": 3,
+    "titulo": "Poetas pela Democracia",
+    "tipo": "Leitura Pública",
+    "modalidade": "presencial",
+    "ano": 2022,
+    "dataCompleta": "14 de junho de 2022",
+    "local": "Espaço 'Térreo Virginia'",
+    "cidade": "São Paulo",
+    "estado": "SP",
+    "descricao": "Ato político, com recital de poemas, depoimentos, música e lançamento de livros."
+  },
+  {
+    "id": 4,
+    "titulo": "Encontro com a escritora Dalila Teles Veras",
+    "tipo": "Encontro",
+    "modalidade": "presencial",
+    "ano": 2005,
+    "dataCompleta": "25 de novembro de 2005",
+    "local": "Biblioteca Interativa de Inclusão Nogueira",
+    "cidade": "Diadema",
+    "estado": "SP",
+    "descricao": "Encontro de conversa e interação com a comunidade local sobre a trajetória literária."
+  }
+]

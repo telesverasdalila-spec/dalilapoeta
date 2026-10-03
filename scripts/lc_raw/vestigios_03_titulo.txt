@@ -1,0 +1,100 @@
+
+    <p style="text-align:justify">&nbsp;</p>
+    <p style="text-align: justify; margin-left: 10; margin-right: 10"><font color="#FFFFFF" face="Arial" size="2"><span style="mso-bidi-font-size: 10.0pt">Li,
+    reli e tresli </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">Vestígios</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">, pôs-me </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">ele</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> a </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">alma</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">em</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">desalinho</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">, </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">como</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">quando</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">me</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> acerco de O </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">lado</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">fatal</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">, de Lya Luft, </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">ou</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> Os </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">anos</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> 40, de Rachel </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">Jardim</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">. A </span><st2:dm>
+    <span style="mso-bidi-font-size: 10.0pt">morte</span></st2:dm>
+    <span style="mso-bidi-font-size: 10.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">que</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">ronda</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> e rói </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">cada</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> sílada, </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">cada</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">palavra</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">, </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">cada</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">verso</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">, ceifeira </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">que</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> </span><st2:dm>
+    <span style="mso-bidi-font-size: 10.0pt">espera</span></st2:dm>
+    <span style="mso-bidi-font-size: 10.0pt"> e se </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">desespera</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">quando</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> a </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">poesia</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> se faz </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">como</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">triunfo</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> da </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">vida</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> e do </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">corpo</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">. O </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">que</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">mais</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> </span><st2:hm>
+    <span style="mso-bidi-font-size: 10.0pt">dizer</span></st2:hm>
+    <span style="mso-bidi-font-size: 10.0pt">, </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">senão</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">que</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> estarei </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">sempre</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> a </span><st2:hm>
+    <span style="mso-bidi-font-size: 10.0pt">desvendar</span></st2:hm>
+    <span style="mso-bidi-font-size: 10.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">Vestígios</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">em</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">suas</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> múltiplas </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">reentrâncias</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> e </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">abismos</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">...<o:p>
+    </o:p>
+    </span></font></p>
+    <p align="right" style="margin-left: 10; margin-right: 10"><font color="#FFFFFF" face="Arial" size="2"><b><span style="mso-bidi-font-size: 10.0pt">Fernando
+    Fiorese</span></b><span style="mso-bidi-font-size: 10.0pt">, </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">Juiz</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> de </span><st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt">Fora</span></st1:verbetes>
+    <span style="mso-bidi-font-size: 10.0pt"> – MG.</span></font></p>
+    <p align="right"><span style="mso-bidi-font-size:10.0pt;font-family:Arial;color:#006666"><o:p>
+    </o:p>
+    </span>
+   

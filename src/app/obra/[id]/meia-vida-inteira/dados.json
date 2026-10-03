@@ -1,0 +1,22 @@
+{
+  "titulo": "Meia Vida Inteira",
+  "subtitulo": "",
+  "genero": "Homenagem",
+  "ano": 1996,
+  "capa": "/imagens/obras-publicadas/poesia/1996-capa-meiavida.jpg",
+  "status_catalogo": "esgotado",
+  "dados": [
+    {
+      "label": "Ano",
+      "valor": "1996"
+    },
+    {
+      "label": "Tipo",
+      "valor": "Livro"
+    },
+    {
+      "label": "Editora",
+      "valor": "Edição MIMO / Santo André, SP"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "titulo": "Madeira - Do Vinho à Saudade",
+  "subtitulo": "",
+  "genero": "Poesia",
+  "ano": 1989,
+  "capa": "/imagens/obras-publicadas/poesia/1989-capa-madeiradovinhoasaudade.jpg",
+  "status_catalogo": "esgotado",
+  "dados": [
+    {
+      "label": "Ano",
+      "valor": "1989"
+    },
+    {
+      "label": "Tipo",
+      "valor": "Livro"
+    },
+    {
+      "label": "Editora",
+      "valor": "José António Gonçalves, Funchal (PT)"
+    }
+  ]
+}

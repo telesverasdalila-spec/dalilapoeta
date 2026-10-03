@@ -1,0 +1,22 @@
+{
+  "titulo": "Elemento Fúria",
+  "subtitulo": "",
+  "genero": "Poesia",
+  "ano": 1989,
+  "capa": "/imagens/obras-publicadas/poesia/1989-capa-elementoemfuria.jpg",
+  "status_catalogo": "esgotado",
+  "dados": [
+    {
+      "label": "Ano",
+      "valor": "1989"
+    },
+    {
+      "label": "Tipo",
+      "valor": "Livro"
+    },
+    {
+      "label": "Editora",
+      "valor": "Academia Piauiense de Letras, PI"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "titulo": "Diuturnos",
+  "subtitulo": "diário - 2000",
+  "genero": "Poesia",
+  "ano": 2012,
+  "capa": "/imagens/obras-publicadas/poesia/2012-capa-diuturnos.jpg",
+  "status_catalogo": "esgotado",
+  "dados": [
+    {"label": "Ano", "valor": "2012"},
+    {"label": "Tipo", "valor": "Diário Poético (12 poemas)"},
+    {"label": "Editora", "valor": "Alpharrabio Edições, SP"},
+    {"label": "Projeto Gráfico", "valor": "Rosana Chrispim, Fátima Roque e Luzia Maninha"},
+    {"label": "Desenhos", "valor": "Guedo Gallet"}
+  ],
+  "trechos": [
+    {
+      "titulo": "janeiro",
+      "imagem_mes": "/imagens/obras-publicadas/poesia/diuturnos/diuturnos-janeiro.jpg",
+      "texto": "**sábado 1** nem milênio, nem século, nem ano, apenas um novo tempo se inaugura, sob o peso cabalístico dos zeros e a vontade de mudar fatalismos decretados por profetas equivocados. o milênio nasce (sem discussões. ponto). é tempo novo, pois novo é o dia de todo o dia. o cheiro de churrasco mescla-se ao verde mata atlântica. o planeta tem cura"
+    },
+    {
+      "titulo": "fevereiro",
+      "imagem_mes": "/imagens/obras-publicadas/poesia/diuturnos/diuturnos-fevereiro.jpg",
+      "texto": "**quarta 23** só mesmo as artes da ficção literária podem operar esta mágica de sair momentaneamente do cotidiano opressor – viagem que, mais do que fuga, é vida, outra"
+    },
+    {
+      "titulo": "março",
+      "imagem_mes": "/imagens/obras-publicadas/poesia/diuturnos/diuturnos-marco.jpg",
+      "texto": "**sábado 4** em ano eleitoral tudo é reinaugurado, com direito a festa e discurso: canteiros em esquinas visíveis, poltronas novas no teatro, computador na biblioteca, asfalto onde já havia asfalto, pintura onde já era cor. falta reinaugurar o estômago dos famintos, colorir e humanizar as veredas periféricas, iluminar com novas luzes a perspectiva de retomada da dignidade de suas comunidades, levar o centro à periferia e nem precisar de outdoor para alardear as façanhas"
+    },
+    {
+      "titulo": "abril",
+      "imagem_mes": "/imagens/obras-publicadas/poesia/diuturnos/diuturnos-abril.jpg",
+      "texto": "**sexta 14** fantasmagórica, reminiscência inglesa de vida vigiada, a marcar o tempo que teima em derrubá-la, paranapiacaba resiste. por entre as suas vielas, no mais fundo de seu centro, a vida dos que insistem em ali permanecer a desafiar a modorra. a mata atlântica, emoldurante, abrindo clareiras para avistar o mar, segue, em silêncio, sua verde trajetória. diante das hordas de bárbaros de além fronteiras, sequiosos de emoções, a cidade devolve apenas placidez, à sua silente maneira"
+    },
+    {
+      "titulo": "maio",
+      "imagem_mes": "/imagens/obras-publicadas/poesia/diuturnos/diuturnos-maio.jpg",
+      "texto": "**domingo 7** no intervalo entre a leitura e escrita de papéis utilitários, a delícia de um verso de murilo, sem utilidade nenhuma, apenas de puro prazer (\"Dos braços do poeta / Pende a ópera do mundo / (Tempo, cirurgião do mundo): – / O abismo bate palmas, / A noite aponta o revólver.\")"
+    },
+    {
+      "titulo": "junho",
+      "imagem_mes": "/imagens/obras-publicadas/poesia/diuturnos/diuturnos-junho.jpg",
+      "texto": "**sábado 10** camões evocado no seu dia de morte, sempre (re)vivido pela língua, da qual tornou-se sinônimo. camões evocado na voz de tantos outros poetas lembrados aqui. pessoa, evocado pelo seu dia de nascimento, o mesmo dia treze que é também de santo antônio, o de lisboa, que também valeu-se da língua portuguesa para professar a sua fé, a mesma fé literária que hoje, lá pelos redutos da já histórica livraria, professamos, através de orações cúmplices, amém"
+    },
+    {
+      "titulo": "julho",
+      "imagem_mes": "/imagens/obras-publicadas/poesia/diuturnos/diuturnos-julho.jpg",
+      "texto": "**terça 11** o ancião memorialista não quer saber de histórias. delas, sua vida está repleta. sabe que lhe resta pouco tempo e deseja participar da vida comunitária, liderar. os moços podem esperar. ficou de fora desta vez, mas a cidade sabe que voltará, pois dele precisa para respirar, como dela precisa o ancião para sentir-se vivo e cidadão"
+    },
+    {
+      "titulo": "agosto",
+      "imagem_mes": "/imagens/obras-publicadas/poesia/diuturnos/diuturnos-agosto.jpg",
+      "texto": "**sexta 11** iniciar um fim-de-semana com lizst e chopin (re)interpretados ao vivo pelas mãos mágicas (e nervos, e plasma, e gestos, e corpo) de um artista é fazê-lo em estado de graça e comunhão com o universo. os prelúdios como prelúdio de um jantar com amigos que, além do bom vinho, é temperado com uma (quase) interminável conversa sobre a paixão de ler: inesquecíveis personagens sentaram-se à mesa, como companhia real e palpável que agasalha e fortifica"
+    },
+    {
+      "titulo": "setembro",
+      "imagem_mes": "/imagens/obras-publicadas/poesia/diuturnos/diuturnos-setembro.jpg",
+      "texto": "**ainda sábado 9**, epidauros a vida na tragédia. a tragédia como representação da vida e da arte. o engenho e a matemática, através dos círculos concêntricos que não se dispersam – acústica e inacreditável arquitetura de um tempo em que a vida não tinha hora marcada, era um natural fluir"
+    },
+    {
+      "titulo": "outubro",
+      "imagem_mes": "/imagens/obras-publicadas/poesia/diuturnos/diuturnos-outubro.jpg",
+      "texto": "**sexta 27** o poeta e seresteiro, violão a tiracolo, comparece à casa da anciã convalescente, para uma serenata em homenagem à sua recuperação. noite comovente de fados a mostrar uma alma e um ser humano único e admirável"
+    },
+    {
+      "titulo": "novembro",
+      "imagem_mes": "/imagens/obras-publicadas/poesia/diuturnos/diuturnos-novembro.jpg",
+      "texto": "**segunda 27** \"ai que prazer, não cumprir um dever, ter um livro para ler e não o fazer!\"... entro no poema de pessoa e simplesmente cancelo todos os compromissos de hoje em nome da preguiça. não ir, só pelo prazer de não cumprir um dever... um pequeno ato de rebeldia degustado após um dia rotineiro e cansativo. ai que prazer..."
+    },
+    {
+      "titulo": "dezembro",
+      "imagem_mes": "/imagens/obras-publicadas/poesia/diuturnos/diuturnos-dezembro.jpg",
+      "texto": "**sábado 23** as mãos feridas pelas espinhas do bacalhau, cuidadosamente retiradas do peixe que irá para a mesa da ceia de amanhã, que celebrará o milagre do (re)nascimento de minha mãe que, frágil, mas íntegra, participa da festa de que ela mais gosta"
+    }
+  ]
+}

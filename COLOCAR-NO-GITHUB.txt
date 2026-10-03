@@ -1,0 +1,115 @@
+COLOCAR O SITE NO GITHUB — GUIA PASSO A PASSO (04/10/2026)
+Site memorial Dalila Teles Veras
+======================================================================
+
+O que este pacote faz:
+  - Coloca o arquivo ".gitignore" na raiz do projeto. Ele diz ao GitHub
+    o que NÃO deve subir: pastas técnicas e os pacotes grandes de download.
+    Assim o repositório fica leve e organizado.
+  - Este próprio arquivo de instruções (COLOCAR-NO-GITHUB.txt).
+
+======================================================================
+PASSO 0 — Aplique este pacote
+======================================================================
+Extraia este zip no Desktop (C:\Users\Windows 10\Desktop) e responda
+SUBSTITUIR / MESCLAR, como nas atualizações anteriores.
+No fim, você terá .gitignore e COLOCAR-NO-GITHUB.txt dentro da pasta
+dalila-teles-veras do seu Desktop.
+
+======================================================================
+PASSO 1 — Conta no GitHub (se você já tem, pule)
+======================================================================
+1) Abra https://github.com e clique em "Sign up".
+2) Use um e-mail seu, crie uma senha e escolha um nome de usuário.
+   Dica: algo como "dalilatelesveras" fica bonito no endereço do site.
+3) Confirme o e-mail que o GitHub enviar.
+
+======================================================================
+PASSO 2 — Crie o repositório (a "casinha" do projeto)
+======================================================================
+1) Ainda no github.com, clique no "+" no canto superior direito >
+   "New repository".
+2) Repository name:  dalila-teles-veras
+3) Marque "Private" (só você vê, por enquanto — dá para mudar depois).
+4) NÃO marque nenhuma das caixinhas de "Add a README", ".gitignore"
+   ou "license". Deixe tudo desmarcado.
+5) Clique no botão verde "Create repository".
+6) Deixe essa página aberta — você volta para ela no passo 6.
+
+======================================================================
+PASSO 3 — Instale o Git no seu computador (uma vez só)
+======================================================================
+1) Abra https://git-scm.com/download/win
+2) Clique em "64-bit Git for Windows Setup" e espere baixar.
+3) Instale clicando Next, Next, Next... (as opções padrão estão ótimas)
+   e por fim Install > Finish.
+4) IMPORTANTE: feche o VS Code e abra de novo (para o terminal
+   reconhecer o Git recém-instalado).
+5) Abra o terminal do VS Code (Ctrl+ç) e teste digitando:
+
+   git --version
+
+   Deve aparecer algo como "git version 2.xx.x.windows.1".
+
+======================================================================
+PASSO 4 — Diga ao Git quem você é (uma vez só)
+======================================================================
+No terminal do VS Code (com o projeto aberto), digite as duas linhas
+abaixo, trocando pelo SEU nome e pelo SEU e-mail do GitHub:
+
+   git config --global user.name "Seu Nome"
+   git config --global user.email "seu-email@exemplo.com"
+
+======================================================================
+PASSO 5 — Primeira versão no Git (dentro do projeto)
+======================================================================
+No terminal do VS Code (o projeto dalila-teles-veras aberto), digite
+uma linha por vez, dando Enter após cada uma:
+
+   git init
+   git add .
+   git commit -m "Site memorial Dalila Teles Veras - versao 19"
+
+======================================================================
+PASSO 6 — Conecte ao GitHub e envie
+======================================================================
+1) Na página do GitHub que você deixou aberta (passo 2), procure a
+   caixa "Quick setup" e copie o endereço do repositório. Ele parece:
+
+   https://github.com/SEU-USUARIO/dalila-teles-veras.git
+
+2) No terminal do VS Code, digite (troque SEU-USUARIO):
+
+   git branch -M main
+   git remote add origin https://github.com/SEU-USUARIO/dalila-teles-veras.git
+   git push -u origin main
+
+3) Na primeira vez, uma janela do GitHub vai abrir pedindo login:
+   clique em "Sign in with your browser" e autorize.
+4) Ao terminar, atualize a página do repositório no navegador (F5):
+   todos os arquivos do site estarão lá. PRONTO! Seu site está salvo
+   no GitHub.
+
+======================================================================
+E DEPOIS? (nas próximas atualizações que fizermos)
+======================================================================
+Para salvar uma nova versão no GitHub, são só 3 comandos no terminal:
+
+   git add .
+   git commit -m "descrição da mudança"
+   git push
+
+======================================================================
+PROBLEMAS COMUNS
+======================================================================
+- "git nao e reconhecido..."  > feche e reabra o VS Code (passo 3.4).
+- "fatal: not a git repository" > o terminal está na pasta errada;
+  abra o VS Code pela pasta dalila-teles-veras (Arquivo > Abrir Pasta).
+- "rejected / fetch first" no push > o repositório foi criado com
+  README no passo 2. Execute:
+     git pull origin main --allow-unrelated-histories
+     git push -u origin main
+- Errou o endereço do remote? Corrija com:
+     git remote set-url origin https://github.com/SEU-USUARIO/dalila-teles-veras.git
+
+Pronto! Qualquer passo que travar, me chame que eu te guio.

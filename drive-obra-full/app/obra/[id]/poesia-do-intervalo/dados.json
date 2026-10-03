@@ -1,0 +1,22 @@
+{
+  "titulo": "Poesia do Intervalo",
+  "subtitulo": "",
+  "genero": "Poesia",
+  "ano": 2005,
+  "capa": "/imagens/obras-publicadas/poesia/2005-capa-poesiadointervalo.jpg",
+  "status_catalogo": "esgotado",
+  "dados": [
+    {
+      "label": "Ano",
+      "valor": "2005"
+    },
+    {
+      "label": "Tipo",
+      "valor": "Livro de Arte"
+    },
+    {
+      "label": "Editora",
+      "valor": "Alpharrabio Edições, SP"
+    }
+  ]
+}

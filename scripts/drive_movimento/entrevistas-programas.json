@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "titulo": "Programa ABC Brasil: A Literatura no ABC",
+    "tipo": "Programa de TV",
+    "modalidade": "presencial",
+    "ano": 2000,
+    "dataCompleta": "29 de março de 2000",
+    "local": "TV São Caetano (Canal 45 UHF)",
+    "cidade": "São Caetano do Sul",
+    "estado": "SP",
+    "descricao": "Participação no programa de TV ABC Brasil, com apresentação de Glenir Santarnecchi."
+  },
+  {
+    "id": 2,
+    "titulo": "Entrevista com Claudinei Vieira",
+    "tipo": "Entrevista",
+    "modalidade": "virtual",
+    "ano": 2020,
+    "dataCompleta": "27 de julho de 2020",
+    "local": "Youtube (Canal Desconcertos)",
+    "cidade": "São Paulo",
+    "estado": "SP",
+    "descricao": "Conversa virtual (entrevista) com o poeta e editor Claudinei Vieira, da Desconcertos Editora."
+  },
+  {
+    "id": 3,
+    "titulo": "Entrevista sobre os Congressos de História do ABC",
+    "tipo": "Entrevista",
+    "modalidade": "virtual",
+    "ano": 2020,
+    "dataCompleta": "10 de novembro de 2020",
+    "local": "Consórcio Intermunicipal do ABC",
+    "cidade": "Santo André",
+    "estado": "SP",
+    "descricao": "Entrevista à equipe de comunicação do Consórcio Intermunicipal do ABC, com depoimento sobre a participação no I Congresso de História do ABC (1990) e nos treze que vieram depois."
+  },
+  {
+    "id": 4,
+    "titulo": "Entrevista para o portal Agenda Tarsila",
+    "tipo": "Entrevista",
+    "modalidade": "virtual",
+    "ano": 2022,
+    "dataCompleta": "25 de maio de 2022",
+    "local": "Portal Agenda Tarsila (Governo do Estado de SP)",
+    "cidade": "São Paulo",
+    "estado": "SP",
+    "descricao": "Entrevista concedida à jornalista Miriam Gimenez, ex-Diário do Grande ABC, para a celebração do centenário da Semana de Arte Moderna de 22."
+  }
+]

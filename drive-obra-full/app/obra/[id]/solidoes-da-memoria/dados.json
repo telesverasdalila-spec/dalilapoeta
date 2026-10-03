@@ -1,0 +1,36 @@
+{
+  "titulo": "Solidões da Memória",
+  "subtitulo": "",
+  "genero": "Poesia",
+  "ano": 2015,
+  "capa": "/imagens/obras-publicadas/poesia/2015-capa-solidoesdamemoria.jpg",
+  "status_catalogo": "esgotado",
+  "dados": [
+    {"label": "Ano", "valor": "2015"},
+    {"label": "Tipo", "valor": "Livro"},
+    {"label": "Editora", "valor": "Dobra Editorial e Alpharrabio Edições, SP"},
+    {"label": "ISBN", "valor": "978-85-8282-043-8"}
+  ],
+  "trechos": [
+    {
+      "titulo": "risoma",
+      "citacao": "\"vestígios de pegadas nas areias,\nrestos d´ossos roídos e d´espinhas\"\n\n— António Barahona",
+      "texto": "a infância e a memória \nda infância, submersa\nna líquida travessia \n\nvez por outra \no atlântico deposita \nossos datados \nnas terras do exílio\n\n(a menina antiga\nrecebe os sinais\ncódigos esquecidos\nlegendas para o lembrar\n– revivências) \n\na memória da infância\né a memória possível\n(e só à poesia cabe recriar)"
+    },
+    {
+      "titulo": "casa",
+      "citacao": "\"Vendam logo esta casa, ela está cheia de fantasmas\"\n\n— José Paulo Paes",
+      "texto": "morta a dona\nmorta a casa\n\nmorta a casa\nmorta a memória\n\nmorta a memória\nmorta a memória da memória\n\nmorta a memória da memória\no vazio da casa\nmorta \ndeixada morta\npela morta que a deixou"
+    },
+    {
+      "titulo": "educação eletiva",
+      "citacao": "\"Alguém te contempla\nDesde antes do tempo começar\"\n\n— Murilo Mendes",
+      "texto": "a tia\n(sempre haverá uma tia, na\nvida de todos os seres viventes\nnão qualquer tia\nmas aquela, para além do sangue,\n                    a eleita\n              antes mesmo de o ser\naquela que contempla\n  e enxerga o escuro\n                aquela que sabe\nda dor da fome\ne, garras à mostra\n     afugenta intrusos\n                    acode\nagasalha\n           acalanta\nafinidade eletiva\nantes mesmo de\n     qualquer começo)\n\nsim, a tia\ncomo esquecer?"
+    },
+    {
+      "titulo": "bagagem",
+      "citacao": "\"de lado a lado\na casa é uma viagem\"\n\n— Irene Lucília Andrade",
+      "texto": "haveria de ser grande \ne bonito\no baú encomendado ao tio\nmadeira coberta por \nfolhas de flandres\ntachas reluzentes e \nbatique florido \n(abrigar os pertences\nresistir às \nintempéries atlânticas\ne, por fim, servir de \nmóvel\nno destino novo)\n\nali, na austeridade \nda arca\na casa\nreduzida ao essencial"
+    }
+  ]
+}

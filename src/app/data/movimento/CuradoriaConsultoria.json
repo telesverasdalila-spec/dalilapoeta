@@ -1,0 +1,79 @@
+{
+  "categoria": "curadoria_consultoria",
+  "total_registros": 4,
+  "descricao": "Curadorias e consultorias culturais",
+  "tags_comuns": [
+    "consultoria",
+    "curadoria"
+  ],
+  "registros": [
+    {
+      "id": "cura-001",
+      "numero_ordem": 1,
+      "titulo_evento": "PALAVRAPONTOCOM – Curadoria de Literatura",
+      "slug_texto": "",
+      "data": "2000-11-00",
+      "local": "SESC São Caetano do Sul",
+      "cidade": "São Caetano do Sul",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "curadoria_consultoria",
+      "tags": [
+        "curadoria"
+      ],
+      "texto_original": "Curadoria de Literatura, incluindo Sarau de Abertura e a exposição 'A Cidade vista por seus Poetas e Cronistas', com textos de 21 autores plotados nas paredes do edifício."
+    },
+    {
+      "id": "cura-002",
+      "numero_ordem": 2,
+      "titulo_evento": "I Jornada de Literatura do ABC",
+      "slug_texto": "",
+      "data": "2001-11-05",
+      "local": "Universidade Metodista de SP",
+      "cidade": "São Bernardo do Campo",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "curadoria_consultoria",
+      "tags": [
+        "consultoria"
+      ],
+      "texto_original": "Consultoria e participação em mesa redonda sobre 'A literatura do Grande ABC – criação, produção e pesquisa'.",
+      "data_fim": "2001-11-07"
+    },
+    {
+      "id": "cura-003",
+      "numero_ordem": 3,
+      "titulo_evento": "PLATAFORMA ABC – MOSTRA DE ARTES",
+      "slug_texto": "",
+      "data": "2002-01-16",
+      "local": "SESC São Caetano do Sul",
+      "cidade": "São Caetano do Sul",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "curadoria_consultoria",
+      "tags": [
+        "curadoria",
+        "consultoria"
+      ],
+      "texto_original": "Evento de arte e cultura do ABC nas expressões Cartuns, Música, Teatro, Literatura, Performance. Curadoria e consultoria de Literatura, com participação em debate.",
+      "data_fim": "2002-03-01"
+    },
+    {
+      "id": "cura-004",
+      "numero_ordem": 4,
+      "titulo_evento": "PLATAFORMA ABC – MOSTRA DE ARTES (2ª edição)",
+      "slug_texto": "",
+      "data": "2003-03-18",
+      "local": "SESC São Caetano do Sul",
+      "cidade": "São Caetano do Sul",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "curadoria_consultoria",
+      "tags": [
+        "curadoria"
+      ],
+      "texto_original": "Mostra de Artes com Música, Dança, Literatura, Fotografia, Teatro e Vídeo. Curadoria de Literatura.",
+      "data_fim": "2003-04-13"
+    }
+  ]
+}

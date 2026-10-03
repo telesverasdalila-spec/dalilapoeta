@@ -1,0 +1,48 @@
+
+const dadosProsa: Livro[] = [
+  { titulo: "Diuturnos", ano: 2012, descricao: "Diário. SP: Alpharrabio", tipo: "Livro" },
+  { titulo: "Seduzir para a Poesia", ano: 2008, descricao: "Trajetória Grupo Livrespaço", tipo: "Livro" },
+  { titulo: "Anotações de Leituras", ano: 2006, descricao: "Comemorativa 14º aniversário", tipo: "Plaquete" },
+  { titulo: "Alpharrabio 12 anos", ano: 2004, descricao: "Em coautoria com Luzia Maninha", tipo: "Livro" },
+  { titulo: "Minudências", ano: 2000, descricao: "Diário. SP: Alpharrabio", tipo: "Livro" },
+  { titulo: "As Artes do Ofício", ano: 2000, descricao: "Crônicas. SP: Alpharrabio", tipo: "Livro" },
+  { titulo: "A Vida Crônica", ano: 1999, descricao: "Crônicas. SP: Alpharrabio", tipo: "Livro" }
+];
+
+const coletaneasBrasil: Livro[] = [
+  { ano: 2023, titulo: "Sarau Gente de Palavra", descricao: "Antologia com poemas dos homenageados no Sarau Paulista. Patuá, SP.", tipo: "Coletânea" },
+  { ano: 2023, titulo: "Tempo de Voar", descricao: "Antologia de poesias, contos e crônicas. Scortecci Ed. SP.", tipo: "Coletânea" },
+  { ano: 2022, titulo: "Feminino Infinito", descricao: "120 Poetas, Escritoras & Artistas Brasileiras. Ed. Feminino Infinito.", tipo: "Coletânea" },
+  { ano: 2022, titulo: "ABCDelas", descricao: "Poemas. Organização Carmem Sanches et al. Editora Clóe, Diadema.", tipo: "Coletânea" },
+  { ano: 2022, titulo: "Foice na carne", descricao: "7 poemas de cada um dos 13 poetas ligados ao Sarau das Ideias.", tipo: "Coletânea" },
+  { ano: 2021, titulo: "Dias Distantes", descricao: "Coletânea (poesia, conto, artes visuais). 23 autores do ABC. Org. dtv.", tipo: "Coletânea" },
+  { ano: 2020, titulo: "uma pausa na luta", descricao: "70 poemas. Org. Manuel Ricardo de Lima. Mórula Editorial, RJ.", tipo: "Coletânea" },
+  { ano: 2020, titulo: "Clausura – A peste pela poesia", descricao: "Org. Rosana Piccolo. Editora Lobo Azul, Curitiba.", tipo: "Coletânea" },
+  { ano: 2019, titulo: "Mediocridade", descricao: "Antologia poética. Org. Rosana Piccolo e Rubens Jardim.", tipo: "Coletânea" },
+  { ano: 2019, titulo: "Revista Cult - Antologia Poética", descricao: "Número 2. Ed. Bregantini, SP. Org. Tarso de Melo.", tipo: "Revista" },
+  { ano: 2018, titulo: "Crocevia di versi / Encruzilhada de Versos", descricao: "Antologia poética transoceânica. Avant Garde Edições, PI.", tipo: "Coletânea" },
+  { ano: 2018, titulo: "A Mulher na Literatura Latino-Americana", descricao: "Org. Algemira Macêdo Mendes e Marleide Lins de Albuquerque.", tipo: "Coletânea" },
+  { ano: 2018, titulo: "Um Girassol nos teus cabelos", descricao: "Poemas para Marielle Franco. Quintal edições e Mulherio das Letras.", tipo: "Coletânea" },
+  { ano: 2015, titulo: "o amor não tem importância", descricao: "Antologia amor, Sábados PerVersos. Alpharrabio Edições.", tipo: "Coletânea" },
+  { ano: 2015, titulo: "Antologia UBE", descricao: "União Brasileira de Escritores. Global Editora, SP.", tipo: "Coletânea" },
+  { ano: 2014, titulo: "É que os Hussardos Chegam Hoje", descricao: "Editora Patuá / Hussardos Livreiros, SP.", tipo: "Coletânea" },
+  { ano: 2013, titulo: "Outras Ruminações", descricao: "75 poetas e a poesia de Donizete Galvão. Dobra Literatura, SP.", tipo: "Coletânea" },
+  { ano: 2013, titulo: "Celuzlose", descricao: "Revista Literária, no. 3. Dobra Literatura e Ed. Patuá, SP.", tipo: "Revista" },
+  { ano: 2010, titulo: "Cidades Impossíveis", descricao: "Org. Eduardo C.B. Bittar e Tarso de Melo. Portal Literatura, SP.", tipo: "Coletânea" },
+  { ano: 2008, titulo: "Encontro – Revista da Lusofonia e Cultura", descricao: "Gabinete Português de Leitura de Pernambuco, nº 20.", tipo: "Revista" },
+  { ano: 2007, titulo: "João Suzuki – Travessia do Sonho", descricao: "José Armando Pereira da Silva. Alpharrabio Edições.", tipo: "Coletânea" },
+  { ano: 2004, titulo: "Paixão Por São Paulo", descricao: "Antologia poética paulistana. Editora Terceiro Nome, SP.", tipo: "Coletânea" },
+  { ano: 2004, titulo: "Relicário", descricao: "Produção poética feminina de 5 países. FUNALFA, Juiz de Fora.", tipo: "Coletânea" },
+  { ano: 2003, titulo: "As Cidades Cantam o Tamanduateí que Passa", descricao: "Poetas das cidades do ABC. Prefeitura Municipal de Mauá.", tipo: "Coletânea" },
+  { ano: 2003, titulo: "Poetas Revisitam Pessoa", descricao: "Org. João Alves das Neves. Centro de Estudos Fernando Pessoa.", tipo: "Coletânea" },
+  { ano: 2000, titulo: "Brasil 2000", descricao: "Antologia de poesia contemporânea brasileira. Ed. Alma Azul.", tipo: "Coletânea" },
+  { ano: 2000, titulo: "Uilcon Pereira: no coração", descricao: "Aricy Curvello (org.). Giordano Editora / Editora AGE.", tipo: "Coletânea" },
+  { ano: 1998, titulo: "Subvertida Palavra", descricao: "Coletânea Livrespaço IV. SP: Ed. Livrespaço.", tipo: "Coletânea" },
+  { ano: 1998, titulo: "À Margem", descricao: "Org. Luzia Teles Veras. SP: Alpharrabio Edições.", tipo: "Coletânea" },
+  { ano: 1992, titulo: "Antologia da Nova Poesia Brasileira", descricao: "Org. Olga Savary. RJ: Editora Hipocampo.", tipo: "Coletânea" },
+  { ano: 1990, titulo: "Sete Versus Sete", descricao: "(E se resolvermos falar de amor...) - Coletânea Livrespaço V.", tipo: "Coletânea" },
+  { ano: 1990, titulo: "Benditos Alternativos e Independentes", descricao: "Benditos Nativos Pendentes. Org. Urhacy Faustino. Edicon.", tipo: "Coletânea" },
+  { ano: 1985, titulo: "Poetas Contemporâneos Brasileiros", descricao: "v. III, Coleção Prata Nova. RS: Suplemento Literário Garatuja.", tipo: "Coletânea" },
+  { ano: 1985, titulo: "Literatuando", descricao: "Coletânea Livrespaço III. SP: Ed. Livrespaço.", tipo: "Coletânea" },
+  { ano: 1984, titulo: "Coletânea Livrespaço II", descricao: "SP: Ed. Livrespaço.", tipo: "Coletânea" }
+];

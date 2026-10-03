@@ -1,0 +1,56 @@
+// Leituras Críticas agrupadas por livro (ordem do legado; Task 62/63)
+const leiturasAgrupadasPorLivro: { ano: number; livro: string; decada: number; leituras: { autor: string; slug: string }[] }[] = [
+  { ano: 2013, livro: "Estranhas Formas de Vida", decada: 2010, leituras: [
+    { autor: "Luiz Roberto Alves", slug: "a-estranheza-poetica-dos-fatos-no-cotidiano-em-dalila" },
+  ] },
+  { ano: 2008, livro: "Retratos Falhados", decada: 2000, leituras: [
+    { autor: "Irene Lucília Andrade", slug: "retratos-falhados" },
+    { autor: "Álvaro Alves de Faria", slug: "pintura-do-cotidiano" },
+  ] },
+  { ano: 2003, livro: "Vestígios", decada: 2000, leituras: [
+    { autor: "Deise Assumpção", slug: "vestigios-livro-corajoso" },
+    { autor: "Rosana Chrispim", slug: "grata-pelo-seu-vestigios-que-releio-com-prazer-renovado-e-a-certeza-de-ter-nas-maos-um" },
+    { autor: "José de Souza Martins", slug: "prezada-dalila-agradeco-lhe-muito-mesmo-o-privilegio-de-ser-um-dos-destinatarios-de" },
+    { autor: "Ronaldo Cagiano", slug: "recebi-seu-candente-vestigios" },
+    { autor: "Marcos (Sidnei Euzébio)", slug: "li-agora-na-forma-de-livro" },
+    { autor: "Maria de Lourdes Hortas", slug: "ontem-a-noite-terminei-de-ler-o-seu-livro-vestigios" },
+    { autor: "Sérgio de Castro Pinto", slug: "muito-obrigado-pelo-envio-de-vestigios" },
+    { autor: "Fernando Fiorese", slug: "li-reli-e-tresli-vestigios-pos-me-ele-a-alma-em-desalinho-como-quando-me-acerco-de-o-lado" },
+    { autor: "Hugo Pontes", slug: "que-sabemos-nos-da-barca-a-espera-da-passagem-do-misterio" },
+    { autor: "Zhô Bertholini", slug: "lendo-e-ouvindo-seus-vestigios" },
+    { autor: "Maria José Giglio", slug: "muito-obrigada-pela-remessa-do-seu-vestigios" },
+    { autor: "Nicodemos Sena", slug: "para-quem-perdeu-um-ente-querido" },
+  ] },
+  { ano: 2002, livro: "À Janela dos dias", decada: 2000, leituras: [
+    { autor: "Joaquim Branco", slug: "poesia-na-janela" },
+    { autor: "Francisco Miguel de Moura", slug: "dalila-a-janela-dos-dias" },
+    { autor: "Geraldo Neres", slug: "um-quase-inverno" },
+    { autor: "Ricardo Corona", slug: "obrigado-pelo-exemplar-de-a-janela-dos-dias-poesia-quase-toda" },
+    { autor: "Batista de Lima", slug: "projeto-grafico-esta-perfeito" },
+    { autor: "Francisco Filardi", slug: "vinte-anos-apos-a-publicacao-de-seu-primeiro-livro" },
+    { autor: "Dinovaldo Giglioli", slug: "acabo-de-ler-a-janela-dos-dias" },
+    { autor: "Jornal O Capital, julho 2002, Aracaju, Sergipe", slug: "um-belo-livro-de-uma-grande-poeta" },
+    { autor: "Fábio Lucas", slug: "percorri-as-varias-colecoes-que-compoe-a-obra" },
+    { autor: "Anderson Braga Horta", slug: "muito-bonito-o-seu-a-janela-dos-dias" },
+    { autor: "Roldan-Roldan", slug: "entrei-pela-janela-dos-seus-dias" },
+    { autor: "Hugo Pontes", slug: "inspirado-momento-em-que-dalila-teles-veras-reuniu-o-conjunto-de-suas-publicacoes-neste-livro" },
+    { autor: "Elmar Carvalho", slug: "recebi-seu-livro-a-janela-dos-dias-ontem-e-hoje-mesmo-agora-as-18-horas" },
+  ] },
+  { ano: 2000, livro: "As Artes do Ofício", decada: 2000, leituras: [
+    { autor: "Luís Alberto de Abreu", slug: "as-artes-do-oficio-um-olhar-sobre-o-abc" },
+    { autor: "Rosana Chrispim", slug: "um-olhar-sobre-o-abc-e-seu-imaginario" },
+    { autor: "Fabiano Calixto", slug: "lentes-atentas" },
+  ] },
+  { ano: 1999, livro: "A Vida Crônica", decada: 1990, leituras: [
+    { autor: "Tarso de Melo", slug: "pessoas-coisas-dias" },
+    { autor: "Caio Porfírio Carneiro", slug: "em-torno-de-um-livro-de-cronicas" },
+    { autor: "Fabiano Calixto", slug: "poeta-cronica" },
+  ] },
+];
+
+const anosLivrosLeituras = [2013,2008,2003,2002,2000,1999];
+
+// Estudos Críticos (Task 62)
+const dadosEstudosCriticos: Livro[] = [
+  { ano: 2009, titulo: "Resistência e assimilação em Dalila Teles Veras", descricao: "Clara Moura Lourenço, Universidade de Coimbra", tipo: "Estudo Crítico", slug: "resistencia-e-assimilacao-em-dalila-teles-veras" }
+];

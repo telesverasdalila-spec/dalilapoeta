@@ -1,0 +1,58 @@
+{
+  "categoria": "leituras_poeticas",
+  "total_registros": 3,
+  "descricao": "Leituras públicas de poesia",
+  "tags_comuns": [
+    "leitura_poetica"
+  ],
+  "registros": [
+    {
+      "id": "leit-001",
+      "numero_ordem": 1,
+      "titulo_evento": "Leitura de poemas na exposição 'Poetas da língua portuguesa'",
+      "slug_texto": "",
+      "data": "2008-05-00",
+      "local": "Local da Exposição",
+      "cidade": "São Paulo",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "leituras_poeticas",
+      "tags": [
+        "leitura_poetica"
+      ],
+      "texto_original": "Abertura da exposição de Constança Lucas, com leituras de dez poetas convidados, incluindo Cláudio Willer, Donizete Galvão, Eunice Arruda e Dalila Teles Veras."
+    },
+    {
+      "id": "leit-002",
+      "numero_ordem": 2,
+      "titulo_evento": "Leitura de poemas na Desvairada – Feira de Poesia",
+      "slug_texto": "",
+      "data": "2019-05-05",
+      "local": "Biblioteca Mário de Andrade",
+      "cidade": "São Paulo",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "leituras_poeticas",
+      "tags": [
+        "leitura_poetica"
+      ],
+      "texto_original": "Participação com leitura de poemas na tradicional Feira de Poesia Desvairada."
+    },
+    {
+      "id": "leit-003",
+      "numero_ordem": 3,
+      "titulo_evento": "Poetas pela Democracia",
+      "slug_texto": "",
+      "data": "2022-06-14",
+      "local": "Espaço 'Térreo Virginia'",
+      "cidade": "São Paulo",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "leituras_poeticas",
+      "tags": [
+        "leitura_poetica"
+      ],
+      "texto_original": "Ato político, com recital de poemas, depoimentos, música e lançamento de livros."
+    }
+  ]
+}

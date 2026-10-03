@@ -1,0 +1,27 @@
+{
+  "titulo": "Alpharrabio 12 anos",
+  "subtitulo": "uma história em curso",
+  "genero": "Prosa",
+  "ano": 2004,
+  "capa": "/imagens/obras-publicadas/poesia/2004-capa-Alpharrabio12anos.jpg",
+  "status_catalogo": "esgotado",
+  "sobre": "“O registro, de um ciclo cumprido, o registro de uma casa de livros, notas sobre uma casa de palavras, anotações sobre uma casa de artes, memórias de uma casa de cultura, notícias de uma micro usina de ideias e projetos.”\n\n— Dalila Teles Veras, sobre o livro",
+  "dados": [
+    {
+      "label": "Ano",
+      "valor": "2004"
+    },
+    {
+      "label": "Tipo",
+      "valor": "Livro"
+    },
+    {
+      "label": "Editora",
+      "valor": "Alpharrabio Edições, Santo André/SP"
+    },
+    {
+      "label": "Coautoria",
+      "valor": "Luzia Maninha Teles Veras"
+    }
+  ]
+}

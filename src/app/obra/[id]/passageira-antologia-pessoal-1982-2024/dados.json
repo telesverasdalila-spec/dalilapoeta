@@ -1,0 +1,63 @@
+{
+  "titulo": "Passageira",
+  "subtitulo": "Antologia Pessoal 1982-2024",
+  "genero": "Poesia",
+  "ano": 2026,
+  "capa": "/imagens/obras-publicadas/poesia/passageira.png",
+  "status_catalogo": "disponivel",
+  "sobre": "Organizado por ocasião dos 80 anos da autora, o belo volume editado pela Impressões de Minas, BH, reúne poemas selecionados de dezoito títulos publicados entre 1982 e 2024. Mais do que uma reunião cronológica da obra, \"Passageira – Antologia Pessoal 1982-2024\" propõe uma travessia por mais de quatro décadas de escrita, aproximando diferentes momentos, temas e procedimentos estéticos que marcaram a trajetória poética de Dalila.\n\nA organização dos poemas parte de temas recorrentes na obra da autora, criando uma espécie de cartografia afetiva de sua escrita. Ao embaralhar tempos, formas e experiências, o livro busca oferecer ao leitor a sensação de estar diante de uma obra nova, sem deixar de revelar a consistência e a singularidade de uma voz construída ao longo dos anos.\n\nEscritora, editora e uma das importantes vozes da literatura brasileira contemporânea, Dalila Teles Veras construiu uma trajetória marcada pela experimentação, pela observação do cotidiano e pela atenção aos processos da memória, da viagem e do tempo.",
+  "orelha": "Não é de modo ingênuo que este livro abre com a seção \"dalilas\", já que apresenta uma Dalila que é, em si, muitas e, mais do que isso, apresenta \"dalilas\" que se estendem a muitas outras. Ao longo da leitura das sete seções, é possível entrever as várias facetas da poeta: além da escritora, somos convidados a visualizar também as facetas de editora, de livreira e de ativista cultural, uma vez que dentro dos contornos de sua poética fazem-se notar, de forma bastante evidente, as esferas existencial, política, ética e estética, que caminham entrelaçadas.",
+  "autorOrelha": "Lilian Sais",
+  "dados": [
+    {
+      "label": "ISBN",
+      "valor": "978-655155-012-6"
+    },
+    {
+      "label": "Ano",
+      "valor": "2026"
+    },
+    {
+      "label": "Formato",
+      "valor": "14×21 cm"
+    },
+    {
+      "label": "Páginas",
+      "valor": "145 pp"
+    },
+    {
+      "label": "Editora",
+      "valor": "Impressões de Minas (@impressoesdeminas)"
+    },
+    {
+      "label": "Coordenação geral",
+      "valor": "Elza Silveira e Wallison Gontijo"
+    },
+    {
+      "label": "Revisão e Orelha",
+      "valor": "Lilian Sais"
+    },
+    {
+      "label": "Projeto gráfico",
+      "valor": "Elza Silveira"
+    },
+    {
+      "label": "Pré-impressão",
+      "valor": "Marina Dias e RicXand"
+    },
+    {
+      "label": "Impressão",
+      "valor": "Vinícius Augusto"
+    },
+    {
+      "label": "Acabamento",
+      "valor": "Camila Gonçalves e Rafael Silveira"
+    }
+  ],
+  "trechos": [
+    {
+      "titulo": "recusa",
+      "texto": "há qualquer coisa\nde interlúdio\nnesta ópera\ntrágica/bufa\nsem libreto\nsó prelúdio\npara a qual\nnão fui convidada\n\nnão ouço\nnão quero\nnão vou"
+    }
+  ]
+}

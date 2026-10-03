@@ -1,0 +1,22 @@
+{
+  "titulo": "Forasteiros - Registros Nordestinos",
+  "subtitulo": "",
+  "genero": "Poesia",
+  "ano": 1991,
+  "capa": "/imagens/obras-publicadas/poesia/1991-capa-forasteiros.jpg",
+  "status_catalogo": "esgotado",
+  "dados": [
+    {
+      "label": "Ano",
+      "valor": "1991"
+    },
+    {
+      "label": "Tipo",
+      "valor": "Plaquete"
+    },
+    {
+      "label": "Editora",
+      "valor": "Livrespaço, SP"
+    }
+  ]
+}

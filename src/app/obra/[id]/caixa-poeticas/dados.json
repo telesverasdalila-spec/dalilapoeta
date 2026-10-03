@@ -1,0 +1,22 @@
+{
+  "titulo": "Caixa Poéticas",
+  "subtitulo": "",
+  "genero": "Antologia Coletiva",
+  "ano": 1996,
+  "capa": "/imagens/obras-publicadas/poesia/1996-capa-caixapoeticas.jpg",
+  "status_catalogo": "esgotado",
+  "dados": [
+    {
+      "label": "Ano",
+      "valor": "1996"
+    },
+    {
+      "label": "Tipo",
+      "valor": "Caixa com múltiplos autores"
+    },
+    {
+      "label": "Editora",
+      "valor": "Alpharrabio Edições, SP"
+    }
+  ]
+}

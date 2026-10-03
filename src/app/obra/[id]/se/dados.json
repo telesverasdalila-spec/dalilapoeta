@@ -1,0 +1,22 @@
+{
+  "titulo": "Se",
+  "subtitulo": "",
+  "genero": "Poesia",
+  "ano": 2012,
+  "capa": "/imagens/obras-publicadas/poesia/2012-capa-se.jpg",
+  "status_catalogo": "esgotado",
+  "dados": [
+    {
+      "label": "Ano",
+      "valor": "2012"
+    },
+    {
+      "label": "Tipo",
+      "valor": "Plaquete"
+    },
+    {
+      "label": "Editora",
+      "valor": "Alpharrabio Edições, SP"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "titulo": "A Vida Crônica",
+  "subtitulo": "",
+  "genero": "Prosa",
+  "ano": 1999,
+  "capa": "/imagens/obras-publicadas/prosa/1999-capa-vidacronica.jpg",
+  "status_catalogo": "esgotado",
+  "dados": [
+    {
+      "label": "Ano",
+      "valor": "1999"
+    },
+    {
+      "label": "Tipo",
+      "valor": "Livro"
+    },
+    {
+      "label": "Editora",
+      "valor": "Alpharrabio Edições, SP"
+    }
+  ]
+}

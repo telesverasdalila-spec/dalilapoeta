@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "titulo": "OS INDEPENDENTES HOJE",
+    "tipo": "Mesa de Debate",
+    "modalidade": "presencial",
+    "ano": 1983,
+    "dataCompleta": "Outubro de 1983",
+    "local": "Faculdade de Letras da Fundação Santo André",
+    "cidade": "Santo André",
+    "estado": "SP",
+    "descricao": "Mesa com outros integrantes do Grupo Livrespaço de Poesia, tendo 'A Literatura Independente' como tema geral."
+  },
+  {
+    "id": 2,
+    "titulo": "Estranhos Estrangeiros",
+    "tipo": "Mesa de Debate",
+    "modalidade": "presencial",
+    "ano": 2017,
+    "dataCompleta": "7 de agosto de 2017",
+    "local": "Biblioteca Pública Monteiro Lobato",
+    "cidade": "São Bernardo do Campo",
+    "estado": "SP",
+    "descricao": "Mesa com Marcelo Maluf, Carola Saavedra e Marcelino Freire, mediados por Leonardo Tonus, da Universidade Sorbonne (projeto MIGRA)."
+  },
+  {
+    "id": 3,
+    "titulo": "Mulheres editoras, livreiras, divulgadoras de outras mulheres",
+    "tipo": "Roda de Conversa",
+    "modalidade": "virtual",
+    "ano": 2020,
+    "dataCompleta": "6 de setembro de 2020",
+    "local": "Evento Virtual",
+    "cidade": "Santos",
+    "estado": "SP",
+    "descricao": "Roda de conversa inserida na programação do II Encontro Mulherio das Letras Baixada Santista, com mediação de Eunice Tomé e Vanessa Ratton."
+  },
+  {
+    "id": 4,
+    "titulo": "Diálogos entre cultura popular e contemporânea",
+    "tipo": "Mesa de Debate",
+    "modalidade": "presencial",
+    "ano": 2007,
+    "dataCompleta": "15 a 17 de novembro de 2007",
+    "local": "I Jornada ABCDMAIOR de ações culturais",
+    "cidade": "Santo André",
+    "estado": "SP",
+    "descricao": "Mesa de Debates com Toninho Macedo (Abaçaí), Nelson Triunfo (Hip Hop), Marcelo Manzatti e Pablo Nabarret Bastos."
+  }
+]

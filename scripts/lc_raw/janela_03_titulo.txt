@@ -1,0 +1,104 @@
+
+    <p style="text-align:justify">&nbsp;</p>
+    <p class="MsoBodyTextIndent"><st1:verbetes>
+    <font color="#FFFFFF" face="Arial" size="2"><span style="mso-bidi-font-size:12.0pt">Um</span></st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size:
+ 12.0pt">belo</span></st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt">livro</span></st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt"> de uma </span><st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt">grande</span></st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt"> </span><st2:dm>
+    <span style="mso-bidi-font-size:
+ 12.0pt">poeta</span></st2:dm>
+    <span style="mso-bidi-font-size:12.0pt">, </span><st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt">que</span></st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size:
+ 12.0pt">também</span></st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt"> é uma </span><st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt">grande</span></st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size:
+ 12.0pt">mulher</span></st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt">. Veja o </span><st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt">poema</span></st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt"> “8 de </span><st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt">março</span></st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt"> – Deram-lhe </span><st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt">um</span></st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size:
+ 12.0pt">dia</span></st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt"> – </span><st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt">apenas</span></st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size:
+ 12.0pt">um</span></st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt">dia</span></st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt"> – devem-lhe </span><st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt">séculos</span></st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt">.” – </span><st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt">elemento</span></st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size:
+ 12.0pt">sempre</span></st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt">constante</span></st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size:
+ 12.0pt">nos</span></st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt">escritos</span></st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt"> da autora: </span><st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt">consciência</span></st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size:
+ 12.0pt">social</span></st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt">, </span><st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt">consciência</span></st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt"> de </span><st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt">si</span></st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size:
+ 12.0pt">mesma</span></st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt">, </span><st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt">consciência</span></st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt"> do </span><st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt">seu</span></st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt"> </span><st2:hm>
+    <span style="mso-bidi-font-size:
+ 12.0pt">ser</span></st2:hm>
+    <span style="mso-bidi-font-size:12.0pt"> no </span><st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt">mundo</span></st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt"> na </span><st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt">vida</span></st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt"> de outras </span><st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt">pessoas</span></st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt">, </span><st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt">consciência</span></st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt"> da </span><st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt">sua</span></st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt"> </span><st1:verbetes>
+    <span style="mso-bidi-font-size:
+ 12.0pt">condição</span></st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt"> de </span><st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt">mulher</span></st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt"> nas </span><st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt">letras</span></st1:verbetes>
+    <span style="mso-bidi-font-size:12.0pt">... <o:p>
+    </o:p>
+    </span></font></p>
+    <p class="MsoNormal" style="text-indent: 35.4pt" align="right"><font color="#FFFFFF" face="Arial" size="2"><st1:verbetes>
+    <b>Jornal</b></st1:verbetes>
+    <b> O </b><st1:verbetes>
+    <b>Capital</b></st1:verbetes>
+    , <st1:verbetes>
+    julho</st1:verbetes>
+    2002, Aracaju, Sergipe</font></p>
+    <p align="right"><span style="mso-bidi-font-size:10.0pt;font-family:Arial;color:#006666"><o:p>
+    </o:p>
+    </span>
+   

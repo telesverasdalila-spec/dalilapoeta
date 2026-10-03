@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "titulo": "I Congresso de História da Região do ABC",
+    "tipo": "Congresso",
+    "modalidade": "presencial",
+    "ano": 1990,
+    "dataCompleta": "27 a 31 de agosto de 1990",
+    "local": "Museu de Santo André",
+    "cidade": "Santo André",
+    "estado": "SP",
+    "descricao": "Atuação na comissão organizadora, coordenação de mesa e apresentação de comunicação sobre 'A Literatura no ABC'."
+  },
+  {
+    "id": 2,
+    "titulo": "ENCONTRO DA DIVERSIDADE CULTURAL DO ABC",
+    "tipo": "Seminário",
+    "modalidade": "presencial",
+    "ano": 2013,
+    "dataCompleta": "21 a 23 de novembro de 2013",
+    "local": "SESC Santo André",
+    "cidade": "Santo André",
+    "estado": "SP",
+    "descricao": "Iniciativa do Fórum Permanente de Debates Culturais do Grande ABC e UFABC. Organização e palestra: Relato de experiência do Fórum e Movimento Cultura Livre."
+  },
+  {
+    "id": 3,
+    "titulo": "Seminário Comida, Educação e Arte",
+    "tipo": "Seminário",
+    "modalidade": "presencial",
+    "ano": 2015,
+    "dataCompleta": "11 de novembro de 2015",
+    "local": "UMESP",
+    "cidade": "São Bernardo do Campo",
+    "estado": "SP",
+    "descricao": "Mesa com participação de Sueli Moraes, Maria Inês e Dalila T. Veras."
+  },
+  {
+    "id": 4,
+    "titulo": "III COPEX - Congresso Paulista de Extensão Universitária e CONEXÃO",
+    "tipo": "Congresso",
+    "modalidade": "presencial",
+    "ano": 2015,
+    "dataCompleta": "Maio de 2015",
+    "local": "UFABC - Campus Santo André",
+    "cidade": "Santo André",
+    "estado": "SP",
+    "descricao": "Mediação da mesa Divulgação Científica, Literatura e Contação de Histórias, com as Profas. Dra. Ana Maria Dietrich, Dra. Kiusam de Oliveira e escritora Simone Alves Pedersen."
+  }
+]

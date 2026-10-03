@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "titulo": "Podcast especial: Um poema para",
+    "tipo": "Podcast",
+    "modalidade": "virtual",
+    "ano": 2020,
+    "dataCompleta": "19 de agosto de 2020",
+    "local": "Canal de Podcast",
+    "cidade": "Virtual",
+    "estado": "SP",
+    "descricao": "Participação no podcast especial de Olga De Favari, celebrando o 100º episódio com uma fala alargada sobre Fernando Pessoa."
+  },
+  {
+    "id": 2,
+    "titulo": "Estreia do Canal Alpharrabio no Youtube: Coletânea Dias Distantes",
+    "tipo": "Live",
+    "modalidade": "virtual",
+    "ano": 2021,
+    "dataCompleta": "30 de janeiro de 2021",
+    "local": "Youtube (Canal Alpharrabio)",
+    "cidade": "Santo André",
+    "estado": "SP",
+    "descricao": "Live de estreia do canal para falar da coletânea 'Dias Distantes', com a presença de 20 dos 23 participantes do livro. A conversa durou mais de 2 horas."
+  },
+  {
+    "id": 3,
+    "titulo": "Laive com o poeta Paulo Dantas",
+    "tipo": "Live",
+    "modalidade": "virtual",
+    "ano": 2021,
+    "dataCompleta": "16 de fevereiro de 2021",
+    "local": "Evento Virtual",
+    "cidade": "São Paulo",
+    "estado": "SP",
+    "descricao": "Live com o poeta Paulo Dantas, com participação de Rosana Chrispim e Tarso de Melo, para lançamento do livro 'Folheto'."
+  },
+  {
+    "id": 4,
+    "titulo": "Laive com as Fiandeiras sobre a trajetória do grupo",
+    "tipo": "Live",
+    "modalidade": "virtual",
+    "ano": 2022,
+    "dataCompleta": "18 de março de 2022",
+    "local": "Youtube",
+    "cidade": "Virtual",
+    "estado": "SP",
+    "descricao": "Programa aconteceu dentro da série Memória do Teatro organizada por Adélia Nicolete e Cassio Castelan."
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "titulo": "A Mulher Antiga",
+  "subtitulo": "",
+  "genero": "Poesia",
+  "ano": 2017,
+  "capa": "/imagens/obras-publicadas/poesia/2017-capa-mulherantigaperversas.jpg",
+  "status_catalogo": "esgotado",
+  "dados": [
+    {
+      "label": "Ano",
+      "valor": "2017"
+    },
+    {
+      "label": "Tipo",
+      "valor": "Livro"
+    },
+    {
+      "label": "Editora",
+      "valor": "Alpharrabio Edições, SP (Coleção PerVersas)"
+    },
+    {
+      "label": "ISBN",
+      "valor": "978-6559060573"
+    }
+  ]
+}

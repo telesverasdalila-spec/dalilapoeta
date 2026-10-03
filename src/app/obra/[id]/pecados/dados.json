@@ -1,0 +1,81 @@
+{
+  "titulo": "Pecados",
+  "subtitulo": "",
+  "genero": "Caixa Artística",
+  "ano": 2006,
+  "capa": "/imagens/obras-publicadas/poesia/2006-capa-pecados.jpg",
+  "status_catalogo": "esgotado",
+  "sobre": "Caixa artística composta por sete poemas, cada um dedicado a um dos pecados capitais. Cada poema é ilustrado por um artista plástico diferente em desenho original. Obra impressa em tiragem limitada de 200 exemplares, numerados e rubricados pela autora, no seu 60º aniversário. O número 6, segundo o Livro do Apocalipse, seria o dos pecados.",
+  "dados": [
+    {"label": "Ano", "valor": "2006"},
+    {"label": "Tipo", "valor": "Caixa Artística (7 poemas ilustrados)"},
+    {"label": "Editora", "valor": "Alpharrabio Edições, SP"},
+    {"label": "Tiragem", "valor": "200 exemplares numerados"},
+    {"label": "Projeto Gráfico", "valor": "Luzia Maninha e Isabela A. T. Veras"}
+  ],
+  "trechos": [
+    {
+      "titulo": "Inveja",
+      "subtitulo": "Da insaciável cobiça",
+      "obra_arte": "Inveja",
+      "citacao": "\"Gloriae et virtutis invidia est comes\"\nprovérbio latino",
+      "texto": "Cobiço\nqualquer coisa\ndesde que te prive\ndesde que te despoje\n\nMeus olhos na tua alegria\nroubam-te o riso\nsaqueiam teu saber\ne tudo que não tenho\n\nNem a mim serve\neste desejo só desejo\nbasta-me que nada seja teu\n(a felicidade apenas no alheio)",
+      "artista": "André Miranda",
+      "imagem_arte": "/imagens/obras-publicadas/poesia/pecados-artes/inveja-andre-miranda.jpg"
+    },
+    {
+      "titulo": "Preguiça",
+      "subtitulo": "Adiamento",
+      "obra_arte": "Preguiça",
+      "citacao": "\"Ai, que preguiça...\"\nMário de Andrade",
+      "texto": "Outro dia\num melhor dia\n(a lua mais intensa\nos astros em conjunção)\npara as novas vontades\npara o enterro dos mortos\no encontro com o diabo\n\nTanta maçada...\n\nEsperarei\num novo dia\n(de maior gana\nde muito querer)\na vida pode esperar",
+      "artista": "Constança Lucas",
+      "imagem_arte": "/imagens/obras-publicadas/poesia/pecados-artes/preguica-constanca-lucas.jpg"
+    },
+    {
+      "titulo": "Luxúria",
+      "subtitulo": "Pensamentos luxuriosos",
+      "obra_arte": "Luxúria",
+      "citacao": "\"Ver-te. Tocar-te. Que fulgor de máscaras.\"\nHilda Hilst",
+      "texto": "Pensava nele\nquando a seda do vestido\ntocou-lhe as coxas\neriçando-lhe os pêlos\n(asas a roçar o espírito\ntocha a incendiar a carne)\n\nPensava nele\nquando a voz de Maria Callas\nalcançou a nota mais aguda\n- L´tra notte in fondo al mare -\ninvocando Mefistofele\n(setas fálicas a zumbir junto aos ouvidos\naromas de sândalo a embebedar os sentidos)\n\nDe tanto nele pensar\ndevorou a si própria\nl u x u r i o s a m e n t e\n(espírito só carne)",
+      "artista": "Guedo Gallet",
+      "imagem_arte": "/imagens/obras-publicadas/poesia/pecados-artes/luxuria-guedo-gallet.jpg"
+    },
+    {
+      "titulo": "Gula",
+      "subtitulo": "Apetites",
+      "obra_arte": "Gula",
+      "citacao": "\"Dize-me o que comes e dir-te-ei as manhas que tens\"\nRamalho Ortigão",
+      "texto": "Pantagruélicas porções\nfios d´ovos e feijões\ncaviar e ovo frito\ntudo serve\ndesde que o estômago encha",
+      "artista": "Mariano Amaral Neto",
+      "imagem_arte": "/imagens/obras-publicadas/poesia/pecados-artes/gula-mariano-amaral.jpg"
+    },
+    {
+      "titulo": "Avareza",
+      "subtitulo": "Miséria cultivada",
+      "obra_arte": "Avareza",
+      "citacao": "\"Que é a avareza? Viver sempre na pobreza pelo receio da pobreza\"\nSão Bernardo",
+      "texto": "Fome com fome mitigada\nfome a esperar outra fome\nfome armazenada\nfome como fonte\nriqueza jamais saboreada",
+      "artista": "Perkins T. Moreira",
+      "imagem_arte": "/imagens/obras-publicadas/poesia/pecados-artes/avareza-perkins-moreira.jpg"
+    },
+    {
+      "titulo": "Ira",
+      "subtitulo": "Dias de ira",
+      "obra_arte": "Ira",
+      "citacao": "\"Ira furor brevis est\"\nHorácio",
+      "texto": "No furor mais insano\ndos ardores intensos\na marca da traição\n: revoltos sentidos\n\nNos braços da ira\na lava das palavras\ntatua impropérios\n: inesperada queimadura\n\n(por fim)\nCompaixão e ungüentos\ncompressas frias\ngestos de paz\n: ardências já cinzas",
+      "artista": "Ricardo Amadasi",
+      "imagem_arte": "/imagens/obras-publicadas/poesia/pecados-artes/ira-ricardo-amadasi.jpg"
+    },
+    {
+      "titulo": "Soberba",
+      "subtitulo": "Vanglória",
+      "obra_arte": "Soberba",
+      "citacao": "\"Après moi le déluge\"\nLuis XV",
+      "texto": "O mundo incompleto\no planeta em desalinho\nsem mim\n\nTanto fastio...\ntodo esse rebanho\n(presa cativa)\npela sedução enlouquecido\ndebaixo dos meus coturnos\n\nOlho no olho jamais...\n\nComigo\npor artes do exotismo\na lenda se faz verdade\n(mito alimentado a pão)",
+      "artista": "Sian",
+      "imagem_arte": "/imagens/obras-publicadas/poesia/pecados-artes/soberba-sian.jpg"
+    }
+  ]
+}

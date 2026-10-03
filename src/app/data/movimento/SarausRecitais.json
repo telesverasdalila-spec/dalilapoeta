@@ -1,0 +1,93 @@
+{
+  "categoria": "saraus_recitais",
+  "total_registros": 5,
+  "descricao": "Participações em saraus e recitais",
+  "tags_comuns": [
+    "sarau",
+    "virtual"
+  ],
+  "registros": [
+    {
+      "id": "saru-001",
+      "numero_ordem": 1,
+      "titulo_evento": "Sarau Poesia sem Quartel!",
+      "slug_texto": "",
+      "data": "2016-08-13",
+      "local": "Casa das Rosas",
+      "cidade": "São Paulo",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "saraus_recitais",
+      "tags": [
+        "sarau"
+      ],
+      "texto_original": "Leituras e fala com depoimento sobre a vivência nos anos da ditadura militar e leitura de poemas. Organização de Hamilton Faria e Luiz Roberto Guedes."
+    },
+    {
+      "id": "saru-002",
+      "numero_ordem": 2,
+      "titulo_evento": "Saraus do ABC – A arte do reencontro",
+      "slug_texto": "",
+      "data": "2016-10-22",
+      "local": "SESC Santo André",
+      "cidade": "Santo André",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "saraus_recitais",
+      "tags": [
+        "sarau"
+      ],
+      "texto_original": "Participação especial no Sarau do Zhô e mesa de debates sobre a própria trajetória, com Zhô Bertholini."
+    },
+    {
+      "id": "saru-003",
+      "numero_ordem": 3,
+      "titulo_evento": "Sarau Camões",
+      "slug_texto": "",
+      "data": "2017-06-10",
+      "local": "Casa das Rosas",
+      "cidade": "São Paulo",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "saraus_recitais",
+      "tags": [
+        "sarau"
+      ],
+      "texto_original": "Mesa com Carlos Felipe Moisés (coord), Renata Pallotini e Álvaro Alves de Faria. Depoimentos e leituras de poemas."
+    },
+    {
+      "id": "saru-004",
+      "numero_ordem": 4,
+      "titulo_evento": "Sarau das Ideias",
+      "slug_texto": "",
+      "data": "2020-12-02",
+      "local": "Evento Virtual",
+      "cidade": "Virtual",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "saraus_recitais",
+      "tags": [
+        "sarau",
+        "virtual"
+      ],
+      "texto_original": "Rodada que abre a fala para um dos participantes ler um poema autoral e abrir para análise e comentários dos demais."
+    },
+    {
+      "id": "saru-005",
+      "numero_ordem": 5,
+      "titulo_evento": "Primeiro Sábados PerVersos (Virtual)",
+      "slug_texto": "",
+      "data": "2020-03-22",
+      "local": "Evento Virtual",
+      "cidade": "São Paulo",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "saraus_recitais",
+      "tags": [
+        "sarau",
+        "virtual"
+      ],
+      "texto_original": "Primeiro encontro virtual do Sábados PerVersos para manter a animação e o clima da poesia durante a pandemia."
+    }
+  ]
+}

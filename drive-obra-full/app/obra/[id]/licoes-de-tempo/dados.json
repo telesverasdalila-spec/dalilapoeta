@@ -1,0 +1,22 @@
+{
+  "titulo": "Lições de Tempo",
+  "subtitulo": "",
+  "genero": "Poesia",
+  "ano": 1982,
+  "capa": "/imagens/obras-publicadas/poesia/1983-capa-licoesdetempo.jpg",
+  "status_catalogo": "esgotado",
+  "dados": [
+    {
+      "label": "Ano",
+      "valor": "1982"
+    },
+    {
+      "label": "Tipo",
+      "valor": "Livro"
+    },
+    {
+      "label": "Editora",
+      "valor": "Pannartz, SP"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "titulo": "Minudências",
+  "subtitulo": "",
+  "genero": "Prosa",
+  "ano": 2000,
+  "capa": "/imagens/obras-publicadas/poesia/2000-capa-minudencias.jpg",
+  "status_catalogo": "esgotado",
+  "sobre": "\"O imaginário do Grande ABC durante 1999 registrado e refletido por mais de uma dezena de ângulos: este é o resultado do projeto de diarização do último ano antes do tão esperado 2000, a que se dedicaram, de início, 20 agentes culturais do Grande ABC, entre escritores, jornalistas e outros, dos quais 8 concluíram integralmente a tarefa e 5, em parte.\n\nA idéia inicial surgiu a partir da empreitada de Antonio Possidonio Sampaio, em 1992, quando se comprometeu, talvez apenas consigo mesmo, a registrar diariamente os acontecimentos culturais, políticos e de seu cotidiano na Região, do que resultou o livro ABC Cotidiano - Cotidiário, lançado no ano seguinte, cuja intenção serviu de modelo para o trabalho desenvolvido durante 1999 por outros autores.",
+  "dados": [
+    {
+      "label": "Ano",
+      "valor": "2000"
+    },
+    {
+      "label": "Tipo",
+      "valor": "Diário"
+    },
+    {
+      "label": "Editora",
+      "valor": "Alpharrabio Edições, SP"
+    },
+    {
+      "label": "Formato",
+      "valor": "16 x 23 cm"
+    },
+    {
+      "label": "Páginas",
+      "valor": "136 pp."
+    }
+  ]
+}

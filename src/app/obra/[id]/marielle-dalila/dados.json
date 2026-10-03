@@ -1,0 +1,22 @@
+{
+  "titulo": "Marielle Dalila",
+  "subtitulo": "",
+  "genero": "Poesia",
+  "ano": 2018,
+  "capa": "/imagens/obras-publicadas/poesia/2018-capa-marielledalila.jpg",
+  "status_catalogo": "esgotado",
+  "dados": [
+    {
+      "label": "Ano",
+      "valor": "2018"
+    },
+    {
+      "label": "Tipo",
+      "valor": "A confirmar"
+    },
+    {
+      "label": "Editora",
+      "valor": "Não informado"
+    }
+  ]
+}

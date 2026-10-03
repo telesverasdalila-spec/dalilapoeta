@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "titulo": "LABORATÓRIO DA PAIXÃO",
+    "tipo": "Oficina",
+    "modalidade": "presencial",
+    "ano": 1990,
+    "dataCompleta": "22 de novembro a 12 de dezembro de 1990",
+    "local": "Oficina da Palavra (Casa Mário de Andrade)",
+    "cidade": "São Paulo",
+    "estado": "SP",
+    "descricao": "Oficina literária realizada ao longo de quase um mês, focada no processo de criação poética."
+  },
+  {
+    "id": 2,
+    "titulo": "POESIA: ALQUIMIA DA PALAVRA",
+    "tipo": "Oficina",
+    "modalidade": "presencial",
+    "ano": 1991,
+    "dataCompleta": "5 de agosto a 30 de agosto de 1991",
+    "local": "Biblioteca Monteiro Lobato",
+    "cidade": "São Bernardo do Campo",
+    "estado": "SP",
+    "descricao": "Oficina realizada com uma turma de 25 alunos do curso de magistério (CEFRAN), seguida de exposição de varal de poesia com os poemas produzidos."
+  },
+  {
+    "id": 3,
+    "titulo": "Workshop: A literatura como ofício",
+    "tipo": "Workshop",
+    "modalidade": "presencial",
+    "ano": 2013,
+    "dataCompleta": "1 a 5 de outubro de 2013",
+    "local": "Universidade Municipal de SCS",
+    "cidade": "São Caetano do Sul",
+    "estado": "SP",
+    "descricao": "Workshop parte integrante da 8ª edição do evento Universidade Aberta, projeto de extensão universitária."
+  },
+  {
+    "id": 4,
+    "titulo": "Oficina de Poesia",
+    "tipo": "Oficina",
+    "modalidade": "presencial",
+    "ano": 2001,
+    "dataCompleta": "10 de março de 2001",
+    "local": "Biblioteca Rio Grande da Serra",
+    "cidade": "Rio Grande da Serra",
+    "estado": "SP",
+    "descricao": "Oficina de Poesia a convite da Secretaria de Cultura local."
+  }
+]

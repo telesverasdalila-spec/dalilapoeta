@@ -1,0 +1,22 @@
+{
+  "titulo": "Ínsulas",
+  "subtitulo": "",
+  "genero": "Poesia",
+  "ano": 2026,
+  "capa": "/imagens/obras-publicadas/poesia/2026-capa-insulas.jpg",
+  "status_catalogo": "disponivel",
+  "dados": [
+    {
+      "label": "Ano",
+      "valor": "2026"
+    },
+    {
+      "label": "Tipo",
+      "valor": "Plaquete"
+    },
+    {
+      "label": "Editora",
+      "valor": "Alpharrabio Edições, SP"
+    }
+  ]
+}

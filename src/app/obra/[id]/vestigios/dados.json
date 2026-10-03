@@ -1,0 +1,156 @@
+{
+  "titulo": "Vestígios",
+  "subtitulo": "",
+  "genero": "Poesia",
+  "ano": 2003,
+  "capa": "/imagens/obras-publicadas/poesia/2003-capa-vestigios.jpg",
+  "status_catalogo": "esgotado",
+  "sobre": {
+    "dedicatoria": [
+      "à memória de minha mãe, Maria de Lourdes,",
+      "que me iniciou nos caminhos da poesia"
+    ],
+    "epigrafes": [
+      {
+        "texto": "o louvor dos mortos\né um modo de orar por eles.",
+        "autor": "Machado de Assis"
+      },
+      {
+        "texto": "Sofrer passa, o ter sofrido\npermanece para a eternidade.",
+        "autor": "Sta. Teresa D'Ávila"
+      },
+      {
+        "texto": "Joy's recollection is no longer joy,\nwhile sorrows memory is a sorrow still.",
+        "autor": "Byron"
+      },
+      {
+        "texto": "Do lado esquerdo carrego meus mortos.\nPor isso caminho um pouco de banda.",
+        "autor": "Carlos Drummond de Andrade"
+      }
+    ]
+  },
+  "dados": [
+    {
+      "label": "Ano",
+      "valor": "2003"
+    },
+    {
+      "label": "Tipo",
+      "valor": "Plaquete Poética"
+    },
+    {
+      "label": "Editora",
+      "valor": "Alpharrabio Edições, SP"
+    },
+    {
+      "label": "Dedicatória",
+      "valor": "À memória de minha mãe, Maria de Lourdes"
+    }
+  ],
+  "partes": [
+    {
+      "titulo": "A rotina da perda",
+      "poemas": [
+        {
+          "titulo": "Terapia intensiva",
+          "texto": "**Terapia intensiva**\n\nA ceifeira ronda\nà volta das máquinas\nao redor dos tubos\nno ar infectado de dor\n– sombra indesejável\n\nA ciência brinca\nexperimenta, põe e tira\nmórbido esconde-esconde\nfingida presença de Deus\n\nUm corpo respira\n(a máquina opera o milagre)\num corpo não mais senhor\ndo gesto, do gosto, do querer\ncorpo, cobaia, objeto\nà mercê do progresso\n\nA ceifeira espera\ne sabe da hora\nA ciência não"
+        },
+        {
+          "titulo": "Rito de Passagem",
+          "texto": "**Rito de Passagem**\n\nQue sabemos nós\nseres chorosos\nà beira da morte\ndo outro?\n\nQue sabemos nós\nseres medrosos\nà beira da vida\nà beira de nós mesmos?\n\nQue sabemos nós\nda barca à espera\nda passagem\ndo mistério?\n\n– Nada\nPor isso tememos"
+        },
+        {
+          "titulo": "Dever cumprido",
+          "texto": "**Dever cumprido**\n\nBrinca de eternidade\na jovem médica\nBagagem abarrotada\nde ciência e tecnologia\nEletrodos ligados\nincisões perfeitas\n:\no dever manda\nas mãos, firmes, obedecem\n(ignora o calafrio\nda morte pressentida)\nEis o prodígio\n:\na vida devolvida\nmecânica (e eterna?)"
+        },
+        {
+          "titulo": "Desvio",
+          "texto": "**Desvio**\n\nO calor desafia o outono\nflores abrem-se tontas\nà luz enganosa de verão\n- natureza violada\n\nMinha mãe agoniza\n(máquinas, balões, computadores,\ntubos, luvas, gases, batas, relógios,\npomadas, seringas, fraldas, algodão\n:\n(ar)tificial saúde)\n– desvio de percurso"
+        },
+        {
+          "titulo": "A dor de ver em dor",
+          "citacao": "\"O rosto é o templo do corpo.\nE quando o corpo decai,\na alma não tem outro santuário\na não ser o rosto\"\n\n— Carlos Fuentes",
+          "texto": "**A dor de ver em dor**\n\nNo corpo enfermo\ninerte\n: olhos e dor\núnicos sinais\n\nNos olhos baços\n(instrumentos reveladores)\n: o sofrimento\nfundo\nimensurável\nsolitário\ninaudito\n\nMovidos pela dor\nos olhos fazem doer\nem outros olhos\n: dor apenas vista\n(compartilhada?)\n\nDor que se comunica em dor\n(a dor de ver em dor, dizem, é provisória\n– mas como dói, diria o poeta)"
+        },
+        {
+          "titulo": "Assepsia",
+          "citacao": "\"Tão triste que na própria morte\nnão haverá maior tristeza.\"\n\n— Dante Alighieri",
+          "texto": "**Assepsia**\n\ncorredores hospitalares\n: tristezas cruzadas\nsolitários soluços\n(rotina incessante da perda)\ncorredores hospitalares\n: olhos evitam olhos\napenas o silêncio cumplicia\n(o ar cortado às fatias)\ncorredores hospitalares\n: no branco asséptico\na cor turva do sofrer\n(gélida paisagem)"
+        },
+        {
+          "titulo": "Similia similibus curentur",
+          "texto": "**Similia similibus curentur**\n\nRepleta de pena e lágrimas\n(ungüentos inúteis)\nvenho, desconsolada,\nconsolar-te\n\nOs semelhantes curam-se\npelos semelhantes\nO sofrimento cessa\ncom outro sofrimento\n(aposta desesperada)"
+        },
+        {
+          "titulo": "Solidões",
+          "citacao": "\"Los hombres vivimos juntos,\npero cada uno se muere solo\ny la muerte es la suprema soledad.\"\n— Miguel de Unamuno",
+          "texto": "**Solidões**\n\nDizias-me\n:\n- não quero,\nmas qualquer dia\nterei que partir\n\nIntuías\n:\na proximidade\na solidão da viagem\na dispensa de acompanhante\n\nTemias\n:\ndo parto, sabias\n(contavas)\nda morte, mistério\n(calavas)\n\nParto e morte\n(solidões assemelhadas)\n:\norigem, ambos"
+        }
+      ]
+    },
+    {
+      "titulo": "Um corpo não mais",
+      "poemas": [
+        {
+          "titulo": "Vestígios",
+          "texto": "**Vestígios**\n\nnas trovas esparramadas\nnas agendas telefônicas\nnos bilhetes apressados\n:\na tua caligrafia\nna memória das gavetas\nnas revistas por abrir\nno lugar vazio à mesa\n:\nimaterial presença\nno casaco com teu cheiro\nno chocolate abocanhado\nno xampu pela metade\n:\nvestígios\ndo que foi vida\nirremediável ausência"
+        },
+        {
+          "titulo": "A morte e a morte",
+          "texto": "**A morte e a morte**\n\nA morte\nnão é a lembrança\nde um corpo não mais\ncorpo\nde uma trajetória sonâmbula\nem direção ao sepulcro\ndo barulho seco e indiferente\nda pá do pedreiro\nfinalizando\na função\n\nA morte\né a constatação\n(real,\ninsuportavelmente real):\num nome e duas datas\ngravadas\nem metal\nna lápide silenciosa"
+        },
+        {
+          "titulo": "Memória",
+          "texto": "**Memória**\n\nEm meu dedo\no teu dedal\n(tento, mãe\ncosturar tua memória\nprender-te\nao que me resta)\nIncertos pontos\nque a vista embaçada\nnão deixa urdir"
+        },
+        {
+          "titulo": "Das mortes",
+          "texto": "**Das mortes**\n\nda primeira vez que te vi morrer\n,a lembrança do horror:\nteu corpo (ainda) morno e nu\nna pedra fria\ne\na marca da dor\nnum rosto que já não era o teu\n\nda segunda vez que te vi morrer\n,o torpor das exéquias:\npesadelo\nda tarde sem ar\nsensação\nde estrangulamento\n\nda terceira vez que te vi morrer\n,o choque e o estranhamento:\nteu nome citado no templo\nna oração aos defuntos\n\nda última vez que te vi morrer\n,a dor fina e lancinante:\no descarte dos teus pertences\na certeza do nunca mais\nnunca...\n(a morte também em mim)"
+        }
+      ],
+      "citacao": "\"Mas de tudo fica um pouco\"\n\n— Carlos Drummond de Andrade"
+    },
+    {
+      "titulo": "Da alma em desalinho",
+      "poemas": [
+        {
+          "titulo": "Saudade",
+          "texto": "**Saudade**\n\nA saudade\nvê-se\n:\numa dor física\nprojetada\nnas frestas do armário\nno retalho de tecido\ndo que foi a tua saia\nno pé seco de manjericão\nna jardineira esquecida\n(ausência\nde tuas mãos)\nA saudade\naprende-se\n:\nno gesto cotidiano\nno diuturno sentir\nda alma em desalinho"
+        },
+        {
+          "titulo": "Desamparo",
+          "texto": "**Desamparo**\n\naniversario\nno aniversário de tua morte\n(havia\num clã\ne o teu comando\n– elo imperceptível\na reunir e orientar –\nera conforto e presença\ncerteza de juventude)\nórfã,\nenvelheci"
+        },
+        {
+          "titulo": "Dia de Finados I",
+          "texto": "**Dia de Finados I**\n\nO dia dois de novembro\nera apenas um feriado\ne sempre chovia\nTodos estavam vivos\ne jorravam primaveras\nnas águas da primavera\n(a juventude é imortal\nimune a intempéries)\nNeste dia dois de novembro\ndo ano dois mil e dois\n(não chove – rito e tradição rompidos)\naprendo,\npelo desespero da ausência\no significado dos sinos\ne o imensurável peso do cinza\n(a maturidade é consciência da finitude\nsusceptível a mudanças climáticas)"
+        },
+        {
+          "titulo": "Dia de Finados II",
+          "texto": "**Dia de Finados II**\n\nofereço-te\numa rosa\n(gostavas tanto delas...)\norações seculares\npoemas enlutados\ne este pranto incontido\nà beira do teu jazigo\nInúteis heranças lusas\nque não lavam dores\nnem preenchem vazios"
+        },
+        {
+          "titulo": "Dúvida",
+          "texto": "**Dúvida**\n\nHoje\n(160 dias de saudade)\nabracei teu casaco e senti teu cheiro\n(a velha sensação de chegada e abrigo\nde âncora jogada ao fundo)\nSeria o teu cheiro ou a lembrança dele?\nSeria o teu cheiro ou o desejo de senti-lo?\n(o pranto aponta: a barca ao deus dará)"
+        },
+        {
+          "titulo": "Luto",
+          "texto": "**Luto**\n\nVenho a Buenos Aires\n(para esquecer-te?)\nDesfaço as malas\nato-me em nós\npercorro,\naflita\nruas nostálgicas\nmelancólicos cafés\n(para encontrar-me?)\nNinguém se aparta de si\n(nem em terra alheia)\nNinguém é outro\n(ainda que fale uma língua provisória)\nViajar em luto\né sentir-se (mais) estrangeira"
+        },
+        {
+          "titulo": "Desobriga",
+          "texto": "**Desobriga**\n\nAntes\nmuito antes\nodisséia juvenil\nânsia de\npertencer ao mundo\nsem DNA imposto\nnem relatório obrigado\nNo retorno a Ítaca\ncãs e cansaço\num desejo apenas\n– mãe, cheguei...\nno silêncio insuportável\ntua poltrona vazia\ndesobriga qualquer relato"
+        },
+        {
+          "titulo": "Legado",
+          "texto": "**Legado**\n\nDepois que te foste\nvejo-me em ti\n(gestos\ngostos\npassos)\nRepasse genético\natavismo a cumprir-se"
+        },
+        {
+          "titulo": "Antecipação",
+          "texto": "**Antecipação**\n\nAntes que os ritos do advento\ninvoquem este natal\nantes que as sementes dos jarros\ngerminem\ne o verde adorne o presépio\nAntes que o cheiro de amêndoase o encarnado dos tecidos\npovoem\no mês de festa vindouro\nde dolorosas lembranças\nAntes que o vazio\napague\nas chamas das velas\n(descolorido jantar)\ne cubra a festa de fumo\nCuidarei de arrancar este dezembro\ndo meu calendário pessoal\ncolocarei trancas nas portas\n(casa fechada aos reis)\ne anteciparei o entrudo\n:\ntempo de quaresma e paixão\n(a Páscoa como perspectiva)"
+        }
+      ],
+      "citacao": "\"toda a saudade é uma espécie de velhice\"\n\n— Guimarães Rosa"
+    }
+  ]
+}

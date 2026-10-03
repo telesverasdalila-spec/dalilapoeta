@@ -1,0 +1,78 @@
+{
+  "categoria": "oficinas_workshops",
+  "total_registros": 4,
+  "descricao": "Oficinas literárias e workshops",
+  "tags_comuns": [
+    "oficina",
+    "workshop"
+  ],
+  "registros": [
+    {
+      "id": "ofic-001",
+      "numero_ordem": 1,
+      "titulo_evento": "LABORATÓRIO DA PAIXÃO",
+      "slug_texto": "",
+      "data": "1990-11-22",
+      "local": "Oficina da Palavra (Casa Mário de Andrade)",
+      "cidade": "São Paulo",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "oficinas_workshops",
+      "tags": [
+        "oficina"
+      ],
+      "texto_original": "Oficina literária realizada ao longo de quase um mês, focada no processo de criação poética.",
+      "data_fim": "1990-12-12"
+    },
+    {
+      "id": "ofic-002",
+      "numero_ordem": 2,
+      "titulo_evento": "POESIA: ALQUIMIA DA PALAVRA",
+      "slug_texto": "",
+      "data": "1991-08-05",
+      "local": "Biblioteca Monteiro Lobato",
+      "cidade": "São Bernardo do Campo",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "oficinas_workshops",
+      "tags": [
+        "oficina"
+      ],
+      "texto_original": "Oficina realizada com uma turma de 25 alunos do curso de magistério (CEFRAN), seguida de exposição de varal de poesia com os poemas produzidos.",
+      "data_fim": "1991-08-30"
+    },
+    {
+      "id": "ofic-003",
+      "numero_ordem": 3,
+      "titulo_evento": "Oficina de Poesia",
+      "slug_texto": "",
+      "data": "2001-03-10",
+      "local": "Biblioteca Rio Grande da Serra",
+      "cidade": "Rio Grande da Serra",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "oficinas_workshops",
+      "tags": [
+        "oficina"
+      ],
+      "texto_original": "Oficina de Poesia a convite da Secretaria de Cultura local."
+    },
+    {
+      "id": "ofic-004",
+      "numero_ordem": 4,
+      "titulo_evento": "Workshop: A literatura como ofício",
+      "slug_texto": "",
+      "data": "2013-10-01",
+      "local": "Universidade Municipal de SCS",
+      "cidade": "São Caetano do Sul",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "oficinas_workshops",
+      "tags": [
+        "workshop"
+      ],
+      "texto_original": "Workshop parte integrante da 8ª edição do evento Universidade Aberta, projeto de extensão universitária.",
+      "data_fim": "2013-10-05"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "titulo": "Cidade Assassinada - Tributo a Celso Daniel",
+  "subtitulo": "",
+  "genero": "Poesia",
+  "ano": 2005,
+  "capa": "/imagens/obras-publicadas/poesia/2005-capa-cidadeassassinada.jpg",
+  "status_catalogo": "esgotado",
+  "dados": [
+    {
+      "label": "Ano",
+      "valor": "2005"
+    },
+    {
+      "label": "Tipo",
+      "valor": "Poema Avulso / Ed. Especial"
+    },
+    {
+      "label": "Editora",
+      "valor": "Alpharrabio Edições, SP"
+    }
+  ]
+}

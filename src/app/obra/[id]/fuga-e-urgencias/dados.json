@@ -1,0 +1,26 @@
+{
+  "titulo": "fuga e urgências",
+  "subtitulo": "",
+  "genero": "Poesia",
+  "ano": 2022,
+  "capa": "/imagens/obras-publicadas/poesia/2022-capa-fuga-e-urgencia-.jpg",
+  "status_catalogo": "esgotado",
+  "dados": [
+    {
+      "label": "Ano",
+      "valor": "2022"
+    },
+    {
+      "label": "Tipo",
+      "valor": "Livro"
+    },
+    {
+      "label": "Editora",
+      "valor": "Alpharrabio Edições, SP"
+    },
+    {
+      "label": "ISBN",
+      "valor": "978-65-87810126"
+    }
+  ]
+}

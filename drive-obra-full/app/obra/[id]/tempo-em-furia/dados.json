@@ -1,0 +1,22 @@
+{
+  "titulo": "Tempo em Fúria",
+  "subtitulo": "",
+  "genero": "Poesia",
+  "ano": 2019,
+  "capa": "/imagens/obras-publicadas/poesia/2019-capa-tempoemfuria.jpg",
+  "status_catalogo": "esgotado",
+  "dados": [
+    {
+      "label": "Ano",
+      "valor": "2019"
+    },
+    {
+      "label": "Tipo",
+      "valor": "Livro"
+    },
+    {
+      "label": "Editora",
+      "valor": "Alpharrabio Edições, SP"
+    }
+  ]
+}
