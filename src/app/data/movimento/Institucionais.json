@@ -1,1 +1,149 @@
-{"categoria": "institucionais", "total_registros": 8, "descricao": "Atividades institucionais, participação em conselhos, diretorias e órgãos culturais", "tags_comuns": ["institucional", "conselho", "diretoria"], "registros": [{"id": "inst-001", "numero_ordem": 1, "titulo_evento": "União Brasileira de Escritores - SP", "slug_texto": "ube-sp", "data": "1986-01-00", "local": "UBE - São Paulo", "cidade": "São Paulo", "estado": "SP", "pais": "Brasil", "categoria_principal": "institucionais", "tags": ["institucional", "ube", "diretoria"], "texto_original": "Filiada à União Brasileira de Escritores, SP, entidade onde ocupou os cargos de Secretária Geral, Diretora e membro do Conselho, nas gestões de 1986/88, 1990/92 e 1994/96."}, {"id": "inst-002", "numero_ordem": 2, "titulo_evento": "Instituto de Estudos Americanos Fernando Pessoa", "slug_texto": "instituto-fernando-pessoa", "data": "1990-01-00", "local": "Instituto Fernando Pessoa", "cidade": "São Paulo", "estado": "SP", "pais": "Brasil", "categoria_principal": "institucionais", "tags": ["institucional", "fernando-pessoa", "vice-presidencia"], "texto_original": "Filiada ao Instituto de Estudos Americanos Fernando Pessoa, fundado pelo intelectual luso-brasileiro João Alves das Neves, onde também ocupou cargos de Diretoria e Vice-Presidência."}, {"id": "inst-003", "numero_ordem": 3, "titulo_evento": "Comitê de Extensão e Cultura - UFABC", "slug_texto": "cec-ufabc", "data": "2013-01-00", "local": "UFABC - Universidade Federal do ABC", "cidade": "Santo André", "estado": "SP", "pais": "Brasil", "categoria_principal": "institucionais", "tags": ["institucional", "ufabc", "comite-extensao"], "texto_original": "Por cinco mandatos de dois anos cada, integrou o Comitê de Extensão e Cultura – CEC, da UFABC – Universidade Federal do ABC (de 2013 a 2023), como representante da comunidade externa."}, {"id": "inst-004", "numero_ordem": 4, "titulo_evento": "Conselho Municipal de Cultura - Santo André", "slug_texto": "conselho-cultura-santo-andre", "data": "1998-10-20", "local": "Câmara Municipal de Santo André", "cidade": "Santo André", "estado": "SP", "pais": "Brasil", "categoria_principal": "institucionais", "tags": ["institucional", "conselho-municipal", "santo-andre"], "texto_original": "Recebeu Voto de Congratulações pelos trabalhos desenvolvidos na implantação e formação do Conselho Municipal de Cultura de Santo André. Esse voto foi inserido em Ata dos trabalhos da Câmara Municipal de Santo André em 20 de outubro de 1998. Integrou o primeiro mandato do Conselho."}, {"id": "inst-005", "numero_ordem": 5, "titulo_evento": "Laboratório de Gestão Regional - IMES", "slug_texto": "laboratorio-gestao-regional-imes", "data": "1999-01-00", "local": "IMES - Instituto Municipal de Ensino Superior", "cidade": "São Caetano do Sul", "estado": "SP", "pais": "Brasil", "categoria_principal": "institucionais", "tags": ["institucional", "imes", "gestao-regional"], "texto_original": "Compôs o Conselho do Laboratório de Gestão Regional, do Centro de Aperfeiçoamento e Pós-graduação do IMES – Instituto Municipal de Ensino Superior de São Caetano do Sul, como membro representante da comunidade externa (1999 / 2001)."}, {"id": "inst-006", "numero_ordem": 6, "titulo_evento": "Conselho Editorial - Cadernos CEAPOG", "slug_texto": "conselho-editorial-ceapog", "data": "2000-01-00", "local": "IMES - Instituto Municipal de Ensino Superior", "cidade": "São Caetano do Sul", "estado": "SP", "pais": "Brasil", "categoria_principal": "institucionais", "tags": ["institucional", "ceapog", "conselho-editorial"], "texto_original": "Integrou o Conselho Editorial da publicação Cadernos CEAPOG - Centro de Estudos de Pós-Graduação, publicação semestral do IMES, sendo responsável por uma página literária ilustrada nos 12 números daquela publicação."}, {"id": "inst-007", "numero_ordem": 7, "titulo_evento": "Fórum Permanente de Debates Culturais - Grande ABC", "slug_texto": "forum-debates-culturais-abc", "data": "2007-01-00", "local": "Grande ABC", "cidade": "Região do Grande ABC", "estado": "SP", "pais": "Brasil", "categoria_principal": "institucionais", "tags": ["institucional", "forum-debates", "grande-abc"], "texto_original": "Coordenou, de 2007 a 2017, o Fórum Permanente de Debates Culturais do Grande ABC, com intervenções e ações importantes nas sete cidades da região, em relação às políticas públicas da cultura e preservação da memória."}, {"id": "inst-008", "numero_ordem": 8, "titulo_evento": "Alpharrabio Livraria Editora e Espaço Cultural", "slug_texto": "alpharrabio", "data": "1992-01-00", "local": "Alpharrabio", "cidade": "Santo André", "estado": "SP", "pais": "Brasil", "categoria_principal": "institucionais", "tags": ["institucional", "alpharrabio", "livraria", "editora"], "texto_original": "Desde 1992 é diretora-proprietária da Alpharrabio Livraria, Editora e Espaço Cultural, em Santo André, SP, reconhecida referência na região do Grande ABC. Dirige igualmente a Alpharrabio Edições, cujo catálogo já se aproxima de duas centenas de títulos."}]}
+{
+  "categoria": "institucionais",
+  "total_registros": 8,
+  "descricao": "Atividades institucionais, participação em conselhos, diretorias e órgãos culturais",
+  "tags_comuns": [
+    "institucional",
+    "conselho",
+    "diretoria"
+  ],
+  "registros": [
+    {
+      "id": "inst-001",
+      "numero_ordem": 1,
+      "titulo_evento": "União Brasileira de Escritores - SP",
+      "data": "1986-01-00",
+      "local": "UBE - São Paulo",
+      "cidade": "São Paulo",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "institucionais",
+      "tags": [
+        "institucional",
+        "ube",
+        "diretoria"
+      ],
+      "texto_original": "Filiada à União Brasileira de Escritores, SP, entidade onde ocupou os cargos de Secretária Geral, Diretora e membro do Conselho, nas gestões de 1986/88, 1990/92 e 1994/96."
+    },
+    {
+      "id": "inst-002",
+      "numero_ordem": 2,
+      "titulo_evento": "Instituto de Estudos Americanos Fernando Pessoa",
+      "data": "1990-01-00",
+      "local": "Instituto Fernando Pessoa",
+      "cidade": "São Paulo",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "institucionais",
+      "tags": [
+        "institucional",
+        "fernando-pessoa",
+        "vice-presidencia"
+      ],
+      "texto_original": "Filiada ao Instituto de Estudos Americanos Fernando Pessoa, fundado pelo intelectual luso-brasileiro João Alves das Neves, onde também ocupou cargos de Diretoria e Vice-Presidência."
+    },
+    {
+      "id": "inst-003",
+      "numero_ordem": 3,
+      "titulo_evento": "Comitê de Extensão e Cultura - UFABC",
+      "data": "2013-01-00",
+      "local": "UFABC - Universidade Federal do ABC",
+      "cidade": "Santo André",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "institucionais",
+      "tags": [
+        "institucional",
+        "ufabc",
+        "comite-extensao"
+      ],
+      "texto_original": "Por cinco mandatos de dois anos cada, integrou o Comitê de Extensão e Cultura – CEC, da UFABC – Universidade Federal do ABC (de 2013 a 2023), como representante da comunidade externa."
+    },
+    {
+      "id": "inst-004",
+      "numero_ordem": 4,
+      "titulo_evento": "Conselho Municipal de Cultura - Santo André",
+      "data": "1998-10-20",
+      "local": "Câmara Municipal de Santo André",
+      "cidade": "Santo André",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "institucionais",
+      "tags": [
+        "institucional",
+        "conselho-municipal",
+        "santo-andre"
+      ],
+      "texto_original": "Recebeu Voto de Congratulações pelos trabalhos desenvolvidos na implantação e formação do Conselho Municipal de Cultura de Santo André. Esse voto foi inserido em Ata dos trabalhos da Câmara Municipal de Santo André em 20 de outubro de 1998. Integrou o primeiro mandato do Conselho."
+    },
+    {
+      "id": "inst-005",
+      "numero_ordem": 5,
+      "titulo_evento": "Laboratório de Gestão Regional - IMES",
+      "data": "1999-01-00",
+      "local": "IMES - Instituto Municipal de Ensino Superior",
+      "cidade": "São Caetano do Sul",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "institucionais",
+      "tags": [
+        "institucional",
+        "imes",
+        "gestao-regional"
+      ],
+      "texto_original": "Compôs o Conselho do Laboratório de Gestão Regional, do Centro de Aperfeiçoamento e Pós-graduação do IMES – Instituto Municipal de Ensino Superior de São Caetano do Sul, como membro representante da comunidade externa (1999 / 2001)."
+    },
+    {
+      "id": "inst-006",
+      "numero_ordem": 6,
+      "titulo_evento": "Conselho Editorial - Cadernos CEAPOG",
+      "data": "2000-01-00",
+      "local": "IMES - Instituto Municipal de Ensino Superior",
+      "cidade": "São Caetano do Sul",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "institucionais",
+      "tags": [
+        "institucional",
+        "ceapog",
+        "conselho-editorial"
+      ],
+      "texto_original": "Integrou o Conselho Editorial da publicação Cadernos CEAPOG - Centro de Estudos de Pós-Graduação, publicação semestral do IMES, sendo responsável por uma página literária ilustrada nos 12 números daquela publicação."
+    },
+    {
+      "id": "inst-007",
+      "numero_ordem": 7,
+      "titulo_evento": "Fórum Permanente de Debates Culturais - Grande ABC",
+      "data": "2007-01-00",
+      "local": "Grande ABC",
+      "cidade": "Região do Grande ABC",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "institucionais",
+      "tags": [
+        "institucional",
+        "forum-debates",
+        "grande-abc"
+      ],
+      "texto_original": "Coordenou, de 2007 a 2017, o Fórum Permanente de Debates Culturais do Grande ABC, com intervenções e ações importantes nas sete cidades da região, em relação às políticas públicas da cultura e preservação da memória."
+    },
+    {
+      "id": "inst-008",
+      "numero_ordem": 8,
+      "titulo_evento": "Alpharrabio Livraria Editora e Espaço Cultural",
+      "data": "1992-01-00",
+      "local": "Alpharrabio",
+      "cidade": "Santo André",
+      "estado": "SP",
+      "pais": "Brasil",
+      "categoria_principal": "institucionais",
+      "tags": [
+        "institucional",
+        "alpharrabio",
+        "livraria",
+        "editora"
+      ],
+      "texto_original": "Desde 1992 é diretora-proprietária da Alpharrabio Livraria, Editora e Espaço Cultural, em Santo André, SP, reconhecida referência na região do Grande ABC. Dirige igualmente a Alpharrabio Edições, cujo catálogo já se aproxima de duas centenas de títulos."
+    }
+  ]
+}
