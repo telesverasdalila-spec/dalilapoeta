@@ -150,6 +150,22 @@ const textos: Record<Exclude<TabMovimento, "ativismo">, React.ReactNode[]> = {
     <div className="trecho" key="em1"><p style={{ fontSize: '1.4rem', marginBottom: '5px' }}><strong>Em Movimento</strong> <em style={{ fontSize: '0.9rem', color: '#666', fontWeight: 'normal' }}>Vários | 21 x 30 cm, 32 pp.</em></p></div>,
     <div className="trecho" key="em2"><p>Publicação dos Escritores em Movimento, um grupo de autores do ABC que desde setembro de 1997 reúne-se mensalmente na Livraria Alpharrabio.</p></div>,
     <div className="trecho" key="em3"><p>Alguns dos temas abordados: <em>O ABC Pensa o ABC, Uma Guerra com Testemunhas, Um Laboratório para a Inteligência Regional, A Leitura do Texto Literário no Ensino Básico: Prazer ou Obrigação?, Patrono, Patrocínio ou Parcerias... Revigorar a Produção Cultural da Região?, Memória e Arte, Cultura em Movimento, Relato de uma experiência, Resgate, A Cultura no Cotidiano Escolar, O Paradoxo do Migrante, A Quem Interessa?</em></p></div>,
+    <figure key="em-fig1" style={{ margin: "38px 0", textAlign: "center" }}>
+      <div style={{ position: "relative", display: "inline-block", transform: "rotate(-1.6deg)" }}>
+        <img
+          src="/images/emmovimento/emmovimento.jpg"
+          alt="Capa da revista Em Movimento nº 1: fundo terracota com seta curva e a lista de temas publicados"
+          loading="lazy"
+          style={{ width: "280px", maxWidth: "100%", height: "auto", borderRadius: "3px", border: "1px solid #e3dccf", boxShadow: "0 12px 30px rgba(60,30,10,0.22), 0 3px 8px rgba(60,30,10,0.14)", background: "#fff" }}
+        />
+        <span style={{ position: "absolute", top: "-11px", right: "-14px", background: "#a8501f", color: "#fff", fontFamily: "'Inter', sans-serif", fontSize: "0.62rem", fontWeight: "700", letterSpacing: "1.5px", padding: "5px 12px", borderRadius: "999px", boxShadow: "0 3px 8px rgba(60,30,10,0.28)", textTransform: "uppercase" }}>
+          Nº 1
+        </span>
+      </div>
+      <figcaption style={{ marginTop: "16px", fontFamily: "'Inter', sans-serif", fontSize: "0.72rem", letterSpacing: "2px", textTransform: "uppercase", color: "#8a7f73" }}>
+        Capa da revista <em style={{ textTransform: "none", letterSpacing: "0.5px" }}>em Movimento</em>
+      </figcaption>
+    </figure>,
     <div className="trecho" key="em4"><p>Assinados por mais de uma dezena de intelectuais atuantes, como Luiz Roberto Alves, Luis Alberto de Abreu, Antonio Possidonio Sampaio e Alexandre Takara.</p></div>,
     <div className="trecho" key="em5"><p style={{ marginTop: '20px' }}><strong>Colaboradores:</strong> Ademir Medici, Alexandre Takara, Antonio Possidonio Sampaio, Aristides Theodoro, Cláudio Feldman, Dalila Teles Veras, Inhadjara S. Yamamura, Irineu Volpato, Jurema Barreto de Souza, Iracema mendes Regis, Luís Allberto de Abreu, Luiz Roberto Alves, Maria de Lourdes Ruegger Silva, Marília Magalhães B. Pedrosa, Roberto Barbosa, Theresinha Malta e Valdecirio Teles Veras.</p></div>,
     <div className="trecho" key="em6"><p><strong>Desenhos:</strong> Mariano Amaral Netto e Perkins.<br /><strong>Editora:</strong> Dalila Teles Veras</p></div>
