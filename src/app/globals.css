@@ -126,16 +126,21 @@ body {
   gap: 10px;
   border-bottom: 1px solid #ebebeb;
   width: 100%;
-  justify-content: center;
+  /* Task 80: centralização à prova de estouro (padrão da régua, Task 76).
+     Cabe → as margens automáticas centralizam; não couber (zoom, fonte maior)
+     → o scroll começa do primeiro botão, nada fica empurrado para a direita */
+  justify-content: flex-start;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
 }
+.tabs-principal > :first-child { margin-left: auto; }
+.tabs-principal > :last-child { margin-right: auto; }
 .tabs-principal::-webkit-scrollbar { display: none; }
 
 .tab-btn {
   font-family: 'Inter', sans-serif;
-  font-size: 1.05rem; /* Task 73: tabs mãe maiores */
+  font-size: 0.95rem; /* Task 80: um degrau menor (era 1.05) — equilíbrio com título e sub-abas */
   font-weight: 500;
   color: #bbb;
   cursor: pointer;
@@ -155,13 +160,10 @@ body {
 .tabs-sub {
   display: none;
   gap: 0;
+  flex-wrap: wrap; /* Task 80: sub-abas quebram em linhas — nunca transbordam */
   justify-content: center;
   margin-top: 2px;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
 }
-.tabs-sub::-webkit-scrollbar { display: none; }
 
 .tab-sub-btn {
   font-family: 'Inter', sans-serif;
@@ -205,7 +207,10 @@ body {
 
 .regua-anos {
   display: flex;
-  justify-content: center;
+  /* Task 76: centralização SEGURA — as margens automáticas das pontas
+     centram a régua quando ela é curta; quando transborda, viram zero
+     e a rolagem começa na primeira década (sem conteúdo inalcançável) */
+  justify-content: flex-start;
   gap: 4px;
   width: 100%;
   padding: 0 10px;
@@ -213,6 +218,8 @@ body {
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
 }
+.regua-anos > :first-child { margin-left: auto; }
+.regua-anos > :last-child { margin-right: auto; }
 .regua-anos::-webkit-scrollbar { display: none; }
 
 .btn-decada {
@@ -470,17 +477,22 @@ span[data-ano].data-iluminada {
   }
 
   .tabs-principal {
-    gap: 4px !important;
+    gap: 4px 8px !important;
     padding: 0 8px;
+    /* Task 80: em vez de scroll lateral que arrastava a página inteira
+       (era isso que desalinhava o menu no celular), as abas agora quebram
+       em duas linhas centralizadas quando não cabem */
+    flex-wrap: wrap !important;
     justify-content: center !important;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
   }
+  /* Task 80: margens automáticas do desktop desligadas no celular —
+     com quebra de linha elas empurravam cada linha para um lado */
+  .tabs-principal > :first-child { margin-left: 0; }
+  .tabs-principal > :last-child { margin-right: 0; }
   .tab-btn {
-    font-size: 0.95rem !important; /* Task 73: tabs mãe maiores no celular */
+    font-size: 0.9rem !important; /* Task 80: um degrau menor no celular (era 0.95) */
     padding: 6px 10px !important;
     white-space: nowrap;
-    flex-shrink: 0;
   }
 
   .ativismo-ativo .tabs-sub {
@@ -519,6 +531,9 @@ span[data-ano].data-iluminada {
     scrollbar-width: none;
     flex-wrap: nowrap !important;
   }
+  /* Task 76: régua curtinha centralizada no celular também */
+  .regua-anos > :first-child { margin-left: auto !important; }
+  .regua-anos > :last-child { margin-right: auto !important; }
   .btn-decada {
     font-size: 0.7rem !important;
     padding: 4px 10px !important;
@@ -607,8 +622,8 @@ span[data-ano].data-iluminada {
     /* fonte e largura herdadas do clamp do bloco @768 — nunca estoura */
     padding: 12px 6px !important;
   }
-  .tab-btn { font-size: 0.9rem !important; padding: 4px 6px !important; }
-  .tab-sub-btn { font-size: 0.85rem !important; } /* mãe 0.9 > sub 0.85 */
+  .tab-btn { font-size: 0.85rem !important; padding: 4px 6px !important; }
+  .tab-sub-btn { font-size: 0.85rem !important; } /* mãe = sub no tamanho; hierarquia fica no peso e na cor */
   .estrada { padding: 15px 15px 40px 60px !important; }
   .estrada::before { left: 24px !important; }
   .trecho::after { left: -34px !important; width: 12px !important; height: 12px !important; }

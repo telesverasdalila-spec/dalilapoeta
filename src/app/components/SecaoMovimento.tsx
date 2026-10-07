@@ -79,13 +79,32 @@ const dadosPalestrasOficinasFusion: ArquivoCategoria = {
   registros: registrosFusionados,
 };
 
+// ✅ FUSÃO (pedido da usuária): a sub-aba "Atividades Culturais" tinha pouquíssimos
+// registros e foi absorvida por "Encontros & Reuniões". O arquivo
+// EncontrosAtividadesCulturais.json continua sendo lido: qualquer registro que
+// exista (hoje ou no futuro) aparece dentro de "Encontros & Reuniões", sem duplicar id.
+const institucionaisVistos = new Set<string>();
+const institucionaisFusionados = [
+  ...((dadosInstitucionais as ArquivoCategoria)?.registros ?? []),
+  ...((dadosAtividadesCulturais as ArquivoCategoria)?.registros ?? []),
+].filter((reg) => {
+  if (institucionaisVistos.has(reg.id)) return false;
+  institucionaisVistos.add(reg.id);
+  return true;
+});
+
+const dadosInstitucionaisFusion: ArquivoCategoria = {
+  ...(dadosInstitucionais as ArquivoCategoria),
+  total_registros: institucionaisFusionados.length,
+  registros: institucionaisFusionados,
+};
+
 const dadosPorSubAba: Record<string, ArquivoCategoria> = {
   palestras_oficinas: dadosPalestrasOficinasFusion,
   saraus: dadosSaraus as ArquivoCategoria,
   congressos: dadosCongressos as ArquivoCategoria,
   conferencias: dadosConferencias as ArquivoCategoria,
-  institucionais: dadosInstitucionais as ArquivoCategoria,
-  atividades_culturais: dadosAtividadesCulturais as ArquivoCategoria,
+  institucionais: dadosInstitucionaisFusion,
   programas: dadosProgramas as ArquivoCategoria,
   curadoria: dadosCuradoria as ArquivoCategoria,
   leituras: dadosLeituras as ArquivoCategoria,
@@ -97,7 +116,6 @@ const subAtivismoLabels: Record<string, string> = {
   congressos: "Congressos & Seminários",
   conferencias: "Conferências & Mesas",
   institucionais: "Encontros & Reuniões",
-  atividades_culturais: "Atividades Culturais",
   programas: "Programas & Entrevistas",
   curadoria: "Curadoria & Consultoria",
   leituras: "Leituras Poéticas",
@@ -109,22 +127,10 @@ const ordemSubAbas = [
   "congressos",
   "conferencias",
   "institucionais",
-  "atividades_culturais",
   "programas",
   "curadoria",
   "leituras",
 ];
-
-// ✅ Estilo compartilhado das capas (Revista Livrespaço)
-const estiloCapa: React.CSSProperties = {
-  width: "178px",
-  maxWidth: "100%",
-  height: "auto",
-  borderRadius: "4px",
-  border: "1px solid #e3dccf",
-  boxShadow: "0 3px 12px rgba(60,40,20,0.16)",
-  background: "#fff"
-};
 
 const textos: Record<Exclude<TabMovimento, "ativismo">, React.ReactNode[]> = {
   alpharrabio: [
@@ -172,38 +178,8 @@ const textos: Record<Exclude<TabMovimento, "ativismo">, React.ReactNode[]> = {
   ],
   livrespaco: [
     <div className="trecho" key="li1"><p>Mais do que uma publicação literária, a Livrespaço foi um sopro de <strong>resistência e descentralização cultural</strong> que marcou a história da literatura brasileira entre 1983 e 1994. Idealizada e capitaneada por Dalila Teles Veras na região do Grande ABC, a revista nasceu como um manifesto vivo contra o monopólio cultural do eixo Rio-São Paulo e o engessamento da crítica universitária tradicional.</p></div>,
-    <figure key="li-fig1" style={{ margin: "30px 0", textAlign: "center" }}>
-      <div style={{ display: "flex", justifyContent: "center", alignItems: "flex-end", gap: "26px", flexWrap: "wrap" }}>
-        <img
-          src="/images/livrespaco/imp07azul.jpg"
-          alt="Recorte de jornal de 17 de dezembro de 1983: Grupo Livrespaço quer atuar mais nas escolas"
-          loading="lazy"
-          style={{ width: "440px", maxWidth: "100%", height: "auto", borderRadius: "4px", border: "1px solid #e3dccf", boxShadow: "0 3px 12px rgba(60,40,20,0.16)", background: "#fff" }}
-        />
-        <img
-          src="/images/livrespaco/revis02.jpg"
-          alt="Página da Revista Livrespaço com o manifesto A (boa) Poesia Brasileira que não está nos cadernos literários da grande imprensa do eixo Rio-S.Paulo"
-          loading="lazy"
-          style={{ width: "300px", maxWidth: "100%", height: "auto", borderRadius: "4px", border: "1px solid #e3dccf", boxShadow: "0 3px 12px rgba(60,40,20,0.16)", background: "#fff" }}
-        />
-      </div>
-      <figcaption style={{ marginTop: "12px", fontFamily: "'Inter', sans-serif", fontSize: "0.72rem", letterSpacing: "2px", textTransform: "uppercase", color: "#8a7f73" }}>
-        Revista Livrespaço
-      </figcaption>
-    </figure>,
     <div className="trecho" key="li2"><p>Sob o lema de que o Brasil é feito de muitas vozes e de que <em>"na poesia, ninguém substitui ninguém, acrescenta"</em>, a Livrespaço abriu suas páginas para o novo, o independente e a pluralidade de vozes que a grande imprensa insistia em ignorar.</p></div>,
-    <div className="trecho" key="li3"><p>Esse trabalho incansável de mapeamento, edição e fomento à poesia viva e marginal foi reconhecido nacionalmente em 1993, quando o projeto foi agraciado com o prestigiado <strong>Prêmio APCA</strong> (Associação Paulista de Críticos de Arte) na categoria de Melhor Realização Cultural.</p></div>,
-    <figure key="li-fig2" style={{ margin: "34px 0 10px", textAlign: "center" }}>
-      <div style={{ display: "flex", justifyContent: "center", alignItems: "flex-end", gap: "22px", flexWrap: "wrap" }}>
-        <img src="/images/livrespaco/le4a.jpg" alt="Capa da Revista Livrespaço" loading="lazy" style={estiloCapa} />
-        <img src="/images/livrespaco/le8.jpg" alt="Capa da Revista Livrespaço" loading="lazy" style={estiloCapa} />
-        <img src="/images/livrespaco/le7a.jpg" alt="Capa da Revista Livrespaço" loading="lazy" style={estiloCapa} />
-        <img src="/images/livrespaco/le5a.jpg" alt="Capa da Revista Livrespaço" loading="lazy" style={estiloCapa} />
-      </div>
-      <figcaption style={{ marginTop: "12px", fontFamily: "'Inter', sans-serif", fontSize: "0.72rem", letterSpacing: "2px", textTransform: "uppercase", color: "#8a7f73" }}>
-        Capas da revista Livrespaço
-      </figcaption>
-    </figure>
+    <div className="trecho" key="li3"><p>Esse trabalho incansável de mapeamento, edição e fomento à poesia viva e marginal foi reconhecido nacionalmente em 1993, quando o projeto foi agraciado com o prestigiado <strong>Prêmio APCA</strong> (Associação Paulista de Críticos de Arte) na categoria de Melhor Realização Cultural.</p></div>
   ]
 };
 
