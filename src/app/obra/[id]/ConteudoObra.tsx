@@ -79,8 +79,6 @@ import dados70Anos from "./70-anos-poemas-leitores/dados.json";
 import dadosPontos from "./pontos/dados.json";
 import dadosFugaEUrgencias from "./fuga-e-urgencias/dados.json";
 import dadosDiuturnos from "./diuturnos/dados.json";
-import dadosAlpharrabio12Anos from "./alpharrabio-12-anos/dados.json";
-import dadosMinudencias from "./minudencias/dados.json";
 
 // Agregador central - reúne todos os livros num único objeto
 const livros: Record<string, Livro> = {
@@ -118,103 +116,8 @@ const livros: Record<string, Livro> = {
   "70-anos-poemas-leitores": dados70Anos,
   "pontos": dadosPontos,
   "fuga-e-urgencias": dadosFugaEUrgencias,
-  "diuturnos": dadosDiuturnos,
-  "alpharrabio-12-anos": dadosAlpharrabio12Anos,
-  "minudencias": dadosMinudencias
+  "diuturnos": dadosDiuturnos
 };
-
-// Fluxo contínuo dos meses do Diuturnos — pedido da usuária: em vez de abas
-// de mês, os 12 meses na mesma página, com título do mês em dourado, linha
-// fina dourada separando os meses e as imagens alternando esquerda/direita
-// (movimento menos esquemático e mais poético no texto).
-function DiuturnosFluxo({ trechos }: { trechos: { titulo: string; texto: string; imagem_mes?: string }[] }) {
-  return (
-    <div style={{ maxWidth: "800px", margin: "0 auto" }}>
-      {trechos.map((t, i) => {
-        const imagemADireita = i % 2 === 1;
-        return (
-          <div key={i}>
-            {/* Título do Mês — dourado (mesmo dourado de Pecados e do diário das crônicas) */}
-            <h2 style={{
-              fontFamily: "Georgia",
-              fontSize: "2rem",
-              fontWeight: "400",
-              letterSpacing: "5px",
-              color: "#8b6914",
-              margin: "0 0 25px 0",
-              textTransform: "uppercase",
-              textAlign: "center"
-            }}>
-              {t.titulo}
-            </h2>
-
-            {/* Mês: imagem alterna ESQUERDA (mês ímpar) / DIREITA (mês par) */}
-            <div style={{
-              display: "flex",
-              gap: "35px",
-              alignItems: "flex-start",
-              flexDirection: imagemADireita ? "row-reverse" : "row",
-              flexWrap: "wrap"
-            }}>
-              {/* Imagem do Mês */}
-              <div style={{ flex: "0 0 280px" }}>
-                <div style={{
-                  backgroundColor: "#faf8f3",
-                  padding: "20px",
-                  border: "1px solid #e8e0d0"
-                }}>
-                  <img
-                    src={t.imagem_mes}
-                    alt={t.titulo}
-                    style={{
-                      width: "100%",
-                      height: "auto",
-                      maxHeight: "350px",
-                      display: "block"
-                    }}
-                  />
-                </div>
-              </div>
-
-              {/* Poema do Mês */}
-              <div style={{ flex: "1", minWidth: "280px" }}>
-                <p style={{
-                  fontSize: "1.05rem",
-                  lineHeight: "1.85",
-                  fontFamily: "Georgia",
-                  color: "#333",
-                  margin: "0",
-                  textAlign: "left"
-                }}>
-                  {t.texto.split(/(\*\*[^*]+\*\*)/g).map((parte, j) => {
-                    if (parte.startsWith("**") && parte.endsWith("**")) {
-                      return (
-                        <span key={j} style={{ fontWeight: "700", color: "#1a1a1a" }}>
-                          {parte.slice(2, -2)}
-                        </span>
-                      );
-                    }
-                    return parte;
-                  })}
-                </p>
-              </div>
-            </div>
-
-            {/* Linha fina dourada separando os meses (não depois do último) */}
-            {i < trechos.length - 1 && (
-              <div style={{
-                marginTop: "45px",
-                marginBottom: "45px",
-                height: "1px",
-                background: "linear-gradient(to right, transparent, #d4af37, transparent)"
-              }}></div>
-            )}
-          </div>
-        );
-      })}
-    </div>
-  );
-}
 
 export default function ConteudoObra({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params);
@@ -321,9 +224,6 @@ export default function ConteudoObra({ params }: { params: Promise<{ id: string 
                 <h1 style={{ fontSize: "2.2rem", lineHeight: "1.1", margin: "0 0 10px 0", color: "#1a1a1a", fontStyle: "italic" }}>
                   {livro.titulo}
                 </h1>
-                {livro.subtitulo && (
-                  <p style={{ fontSize: "1rem", color: "#666", marginBottom: "30px" }}>{livro.subtitulo}</p>
-                )}
               </div>
 
               <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.75rem", letterSpacing: "2px", color: "#999", textTransform: "uppercase", marginBottom: "30px" }}>{livro.genero}</p>
@@ -484,12 +384,6 @@ export default function ConteudoObra({ params }: { params: Promise<{ id: string 
 
                 {/* TAB TRECHOS - condicional */}
                 {abaAtiva === "trechos" && livro.trechos && livro.trechos.length > 0 && (
-                  livro.trechos.some((t) => t.imagem_mes) ? (
-                    /* Livro de meses (Diuturnos): os 12 meses na MESMA página,
-                       sem abas de mês — fluxo contínuo, títulos dourados, linha
-                       fina entre os meses e imagens alternando esquerda/direita */
-                    <DiuturnosFluxo trechos={livro.trechos} />
-                  ) : (
                   <div>
                     <div style={{ display: "flex", gap: "0", borderBottom: "1px solid #ebebeb", marginBottom: "25px", overflowX: "auto", scrollbarWidth: "none" }}>
                       {livro.trechos.map((t, i: number) => (
@@ -543,6 +437,85 @@ export default function ConteudoObra({ params }: { params: Promise<{ id: string 
                     
                     {/* === LAYOUTS DOS TRECHOS === */}
                     
+                    {/* Layout Diuturnos - Especial para livro de meses */}
+                    {livro.trechos[trechoAtivo].imagem_mes && (
+                      <div style={{ 
+                        maxWidth: "800px", 
+                        margin: "0 auto"
+                      }}>
+                        {/* Título do Mês - Estilo dourado elegante como Pecados */}
+                        <h2 style={{ 
+                          fontFamily: "Georgia", 
+                          fontSize: "2rem", 
+                          fontWeight: "400",
+                          letterSpacing: "5px",
+                          color: "#1a1a1a",
+                          margin: "0 0 25px 0", 
+                          textTransform: "uppercase",
+                          textAlign: "center"
+                        }}>
+                          {livro.trechos[trechoAtivo].titulo}
+                        </h2>
+                        
+                        {/* Layout: Imagem à ESQUERDA | Conteúdo à DIREITA */}
+                        <div style={{ display: "flex", gap: "35px", alignItems: "flex-start" }}>
+                          {/* Coluna da Imagem do Mês - Esquerda */}
+                          <div style={{ 
+                            flex: "0 0 280px"
+                          }}>
+                            <div style={{
+                              backgroundColor: "#faf8f3",
+                              padding: "20px",
+                              border: "1px solid #e8e0d0"
+                            }}>
+                              <img
+                                src={livro.trechos[trechoAtivo].imagem_mes}
+                                alt={livro.trechos[trechoAtivo].titulo}
+                                style={{
+                                  width: "100%",
+                                  height: "auto",
+                                  maxHeight: "350px",
+                                  display: "block"
+                                }}
+                              />
+                            </div>
+                          </div>
+                          
+                          {/* Coluna do Poema - Direita */}
+                          <div style={{ flex: "1" }}>
+                            <p style={{ 
+                              fontSize: "1.05rem", 
+                              lineHeight: "1.85", 
+                              fontFamily: "Georgia",
+                              color: "#333",
+                              margin: "0",
+                              textAlign: "left"
+                            }}>
+                              {livro.trechos[trechoAtivo].texto.split(/(\*\*[^*]+\*\*)/g).map((parte, i) => {
+                                if (parte.startsWith('**') && parte.endsWith('**')) {
+                                  return (
+                                    <span key={i} style={{ fontWeight: "700", color: "#1a1a1a" }}>
+                                      {parte.slice(2, -2)}
+                                    </span>
+                                  );
+                                }
+                                return parte;
+                              })}
+                            </p>
+                          </div>
+                        </div>
+                        
+                        {/* Linha separadora dourada - só se não for o último */}
+                        {trechoAtivo < (livro.trechos?.length || 0) - 1 && (
+                          <div style={{ 
+                            marginTop: "40px", 
+                            marginBottom: "40px",
+                            height: "1px", 
+                            background: "linear-gradient(to right, transparent, #d4af37, transparent)" 
+                          }}></div>
+                        )}
+                      </div>
+                    )}
 
                     {/* Layout Pecados - Estilo página de livro refinado */}
                     {livro.trechos[trechoAtivo].artista && !livro.trechos[trechoAtivo].imagem_mes && (
@@ -712,7 +685,6 @@ export default function ConteudoObra({ params }: { params: Promise<{ id: string 
                       </div>
                     )}
                   </div>
-                  )
                 )}
 
                 {/* ============================================================ */}

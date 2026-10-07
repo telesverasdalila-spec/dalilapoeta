@@ -2,11 +2,9 @@
 
 // ============================================
 // PÁGINA DE LEITURA DE ENTREVISTAS — mesmo pacote visual dos Ensaios:
-// faixa FaixaObras.png no topo, SELO dtv (poeta · cronista · memorialista
-// — Alpharrabio editora) na coluna da esquerda, título em Georgia itálico
-// e linha de metadados. O selo foi recortado da prova de borrachão
-// enviada pela usuária (upload/dtv-selo-1.png), ficando apenas o
-// carimbo central, completo.
+// faixa FaixaObras.png no topo, imagem fixa da categoria (as mãos
+// escrevendo do site legado, que ilustravam a seção Entrevistas
+// original), título em Georgia itálico e linha de metadados.
 // Diferencial (pedido da usuária): PERGUNTAS em cor própria — o azul
 // #2050A0 do site legado, onde as perguntas eram azuis e as respostas
 // pretas — via classes ent-pergunta / ent-resposta gravadas no
@@ -28,7 +26,7 @@ interface DadosTexto {
   fonte_original?: { url?: string; texto: string; nota?: string };
 }
 
-const imagemEntrevistas = "/imagens/entrevistas/dtv-selo.png";
+const imagemEntrevistas = "/imagens/entrevistas/maosescrita2.jpg";
 
 const cssEntrevistas = `
   /* Perguntas em azul — herança do site legado (perguntas azuis,
@@ -89,13 +87,6 @@ const cssEntrevistas = `
     font-style: italic;
     margin-top: 36px;
   }
-
-  /* Selo dtv na coluna da esquerda: quadrado no desktop; no celular
-     fica centralizado e um pouco menor, sem empurrar o título pra baixo */
-  .ent-selo-wrap { flex: 0 0 300px; max-width: 100%; }
-  @media (max-width: 768px) {
-    .ent-selo-wrap { flex: 0 0 auto; width: 230px; margin: 0 auto 10px; }
-  }
 `;
 
 export default function ConteudoEntrevista({ dados }: { dados: DadosTexto }) {
@@ -125,13 +116,13 @@ export default function ConteudoEntrevista({ dados }: { dados: DadosTexto }) {
 
         <div style={{ display: "flex", gap: "40px", flexWrap: "wrap", alignItems: "flex-start" }}>
 
-          {/* SELO DTV — carimbo central recortado da prova enviada pela usuária */}
-          <div className="ent-selo-wrap">
-            <div style={{ boxShadow: "0 12px 32px rgba(0,0,0,0.18)", backgroundColor: "#f5f2ec" }}>
+          {/* IMAGEM FIXA DA CATEGORIA — as mãos escrevendo do site legado */}
+          <div style={{ flex: "0 0 375px", maxWidth: "100%" }}>
+            <div style={{ boxShadow: "0 15px 40px rgba(0,0,0,0.15)", backgroundColor: "#f5f5f5" }}>
               <img
                 src={dados.imagem?.url || imagemEntrevistas}
-                alt="Selo dtv — poeta, cronista e memorialista — Alpharrabio editora"
-                style={{ width: "100%", height: "auto", display: "block" }}
+                alt="Imagem da seção Entrevistas de Dalila Teles Veras"
+                style={{ width: "100%", height: "auto", aspectRatio: "2/3", objectFit: "cover", display: "block" }}
               />
             </div>
           </div>

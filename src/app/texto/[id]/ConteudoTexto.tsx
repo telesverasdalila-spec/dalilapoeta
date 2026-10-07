@@ -13,7 +13,7 @@ import { cssCorpoTexto } from "./css-corpo";
 interface DadosTexto {
   id: string;
   titulo: string;
-  tipo: "ensaio" | "cronica" | "traducao" | "livro" | "artigo" | "leitura-critica" | "estudo-critico";
+  tipo: "ensaio" | "cronica" | "traducao" | "livro" | "artigo";
   subtitulo?: string;
   ano?: number | string;
   texto: string; // HTML completo (limpo do site legado)
@@ -34,8 +34,6 @@ const imagemPorTipo: Record<string, string> = {
   ensaio: "/imagens/obras-publicadas/ensaios/placeholder-ensaios.png",
   cronica: "/imagens/obras-publicadas/cronicas/placeholder-cronicas.png",
   traducao: "/imagens/obras-publicadas/traducoes/placeholder-traducoes.png",
-  "leitura-critica": "/imagens/obras-publicadas/ensaios/placeholder-ensaios.png",
-  "estudo-critico": "/imagens/obras-publicadas/ensaios/placeholder-ensaios.png",
 };
 
 const tipoRotulo: Record<string, string> = {
@@ -44,8 +42,6 @@ const tipoRotulo: Record<string, string> = {
   traducao: "Tradução",
   livro: "Texto",
   artigo: "Artigo",
-  "leitura-critica": "Leitura Crítica",
-  "estudo-critico": "Estudo Crítico",
 };
 
 // Rótulo plural para a faixa (mesmo padrão de "Dalila Teles Veras • Obras")
@@ -53,8 +49,6 @@ const tipoFaixa: Record<string, string> = {
   ensaio: "Ensaios",
   cronica: "Crônicas",
   traducao: "Traduções",
-  "leitura-critica": "Leituras Críticas",
-  "estudo-critico": "Estudos Críticos",
 };
 
 export default function ConteudoTexto({ dados }: { dados: DadosTexto }) {

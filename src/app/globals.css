@@ -52,7 +52,7 @@ body {
   flex: 1;
   max-width: 200px;
   padding: 16px 12px;
-  font-size: 0.9rem;
+  font-size: 1.1rem; /* Task 73: palavras VIDA / OBRA / MOVIMENTO maiores no HERO */
   font-weight: 600;
   font-family: sans-serif;
   letter-spacing: 2px;
@@ -135,7 +135,7 @@ body {
 
 .tab-btn {
   font-family: 'Inter', sans-serif;
-  font-size: 0.95rem;
+  font-size: 1.05rem; /* Task 73: tabs mãe maiores */
   font-weight: 500;
   color: #bbb;
   cursor: pointer;
@@ -165,7 +165,7 @@ body {
 
 .tab-sub-btn {
   font-family: 'Inter', sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.95rem; /* Task 73: subtítulos dos menus maiores */
   font-weight: 400;
   color: #666; /* contraste AA sobre fundo claro (era #ccc, claro demais) */
   cursor: pointer;
@@ -441,12 +441,15 @@ span[data-ano].data-iluminada {
   .hero-container p { font-size: 0.9rem !important; }
 
   .hero-menu { gap: 4px; padding: 0 8px; }
+  /* Task 73: VIDA / OBRA / MOVIMENTO maiores no celular, mas o clamp
+     (3vw) encolhe a letra conforme a tela estreita — a palavra mais
+     longa (MOVIMENTO) nunca ultrapassa 1/3 da largura disponível */
   .hero-menu a {
     flex: 1;
-    max-width: 140px;
+    max-width: none;
     padding: 14px 8px;
-    font-size: 0.9rem !important;
-    letter-spacing: 1.5px;
+    font-size: clamp(0.75rem, 3vw, 1rem) !important;
+    letter-spacing: 1px;
     white-space: nowrap;
     border-radius: 4px;
   }
@@ -474,7 +477,7 @@ span[data-ano].data-iluminada {
     -webkit-overflow-scrolling: touch;
   }
   .tab-btn {
-    font-size: 0.8rem !important;
+    font-size: 0.95rem !important; /* Task 73: tabs mãe maiores no celular */
     padding: 6px 10px !important;
     white-space: nowrap;
     flex-shrink: 0;
@@ -489,7 +492,7 @@ span[data-ano].data-iluminada {
     border-bottom: 1px solid #ebebeb;
   }
   .tab-sub-btn {
-    font-size: 0.8rem !important;
+    font-size: 0.9rem !important; /* Task 73: subtítulos maiores no celular */
     padding: 4px 12px !important;
     white-space: nowrap;
     border-radius: 16px;
@@ -601,11 +604,11 @@ span[data-ano].data-iluminada {
   .header-vida h1 { font-size: 1.8rem !important; }
   .header-vida .header-subtitle { font-size: 0.95rem !important; }
   .hero-menu a {
-    font-size: 0.75rem !important;
+    /* fonte e largura herdadas do clamp do bloco @768 — nunca estoura */
     padding: 12px 6px !important;
-    max-width: 100px !important;
   }
-  .tab-btn { font-size: 0.7rem !important; padding: 4px 6px !important; }
+  .tab-btn { font-size: 0.9rem !important; padding: 4px 6px !important; }
+  .tab-sub-btn { font-size: 0.85rem !important; } /* mãe 0.9 > sub 0.85 */
   .estrada { padding: 15px 15px 40px 60px !important; }
   .estrada::before { left: 24px !important; }
   .trecho::after { left: -34px !important; width: 12px !important; height: 12px !important; }
@@ -616,9 +619,6 @@ span[data-ano].data-iluminada {
   .btn-decada { font-size: 0.6rem !important; padding: 2px 4px !important; }
 }
 
-@media (min-width: 390px) and (max-width: 420px) {
-  .hero-menu a { font-size: 0.7rem; padding: 12px 6px; letter-spacing: 1.2px; max-width: 120px; }
-}
 /* ===== Ficha de obra — escada dourada de epígrafes (ex.: Vestígios) ===== */
 .sobre-container {
   padding: 10px 0;

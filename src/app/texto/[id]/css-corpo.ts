@@ -2,6 +2,9 @@
 // Refinamento (pedido da usuária): títulos internos em MAIÚSCULAS, peso
 // fino e na cor dourada da paleta (#8b6914 — dourado de texto, com linha
 // em #D4AF37), usando Cormorant Garamond (serifada fina do site).
+// NOTA Task 74: a usuária esclareceu que títulos à direita/menos
+// enfáticos valiam SÓ para as Entrevistas — aqui tudo voltou ao
+// estado anterior (à esquerda, tamanhos originais).
 // Escopado em .corpo-texto para não vazar para outras páginas.
 
 export const cssCorpoTexto = `
@@ -25,9 +28,6 @@ export const cssCorpoTexto = `
     padding-bottom: 6px;
   }
   .corpo-texto p { margin-bottom: 20px; text-align: justify; }
-  /* Entrevistas: perguntas em rosa-grená de contraste com as respostas
-     (pedido da usuária), mantendo o corpo das respostas em #333 */
-  .corpo-texto p.pergunta, .corpo-texto span.pergunta { color: #7a3b5a; }
   .corpo-texto blockquote {
     margin: 25px 0; padding: 20px 25px;
     background-color: #faf8f2;
