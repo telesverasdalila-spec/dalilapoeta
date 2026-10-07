@@ -2,9 +2,11 @@
 
 // ============================================
 // PÁGINA DE LEITURA DE ENTREVISTAS — mesmo pacote visual dos Ensaios:
-// faixa FaixaObras.png no topo, imagem fixa da categoria (as mãos
-// escrevendo do site legado, que ilustravam a seção Entrevistas
-// original), título em Georgia itálico e linha de metadados.
+// faixa FaixaObras.png no topo, SELO dtv (poeta · cronista · memorialista
+// — Alpharrabio editora) na coluna da esquerda, título em Georgia itálico
+// e linha de metadados. O selo foi recortado da prova de borrachão
+// enviada pela usuária (upload/dtv-selo-1.png), ficando apenas o
+// carimbo central, completo.
 // Diferencial (pedido da usuária): PERGUNTAS em cor própria — o azul
 // #2050A0 do site legado, onde as perguntas eram azuis e as respostas
 // pretas — via classes ent-pergunta / ent-resposta gravadas no
@@ -26,15 +28,19 @@ interface DadosTexto {
   fonte_original?: { url?: string; texto: string; nota?: string };
 }
 
-const imagemEntrevistas = "/imagens/entrevistas/maosescrita2.jpg";
+const imagemEntrevistas = "/imagens/entrevistas/dtv-selo.png";
 
 const cssEntrevistas = `
   /* Perguntas em azul — herança do site legado (perguntas azuis,
      respostas na cor do texto). Pedido da usuária na restauração da
-     subtab Entrevistas. */
+     subtab Entrevistas.
+     Refino Task 73 (pedido da usuária): perguntas MENOS enfáticas
+     (peso 500) e alinhadas à direita, como os títulos — assim não
+     herdam a justificação e não criam vácuos quando quebram linha. */
   .corpo-texto p.ent-pergunta {
     color: #2050A0;
-    font-weight: 600;
+    font-weight: 500;
+    text-align: right;
     margin-top: 30px;
     margin-bottom: 16px;
   }
@@ -83,6 +89,13 @@ const cssEntrevistas = `
     font-style: italic;
     margin-top: 36px;
   }
+
+  /* Selo dtv na coluna da esquerda: quadrado no desktop; no celular
+     fica centralizado e um pouco menor, sem empurrar o título pra baixo */
+  .ent-selo-wrap { flex: 0 0 300px; max-width: 100%; }
+  @media (max-width: 768px) {
+    .ent-selo-wrap { flex: 0 0 auto; width: 230px; margin: 0 auto 10px; }
+  }
 `;
 
 export default function ConteudoEntrevista({ dados }: { dados: DadosTexto }) {
@@ -112,13 +125,13 @@ export default function ConteudoEntrevista({ dados }: { dados: DadosTexto }) {
 
         <div style={{ display: "flex", gap: "40px", flexWrap: "wrap", alignItems: "flex-start" }}>
 
-          {/* IMAGEM FIXA DA CATEGORIA — as mãos escrevendo do site legado */}
-          <div style={{ flex: "0 0 375px", maxWidth: "100%" }}>
-            <div style={{ boxShadow: "0 15px 40px rgba(0,0,0,0.15)", backgroundColor: "#f5f5f5" }}>
+          {/* SELO DTV — carimbo central recortado da prova enviada pela usuária */}
+          <div className="ent-selo-wrap">
+            <div style={{ boxShadow: "0 12px 32px rgba(0,0,0,0.18)", backgroundColor: "#f5f2ec" }}>
               <img
                 src={dados.imagem?.url || imagemEntrevistas}
-                alt="Imagem da seção Entrevistas de Dalila Teles Veras"
-                style={{ width: "100%", height: "auto", aspectRatio: "2/3", objectFit: "cover", display: "block" }}
+                alt="Selo dtv — poeta, cronista e memorialista — Alpharrabio editora"
+                style={{ width: "100%", height: "auto", display: "block" }}
               />
             </div>
           </div>
@@ -127,7 +140,7 @@ export default function ConteudoEntrevista({ dados }: { dados: DadosTexto }) {
           <div style={{ flex: "1 1 300px", minWidth: "280px" }}>
 
             <div style={{ textAlign: "center", marginBottom: "30px" }}>
-              <h1 style={{ fontSize: "2.2rem", lineHeight: "1.1", margin: "0 0 10px 0", color: "#1a1a1a", fontStyle: "italic" }}>
+              <h1 style={{ fontSize: "1.9rem", lineHeight: "1.1", margin: "0 0 10px 0", color: "#1a1a1a", fontStyle: "italic" }}>
                 {dados.titulo}
               </h1>
             </div>
