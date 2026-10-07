@@ -1,0 +1,81 @@
+LISTA DE AJUSTES — Opção A (Task 79)
+=====================================
+
+Compromisso: preservar o texto palavra por palavra, limpando APENAS os
+engasgos mecânicos do scanner/OCR. Abaixo, exatamente o que foi tocado.
+
+PARTE 1 — LIMPEZAS APLICADAS (mecânicas, incontestáveis)
+---------------------------------------------------------
+1. Símbolos de fórmula viraram texto normal (3 pontos):
+   - "$1m \times 2m$" ............ virou "1m × 2m" (orelhas)
+   - "$1,20m \times 2,20m$" ...... virou "1,20m × 2,20m" (orelhas)
+   - "$12 \times 5$" ............. virou "12 × 5" (verbete do 12)
+
+2. Repetições consecutivas do OCR (mantida 1 ocorrência):
+   - "a Alpharrabio Livraria Espaço-Cultura abriu ao público para
+     pequenas vitrines," — aparecia 4x seguidas → 1x
+   - "tentam o trágico destino de não fossem os alternativistas
+     (teimosos guardiões da memória)," — aparecia 9x seguidas → 1x
+   - "12 é, em definitivo, e sempre, o número de uma não-realização,"
+     — aparecia 2x → 1x
+   - "é o produto das 4 partes cardeais pelos 3 planos do mundo, e os
+     12 signos do zodíaco," — duplicação intermediária → removida
+     (mantido início e fim da frase)
+
+3. Palavras trocadas pelo scanner, corrigidas pelo contexto:
+   - "pasi-vas" .................. → "passivas"
+   - "nos mais diversas áreas" ... → "nas mais diversas áreas"
+   - "sob o chancelo" ............ → "sob a chancela"
+   - "literatura reginais" ....... → "literatura regionais"
+   - "foi de curto demais" ....... → "foi curto demais"
+   - "de um micro cumprido" ...... → "de um ciclo cumprido"
+
+4. Pontuação:
+   - "após a impressão do livro. de forma irremediável." → vírgula:
+     "após a impressão do livro, de forma irremediável."
+
+5. Tipografia (sem alterar conteúdo):
+   - Aspas retas → aspas curvas (" ") nas citações
+   - Espaços múltiplos → espaço simples
+
+PARTE 2 — TRECHOS MANTIDOS VERBATIM (para conferir no livro físico)
+--------------------------------------------------------------------
+Estes continuam estranhos mesmo após a limpeza, mas não foram
+inventados nem "corrigidos" — só você com o livro em mãos pode
+confirmar o texto original. Sugestão: pode me ditar e eu substituo.
+
+   DA AÇÃO:
+   - "Se para a venda o fogo alastrado pelo casul Índice e
+     Sindicato-Série Bruta, (que decido pagar pela vez e molha américa)."
+   - "A casa foi julgada de cordas-triz e adaptada com prateleiras,
+     muitas prateleiras sem tradução estética"
+   - "com prateleiras baixadas e tapetes velhos e empoeirados de
+     engafle e 100 livros, inicial de 2.000 livros"
+   - "faltando todas as pontas rigorosas"
+   - "(e ousando no quarto)"
+   - "O casarão foi aberto em ondas; jarra, louça empapada. Zéfiro,
+     feitos ranhões lançou-se por associadas."
+   - "60 M (sessenta m) cantinas, 6 pensamentos abertos, e arte
+     pulsante, 50 B (cinquenta benfeitarias) passadas por água"
+   - "De memória, para um projeto mutado apenas por prédio e
+     robótica apenas Guanero, chega a surpreender:"
+
+   NA LISTA DE CONQUISTAS (itens com hífens):
+   - "31 edições do Invariar Informadas" (nome do boletim?)
+   - "8 números de fanzines Cultural Aborda"
+   - "atuação em 1994, de ABCs - Fichas Apiradas de Referência e Memória"
+
+   DO LIVRO:
+   - "Joaquim de Montemorva de Carvalho (de Lisboa, Portugal)"
+   - "Decisão tomada e Fiel (escolhemos Luzia Maninha não vaidosa,
+     arranjou as margens e juntas, começamos a vasculhar..."
+   - "a conferência da grauda das tomas"
+   - "não permitiu sem sequer um com-chillo)"
+
+   NEL MEZZO DEL CAMMIN (trecho do verbete do 12 no Chevalier):
+   - Do ponto "É a Távola Redonda do Rei Artur..." até "...trabalho
+     de pesquisa" — bloco bem degradado pelo scanner, mantido verbatim
+     exceto as repetições da Parte 1.
+
+Grafia da época (2004, pré-acordo ortográfico) foi PRESERVADA de propósito:
+"idéia", "freqüentemente" etc.

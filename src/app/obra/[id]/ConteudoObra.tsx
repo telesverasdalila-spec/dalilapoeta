@@ -79,6 +79,7 @@ import dados70Anos from "./70-anos-poemas-leitores/dados.json";
 import dadosPontos from "./pontos/dados.json";
 import dadosFugaEUrgencias from "./fuga-e-urgencias/dados.json";
 import dadosDiuturnos from "./diuturnos/dados.json";
+import dadosAlpharrabio12Anos from "./alpharrabio-12-anos/dados.json";
 
 // Agregador central - reúne todos os livros num único objeto
 const livros: Record<string, Livro> = {
@@ -116,7 +117,8 @@ const livros: Record<string, Livro> = {
   "70-anos-poemas-leitores": dados70Anos,
   "pontos": dadosPontos,
   "fuga-e-urgencias": dadosFugaEUrgencias,
-  "diuturnos": dadosDiuturnos
+  "diuturnos": dadosDiuturnos,
+  "alpharrabio-12-anos": dadosAlpharrabio12Anos
 };
 
 export default function ConteudoObra({ params }: { params: Promise<{ id: string }> }) {
