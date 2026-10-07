@@ -167,7 +167,7 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: 0.9rem;
   font-weight: 400;
-  color: #ccc;
+  color: #666; /* contraste AA sobre fundo claro (era #ccc, claro demais) */
   cursor: pointer;
   padding: 6px 10px;
   border: none;
