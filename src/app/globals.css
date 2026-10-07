@@ -292,7 +292,7 @@ body {
   margin-bottom: 4px;
 }
 .trecho .local-info {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: #888;
   font-weight: 400;
   display: block;
@@ -300,7 +300,7 @@ body {
   font-family: 'Inter', sans-serif;
 }
 .trecho .data-info {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: #999;
   font-weight: 400;
   display: block;
@@ -542,19 +542,29 @@ span[data-ano].data-iluminada {
     top: 6px !important;
     border-width: 3px !important;
   }
-  
-  /* 👇 SOBRESCREVE REGRAS DO LAYOUT CLEAN NO CELULAR */
+
+  /* 👇 Corpo dos eixos VIDA / OBRA / MOVIMENTO: um pouco maior no celular,
+     ocupando melhor a largura sem encostar nas margens (padding intacto) */
+  .trecho p {
+    font-size: 1.15rem !important;
+  }
+  .trecho-citacao p {
+    font-size: 0.95rem !important;
+  }
+
+  /* 👇 SOBRESCREVE REGRAS DO LAYOUT CLEAN NO CELULAR
+     (padronizado com o corpo dos textos do Eixo Vida) */
   .trecho .titulo-evento {
-    font-size: 1.1rem !important;
+    font-size: 1.2rem !important;
   }
   .trecho .local-info {
-    font-size: 0.75rem !important;
+    font-size: 0.9rem !important;
   }
   .trecho .data-info {
-    font-size: 0.7rem !important;
+    font-size: 0.8rem !important;
   }
   .trecho .texto-original {
-    font-size: 0.85rem !important;
+    font-size: 1.05rem !important;
   }
   
   .trecho .tag {
@@ -599,10 +609,10 @@ span[data-ano].data-iluminada {
   .estrada { padding: 15px 15px 40px 60px !important; }
   .estrada::before { left: 24px !important; }
   .trecho::after { left: -34px !important; width: 12px !important; height: 12px !important; }
-  .trecho .titulo-evento { font-size: 1rem !important; }
-  .trecho .local-info { font-size: 0.7rem !important; }
-  .trecho .data-info { font-size: 0.65rem !important; }
-  .trecho .texto-original { font-size: 0.7rem !important; }
+  .trecho .titulo-evento { font-size: 1.15rem !important; }
+  .trecho .local-info { font-size: 0.85rem !important; }
+  .trecho .data-info { font-size: 0.78rem !important; }
+  .trecho .texto-original { font-size: 1rem !important; }
   .btn-decada { font-size: 0.6rem !important; padding: 2px 4px !important; }
 }
 
