@@ -206,22 +206,22 @@ const dadosCronicas: Livro[] = [
 ];
 
 const dadosTraducoes: Livro[] = [
-  { ano: 2000, titulo: "Esse Grande Simulacro", descricao: "Mario Benedetti em versões bilíngues, publicadas na revista literária A Cigarra nº 35, junho 2000, Santo André, SP.", tipo: "Tradução", slug: "esse-grande-simulacro" },
-  { ano: 1997, titulo: "O Crime Foi em Granada", descricao: "Antonio Machado em versão bilíngue, publicado na revista literária A Cigarra nº 31, agosto 1997, Santo André, SP.", tipo: "Tradução", slug: "o-crime-foi-em-granada" }
+  { ano: 2000, titulo: "Traduções", descricao: "Antonio Machado e Mario Benedetti em versões bilíngues, publicadas na revista A Cigarra (nº 31, ago/1997; nº 35, jun/2000).", tipo: "Tradução", slug: "traducoes" }
 ]; 
 
-const dadosLeiturasCriticas: Livro[] = [
-  { ano: 2013, titulo: "Estranhas Formas de Vida", descricao: "Leitura crítica de Luiz Roberto Alves: “A estranheza poética dos fatos no cotidiano em Dalila”. Jornal Linguagem Viva, junho de 2013.", tipo: "Leitura Crítica", slug: "leituras-estranhas-formas-de-vida" },
-  { ano: 2009, titulo: "Retratos Falhados", descricao: "Leituras críticas de Irene Lucília Andrade (Funchal, 2009) e Álvaro Alves de Faria (Jornal Rascunho, dez/2008).", tipo: "Leitura Crítica", slug: "leituras-retratos-falhados" },
-  { ano: 2004, titulo: "Vestígios", descricao: "O que a crítica escreveu sobre o livro: Deise Assumpção, Rosana Chrispim, José de Souza Martins, Nicodemos Sena e outros.", tipo: "Leitura Crítica", slug: "leituras-vestigios" },
-  { ano: 2003, titulo: "À Janela dos Dias", descricao: "O que a crítica escreveu sobre o livro: Joaquim Branco, Francisco Miguel de Moura, j. geraldo neres e outros.", tipo: "Leitura Crítica", slug: "leituras-a-janela-dos-dias" },
-  { ano: 2001, titulo: "A Vida Crônica", descricao: "Leituras críticas de Tarso de Melo, Caio Porfírio Carneiro e Fabiano Calixto.", tipo: "Leitura Crítica", slug: "leituras-a-vida-cronica" },
-  { ano: 2000, titulo: "As Artes do Ofício", descricao: "Leituras críticas de Luís Alberto de Abreu, Rosana Chrispim e Fabiano Calixto.", tipo: "Leitura Crítica", slug: "leituras-as-artes-do-oficio" }
-];
-
-const dadosEstudosCriticos: Livro[] = [
-  { ano: 2009, titulo: "Resistência e assimilação em Dalila Teles Veras", descricao: "Estudo de Clara Moura Lourenço, Universidade de Coimbra, apresentado no IV Congresso A Voz e a Vez da Mulher Portuguesa na Diáspora, Curitiba, maio de 2009.", tipo: "Estudo Crítico", slug: "estudo-resistencia-e-assimilacao" },
-  { ano: 2002, titulo: "Dalila Teles Veras", descricao: "Texto de José Armando Pereira da Silva sobre a trajetória da poeta e a Alpharrabio, 2002.", tipo: "Estudo Crítico", slug: "estudo-dalila-teles-veras-jose-armando" }
+// Entrevistas — os textos do site legado (índice entrevistasdalilatelesveras.htm),
+// restaurados verbatim como páginas de leitura em /texto/{slug}.
+// Cada card da subtab Entrevistas leva ao texto integral (perguntas em azul,
+// como no site original). A listagem sem links da aba "Programas & Entrevistas"
+// permanece no Eixo Movimento (ProgramasEntrevistas.json) — fontes distintas.
+const dadosEntrevistas: Livro[] = [
+  { ano: 2015, titulo: "Tarso de Melo", descricao: "Enquete “Sobre poesia, ainda”, realizada com poetas brasileiros da atualidade, publicada no blog Contra Tanto Silêncio, abril de 2015.", tipo: "Entrevista", slug: "entrevista-tarso-de-melo" },
+  { ano: 2012, titulo: "Sergio Simka", descricao: "Concedida ao prof. Sérgio Simka, publicada em setembro de 2012 no Portal Mauá e Região.", tipo: "Entrevista", slug: "entrevista-sergio-simka" },
+  { ano: 0, titulo: "Selmo Vasconcellos", descricao: "Concedida a Selmo Vasconcellos, publicada no portal Selmo Vasconcellos. Com poemas de Dalila Teles Veras.", tipo: "Entrevista", slug: "entrevista-selmo-vasconcellos" },
+  { ano: 2009, titulo: "Álvaro Alves de Faria", descricao: "Concedida (através de emails) a Álvaro Alves de Faria, inserida no livro Pastores de Virgílio – A literatura na voz de seus poetas e escritores (Ed. Escrituras, SP, 2009).", tipo: "Entrevista", slug: "entrevista-alvaro-alves-de-faria" },
+  { ano: 2008, titulo: "Floriano Martins", descricao: "Concedida ao escritor Floriano Martins, incluída, à guisa de prefácio, no livro Retratos Falhados (Editora Escrituras, 2008).", tipo: "Entrevista", slug: "entrevista-floriano-martins" },
+  { ano: 2004, titulo: "Notícias IMES", descricao: "IMES-NOTÍCIAS - Ano XIV - Nº 93, Novembro 2004. Trechos da entrevista sobre produção cultural e o espaço Alpharrabio.", tipo: "Entrevista", slug: "entrevista-noticias-imes" },
+  { ano: 2002, titulo: "Revista Virtual PD Literatura", descricao: "Entrevista concedida a Rodrigo de Souza Leão, para a revista virtual PD Literatura, setembro de 2002, a propósito do lançamento de À Janela dos Dias.", tipo: "Entrevista", slug: "entrevista-pd-literatura" }
 ];
 
 const dadosVerbetes: Livro[] = [
@@ -280,11 +280,10 @@ export default function SecaoObras() {
   } else if (tabAtiva === "escritos") {
     if (subTabAtiva === "ensaios") obrasAtuais = dadosEnsaios;
     else if (subTabAtiva === "cronicas") obrasAtuais = dadosCronicas;
+    else if (subTabAtiva === "entrevistas") obrasAtuais = dadosEntrevistas;
     else if (subTabAtiva === "traducoes") obrasAtuais = dadosTraducoes;
   } else if (tabAtiva === "resenhas") {
     if (subTabAtiva === "fortuna") obrasAtuais = dadosFortunaCritica;
-    else if (subTabAtiva === "leituras") obrasAtuais = dadosLeiturasCriticas;
-    else if (subTabAtiva === "estudos") obrasAtuais = dadosEstudosCriticos;
     else if (subTabAtiva === "verbetes") obrasAtuais = dadosVerbetes;
   } else if (tabAtiva === "colaboracoes") {
     if (subTabAtiva === "apresentacoes") obrasAtuais = dadosColaboracoes.filter(c => c.tipo === "Apresentação" || c.tipo === "Ensaio" || c.tipo === "Resenha");
@@ -349,7 +348,7 @@ export default function SecaoObras() {
                         Conheça a obra →
                       </Link>
                     )}
-                    {(tabAtiva === "escritos" || tabAtiva === "resenhas") && obra.slug && (
+                    {tabAtiva === "escritos" && obra.slug && (
                       <Link 
                         href={`/texto/${obra.slug}`}
                         style={{ display: 'inline-block', marginTop: '10px', fontFamily: "'Inter', sans-serif", fontSize: '0.85rem', fontWeight: '500', color: '#7a3b5a', textDecoration: 'none', borderBottom: '1px solid transparent', transition: 'all 0.3s ease', paddingBottom: '1px' }}

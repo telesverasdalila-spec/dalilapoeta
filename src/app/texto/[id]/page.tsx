@@ -11,6 +11,7 @@ import ConteudoTexto from "./ConteudoTexto";
 import ConteudoCronica from "./ConteudoCronica";
 import ConteudoTraducao from "./ConteudoTraducao";
 import ConteudoEnsaio from "./ConteudoEnsaio";
+import ConteudoEntrevista from "./ConteudoEntrevista";
 
 const DIR_TEXTOS = path.join(process.cwd(), "src", "app", "texto", "[id]");
 
@@ -70,9 +71,11 @@ export default async function PageTexto({
   if (!dados) notFound();
   // Cada categoria tem componente próprio (refinamentos independentes):
   // Crônicas (dias empilhados dourados), Traduções (subtabs por autor),
-  // Ensaios (metadado com veículo/evento). Outros tipos: modelo padrão.
+  // Ensaios (metadado com veículo/evento), Entrevistas (perguntas azuis
+  // do legado, respostas na cor do texto). Outros tipos: modelo padrão.
   if (dados.tipo === "cronica") return <ConteudoCronica dados={dados} />;
   if (dados.tipo === "traducao") return <ConteudoTraducao dados={dados} />;
   if (dados.tipo === "ensaio") return <ConteudoEnsaio dados={dados} />;
+  if (dados.tipo === "entrevista") return <ConteudoEntrevista dados={dados} />;
   return <ConteudoTexto dados={dados} />;
 }
