@@ -135,7 +135,7 @@ body {
 
 .tab-btn {
   font-family: 'Inter', sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   font-weight: 500;
   color: #bbb;
   cursor: pointer;
@@ -165,7 +165,7 @@ body {
 
 .tab-sub-btn {
   font-family: 'Inter', sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   font-weight: 400;
   color: #ccc;
   cursor: pointer;
@@ -474,7 +474,7 @@ span[data-ano].data-iluminada {
     -webkit-overflow-scrolling: touch;
   }
   .tab-btn {
-    font-size: 0.7rem !important;
+    font-size: 0.8rem !important;
     padding: 6px 10px !important;
     white-space: nowrap;
     flex-shrink: 0;
@@ -489,7 +489,7 @@ span[data-ano].data-iluminada {
     border-bottom: 1px solid #ebebeb;
   }
   .tab-sub-btn {
-    font-size: 0.7rem !important;
+    font-size: 0.8rem !important;
     padding: 4px 12px !important;
     white-space: nowrap;
     border-radius: 16px;
@@ -595,7 +595,7 @@ span[data-ano].data-iluminada {
     padding: 12px 6px !important;
     max-width: 100px !important;
   }
-  .tab-btn { font-size: 0.6rem !important; padding: 4px 6px !important; }
+  .tab-btn { font-size: 0.7rem !important; padding: 4px 6px !important; }
   .estrada { padding: 15px 15px 40px 60px !important; }
   .estrada::before { left: 24px !important; }
   .trecho::after { left: -34px !important; width: 12px !important; height: 12px !important; }
