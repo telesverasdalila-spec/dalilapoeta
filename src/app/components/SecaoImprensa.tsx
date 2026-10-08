@@ -27,16 +27,6 @@ export default function SecaoImprensa() {
               Blog literário e cultural desde 2009.
             </span>
           </p>
-          <p style={{ marginTop: "15px" }}>
-            <a href="https://blog.alpharrabio.com.br" target="_blank" rel="noopener noreferrer" style={{ color: "#7a3b5a", textDecoration: "none", fontWeight: "500", borderBottom: "1px solid transparent", transition: "0.3s" }}
-               onMouseOver={(e) => e.currentTarget.style.borderBottomColor = "#7a3b5a"}
-               onMouseOut={(e) => e.currentTarget.style.borderBottomColor = "transparent"}>
-              📚 Blog do Alpharrabio
-            </a>
-            <span style={{ display: "block", fontSize: "0.9rem", color: "#666", marginTop: "5px" }}>
-              Caderno de registros, apropriações, inquietudes e intervenções (2006-2023).
-            </span>
-          </p>
         </div>
 
         {/* REDES SOCIAIS E SITES */}

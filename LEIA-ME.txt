@@ -1,59 +1,33 @@
-TASK 87 — LEITURAS CRÍTICAS E ESTUDOS CRÍTICOS (textos integrais de volta!)
-===========================================================================
+PACOTE DE REFINAMENTOS — Desenho no estudo do José Armando + Mídia sem Blog do Alpharrabio
+============================================================================================
 
-O que este pacote faz:
-- Recria o conteúdo das subtabs "Leituras Críticas" e "Estudos Críticos"
-  (dentro de OBRA → Resenhas), raspado VERBATIM do site legado.
-- 6 páginas de Leituras Críticas (uma por livro) + 2 Estudos Críticos,
-  cada uma como página de leitura no mesmo modelo de Ensaios/Crônicas.
+Este pacote ajusta dois detalhes pedidos pela Dalila:
+  1. O desenho da página original (mesa de escritor com livros, teclado e caneta)
+     volta a aparecer NO INÍCIO do estudo crítico do José Armando Pereira da Silva,
+     antes do título "DALILA TELES VERAS" — na mesma posição do original.
+  2. Na aba MÍDIA, o card "Blog do Alpharrabio" foi retirado (blog desativado).
+     A seção Blogs fica só com "À Janela dos Dias".
 
-Como aplicar (2 minutinhos):
-1. Arraste a pasta "src" deste pacote para a RAIZ do seu projeto
-   (ela vai se fundir com a "src" que já existe — pastas novas entram,
-   os 2 arquivos abaixo serão substituídos).
-2. No VS Code, escreva o nome do commit ANTES de clicar (ex.:
-   "leituras e estudos criticos") e clique em Commit & Sync.
-3. Espere ~2 min o deploy na Vercel e confira com Ctrl+Shift+R:
+COMO APLICAR (3 arquivos):
 
-   OBRA → Resenhas → Leituras Críticas  (6 itens com "Leia o texto →")
-   OBRA → Resenhas → Estudos Críticos   (2 itens)
+[1] NOVO ARQUIVO — imagem do desenho:
+   Copie para:  public/imagens/obras-publicadas/estudos-criticos/livroabcs.jpg
+    (crie a pasta "estudos-criticos" dentro de "public/imagens/obras-publicadas/")
 
-Arquivos SUBSTITUÍDOS (2):
-- src/app/components/SecaoObras.tsx
-    (adiciona as duas listas de dados + renderização das subtabs;
-     Fortuna Crítica e Verbetes intocados)
-- src/app/texto/[id]/ConteudoTexto.tsx
-    (conhece os novos tipos "leitura-critica" e "estudo-critico":
-     rótulos, faixa "Críticas & Resenhas" e link de volta)
+[2] SUBSTITUIR INTEIRO:
+    Copie "dados-jose-armando.json" para (renomeando para dados.json):
+    src/app/texto/[id]/estudo-critico-dalila-teles-veras/dados.json
 
-Pastas NOVAS (8 — só entram, nada é apagado):
-- src/app/texto/[id]/leituras-criticas-{estranhas-formas-de-vida,
-  retratos-falhados, a-janela-dos-dias, vestigios, as-artes-do-oficio,
-  a-vida-cronica}/dados.json
-- src/app/texto/[id]/estudo-critico-{resistencia-e-assimilacao,
-  dalila-teles-veras}/dados.json
+[3] SUBSTITUIR INTEIRO:
+    Copie "SecaoImprensa.tsx" para:
+    src/app/components/SecaoImprensa.tsx
 
-Conteúdo das páginas:
-- Estranhas formas de vida — leitura de Luiz Roberto Alves (2013)
-- Retratos Falhados — Irene Lucília Andrade (Funchal, 2009) e
-  Álvaro Alves de Faria (Jornal Rascunho, 2008)
-- À Janela dos Dias — Joaquim Branco, Francisco Miguel de Moura,
-  poema de j. geraldo neres e recados de leitores (2002-2003)
-- Vestígios — mensagens de leitores + resenha de Nicodemos Sena (2004)
-- As Artes do Ofício — Luís Alberto de Abreu, Rosana Chrispim,
-  Fabiano Calixto
-- A Vida Crônica — Tarso de Melo, Caio Porfírio Carneiro,
-  Fabiano Calixto
-- Estudos: "Resistência e Assimilação em Dalila Teles Veras"
-  (Clara Moura Lourenço, Univ. de Coimbra) e "Dalila Teles Veras"
-  (José Armando Pereira da Silva, 2002)
+Depois: Commit & Sync no VS Code (sugestão de mensagem:
+"desenho no estudo do Jose Armando + midia sem blog do alpharrabio")
+e aguardar ~2 minutos para o deploy na Vercel.
 
-Garantias:
-- Textos preservados VERBATIM (checagem automática bloco a bloco).
-- Só blocos de navegação do legado (menus/índices) não foram levados.
-- Poemas citados renderizam como versos centrados (estilo já do site).
-- As páginas usam a imagem de placeholder dos ensaios; se quiser uma
-  imagem própria para a categoria, é só escolher que eu aplico depois.
-
-Se você tiver editado SecaoObras.tsx ou ConteudoTexto.tsx manualmente
-depois do último pacote, me avise antes de aplicar.
+VERIFICAÇÃO (se quiser conferir):
+  - OBRA > Resenhas > Estudos Críticos > "Dalila Teles Veras" (José Armando):
+    o desenho aparece antes do título do texto.
+  - VIDA > Mídia: a seção Blogs mostra apenas "À Janela dos Dias".
+  - Se algo parecer antigo: Ctrl+Shift+R (recarga forçada).
