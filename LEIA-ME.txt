@@ -1,0 +1,29 @@
+CONSERTE: imagem lateral das páginas de entrevista
+====================================================
+
+O que aconteceu:
+- A página de leitura das entrevistas pede uma imagem lateral
+  (maosescrita2.jpg) que nunca chegou ao seu projeto.
+- Sem ela, a página mostra um retângulo cinza vazio à esquerda,
+  o que faz parecer que o selo e o alinhamento não foram aplicados
+  (mas eles JÁ ESTÃO no site: o carimbo dtv aparece acima do texto
+  e as perguntas azuis já estão à direita).
+
+O que fazer (2 passos):
+1. Arraste a pasta "public" deste pacote para dentro da pasta
+   do seu projeto (clone local) e confirme a substituição.
+   O arquivo vai para: public/imagens/entrevistas/maosescrita2.jpg
+2. No VS Code: Commit & Sync (como sempre). Aguarde ~2 min o deploy.
+
+Se você achar a imagem ORIGINAL da mão escrevendo no seu computador,
+me mande aqui no chat que eu preparo a troca — ou renomeie o arquivo
+original para maosescrita2.jpg e substitua o deste pacote, mantendo
+exatamente o mesmo nome.
+
+Depois, teste abrindo uma entrevista:
+OBRA > Escritos & Leituras > Entrevistas > "Leia o texto" em qualquer registro.
+
+Pacote gerado em 08/10/2026 (Task 84).
+Conteúdo: public/imagens/entrevistas/maosescrita2.jpg (imagem nova,
+gerada no estilo do site: mão escrevendo, aquarela em tons sépia).
+Nenhum outro arquivo é tocado — seu código fica intacto.
