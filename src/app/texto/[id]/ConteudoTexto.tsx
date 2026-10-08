@@ -13,7 +13,7 @@ import { cssCorpoTexto } from "./css-corpo";
 interface DadosTexto {
   id: string;
   titulo: string;
-  tipo: "ensaio" | "cronica" | "traducao" | "livro" | "artigo";
+  tipo: "ensaio" | "cronica" | "traducao" | "livro" | "artigo" | "leitura-critica" | "estudo-critico";
   subtitulo?: string;
   ano?: number | string;
   texto: string; // HTML completo (limpo do site legado)
@@ -30,10 +30,14 @@ interface DadosTexto {
 }
 
 // Imagem fixa por categoria (no lugar da capa do livro) — fornecidas pela usuária
+// (leituras/estudos críticos reutilizam o placeholder de ensaios até que haja
+// imagem dedicada da categoria)
 const imagemPorTipo: Record<string, string> = {
   ensaio: "/imagens/obras-publicadas/ensaios/placeholder-ensaios.png",
   cronica: "/imagens/obras-publicadas/cronicas/placeholder-cronicas.png",
   traducao: "/imagens/obras-publicadas/traducoes/placeholder-traducoes.png",
+  "leitura-critica": "/imagens/obras-publicadas/ensaios/placeholder-ensaios.png",
+  "estudo-critico": "/imagens/obras-publicadas/ensaios/placeholder-ensaios.png",
 };
 
 const tipoRotulo: Record<string, string> = {
@@ -42,6 +46,8 @@ const tipoRotulo: Record<string, string> = {
   traducao: "Tradução",
   livro: "Texto",
   artigo: "Artigo",
+  "leitura-critica": "Leitura Crítica",
+  "estudo-critico": "Estudo Crítico",
 };
 
 // Rótulo plural para a faixa (mesmo padrão de "Dalila Teles Veras • Obras")
@@ -49,11 +55,20 @@ const tipoFaixa: Record<string, string> = {
   ensaio: "Ensaios",
   cronica: "Crônicas",
   traducao: "Traduções",
+  "leitura-critica": "Críticas & Resenhas",
+  "estudo-critico": "Críticas & Resenhas",
+};
+
+// Rótulo do link de volta (subtab de origem de cada categoria)
+const voltarPorTipo: Record<string, string> = {
+  "leitura-critica": "Críticas & Resenhas",
+  "estudo-critico": "Críticas & Resenhas",
 };
 
 export default function ConteudoTexto({ dados }: { dados: DadosTexto }) {
   const rotulo = tipoRotulo[dados.tipo] || "Texto";
   const faixa = tipoFaixa[dados.tipo] || "Escritos";
+  const voltar = voltarPorTipo[dados.tipo] || "Escritos & Leituras";
 
   // Imagem fixa da categoria (override opcional por texto via dados.imagem.url)
   const imagem =
@@ -87,7 +102,7 @@ export default function ConteudoTexto({ dados }: { dados: DadosTexto }) {
       <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "30px 20px 60px", fontFamily: "Georgia", color: "#333" }}>
 
         <Link href="/?eixo=obra" style={{ fontSize: "0.9rem", color: "#7a3b5a", textDecoration: "none", fontWeight: "500", display: "inline-block", marginBottom: "25px" }}>
-          ← Voltar para Escritos &amp; Leituras
+          ← Voltar para {voltar}
         </Link>
 
         <div style={{ display: "flex", gap: "40px", flexWrap: "wrap", alignItems: "flex-start" }}>

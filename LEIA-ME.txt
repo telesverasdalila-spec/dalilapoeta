@@ -1,30 +1,59 @@
-DIUTURNOS: meses empilhados, sem tabs (formato definitivo)
-=============================================================
+TASK 87 — LEITURAS CRÍTICAS E ESTUDOS CRÍTICOS (textos integrais de volta!)
+===========================================================================
 
-O que mudou:
-- Fim das tabs de meses na aba "Trechos" do livro Diuturnos.
-- Agora os 12 meses aparecem empilhados, todos na mesma página:
-  * Título do mês em cima, DOURADO, com um pequeno traço de ênfase abaixo;
-  * Janeiro abre com a imagem à ESQUERDA do poema;
-  * Cada mês alterna a imagem (esquerda, direita, esquerda...);
-  * Dezembro, o último, fecha o ciclo com a IMAGEM DE JANEIRO
-    à direita do poema — o ano termina onde começou.
-- No celular, imagem e poema viram coluna única, sem nada escapar.
+O que este pacote faz:
+- Recria o conteúdo das subtabs "Leituras Críticas" e "Estudos Críticos"
+  (dentro de OBRA → Resenhas), raspado VERBATIM do site legado.
+- 6 páginas de Leituras Críticas (uma por livro) + 2 Estudos Críticos,
+  cada uma como página de leitura no mesmo modelo de Ensaios/Crônicas.
 
-O que fazer (2 passos):
-1. Arraste a pasta "src" deste pacote para dentro da pasta do seu
-   projeto (clone local) e confirme a substituição.
-   O arquivo vai para: src/app/obra/[id]/ConteudoObra.tsx
-2. No VS Code: Commit & Sync (como sempre). Aguarde ~2 min o deploy.
+Como aplicar (2 minutinhos):
+1. Arraste a pasta "src" deste pacote para a RAIZ do seu projeto
+   (ela vai se fundir com a "src" que já existe — pastas novas entram,
+   os 2 arquivos abaixo serão substituídos).
+2. No VS Code, escreva o nome do commit ANTES de clicar (ex.:
+   "leituras e estudos criticos") e clique em Commit & Sync.
+3. Espere ~2 min o deploy na Vercel e confira com Ctrl+Shift+R:
 
-AVISO AMIGÁVEL: este pacote substitui o arquivo inteiro
-ConteudoObra.tsx (a página dos livros). Se você personalizou algo
-NESSA página do seu lado, me avise antes de aplicar — o resto do
-site não é tocado. O CSS novo viaja embutido no próprio componente,
-então o seu globals.css fica intocado.
+   OBRA → Resenhas → Leituras Críticas  (6 itens com "Leia o texto →")
+   OBRA → Resenhas → Estudos Críticos   (2 itens)
 
-Depois, teste: OBRA > Obras Publicadas > Diuturnos > aba "Trechos".
+Arquivos SUBSTITUÍDOS (2):
+- src/app/components/SecaoObras.tsx
+    (adiciona as duas listas de dados + renderização das subtabs;
+     Fortuna Crítica e Verbetes intocados)
+- src/app/texto/[id]/ConteudoTexto.tsx
+    (conhece os novos tipos "leitura-critica" e "estudo-critico":
+     rótulos, faixa "Críticas & Resenhas" e link de volta)
 
-Pacote gerado em 08/10/2026 (Task 86).
-Conteúdo: src/app/obra/[id]/ConteudoObra.tsx (com o layout dos
-meses novo + CSS embutido). Nenhum outro arquivo é tocado.
+Pastas NOVAS (8 — só entram, nada é apagado):
+- src/app/texto/[id]/leituras-criticas-{estranhas-formas-de-vida,
+  retratos-falhados, a-janela-dos-dias, vestigios, as-artes-do-oficio,
+  a-vida-cronica}/dados.json
+- src/app/texto/[id]/estudo-critico-{resistencia-e-assimilacao,
+  dalila-teles-veras}/dados.json
+
+Conteúdo das páginas:
+- Estranhas formas de vida — leitura de Luiz Roberto Alves (2013)
+- Retratos Falhados — Irene Lucília Andrade (Funchal, 2009) e
+  Álvaro Alves de Faria (Jornal Rascunho, 2008)
+- À Janela dos Dias — Joaquim Branco, Francisco Miguel de Moura,
+  poema de j. geraldo neres e recados de leitores (2002-2003)
+- Vestígios — mensagens de leitores + resenha de Nicodemos Sena (2004)
+- As Artes do Ofício — Luís Alberto de Abreu, Rosana Chrispim,
+  Fabiano Calixto
+- A Vida Crônica — Tarso de Melo, Caio Porfírio Carneiro,
+  Fabiano Calixto
+- Estudos: "Resistência e Assimilação em Dalila Teles Veras"
+  (Clara Moura Lourenço, Univ. de Coimbra) e "Dalila Teles Veras"
+  (José Armando Pereira da Silva, 2002)
+
+Garantias:
+- Textos preservados VERBATIM (checagem automática bloco a bloco).
+- Só blocos de navegação do legado (menus/índices) não foram levados.
+- Poemas citados renderizam como versos centrados (estilo já do site).
+- As páginas usam a imagem de placeholder dos ensaios; se quiser uma
+  imagem própria para a categoria, é só escolher que eu aplico depois.
+
+Se você tiver editado SecaoObras.tsx ou ConteudoTexto.tsx manualmente
+depois do último pacote, me avise antes de aplicar.
