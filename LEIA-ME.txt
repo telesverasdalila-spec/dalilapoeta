@@ -1,33 +1,47 @@
-PACOTE DE REFINAMENTOS — Desenho no estudo do José Armando + Mídia sem Blog do Alpharrabio
-============================================================================================
+PACOTE TRADUÇÕES — cada tradução com linha própria e página própria (fim do 404)
+=================================================================================
 
-Este pacote ajusta dois detalhes pedidos pela Dalila:
-  1. O desenho da página original (mesa de escritor com livros, teclado e caneta)
-     volta a aparecer NO INÍCIO do estudo crítico do José Armando Pereira da Silva,
-     antes do título "DALILA TELES VERAS" — na mesma posição do original.
-  2. Na aba MÍDIA, o card "Blog do Alpharrabio" foi retirado (blog desativado).
-     A seção Blogs fica só com "À Janela dos Dias".
+O que mudou:
+  O card único "Traduções" da subtab apontava para uma página que nunca
+  chegou a existir no site (por isso o 404 ao clicar). Agora a subtab
+  OBRA > Escritos & Leituras > Traduções mostra DUAS linhas, cada uma
+  com sua página de leitura:
+    • Antonio Machado (1997) — A Contradição da Modernidade + poema
+      "El Crimen Fue en Granada" em versões bilíngues (A Cigarra nº 31)
+    • Mario Benedetti (2000) — Esse Grande Simulacro + Ah as Primícias
+      em versões bilíngues (A Cigarra nº 35)
+  O conteúdo é o mesmo texto integral, preservado palavra por palavra;
+  os poemas bilíngues continuam com o tratamento visual dourado.
+  Únicas adaptações (de layout, não de texto): o título de cada autor
+  passou a ser o título da sua página (o separador interno de subtab
+  deixou de existir) e limpei tags vazias invisíveis do Word (<o:p>).
 
-COMO APLICAR (3 arquivos):
+COMO APLICAR:
 
-[1] NOVO ARQUIVO — imagem do desenho:
-   Copie para:  public/imagens/obras-publicadas/estudos-criticos/livroabcs.jpg
-    (crie a pasta "estudos-criticos" dentro de "public/imagens/obras-publicadas/")
+[1] NOVAS PASTAS — páginas de leitura:
+    Copie as duas pastas inteiras para:
+      src/app/texto/[id]/traducao-antonio-machado/   (contém dados.json)
+      src/app/texto/[id]/traducao-mario-benedetti/   (contém dados.json)
 
 [2] SUBSTITUIR INTEIRO:
-    Copie "dados-jose-armando.json" para (renomeando para dados.json):
-    src/app/texto/[id]/estudo-critico-dalila-teles-veras/dados.json
+      src/app/components/SecaoObras.tsx
+    (é este arquivo que troca o card único pelas duas linhas)
 
-[3] SUBSTITUIR INTEIRO:
-    Copie "SecaoImprensa.tsx" para:
-    src/app/components/SecaoImprensa.tsx
+[3] IMAGEM — por garantia:
+      public/imagens/obras-publicadas/traducoes/placeholder-traducoes.png
+    É a mesma imagem que você me enviou (byte a byte). Se a pasta já
+    existir no seu clone com esse arquivo, substituição sem efeito.
+
+OPCIONAL (limpeza): se no seu clone existir a pasta
+    src/app/texto/[id]/traducoes/
+(antiga página agrupada), ela fica sem nenhum link apontando para ela.
+Pode manter (inofensiva) ou apagar a pasta inteira — a seu critério.
 
 Depois: Commit & Sync no VS Code (sugestão de mensagem:
-"desenho no estudo do Jose Armando + midia sem blog do alpharrabio")
-e aguardar ~2 minutos para o deploy na Vercel.
+"traducoes: paginas proprias para machado e benedetti") e aguardar
+~2 minutos de deploy na Vercel.
 
-VERIFICAÇÃO (se quiser conferir):
-  - OBRA > Resenhas > Estudos Críticos > "Dalila Teles Veras" (José Armando):
-    o desenho aparece antes do título do texto.
-  - VIDA > Mídia: a seção Blogs mostra apenas "À Janela dos Dias".
+VERIFICAÇÃO:
+  - OBRA > Escritos & Leituras > Traduções: duas linhas (2000 / 1997),
+    cada uma com "Leia o texto →" abrindo sua página — sem mais 404.
   - Se algo parecer antigo: Ctrl+Shift+R (recarga forçada).

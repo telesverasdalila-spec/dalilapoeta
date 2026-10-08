@@ -206,8 +206,9 @@ const dadosCronicas: Livro[] = [
 ];
 
 const dadosTraducoes: Livro[] = [
-  { ano: 2000, titulo: "Traduções", descricao: "Antonio Machado e Mario Benedetti em versões bilíngues, publicadas na revista A Cigarra (nº 31, ago/1997; nº 35, jun/2000).", tipo: "Tradução", slug: "traducoes" }
-]; 
+  { ano: 2000, titulo: "Mario Benedetti", descricao: "Esse Grande Simulacro e Ah as Primícias em versões bilíngues, do volume El olvido está lleno de memoria (1994), publicados na revista A Cigarra (nº 35, jun/2000).", tipo: "Tradução", slug: "traducao-mario-benedetti" },
+  { ano: 1997, titulo: "Antonio Machado", descricao: "A Contradição da Modernidade: Antonio Machado e o poema El Crimen Fue en Granada em versões bilíngues, publicados na revista A Cigarra (nº 31, ago/1997).", tipo: "Tradução", slug: "traducao-antonio-machado" }
+];
 
 const dadosVerbetes: Livro[] = [
   { ano: 2021, titulo: "As Mulheres Poetas na Literatura Brasileira", descricao: "Rubens Jardim (org.). Arribaçã, Cajazeiras, PB.", tipo: "Verbete" },
@@ -235,22 +236,6 @@ const dadosFortunaCritica: Livro[] = [
   { ano: 2016, titulo: "Paixão movida por compromisso", descricao: "Rubens Shirassu Júnior, Jornal Linguagem Viva, no. 328, dezembro de 2016. (70)", tipo: "Resenha" },
   { ano: 2016, titulo: "Solidões da memória", descricao: "Fernando Py, Tribuna de Petrópolis, 4.11.2016. (SM)", tipo: "Resenha" },
   { ano: 2017, titulo: "Geografia dos sentidos", descricao: "Valdomiro Santana, Suplemento Literário de Minas Gerais, Ed. 1.370, pgs. 12-15, Belo Horizonte, MG. (SM)", tipo: "Resenha" }
-];
-
-// Task 87 — Leituras Críticas (textos integrais por livro, raspados do legado)
-const dadosLeiturasCriticas: Livro[] = [
-  { ano: 2013, titulo: "Estranhas formas de vida", descricao: "Por Luiz Roberto Alves. A estranheza poética dos fatos no cotidiano em Dalila.", tipo: "Leitura Crítica", slug: "leituras-criticas-estranhas-formas-de-vida" },
-  { ano: 2009, titulo: "Retratos Falhados", descricao: "Textos de Irene Lucília Andrade e Álvaro Alves de Faria.", tipo: "Leitura Crítica", slug: "leituras-criticas-retratos-falhados" },
-  { ano: 2002, titulo: "À Janela dos Dias", descricao: "Textos de Joaquim Branco, Francisco Miguel de Moura, j. geraldo neres e outros autores.", tipo: "Leitura Crítica", slug: "leituras-criticas-a-janela-dos-dias" },
-  { ano: 2003, titulo: "Vestígios", descricao: "Mensagens de leitores e resenha de Nicodemos Sena.", tipo: "Leitura Crítica", slug: "leituras-criticas-vestigios" },
-  { ano: 2007, titulo: "As Artes do Ofício", descricao: "Textos de Luís Alberto de Abreu, Rosana Chrispim e Fabiano Calixto.", tipo: "Leitura Crítica", slug: "leituras-criticas-as-artes-do-oficio" },
-  { ano: 1999, titulo: "A Vida Crônica", descricao: "Textos de Tarso de Melo, Caio Porfírio Carneiro e Fabiano Calixto.", tipo: "Leitura Crítica", slug: "leituras-criticas-a-vida-cronica" }
-];
-
-// Task 87 — Estudos Críticos (textos acadêmicos/literários integrais)
-const dadosEstudosCriticos: Livro[] = [
-  { ano: 0, titulo: "Resistência e Assimilação em Dalila Teles Veras", descricao: "Por Clara Moura Lourenço – Universidade de Coimbra.", tipo: "Estudo Crítico", slug: "estudo-critico-resistencia-e-assimilacao" },
-  { ano: 2002, titulo: "Dalila Teles Veras", descricao: "Por José Armando Pereira da Silva.", tipo: "Estudo Crítico", slug: "estudo-critico-dalila-teles-veras" }
 ];
 
 export default function SecaoObras() {
@@ -285,8 +270,6 @@ export default function SecaoObras() {
   } else if (tabAtiva === "resenhas") {
     if (subTabAtiva === "fortuna") obrasAtuais = dadosFortunaCritica;
     else if (subTabAtiva === "verbetes") obrasAtuais = dadosVerbetes;
-    else if (subTabAtiva === "leituras") obrasAtuais = dadosLeiturasCriticas;
-    else if (subTabAtiva === "estudos") obrasAtuais = dadosEstudosCriticos;
   } else if (tabAtiva === "colaboracoes") {
     if (subTabAtiva === "apresentacoes") obrasAtuais = dadosColaboracoes.filter(c => c.tipo === "Apresentação" || c.tipo === "Ensaio" || c.tipo === "Resenha");
     else if (subTabAtiva === "prefacios") obrasAtuais = dadosColaboracoes.filter(c => c.tipo === "Prefácio" || c.tipo === "Orelha" || c.tipo === "Posfácio");
@@ -321,30 +304,7 @@ export default function SecaoObras() {
           anos={decadasFixos}
         />
 
-        {/* Task 87 — Leituras e Estudos Críticos: lista simples (sem décadas),
-            na ordem do índice do legado, com link para o texto integral */}
-        {tabAtiva === "resenhas" && (subTabAtiva === "leituras" || subTabAtiva === "estudos") && obrasAtuais.length > 0 ? (
-          <div className="estrada estrada-obra">
-            {obrasAtuais.map((obra) => (
-              <div className="trecho" key={obra.titulo}>
-                <p>
-                  <strong>{obra.titulo}</strong>
-                  <span style={{ display: "block", fontSize: "1rem", color: "#666", marginTop: "5px", fontFamily: "'Inter', sans-serif" }}>
-                    {obra.descricao} <span className="tipo-publicacao">{obra.tipo}</span>
-                  </span>
-                </p>
-                <Link
-                  href={`/texto/${obra.slug}`}
-                  style={{ display: 'inline-block', marginTop: '10px', fontFamily: "'Inter', sans-serif", fontSize: '0.85rem', fontWeight: '500', color: '#7a3b5a', textDecoration: 'none', borderBottom: '1px solid transparent', transition: 'all 0.3s ease', paddingBottom: '1px' }}
-                  onMouseOver={(e) => e.currentTarget.style.borderBottomColor = '#7a3b5a'}
-                  onMouseOut={(e) => e.currentTarget.style.borderBottomColor = 'transparent'}
-                >
-                  Leia o texto →
-                </Link>
-              </div>
-            ))}
-          </div>
-        ) : (tabAtiva === "obras" || tabAtiva === "coletaneas" || tabAtiva === "colaboracoes" || tabAtiva === "escritos" || tabAtiva === "resenhas") && obrasAtuais.length > 0 ? (
+        {(tabAtiva === "obras" || tabAtiva === "coletaneas" || tabAtiva === "colaboracoes" || tabAtiva === "escritos" || tabAtiva === "resenhas") && obrasAtuais.length > 0 ? (
           <div className="estrada estrada-obra">
             {obrasAgrupadas.map((grupo, gIndex) => (
               <div key={grupo.decada}>
