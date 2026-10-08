@@ -1,24 +1,30 @@
-TROCA DA IMAGEM LATERAL DAS ENTREVISTAS
-=========================================
+DIUTURNOS: meses empilhados, sem tabs (formato definitivo)
+=============================================================
 
-A imagem da mãozinha (aquarela) foi aposentada — entra a
-FOTOMONTAGEM DA DALILA (retratos em terracota com o selo dtv),
-aquela mesma do card de WhatsApp, no formato exato do espaço (2:3).
+O que mudou:
+- Fim das tabs de meses na aba "Trechos" do livro Diuturnos.
+- Agora os 12 meses aparecem empilhados, todos na mesma página:
+  * Título do mês em cima, DOURADO, com um pequeno traço de ênfase abaixo;
+  * Janeiro abre com a imagem à ESQUERDA do poema;
+  * Cada mês alterna a imagem (esquerda, direita, esquerda...);
+  * Dezembro, o último, fecha o ciclo com a IMAGEM DE JANEIRO
+    à direita do poema — o ano termina onde começou.
+- No celular, imagem e poema viram coluna única, sem nada escapar.
 
 O que fazer (2 passos):
-1. Arraste a pasta "public" deste pacote para dentro da pasta
-   do seu projeto (clone local) e confirme a substituição.
-   O arquivo vai para: public/imagens/entrevistas/maosescrita2.jpg
-   (nome mantido de propósito: é o que a página já procura)
+1. Arraste a pasta "src" deste pacote para dentro da pasta do seu
+   projeto (clone local) e confirme a substituição.
+   O arquivo vai para: src/app/obra/[id]/ConteudoObra.tsx
 2. No VS Code: Commit & Sync (como sempre). Aguarde ~2 min o deploy.
 
-Se você já tinha arrastado o pacote anterior (a mãozinha), este
-aqui sobrescreve a imagem sem tocar em mais nada. Seu código
-fica intacto — o pacote contém apenas a imagem.
+AVISO AMIGÁVEL: este pacote substitui o arquivo inteiro
+ConteudoObra.tsx (a página dos livros). Se você personalizou algo
+NESSA página do seu lado, me avise antes de aplicar — o resto do
+site não é tocado. O CSS novo viaja embutido no próprio componente,
+então o seu globals.css fica intocado.
 
-Depois, teste abrindo uma entrevista:
-OBRA > Escritos & Leituras > Entrevistas > "Leia o texto".
+Depois, teste: OBRA > Obras Publicadas > Diuturnos > aba "Trechos".
 
-Pacote gerado em 08/10/2026 (Task 85).
-Imagem: upload fotomontagemdalila.png enviada pela usuária,
-convertida para JPG (400x600, 63 KB).
+Pacote gerado em 08/10/2026 (Task 86).
+Conteúdo: src/app/obra/[id]/ConteudoObra.tsx (com o layout dos
+meses novo + CSS embutido). Nenhum outro arquivo é tocado.

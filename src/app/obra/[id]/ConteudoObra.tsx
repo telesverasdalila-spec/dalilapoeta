@@ -79,7 +79,6 @@ import dados70Anos from "./70-anos-poemas-leitores/dados.json";
 import dadosPontos from "./pontos/dados.json";
 import dadosFugaEUrgencias from "./fuga-e-urgencias/dados.json";
 import dadosDiuturnos from "./diuturnos/dados.json";
-import dadosAlpharrabio12Anos from "./alpharrabio-12-anos/dados.json";
 
 // Agregador central - reúne todos os livros num único objeto
 const livros: Record<string, Livro> = {
@@ -117,8 +116,7 @@ const livros: Record<string, Livro> = {
   "70-anos-poemas-leitores": dados70Anos,
   "pontos": dadosPontos,
   "fuga-e-urgencias": dadosFugaEUrgencias,
-  "diuturnos": dadosDiuturnos,
-  "alpharrabio-12-anos": dadosAlpharrabio12Anos
+  "diuturnos": dadosDiuturnos
 };
 
 export default function ConteudoObra({ params }: { params: Promise<{ id: string }> }) {
@@ -387,6 +385,60 @@ export default function ConteudoObra({ params }: { params: Promise<{ id: string 
                 {/* TAB TRECHOS - condicional */}
                 {abaAtiva === "trechos" && livro.trechos && livro.trechos.length > 0 && (
                   <div>
+                    {/* Task 86 — Diuturnos: meses empilhados SEM tabs, título dourado com traço, zigzag imagem esquerda/direita; último bloco fecha com a imagem de janeiro à direita */}
+                    <style>{`
+                      .diu-mes { max-width: 800px; margin: 0 auto; padding: 4px 0 14px; }
+                      .diu-titulo { font-family: Georgia, serif; font-size: 2rem; font-weight: 400; letter-spacing: 5px; color: #8b6914; text-transform: uppercase; text-align: center; margin: 0 0 10px 0; }
+                      .diu-traco { width: 64px; height: 2px; background: #d4af37; margin: 0 auto 26px auto; }
+                      .diu-linha { display: flex; gap: 35px; align-items: flex-start; }
+                      .diu-direita { flex-direction: row-reverse; }
+                      .diu-imagem { flex: 0 0 280px; }
+                      .diu-imagem-card { background: #faf8f3; padding: 20px; border: 1px solid #e8e0d0; }
+                      .diu-imagem-card img { width: 100%; height: auto; display: block; }
+                      .diu-poema { flex: 1; font-size: 1.05rem; line-height: 1.85; font-family: Georgia, serif; color: #333; margin: 0; text-align: left; }
+                      .diu-separador { margin-top: 40px; height: 1px; background: linear-gradient(to right, transparent, #d4af37, transparent); }
+                      @media (max-width: 768px) {
+                        .diu-linha, .diu-linha.diu-direita { flex-direction: column; gap: 22px; }
+                        .diu-imagem { flex: none; width: 100%; max-width: 340px; margin: 0 auto; }
+                        .diu-titulo { font-size: 1.4rem; letter-spacing: 3px; }
+                      }
+                    `}</style>
+                    {id === "diuturnos" ? (
+                      <div>
+                        {livro.trechos.map((t, i: number) => {
+                          const ehUltimo = i === livro.trechos.length - 1;
+                          const imagemExibida = ehUltimo ? "/imagens/obras-publicadas/poesia/diuturnos/diuturnos-janeiro.jpg" : t.imagem_mes;
+                          const imagemADireita = i % 2 === 1;
+                          return (
+                            <div key={i} className="diu-mes">
+                              <h2 className="diu-titulo">{t.titulo}</h2>
+                              <div className="diu-traco"></div>
+                              <div className={imagemADireita ? "diu-linha diu-direita" : "diu-linha"}>
+                                <div className="diu-imagem">
+                                  <div className="diu-imagem-card">
+                                    <img src={imagemExibida} alt={t.titulo} />
+                                  </div>
+                                </div>
+                                <p className="diu-poema">
+                                  {t.texto.split(/(\*\*[^*]+\*\*)/g).map((parte, j) => {
+                                    if (parte.startsWith("**") && parte.endsWith("**")) {
+                                      return (
+                                        <span key={j} style={{ fontWeight: "700", color: "#1a1a1a" }}>
+                                          {parte.slice(2, -2)}
+                                        </span>
+                                      );
+                                    }
+                                    return parte;
+                                  })}
+                                </p>
+                              </div>
+                              {!ehUltimo && <div className="diu-separador"></div>}
+                            </div>
+                          );
+                        })}
+                      </div>
+                    ) : (
+                    <>
                     <div style={{ display: "flex", gap: "0", borderBottom: "1px solid #ebebeb", marginBottom: "25px", overflowX: "auto", scrollbarWidth: "none" }}>
                       {livro.trechos.map((t, i: number) => (
                         <button 
@@ -685,6 +737,8 @@ export default function ConteudoObra({ params }: { params: Promise<{ id: string 
                           {livro.trechos[trechoAtivo].texto}
                         </p>
                       </div>
+                    )}
+                    </>
                     )}
                   </div>
                 )}
