@@ -1,29 +1,24 @@
-CONSERTE: imagem lateral das páginas de entrevista
-====================================================
+TROCA DA IMAGEM LATERAL DAS ENTREVISTAS
+=========================================
 
-O que aconteceu:
-- A página de leitura das entrevistas pede uma imagem lateral
-  (maosescrita2.jpg) que nunca chegou ao seu projeto.
-- Sem ela, a página mostra um retângulo cinza vazio à esquerda,
-  o que faz parecer que o selo e o alinhamento não foram aplicados
-  (mas eles JÁ ESTÃO no site: o carimbo dtv aparece acima do texto
-  e as perguntas azuis já estão à direita).
+A imagem da mãozinha (aquarela) foi aposentada — entra a
+FOTOMONTAGEM DA DALILA (retratos em terracota com o selo dtv),
+aquela mesma do card de WhatsApp, no formato exato do espaço (2:3).
 
 O que fazer (2 passos):
 1. Arraste a pasta "public" deste pacote para dentro da pasta
    do seu projeto (clone local) e confirme a substituição.
    O arquivo vai para: public/imagens/entrevistas/maosescrita2.jpg
+   (nome mantido de propósito: é o que a página já procura)
 2. No VS Code: Commit & Sync (como sempre). Aguarde ~2 min o deploy.
 
-Se você achar a imagem ORIGINAL da mão escrevendo no seu computador,
-me mande aqui no chat que eu preparo a troca — ou renomeie o arquivo
-original para maosescrita2.jpg e substitua o deste pacote, mantendo
-exatamente o mesmo nome.
+Se você já tinha arrastado o pacote anterior (a mãozinha), este
+aqui sobrescreve a imagem sem tocar em mais nada. Seu código
+fica intacto — o pacote contém apenas a imagem.
 
 Depois, teste abrindo uma entrevista:
-OBRA > Escritos & Leituras > Entrevistas > "Leia o texto" em qualquer registro.
+OBRA > Escritos & Leituras > Entrevistas > "Leia o texto".
 
-Pacote gerado em 08/10/2026 (Task 84).
-Conteúdo: public/imagens/entrevistas/maosescrita2.jpg (imagem nova,
-gerada no estilo do site: mão escrevendo, aquarela em tons sépia).
-Nenhum outro arquivo é tocado — seu código fica intacto.
+Pacote gerado em 08/10/2026 (Task 85).
+Imagem: upload fotomontagemdalila.png enviada pela usuária,
+convertida para JPG (400x600, 63 KB).
