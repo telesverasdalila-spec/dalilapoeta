@@ -34,13 +34,18 @@ const cssEntrevistas = `
      subtab Entrevistas.
      Refino Task 73 (pedido da usuária): perguntas MENOS enfáticas
      (peso 500) e alinhadas à direita, como os títulos — assim não
-     herdam a justificação e não criam vácuos quando quebram linha. */
+     herdam a justificação e não criam vácuos quando quebram linha.
+     Task 82: o seletor ganhou .corpo-entrevistas (especificidade
+     maior) para vencer com folga a justificação do CSS base. */
   .corpo-texto p.ent-pergunta {
     color: #2050A0;
     font-weight: 500;
     text-align: right;
     margin-top: 30px;
     margin-bottom: 16px;
+  }
+  .corpo-texto.corpo-entrevistas p.ent-pergunta {
+    text-align: right;
   }
   .corpo-texto p.ent-resposta { margin-bottom: 16px; }
 
@@ -146,6 +151,28 @@ export default function ConteudoEntrevista({ dados }: { dados: DadosTexto }) {
               borderTop: "1px solid #e0e0e0",
               paddingTop: "35px"
             }}>
+
+              {/* SELO DTV (Task 82, pedido da usuária): carimbo de abertura,
+                  à direita, redondo, fundido com o papel (multiply) e
+                  levemente girado — como um carimbo real na primeira página.
+                  Para movê-lo para outro canto, basta mudar o
+                  justifyContent (flex-end = direita, flex-start = esquerda). */}
+              <div style={{ display: "flex", justifyContent: "flex-end", margin: "0 0 4px" }}>
+                <img
+                  src="/imagens/entrevistas/dtv-selo.jpg"
+                  alt="Selo dtv — poeta, cronista, memorialista — Alpharrabio editora"
+                  style={{
+                    width: "92px",
+                    height: "auto",
+                    display: "block",
+                    borderRadius: "50%",
+                    opacity: 0.9,
+                    mixBlendMode: "multiply",
+                    transform: "rotate(-5deg)"
+                  }}
+                />
+              </div>
+
               <main
                 className="corpo-texto corpo-entrevistas"
                 dangerouslySetInnerHTML={{ __html: dados.texto }}

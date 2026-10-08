@@ -1,45 +1,36 @@
-TASK 80 — MOVIMENTO: fusão de abinhas + tabs menores + conserto do desalinhamento
-================================================================================
+TASK 82 — ENTREVISTAS: selo dtv carimbado na página de leitura
+===============================================================
 
-O QUE ACONTECEU (diagnóstico do desalinhamento que você percebeu):
-- A Task 73 aumentou a fonte das abas-mãe (1.05rem no desktop, 0.95rem no
-  celular) mantendo-as "nowrap" e proibindo encolher (flex-shrink: 0).
-- No celular, as 6 abas não cabiam mais na tela: o menu passou a exigir
-  501px numa tela de ~390px. Em vez de rolar só dentro do menu, ele
-  ARRASTAVA A PÁGINA INTEIRA para os lados — por isso tudo parecia
-  empurrado para a direita / fora do centro.
-- O mesmo estouro (por 1px!) existia no desktop: 811px de abas num
-  espaço de 810px. Com "justify-content: center" + overflow, o início
-  do menu ficava inacessível — a impressão de "desalinhado do centro".
+CONTEXTO: o zip que você procurava não existia mais — a conversa da
+época foi interrompida antes do pacote, e a renovação do ambiente
+esvaziou a pasta de downloads. Este aqui é o conserto refeito.
 
 O QUE ESTE PACOTE FAZ:
-1. FUSÃO (seu pedido 1): a sub-aba "Atividades Culturais" foi absorvida por
-   "Encontros & Reuniões". O arquivo EncontrosAtividadesCulturais.json
-   continua sendo lido — qualquer registro que exista lá aparece dentro
-   de "Encontros & Reuniões", sem duplicar. A listagem ficou com 8 sub-abas.
-2. TABS MENORES (seu pedido 2): abas-mãe de 1.05rem -> 0.95rem (desktop),
-   0.95 -> 0.9rem (celular), 0.9 -> 0.85rem (telas bem estreitas).
-   Sub-abas intocadas.
-3. CONCERTO DO ALINHAMENTO:
-   - No celular as abas-mãe agora QUEBRAM em duas fileiras centralizadas
-     (nunca mais rolam a página de lado).
-   - No desktop, a centralização usa o padrão à prova de estouro já
-     adotado na régua do tempo (Task 76): se couber, centraliza; se não
-     couber, o scroll nasce do primeiro botão (nada some à esquerda).
-   - Sub-abas do desktop também ganharam quebra de linha garantida.
+1. SELO DTV (sua solicitação): o carimbo redondo "dtv — poeta, cronista,
+   memorialista / Alpharrabio editora" aparece na abertura do corpo de
+   cada entrevista, alinhado à DIREITA, fundido com o papel (efeito
+   multiply) e levemente girado, como um carimbo real na primeira página.
+   Tamanho: 92px. Imagem incluída no pacote (public/imagens/entrevistas/).
+2. ALINHAMENTO À DIREITA das perguntas: já existia no seu arquivo; neste
+   pacote o seletor foi reforçado (.corpo-texto.corpo-entrevistas
+   p.ent-pergunta) para vencer com folga qualquer justificação do CSS
+   base — agora garante o direita em todas as páginas.
 
 ARQUIVOS:
-- src/app/components/SecaoMovimento.tsx  (fusão das abinhas)
-- src/app/globals.css                    (tamanhos + alinhamento)
+- src/app/texto/[id]/ConteudoEntrevista.tsx  (substitui o seu por inteiro)
+- public/imagens/entrevistas/dtv-selo.jpg    (novo — a imagem do carimbo)
+
+IMPORTANTE:
+- NÃO substitua seu css-corpo.ts (não vem no pacote; o seu permanece).
+- NÃO mexa no page.tsx (a rota de entrevistas já existe no seu clone).
+- Se um dia quiser o selo à esquerda: no arquivo ConteudoEntrevista.tsx,
+  procure "justifyContent: \"flex-end\"" e troque por "flex-start".
 
 COMO APLICAR:
-1. Substitua os dois arquivos pelos do pacote (mesmos caminhos).
+1. Arraste os dois arquivos para os mesmos caminhos no seu clone.
 2. VS Code: Commit & Sync.
-3. Aguarde o deploy na Vercel (~2 min) e confira no celular e no desktop.
+3. Aguarde o deploy na Vercel (~2 min) e abra uma entrevista.
 
 VERIFICADO ANTES DE ENVIAR:
-- TypeScript sem erros; CSS balanceado (125/125 chaves).
-- Medido no navegador: desvio de centralização = 0 nas larguras
-  390 / 480 / 768 / 1440 px; página inteira sem rolagem lateral.
-- VIDA e OBRA testados e intocados (centralização 0, sem vazamento).
-- "Encontros & Reuniões" exibe os 8 registros normalmente.
+- TypeScript sem erros; página testada no navegador (desktop e celular):
+  selo visível à direita, perguntas azuis à direita, sem rolagem lateral.
