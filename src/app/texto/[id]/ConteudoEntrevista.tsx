@@ -1,15 +1,11 @@
 "use client";
 
 // ============================================
-// PÁGINA DE LEITURA DE ENTREVISTAS — mesmo pacote visual dos Ensaios:
-// faixa FaixaObras.png no topo, imagem fixa da categoria (as mãos
-// escrevendo do site legado, que ilustravam a seção Entrevistas
-// original), título em Georgia itálico e linha de metadados.
-// Diferencial (pedido da usuária): PERGUNTAS em cor própria — o azul
-// #2050A0 do site legado, onde as perguntas eram azuis e as respostas
-// pretas — via classes ent-pergunta / ent-resposta gravadas no
-// dados.json. Poesia embutida usa classes ent-* (versos à esquerda,
-// epígrafes recuadas, títulos dourados finos da paleta).
+// PÁGINA DE LEITURA DE ENTREVISTAS — formato pergunta/resposta
+// herdado do site legado (perguntas azuis à direita, respostas na cor
+// do texto). Reconstruído do deploy em produção (forense do chunk JS
+// + HTML da página /texto/entrevista-tarso-de-melo) após a regressão
+// do pacote anterior; CSS das classes .ent-* resgatado verbatim.
 // ============================================
 
 import Link from "next/link";
@@ -21,22 +17,26 @@ interface DadosTexto {
   tipo: "entrevista";
   subtitulo?: string;
   ano?: number | string;
-  texto: string; // HTML limpo do site legado (com classes ent-*)
+  texto: string; // HTML completo (com classes ent-* do legado)
+  data_publicacao?: string;
+  data_evento?: string;
+  contexto?: {
+    evento?: string;
+    local?: string;
+    cidade?: string;
+    organizador?: string;
+  };
   imagem?: { url: string; credito?: string; legenda?: string };
   fonte_original?: { url?: string; texto: string; nota?: string };
 }
 
 const imagemEntrevistas = "/imagens/entrevistas/maosescrita2.jpg";
 
+// CSS específico das entrevistas (resgatado verbatim do deploy —
+// histórico de Task 73 (perguntas menos enfáticas, alinhadas à
+// direita) e Task 82 (seletor com .corpo-entrevistas para vencer a
+// justificação do CSS base)).
 const cssEntrevistas = `
-  /* Perguntas em azul — herança do site legado (perguntas azuis,
-     respostas na cor do texto). Pedido da usuária na restauração da
-     subtab Entrevistas.
-     Refino Task 73 (pedido da usuária): perguntas MENOS enfáticas
-     (peso 500) e alinhadas à direita, como os títulos — assim não
-     herdam a justificação e não criam vácuos quando quebram linha.
-     Task 82: o seletor ganhou .corpo-entrevistas (especificidade
-     maior) para vencer com folga a justificação do CSS base. */
   .corpo-texto p.ent-pergunta {
     color: #2050A0;
     font-weight: 500;
@@ -96,9 +96,12 @@ const cssEntrevistas = `
 
 export default function ConteudoEntrevista({ dados }: { dados: DadosTexto }) {
   const anoVisivel =
-    dados.ano && Number(dados.ano) !== 0 ? String(dados.ano) : null;
-  const linhaMeta =
-    dados.subtitulo || `Entrevista${anoVisivel ? ` • ${anoVisivel}` : ""}`;
+    dados.data_evento || dados.data_publicacao ||
+    (dados.ano && dados.ano !== 0 ? String(dados.ano).replace("-", "–") : null);
+
+  // Linha sob o título: subtitulo do caderno/portal, com fallback
+  // para o rótulo "Entrevista • ano"
+  const linhaMeta = dados.subtitulo || `Entrevista${anoVisivel ? ` • ${anoVisivel}` : ""}`;
 
   return (
     <div style={{ minHeight: "100vh", backgroundColor: "#fdfcf8" }}>
@@ -121,7 +124,7 @@ export default function ConteudoEntrevista({ dados }: { dados: DadosTexto }) {
 
         <div style={{ display: "flex", gap: "40px", flexWrap: "wrap", alignItems: "flex-start" }}>
 
-          {/* IMAGEM FIXA DA CATEGORIA — as mãos escrevendo do site legado */}
+          {/* IMAGEM FIXA DA CATEGORIA — mesma moldura da capa do livro */}
           <div style={{ flex: "0 0 375px", maxWidth: "100%" }}>
             <div style={{ boxShadow: "0 15px 40px rgba(0,0,0,0.15)", backgroundColor: "#f5f5f5" }}>
               <img
@@ -145,31 +148,18 @@ export default function ConteudoEntrevista({ dados }: { dados: DadosTexto }) {
               {linhaMeta}
             </p>
 
-            {/* CORPO DO TEXTO — perguntas azuis, respostas na cor do texto */}
+            {/* CORPO DO TEXTO — perguntas/respostas do legado */}
             <div style={{
               marginTop: "40px",
               borderTop: "1px solid #e0e0e0",
               paddingTop: "35px"
             }}>
-
-              {/* SELO DTV (Task 82, pedido da usuária): carimbo de abertura,
-                  à direita, redondo, fundido com o papel (multiply) e
-                  levemente girado — como um carimbo real na primeira página.
-                  Para movê-lo para outro canto, basta mudar o
-                  justifyContent (flex-end = direita, flex-start = esquerda). */}
+              {/* Selo dtv — assinatura da editora, canto superior direito */}
               <div style={{ display: "flex", justifyContent: "flex-end", margin: "0 0 4px" }}>
                 <img
                   src="/imagens/entrevistas/dtv-selo.jpg"
                   alt="Selo dtv — poeta, cronista, memorialista — Alpharrabio editora"
-                  style={{
-                    width: "92px",
-                    height: "auto",
-                    display: "block",
-                    borderRadius: "50%",
-                    opacity: 0.9,
-                    mixBlendMode: "multiply",
-                    transform: "rotate(-5deg)"
-                  }}
+                  style={{ width: "92px", height: "auto", display: "block", borderRadius: "50%", opacity: 0.9, mixBlendMode: "multiply", transform: "rotate(-5deg)" }}
                 />
               </div>
 

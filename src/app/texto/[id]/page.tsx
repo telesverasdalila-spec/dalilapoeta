@@ -71,8 +71,8 @@ export default async function PageTexto({
   if (!dados) notFound();
   // Cada categoria tem componente próprio (refinamentos independentes):
   // Crônicas (dias empilhados dourados), Traduções (subtabs por autor),
-  // Ensaios (metadado com veículo/evento), Entrevistas (perguntas azuis
-  // do legado, respostas na cor do texto). Outros tipos: modelo padrão.
+  // Ensaios (metadado com veículo/evento), Entrevistas (pergunta/resposta
+  // do legado, perguntas azuis). Outros tipos: modelo padrão.
   if (dados.tipo === "cronica") return <ConteudoCronica dados={dados} />;
   if (dados.tipo === "traducao") return <ConteudoTraducao dados={dados} />;
   if (dados.tipo === "ensaio") return <ConteudoEnsaio dados={dados} />;

@@ -15,7 +15,7 @@ const dadosPoesia: Livro[] = [
   { titulo: "fuga e urgências", ano: 2022, descricao: "Alpharrabio Edições", tipo: "Livro" },
   { titulo: "Tempo em Fúria", ano: 2019, descricao: "SP: Alpharrabio Edições", tipo: "Livro" },
   { titulo: "A Mulher Antiga", ano: 2017, descricao: "Coleção PerVersas", tipo: "Livro" },
-  { titulo: "SETENTA anos, poemas, leitores", ano: 2016, descricao: "SP: Alpharrabio Edições", tipo: "Livro", slug: "setenta-anos-poemas-leitores" },
+  { titulo: "70 anos poemas leitores", ano: 2016, descricao: "SP: Alpharrabio Edições", tipo: "Livro" },
   { titulo: "Solidões da Memória", ano: 2015, descricao: "Dobra e Alpharrabio Edições", tipo: "Livro" },
   { titulo: "Estranhas Formas de Vida", ano: 2013, descricao: "Dobra e Alpharrabio Edições", tipo: "Livro" },
   { titulo: "Retratos Falhados", ano: 2008, descricao: "Editora Escrituras", tipo: "Livro" },
@@ -205,9 +205,13 @@ const dadosCronicas: Livro[] = [
   { ano: "1999-2004", titulo: "A Cidade do Meu Desejo", descricao: "Crônicas escritas para coluna Viaverbo, entre 1999-2004.", tipo: "Crônica", slug: "a-cidade-do-meu-desejo" }
 ];
 
+const dadosEntrevistas: Livro[] = [
+  { ano: 2015, titulo: "Tarso de Melo", descricao: "Enquete “Sobre poesia, ainda”, realizada com poetas brasileiros da atualidade. Blog Contra Tanto Silêncio, abril de 2015.", tipo: "Entrevista", slug: "entrevista-tarso-de-melo" },
+  { ano: "", titulo: "Selmo Vasconcellos", descricao: "Entrevista nº 584, coluna de entrevistas do portal Selmo Vasconcellos.", tipo: "Entrevista", slug: "entrevista-selmo-vasconcellos" }
+];
+
 const dadosTraducoes: Livro[] = [
-  { ano: 2000, titulo: "Mario Benedetti", descricao: "Esse Grande Simulacro e Ah as Primícias em versões bilíngues, do volume El olvido está lleno de memoria (1994), publicados na revista A Cigarra (nº 35, jun/2000).", tipo: "Tradução", slug: "traducao-mario-benedetti" },
-  { ano: 1997, titulo: "Antonio Machado", descricao: "A Contradição da Modernidade: Antonio Machado e o poema El Crimen Fue en Granada em versões bilíngues, publicados na revista A Cigarra (nº 31, ago/1997).", tipo: "Tradução", slug: "traducao-antonio-machado" }
+  { ano: 2000, titulo: "Traduções", descricao: "Antonio Machado e Mario Benedetti em versões bilíngues, publicadas na revista A Cigarra (nº 31, ago/1997; nº 35, jun/2000).", tipo: "Tradução", slug: "traducoes" }
 ];
 
 const dadosVerbetes: Livro[] = [
@@ -266,6 +270,7 @@ export default function SecaoObras() {
   } else if (tabAtiva === "escritos") {
     if (subTabAtiva === "ensaios") obrasAtuais = dadosEnsaios;
     else if (subTabAtiva === "cronicas") obrasAtuais = dadosCronicas;
+    else if (subTabAtiva === "entrevistas") obrasAtuais = dadosEntrevistas;
     else if (subTabAtiva === "traducoes") obrasAtuais = dadosTraducoes;
   } else if (tabAtiva === "resenhas") {
     if (subTabAtiva === "fortuna") obrasAtuais = dadosFortunaCritica;
@@ -325,7 +330,7 @@ export default function SecaoObras() {
                     </p>
                     {tabAtiva === "obras" && (
                       <Link 
-                        href={`/obra/${obra.slug || obra.titulo?.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[\s–—()]+/g, '-')}`}
+                        href={`/obra/${obra.titulo?.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[\s–—()]+/g, '-')}`}
                         style={{ display: 'inline-block', marginTop: '10px', fontFamily: "'Inter', sans-serif", fontSize: '0.85rem', fontWeight: '500', color: '#7a3b5a', textDecoration: 'none', borderBottom: '1px solid transparent', transition: 'all 0.3s ease', paddingBottom: '1px' }}
                         onMouseOver={(e) => e.currentTarget.style.borderBottomColor = '#7a3b5a'}
                         onMouseOut={(e) => e.currentTarget.style.borderBottomColor = 'transparent'}
