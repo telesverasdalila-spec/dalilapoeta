@@ -17,6 +17,17 @@
     {
       "label": "Editora",
       "valor": "Alpharrabio Edições, SP"
+    },
+    {
+      "label": "Sobre",
+      "valor": "Antologia de poemas escolhidos por 70 leitores, dentre os quinze títulos de livros de poesia publicados por Dalila Teles Veras, ao longo de trinta e quatro anos."
+    }
+  ],
+  "trechos": [
+    {
+      "titulo": "a uma rosa",
+      "texto": "",
+      "imagem_trecho": "/imagens/obras-publicadas/poesia/70-anos-a-uma-rosa.jpg"
     }
   ]
 }
