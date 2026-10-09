@@ -75,7 +75,7 @@ import dadosTempoEmFuria from "./tempo-em-furia/dados.json";
 import dadosCaixaPoeticas from "./caixa-poeticas/dados.json";
 import dadosMarielleDalila from "./marielle-dalila/dados.json";
 import dadosVestigios from "./vestigios/dados.json";
-import dados70Anos from "./70-anos-poemas-leitores/dados.json";
+import dados70Anos from "./setenta-anos-poemas-leitores/dados.json";
 import dadosPontos from "./pontos/dados.json";
 import dadosFugaEUrgencias from "./fuga-e-urgencias/dados.json";
 import dadosDiuturnos from "./diuturnos/dados.json";
@@ -113,7 +113,7 @@ const livros: Record<string, Livro> = {
   "caixa-poeticas": dadosCaixaPoeticas,
   "marielle-dalila": dadosMarielleDalila,
   "vestigios": dadosVestigios,
-  "70-anos-poemas-leitores": dados70Anos,
+  "setenta-anos-poemas-leitores": dados70Anos,
   "pontos": dadosPontos,
   "fuga-e-urgencias": dadosFugaEUrgencias,
   "diuturnos": dadosDiuturnos
@@ -224,6 +224,11 @@ export default function ConteudoObra({ params }: { params: Promise<{ id: string 
                 <h1 style={{ fontSize: "2.2rem", lineHeight: "1.1", margin: "0 0 10px 0", color: "#1a1a1a", fontStyle: "italic" }}>
                   {livro.titulo}
                 </h1>
+                {livro.subtitulo && (
+                  <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.95rem", letterSpacing: "1px", color: "#666", margin: "0 0 12px 0" }}>
+                    {livro.subtitulo}
+                  </p>
+                )}
               </div>
 
               <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.75rem", letterSpacing: "2px", color: "#999", textTransform: "uppercase", marginBottom: "30px" }}>{livro.genero}</p>

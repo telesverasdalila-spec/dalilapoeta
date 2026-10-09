@@ -15,7 +15,7 @@ const dadosPoesia: Livro[] = [
   { titulo: "fuga e urgências", ano: 2022, descricao: "Alpharrabio Edições", tipo: "Livro" },
   { titulo: "Tempo em Fúria", ano: 2019, descricao: "SP: Alpharrabio Edições", tipo: "Livro" },
   { titulo: "A Mulher Antiga", ano: 2017, descricao: "Coleção PerVersas", tipo: "Livro" },
-  { titulo: "70 anos poemas leitores", ano: 2016, descricao: "SP: Alpharrabio Edições", tipo: "Livro" },
+  { titulo: "SETENTA anos, poemas, leitores", ano: 2016, descricao: "SP: Alpharrabio Edições", tipo: "Livro", slug: "setenta-anos-poemas-leitores" },
   { titulo: "Solidões da Memória", ano: 2015, descricao: "Dobra e Alpharrabio Edições", tipo: "Livro" },
   { titulo: "Estranhas Formas de Vida", ano: 2013, descricao: "Dobra e Alpharrabio Edições", tipo: "Livro" },
   { titulo: "Retratos Falhados", ano: 2008, descricao: "Editora Escrituras", tipo: "Livro" },
@@ -325,7 +325,7 @@ export default function SecaoObras() {
                     </p>
                     {tabAtiva === "obras" && (
                       <Link 
-                        href={`/obra/${obra.titulo?.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[\s–—()]+/g, '-')}`}
+                        href={`/obra/${obra.slug || obra.titulo?.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[\s–—()]+/g, '-')}`}
                         style={{ display: 'inline-block', marginTop: '10px', fontFamily: "'Inter', sans-serif", fontSize: '0.85rem', fontWeight: '500', color: '#7a3b5a', textDecoration: 'none', borderBottom: '1px solid transparent', transition: 'all 0.3s ease', paddingBottom: '1px' }}
                         onMouseOver={(e) => e.currentTarget.style.borderBottomColor = '#7a3b5a'}
                         onMouseOut={(e) => e.currentTarget.style.borderBottomColor = 'transparent'}

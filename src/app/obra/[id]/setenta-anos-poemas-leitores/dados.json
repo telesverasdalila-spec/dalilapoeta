@@ -1,10 +1,11 @@
 {
-  "titulo": "70 anos, poemas, leitores",
-  "subtitulo": "",
+  "titulo": "SETENTA",
+  "subtitulo": "anos, poemas, leitores",
   "genero": "Homenagem",
   "ano": 2016,
   "capa": "/imagens/obras-publicadas/poesia/70-anos-poemas-leitores.jpg",
   "status_catalogo": "esgotado",
+  "sobre": "Poemas escolhidos por 70 leitores, para celebrar os 70 anos da autora em 2016. Amigos, artistas, leitores e escritores, fazem a curadoria da antologia que resulta numa obra que convida para navegar no mundo poético de Dalila, que à época, contava com os quinze títulos publicados.",
   "dados": [
     {
       "label": "Ano",
@@ -17,10 +18,6 @@
     {
       "label": "Editora",
       "valor": "Alpharrabio Edições, SP"
-    },
-    {
-      "label": "Sobre",
-      "valor": "Antologia de poemas escolhidos por 70 leitores, dentre os quinze títulos de livros de poesia publicados por Dalila Teles Veras, ao longo de trinta e quatro anos."
     }
   ],
   "trechos": [
