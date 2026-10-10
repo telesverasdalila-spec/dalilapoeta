@@ -249,10 +249,11 @@ body {
   background-color: rgba(0,0,0,0.03);
 }
 .btn-decada.ativa {
-  color: #8b6914; /* Task 103 — década ativa legível sobre creme */
+  color: #d4af37; /* Task 105 — dourado vibrante de volta: régua é o trilho que alinha a página */
+  font-weight: 600; /* engrossa o dourado para manter legibilidade */
   border-bottom-color: #d4af37;
-  transform: scale(1.15);
-  background-color: rgba(212, 175, 55, 0.1);
+  transform: scale(1.15); /* ênfase pelo aumento */
+  background-color: rgba(212, 175, 55, 0.1); /* ênfase pelo fundo dourado leve */
 }
 
 /* ============================================================
@@ -388,7 +389,7 @@ span[data-ano] {
   color: #333;
 }
 span[data-ano].data-iluminada {
-  color: #8b6914; /* Task 103 — ano iluminado também precisa contraste */
+  color: #d4af37; /* Task 105 — ano iluminado volta ao dourado (acompanha a régua) */
   font-weight: 700;
 }
 
