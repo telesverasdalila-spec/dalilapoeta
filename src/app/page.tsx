@@ -51,7 +51,7 @@ export default function Home() {
       )}
 
       {/* Rodapé — cinza fotográfico (tons das fotos P&B) com letras douradas;
-          simplificado a pedido da usuária: apenas o nome, em minúsculas,
+          simplificado a pedido da usuária: nome em minúsculas + © ano, sem filigrana,
           com a mesma fonte das tabs principais (Inter 500, 0.95rem) */}
       <footer style={{
         background: 'linear-gradient(180deg, #6b6b6b 0%, #5a5a5a 100%)',
@@ -61,7 +61,7 @@ export default function Home() {
         marginTop: 'auto'
       }}>
         <p style={{ margin: 0, fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: '0.95rem' }}>
-          dalila teles veras
+          dalila teles veras  — © {new Date().getFullYear()}
         </p>
       </footer>
     </>

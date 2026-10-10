@@ -812,3 +812,17 @@ Work Log:
 Stage Summary:
 - Rodapé = só o nome em minúsculas, fonte das tabs, fundo cinza fotográfico e letras douradas preservados
 - Observação: o "© ano" saiu junto ("somente o nome", pedido literal) — fácil de repor se a usuária quiser
+
+---
+Task ID: 101
+Agent: Super Z (sessão de continuação)
+Task: Usuária reverteu parcialmente o pedido do rodapé — "na realidade eu gostaria que ficasse sim o ano... com a marca do registro autoral e o ano" (manter estilo simples, restaurar © ano)
+
+Work Log:
+- Protocolo: git fetch confirmou sync dos 3 commits da usuária (e011928 traduções ajuste, d65639c dividir traduções, a27ecb8 rodapé ajuste = HEAD); page.tsx do GitHub IDÊNTICO ao da mesa
+- Edit: <p> do rodapé agora "dalila teles veras — © {new Date().getFullYear()}" — mantidos: minúsculas, Inter 500 0.95rem, sem filigrana, cinza + dourado; comentário do bloco atualizado
+- Build local: OK, 146 páginas
+- Pacote: download/footer-com-copyright.zip (src/app/page.tsx + worklog.md), conferido com unzip -l
+
+Stage Summary:
+- Rodapé final: assinatura enxuta com registro autoral — "dalila teles veras — © ano" na fonte das tabs
