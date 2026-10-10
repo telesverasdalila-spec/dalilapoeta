@@ -61,7 +61,7 @@ export default function Home() {
         marginTop: 'auto'
       }}>
         <p style={{ margin: 0, fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: '0.95rem' }}>
-          dalila teles veras—© {new Date().getFullYear()}
+          dalila teles veras — © {new Date().getFullYear()}
         </p>
       </footer>
     </>
