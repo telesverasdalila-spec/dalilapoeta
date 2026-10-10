@@ -207,7 +207,12 @@ const dadosCronicas: Livro[] = [
 
 const dadosEntrevistas: Livro[] = [
   { ano: 2015, titulo: "Tarso de Melo", descricao: "Enquete “Sobre poesia, ainda”, realizada com poetas brasileiros da atualidade. Blog Contra Tanto Silêncio, abril de 2015.", tipo: "Entrevista", slug: "entrevista-tarso-de-melo" },
-  { ano: "", titulo: "Selmo Vasconcellos", descricao: "Entrevista nº 584, coluna de entrevistas do portal Selmo Vasconcellos.", tipo: "Entrevista", slug: "entrevista-selmo-vasconcellos" }
+  { ano: 2012, titulo: "Sérgio Simka", descricao: "Entrevista concedida ao prof. Sérgio Simka, publicada no Portal Mauá e Região, setembro de 2012.", tipo: "Entrevista", slug: "entrevista-sergio-simka" },
+  { ano: 2009, titulo: "Álvaro Alves de Faria", descricao: "Entrevista por e-mails a Álvaro Alves de Faria, inserida no livro Pastores de Virgílio (Ed. Escrituras, 2009).", tipo: "Entrevista", slug: "entrevista-alvaro-alves-de-faria" },
+  { ano: 2008, titulo: "Floriano Martins", descricao: "Entrevista concedida a Floriano Martins, incluída à guisa de prefácio no livro Retratos Falhados (Ed. Escrituras, 2008).", tipo: "Entrevista", slug: "entrevista-floriano-martins" },
+  { ano: 2004, titulo: "IMES-Notícias", descricao: "Entrevista ao IMES-Notícias, Ano XIV, nº 93, novembro de 2004.", tipo: "Entrevista", slug: "entrevista-noticias-imes" },
+  { ano: "", titulo: "Selmo Vasconcellos", descricao: "Entrevista nº 584, coluna de entrevistas do portal Selmo Vasconcellos.", tipo: "Entrevista", slug: "entrevista-selmo-vasconcellos" },
+  { ano: "", titulo: "Revista Virtual PD Literatura", descricao: "Entrevista à Revista Virtual PD Literatura, sobre À Janela dos Dias – poesia quase toda.", tipo: "Entrevista", slug: "entrevista-pd-literatura" }
 ];
 
 const dadosTraducoes: Livro[] = [

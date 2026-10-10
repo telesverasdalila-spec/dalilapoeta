@@ -2,10 +2,12 @@
 
 // ============================================
 // PÁGINA DE LEITURA DE ENTREVISTAS — formato pergunta/resposta
-// herdado do site legado (perguntas azuis à direita, respostas na cor
+// herdado do site legado (perguntas azuis, respostas na cor
 // do texto). Reconstruído do deploy em produção (forense do chunk JS
 // + HTML da página /texto/entrevista-tarso-de-melo) após a regressão
 // do pacote anterior; CSS das classes .ent-* resgatado verbatim.
+// Task 93: perguntas à esquerda; +5 entrevistas do legado (IMES,
+// PD Literatura, Floriano Martins, Álvaro Alves de Faria, Simka).
 // ============================================
 
 import Link from "next/link";
@@ -33,19 +35,20 @@ interface DadosTexto {
 const imagemEntrevistas = "/imagens/entrevistas/maosescrita2.jpg";
 
 // CSS específico das entrevistas (resgatado verbatim do deploy —
-// histórico de Task 73 (perguntas menos enfáticas, alinhadas à
-// direita) e Task 82 (seletor com .corpo-entrevistas para vencer a
-// justificação do CSS base)).
+// histórico de Task 73 (perguntas menos enfáticas) e Task 82 (seletor
+// com .corpo-entrevistas para vencer a justificação do CSS base).
+// Task 93: perguntas alinhadas à ESQUERDA (pedido da usuária — o
+// alinhamento à direita do legado dificultava a leitura).
 const cssEntrevistas = `
   .corpo-texto p.ent-pergunta {
     color: #2050A0;
     font-weight: 500;
-    text-align: right;
+    text-align: left;
     margin-top: 30px;
     margin-bottom: 16px;
   }
   .corpo-texto.corpo-entrevistas p.ent-pergunta {
-    text-align: right;
+    text-align: left;
   }
   .corpo-texto p.ent-resposta { margin-bottom: 16px; }
 

@@ -644,3 +644,28 @@ Stage Summary:
 - Subtab Entrevistas restaurada: botão (CabecalhoObra) + lista com 2 entrevistas (SecaoObras) + 2 páginas de leitura completas verbatim do deploy
 - PENDÊNCIA (dados irrecuperáveis localmente): listas "Leituras Críticas" e "Estudos Críticos" de OBRA→Resenhas permanecem no fallback de curadoria — os arrays existiam só no SecaoObras da era pré-91, perdido nas reciclagens; fontes a tentar com a usuária: VS Code Timeline (Open Timeline no arquivo), histórico do GitHub dela, ou zip antigo na pasta Downloads do computador dela
 - REGRA reforçada: pacotes futuros só podem tocar arquivos verificados como não-avançados no live (comparar chunk do AR antes de sobrescrever)
+
+---
+Task ID: 93-b
+Agent: Super Z (sessão de continuação)
+Task: Completar as entrevistas do legado (7 no total) + alinhar perguntas à esquerda (pedido da usuária: "apareceu as entrevistas mas não apareceram todas... o texto precisa estar alinhado à esquerda não à direita"; link legado informado: entrevistasdalilatelesveras.htm)
+
+Work Log:
+- Página-índice do legado baixada: 7 entrevistas no site antigo (IMES, PD Literatura, Floriano Martins, Álvaro Alves de Faria, Sérgio Simka, Selmo Vasconcellos, Tarso de Melo); site novo tinha só 2 (Tarso, Selmo)
+- Baixadas as 7 páginas individuais (servidor legado instável: 3 ficaram truncadas em várias tentativas; Floriano e Álvaro completas só via site original com retries + Álvaro também conferida no Wayback; arquivos salvos em scripts/legado_entrevista_*.html)
+- Codificação: servidor antigo usa cp1252 — extração com cp1252 preserva travessões e aspas curvas (latin-1 puro gerava caracteres de controle invisíveis)
+- Texto limpo extraído para scripts/txt_0{1,2,3,4,5}_*.txt; verificação de completude por </html> e por leitura integral
+- scripts/gerar_entrevistas.py: gera os 5 dados.json no modelo ent-* da Tarso (ent-intro / hr ent-separador / h2 / ent-pergunta / ent-resposta / ent-assinatura), texto VERBATIM (typos do legado preservados: "AFF"/"AAF", "que ,", parêntese não fechado na intro de Álvaro, aspas retas do Simka)
+- Bug corrigido no parse: marcadores "=====" de <hr> grudavam em parágrafos vizinhos e engoliam "LIVROS PUBLICADOS" e a 1ª pergunta PD (replace "=====" -> ¶ antes do split)
+- Contagens finais: IMES 7/7, PD 10 perguntas + 6 bio + 1 livros + 10 respostas, Floriano 9/9+6 continuação + assinatura [Fortaleza, abril de 2008.], Álvaro 13 perguntas/17 respostas, Simka 11/11
+- 5 pastas criadas em src/app/texto/[id]/: entrevista-noticias-imes (2004), entrevista-pd-literatura (sem ano), entrevista-floriano-martins (2008), entrevista-alvaro-alves-de-faria (2009), entrevista-sergio-simka (2012)
+- SecaoObras.tsx: dadosEntrevistas ampliado de 2 para 7 cards (ordem ano desc; Selmo e PD Literatura no grupo "Data não informada")
+- ConteudoEntrevista.tsx: .ent-pergunta text-align right -> left (regra base + variante .corpo-entrevistas), comentários atualizados (Task 93); assinatura continua à direita (convenção)
+- Build: OK (88 páginas estáticas; /texto/[id] com 45 rotas — 7 entrevistas presentes); erro de rede next/font/google é ruído local (na Vercel baixa normal)
+- Verificação anti-regressão (regra nova): SecaoObras.tsx local = live + adições; ConteudoEntrevista.tsx local = live + mudança de alinhamento; dados.json são arquivos novos; page.tsx/CabecalhoObra/css-corpo NÃO tocados
+
+Stage Summary:
+- Subtab Entrevistas agora lista as 7 do legado, todas com texto integral em /texto/<slug>
+- Perguntas azuis alinhadas à esquerda em todas as 7 entrevistas
+- Pacote: download/entrevistas-completas-alinhamento-pacote.zip
+- PENDÊNCIAS: (a) leituras críticas / estudos críticos seguem no fallback de curadoria (dados só existiam no SecaoObras era pré-91; perguntar se a usuária tem cópia); (b) Task 92 adiada: contraste/acessibilidade
