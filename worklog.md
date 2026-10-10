@@ -760,3 +760,55 @@ Stage Summary:
 - Código no GitHub está sadio; gargalo é o atraso dos deploys na Vercel + pacote antigo commitado por engano (provável confusão entre zips parecidos no extrair)
 - Faltou ao f4418e3 somente a divisão das traduções → coberta pelo pacote de 2 arquivos
 - PENDÊNCIAS: confirmar deploy do f4418e3 e do pacote novo; se deploys seguirem atrasando, verificar aba Deploys do painel Vercel; Task 92 (contraste) adiada; pasta órfã entrevista-imes-noticias para limpeza futura
+
+---
+Task ID: 98
+Agent: Super Z (sessão de continuação)
+Task: Confrontar print do painel Vercel (Deployments) com a perícia do site ao vivo e resolver "conteúdo vazio nas críticas"
+
+Work Log:
+- Print da usuária: f4418e3 "Rescue and integrate..." Ready 41s, Production, 1h atrás — deploy SAUDÁVEL
+- Primeira perícia de chunk foi enganosa: "Leia o texto" x1 no chunk ao vivo batia com 758bead, mas minificadores fundem literais de string iguais (dedupe) — assinatura inválida
+- Perícia correta com literal ÚNICO do array de leituras ("Nicodemos Sena"): 0 no src do 758bead, 1 no SecaoObras do f4418e3 (array com 6 itens), e PRESENTE no chunk ao vivo 2l76y7y-ypx9d.js → site ao vivo = f4418e3
+- Traduções juntas = esperado no f4418e3 (divisão só existe no pacote de 2 arquivos, nunca commitado — GitHub segue sem commit além de f4418e3)
+- Conteúdo "vazio" nas críticas = cache do navegador (botões existiam no 758bead, dados não)
+- Teste da janela anônima (proposto à usuária) CONFIRMADO por ela: leituras críticas, estudos críticos e entrevistas aparecem; traduções juntas (esperado)
+- Lição: para perícia de chunk minificado, usar literais únicos e raros (nomes próprios/descrições longas), nunca nomes de variáveis nem strings curtas repetidas
+
+Stage Summary:
+- Site no ar (f4418e3) com 7 entrevistas + leituras/estudos críticos completos — só falta a divisão das traduções
+- Fim de linha pendente: usuária aplicar download/pacote-traducoes-separadas.zip (2 arquivos) → Commit & Sync → traduções em 2 linhas
+- Cache do navegador documentado como causa recorrente de falsas regressões; janela anônima = teste diagnóstico padrão
+
+---
+Task ID: 99
+Agent: Super Z (sessão de continuação)
+Task: Responder "como fazer pra não retornar ao status anterior?" e confirmar o ciclo completo de restauração
+
+Work Log:
+- git fetch: 2 commits novos (9d70ab3 "inserção", 71fa51a "refinar as abas traduções e resenhas") — usuária aplicou o pacote de 2 arquivos com sucesso; diff f4418e3..HEAD = só SecaoObras (+6/-1, as 2 cards de tradução) + worklog
+- Perícia final do site ao vivo (chunks do Turbopack): literal "traducao-mario-benedetti" PRESENTE no chunk 1wlx1-w6el-u4.js → as 2 linhas de traduções estão NO AR
+- Janela anônima confirmada pela usuária: entrevistas, leituras críticas e estudos críticos visíveis; cache do navegador documentado como a causa das "regressões" vistas (não eram regressões do site)
+
+Stage Summary:
+- CICLO FECHADO: 7 entrevistas + 6 leituras críticas + 2 estudos críticos + 2 traduções separadas, tudo no ar e commitado no GitHub (fonte da verdade)
+- Fim do loop de regressão: protocolo GitHub-first (toda sessão baixa o estado real antes de trabalhar) + perícia de chunks para verificar o ar + janela anônima como teste de cache
+- PENDÊNCIAS opcionais: Task 92 (contraste/acessibilidade), pasta órfã entrevista-imes-noticias, extras locais não-commitados (cronicas, 70-anos-poemas-leitores, texto/[id]/traducoes)
+
+---
+Task ID: 100
+Agent: Super Z (sessão de continuação)
+Task: Simplificar o rodapé a pedido da usuária — apenas "dalila teles veras" em minúsculas, sem adornos acima, com a fonte das tabs principais
+
+Work Log:
+- Protocolo seguido: mesa sincronizada com o GitHub HEAD (71fa51a) via rsync antes de editar
+- Footer localizado em src/app/page.tsx (não é componente próprio)
+- Antes: filigrana dourada (2 linhas + losango) + "Dalila Teles Veras — © ano" em Georgia serif espaçada
+- Fonte das tabs identificada: .tab-btn em globals.css linha 141 — Inter, sans-serif, 500, 0.95rem
+- Edit: filigrana removida; <p> único com "dalila teles veras" (minúsculas, sem © ano), fontFamily Inter, fontWeight 500, fontSize 0.95rem; gradiente cinza + dourado #F7D179 mantidos (não foram pedidas mudanças de cor); comentário atualizado para contexto de sessões futuras
+- Build local: OK, 146 páginas
+- Pacote: download/footer-simplificado.zip (src/app/page.tsx + worklog.md), conferido com unzip -l
+
+Stage Summary:
+- Rodapé = só o nome em minúsculas, fonte das tabs, fundo cinza fotográfico e letras douradas preservados
+- Observação: o "© ano" saiu junto ("somente o nome", pedido literal) — fácil de repor se a usuária quiser

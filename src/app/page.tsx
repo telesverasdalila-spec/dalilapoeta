@@ -50,7 +50,9 @@ export default function Home() {
         <SecaoMovimento />
       )}
 
-      {/* Rodapé — cinza fotográfico (tons das fotos P&B) com letras douradas */}
+      {/* Rodapé — cinza fotográfico (tons das fotos P&B) com letras douradas;
+          simplificado a pedido da usuária: apenas o nome, em minúsculas,
+          com a mesma fonte das tabs principais (Inter 500, 0.95rem) */}
       <footer style={{
         background: 'linear-gradient(180deg, #6b6b6b 0%, #5a5a5a 100%)',
         color: '#F7D179',
@@ -58,23 +60,8 @@ export default function Home() {
         textAlign: 'center',
         marginTop: 'auto'
       }}>
-        {/* Filigrana em dourado suave (mesma lógica tom-sobre-tom do rodapé antigo) */}
-        <div
-          aria-hidden="true"
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '12px',
-            maxWidth: '420px',
-            margin: '0 auto 10px'
-          }}
-        >
-          <div style={{ flex: 1, height: 1, background: 'linear-gradient(to right, transparent, rgba(247, 209, 121, 0.55))' }} />
-          <div style={{ width: 6, height: 6, background: '#F7D179', transform: 'rotate(45deg)', flex: 'none' }} />
-          <div style={{ flex: 1, height: 1, background: 'linear-gradient(to left, transparent, rgba(247, 209, 121, 0.55))' }} />
-        </div>
-        <p style={{ margin: 0, fontFamily: 'Georgia, serif', letterSpacing: '1.5px', color: '#F7D179' }}>
-          Dalila Teles Veras — © {new Date().getFullYear()}
+        <p style={{ margin: 0, fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: '0.95rem' }}>
+          dalila teles veras
         </p>
       </footer>
     </>
