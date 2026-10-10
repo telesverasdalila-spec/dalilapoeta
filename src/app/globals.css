@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+/* Task 103 — acessibilidade: base tipográfica 16px → 18px.
+   Tudo que é medido em rem cresce proporcionalmente no site inteiro,
+   em qualquer dispositivo. */
+html {
+  font-size: 18px;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -116,7 +123,7 @@ body {
 .header-subtitle {
   font-style: italic;
   font-size: 1.15rem;
-  color: #999;
+  color: #333;
   margin-bottom: 2px;
   text-align: center;
 }
@@ -142,7 +149,7 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: 0.95rem; /* Task 80: um degrau menor (era 1.05) — equilíbrio com título e sub-abas */
   font-weight: 500;
-  color: #bbb;
+  color: #333;
   cursor: pointer;
   padding: 8px 10px;
   border: none;
@@ -153,8 +160,8 @@ body {
 }
 .tab-btn:hover { color: #8b4513; }
 .tab-btn.ativa {
-  color: #d4af37;
-  border-bottom-color: #d4af37;
+  color: #8b6914; /* Task 103 — dourado escurecido: 4.9:1 sobre creme (antes 2.1:1) */
+  border-bottom-color: #d4af37; /* filete decorativo mantém o dourado original */
 }
 
 .tabs-sub {
@@ -180,7 +187,7 @@ body {
 }
 .tab-sub-btn:hover { color: #8b4513; }
 .tab-sub-btn.ativa {
-  color: #d4af37;
+  color: #8b6914; /* Task 103 — mesmo tratamento da aba principal */
   border-bottom-color: #d4af37;
 }
 
@@ -228,7 +235,7 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: 0.8rem;
   font-weight: 500;
-  color: #bbb;
+  color: #333;
   cursor: pointer;
   padding: 4px 8px;
   border-bottom: 2px solid transparent;
@@ -242,7 +249,7 @@ body {
   background-color: rgba(0,0,0,0.03);
 }
 .btn-decada.ativa {
-  color: #d4af37;
+  color: #8b6914; /* Task 103 — década ativa legível sobre creme */
   border-bottom-color: #d4af37;
   transform: scale(1.15);
   background-color: rgba(212, 175, 55, 0.1);
@@ -303,7 +310,7 @@ body {
 }
 .trecho .local-info {
   font-size: 0.9rem;
-  color: #888;
+  color: #333;
   font-weight: 400;
   display: block;
   margin-top: 2px;
@@ -311,7 +318,7 @@ body {
 }
 .trecho .data-info {
   font-size: 0.85rem;
-  color: #999;
+  color: #333;
   font-weight: 400;
   display: block;
   margin-top: 2px;
@@ -370,7 +377,7 @@ body {
   font-weight: 600;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #b0b0b0;
+  color: #333;
   margin: 20px 0 10px -10px;
   padding-bottom: 5px;
   border-bottom: 1px solid #ebebeb;
@@ -378,10 +385,10 @@ body {
 
 span[data-ano] {
   transition: color 0.3s ease, font-weight 0.3s ease;
-  color: #888;
+  color: #333;
 }
 span[data-ano].data-iluminada {
-  color: #d4af37;
+  color: #8b6914; /* Task 103 — ano iluminado também precisa contraste */
   font-weight: 700;
 }
 
@@ -398,7 +405,7 @@ span[data-ano].data-iluminada {
   display: block;
   font-size: 14px;
   font-weight: 600;
-  color: #d4af37;
+  color: #8b6914; /* Task 103 — ano legível sobre creme (era dourado 2.1:1) */
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 8px;
@@ -406,9 +413,9 @@ span[data-ano].data-iluminada {
 }
 .trecho-citacao p {
   margin: 0;
-  font-size: 13px;
-  line-height: 1.6;
-  color: #8a7e7a;
+  font-size: 15px; /* Task 103 — citações são o conteúdo principal: 13px → 15px */
+  line-height: 1.7;
+  color: #333;
   font-style: italic;
   font-family: Georgia, 'Times New Roman', serif;
   font-weight: 400;
@@ -615,7 +622,7 @@ span[data-ano].data-iluminada {
     padding: 10px 12px 8px 12px !important;
   }
   .trecho-citacao p { font-size: 0.85rem !important; }
-  .trecho-citacao .ano { font-size: 14px !important; font-weight: 600 !important; }
+  .trecho-citacao .ano { font-size: 15px !important; font-weight: 600 !important; }
 }
 
 @media (max-width: 480px) {
@@ -680,7 +687,7 @@ span[data-ano].data-iluminada {
   text-align: right;
   font-family: var(--font-inter), sans-serif;
   font-size: 0.85rem;
-  color: #888;
+  color: #333;
 }
 
 .quote-body {

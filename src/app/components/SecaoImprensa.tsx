@@ -7,14 +7,14 @@ export default function SecaoImprensa() {
 
         <div className="trecho">
           
-          <p style={{ textAlign: "center", fontSize: "1.1rem", color: "#555", marginBottom: "40px" }}>
+          <p style={{ textAlign: "center", fontSize: "1.1rem", color: "#2b2b2b", marginBottom: "40px" }}>
             Acompanhe o trabalho de Dalila Teles Veras através dos canais oficiais:
           </p>
         </div>
 
         {/* BLOGS */}
         <div className="trecho" style={{ marginBottom: "40px" }}>
-          <h3 style={{ fontSize: "1.4rem", fontWeight: "600", color: "#d4af37", borderBottom: "2px solid #ebebeb", paddingBottom: "10px", marginBottom: "20px" }}>
+          <h3 style={{ fontSize: "1.4rem", fontWeight: "600", color: "#8b6914", borderBottom: "2px solid #ebebeb", paddingBottom: "10px", marginBottom: "20px" }}>
             ✍️ Blogs
           </h3>
           <p>
@@ -23,7 +23,7 @@ export default function SecaoImprensa() {
                onMouseOut={(e) => e.currentTarget.style.borderBottomColor = "transparent"}>
               📖 À Janela dos Dias
             </a>
-            <span style={{ display: "block", fontSize: "0.9rem", color: "#666", marginTop: "5px" }}>
+            <span style={{ display: "block", fontSize: "0.9rem", color: "#2b2b2b", marginTop: "5px" }}>
               Blog literário e cultural desde 2009.
             </span>
           </p>
@@ -31,7 +31,7 @@ export default function SecaoImprensa() {
 
         {/* REDES SOCIAIS E SITES */}
         <div className="trecho" style={{ marginBottom: "40px" }}>
-          <h3 style={{ fontSize: "1.4rem", fontWeight: "600", color: "#d4af37", borderBottom: "2px solid #ebebeb", paddingBottom: "10px", marginBottom: "20px" }}>
+          <h3 style={{ fontSize: "1.4rem", fontWeight: "600", color: "#8b6914", borderBottom: "2px solid #ebebeb", paddingBottom: "10px", marginBottom: "20px" }}>
             🔗 Sites e Redes Sociais
           </h3>
           <p>
@@ -59,7 +59,7 @@ export default function SecaoImprensa() {
 
         {/* CONTATO */}
         <div className="trecho" style={{ marginBottom: "40px" }}>
-          <h3 style={{ fontSize: "1.4rem", fontWeight: "600", color: "#d4af37", borderBottom: "2px solid #ebebeb", paddingBottom: "10px", marginBottom: "20px" }}>
+          <h3 style={{ fontSize: "1.4rem", fontWeight: "600", color: "#8b6914", borderBottom: "2px solid #ebebeb", paddingBottom: "10px", marginBottom: "20px" }}>
             📧 Contato
           </h3>
           <p>
@@ -69,7 +69,7 @@ export default function SecaoImprensa() {
               📧 dalila@alpharrabio.com.br
             </a>
           </p>
-          <p style={{ marginTop: "15px", fontSize: "0.95rem", color: "#666" }}>
+          <p style={{ marginTop: "15px", fontSize: "0.95rem", color: "#2b2b2b" }}>
             <strong>Alpharrabio Livraria, Editora e Espaço Cultural</strong><br />
             📍 Santo André, SP — Brasil
           </p>

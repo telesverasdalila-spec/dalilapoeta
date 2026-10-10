@@ -345,7 +345,7 @@ export default function SecaoObras() {
               <div className="trecho" key={obra.titulo}>
                 <p>
                   <strong>{obra.titulo}</strong>
-                  <span style={{ display: "block", fontSize: "1rem", color: "#666", marginTop: "5px", fontFamily: "'Inter', sans-serif" }}>
+                  <span style={{ display: "block", fontSize: "1rem", color: "#2b2b2b", marginTop: "5px", fontFamily: "'Inter', sans-serif" }}>
                     {obra.descricao} <span className="tipo-publicacao">{obra.tipo}</span>
                   </span>
                 </p>
@@ -375,7 +375,7 @@ export default function SecaoObras() {
                   <div className="trecho" key={obra.titulo + obra.ano}>
                     <p>
                       <strong>{obra.titulo}</strong> 
-                      <span style={{ display: "block", fontSize: "1rem", color: "#666", marginTop: "5px", fontFamily: "'Inter', sans-serif" }}>
+                      <span style={{ display: "block", fontSize: "1rem", color: "#2b2b2b", marginTop: "5px", fontFamily: "'Inter', sans-serif" }}>
                         {obra.descricao} <span className="tipo-publicacao">{obra.tipo}</span>
                       </span>
                     </p>
@@ -407,8 +407,8 @@ export default function SecaoObras() {
         ) : (
           <div className="estrada estrada-obra">
             <div className="trecho" style={{ marginTop: "60px", textAlign: "center" }}>
-              <p style={{ fontStyle: 'italic', color: "#999", fontSize: "1.1rem" }}>📝 Conteúdo em processo de curadoria e atualização.</p>
-              <p style={{ fontStyle: 'italic', color: "#bbb", fontSize: "0.95rem", marginTop: "10px" }}>
+              <p style={{ fontStyle: 'italic', color: "#333", fontSize: "1.1rem" }}>📝 Conteúdo em processo de curadoria e atualização.</p>
+              <p style={{ fontStyle: 'italic', color: "#333", fontSize: "0.95rem", marginTop: "10px" }}>
                 {tabAtiva === "escritos" && subTabAtiva !== "cronicas" && "Em breve, mais ensaios e traduções em texto integral."}
                 {tabAtiva === "resenhas" && (subTabAtiva === "leituras" || subTabAtiva === "estudos") && "Em breve, leituras e estudos críticos sobre a obra da autora."}
               </p>

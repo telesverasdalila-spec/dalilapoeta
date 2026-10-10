@@ -83,7 +83,7 @@ export default function TemplateConteudo({
         alignItems: 'center',
         justifyContent: 'center'
       }}>
-        <p style={{ fontFamily: "'Inter', sans-serif", color: "#999" }}>
+        <p style={{ fontFamily: "'Inter', sans-serif", color: "#333" }}>
           Carregando {labels.secao.toLowerCase()}...
         </p>
       </div>
@@ -116,10 +116,10 @@ export default function TemplateConteudo({
           >
             ← Voltar para {labels.header}
           </Link>
-          <h1 style={{ fontSize: "2rem", color: "#999", marginBottom: "20px" }}>
+          <h1 style={{ fontSize: "2rem", color: "#333", marginBottom: "20px" }}>
             {labels.secao} não encontrada
           </h1>
-          <p style={{ fontSize: "1.1rem", color: "#bbb" }}>
+          <p style={{ fontSize: "1.1rem", color: "#333" }}>
             Este {labels.secao.toLowerCase()} ainda não está disponível.
           </p>
         </div>
@@ -188,7 +188,7 @@ export default function TemplateConteudo({
               margin: 0, 
               fontFamily: "'Inter', sans-serif", 
               fontSize: "0.9rem", 
-              color: "#666" 
+              color: "#2b2b2b" 
             }}>
               📅 {data}
             </p>
@@ -215,7 +215,7 @@ export default function TemplateConteudo({
             paddingTop: "25px",
             borderTop: "1px solid #e0e0e0",
             fontSize: "0.85rem",
-            color: "#888",
+            color: "#333",
             fontFamily: "'Inter', sans-serif"
           }}>
             <p style={{ margin: "5px 0" }}>
@@ -232,7 +232,7 @@ export default function TemplateConteudo({
             backgroundColor: "#f9f9f9",
             borderLeft: "3px solid #F7D179",
             fontSize: "0.9rem",
-            color: "#666",
+            color: "#2b2b2b",
             fontFamily: "'Georgia', serif",
             fontStyle: "italic",
             borderRadius: "0 5px 5px 0"

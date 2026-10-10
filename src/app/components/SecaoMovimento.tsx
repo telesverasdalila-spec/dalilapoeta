@@ -168,7 +168,7 @@ const textos: Record<Exclude<TabMovimento, "ativismo">, React.ReactNode[]> = {
           Nº 1
         </span>
       </div>
-      <figcaption style={{ marginTop: "16px", fontFamily: "'Inter', sans-serif", fontSize: "0.72rem", letterSpacing: "2px", textTransform: "uppercase", color: "#8a7f73" }}>
+      <figcaption style={{ marginTop: "16px", fontFamily: "'Inter', sans-serif", fontSize: "0.72rem", letterSpacing: "2px", textTransform: "uppercase", color: "#333" }}>
         Capa da revista <em style={{ textTransform: "none", letterSpacing: "0.5px" }}>em Movimento</em>
       </figcaption>
     </figure>,
@@ -392,7 +392,7 @@ export default function SecaoMovimento() {
                       style={{ 
                         marginTop: "20px", 
                         fontSize: "0.65rem", 
-                        color: "#ccc",
+                        color: "#333",
                         letterSpacing: "2px",
                         borderBottom: "none",
                         marginBottom: "5px"
@@ -410,7 +410,7 @@ export default function SecaoMovimento() {
             ))
           ) : (
             <div className="trecho" style={{ marginTop: "60px", textAlign: "center" }}>
-              <p style={{ fontStyle: "italic", color: "#999", fontSize: "1.1rem" }}>📝 Nenhum registro encontrado para esta categoria.</p>
+              <p style={{ fontStyle: "italic", color: "#333", fontSize: "1.1rem" }}>📝 Nenhum registro encontrado para esta categoria.</p>
             </div>
           )
         ) : (
