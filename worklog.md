@@ -687,3 +687,40 @@ Stage Summary:
 - Pacote anterior falhou por omissão do SecaoObras.tsx (lição: conferir conteúdo do zip com unzip -l antes de entregar)
 - Este pacote traz as 7 entrevistas (cards + páginas) e o alinhamento à esquerda do texto
 - PENDÊNCIAS mantidas: leituras/estudos críticos no fallback; Task 92 (contraste) adiada
+
+---
+Task ID: 94
+Agent: Super Z (sessão de continuação)
+Task: Quebrar o "loop" de regressões (pergunta da usuária: por que os dados das tabs voltam ao estágio errado ao desligar o computador) — solução: GitHub como fonte da verdade
+
+Work Log:
+- Explicado o loop: cópias de trabalho (workspace do agente + clone local) "acordam" em estágios antigos nas reciclagens; GitHub e Vercel nunca esquecem
+- Usuária informou o repo: github.com/telesverasdalila-spec/dalilapoeta — inicialmente PRIVADO (git pedia credenciais; API sob rate limit)
+- Orientada a tornar público via Settings > Danger Zone > Change visibility; feito com sucesso
+- CLONE OK (repo-github/, depth 5): último commit "inserção de entrevistas"
+- Estado real verificado: SecaoObras com 7 cards; 8 pastas de entrevistas (IMES duplicado: entrevista-imes-noticias = versão antiga órfã de commit manual, não citada por card; card cita entrevista-noticias-imes correta); ConteudoEntrevista com text-align left; leituras/estudos críticos ainda no fallback (esperado)
+- Protocolo novo estabelecido: TODA sessão começa com git clone/pull do repo remoto (repo-github) — pacotes sempre gerados contra o estado real do GitHub
+
+Stage Summary:
+- FIM DO LOOP: repo público acessível sem credenciais; fonte da verdade = GitHub
+- PENDÊNCIA pequena: remover pasta órfã src/app/texto/[id]/entrevista-imes-noticias num próximo pacote de limpeza
+- PENDÊNCIAS mantidas: leituras/estudos críticos no fallback (resgatar do histórico do GitHub — agora possível: git log/diff nos commits antigos do repo remoto); Task 92 (contraste) adiada
+
+---
+Task ID: 95
+Agent: Super Z (sessão de continuação)
+Task: Resgatar Leituras Críticas e Estudos Críticos do histórico do GitHub (pendência antiga das regressões) — primeiro pacote gerado pelo protocolo novo
+
+Work Log:
+- Clone do remoto (repo público) com histórico completo (28 commits, unshallow)
+- git log -S "Leituras Críticas" localizou o commit d9ce5bc ("inserção de lieituras criticas e estudos criticos", 08/10 19:31) com os arrays da Task 87
+- Diagnóstico: pastas de conteúdo (6 leituras-criticas-* + estudo-critico-*) SOBREVIVERAM no remoto; o que foi apagado pelos commits posteriores (gerados de zips de workspace regredido) foi SÓ o SecaoObras.tsx (arrays + roteamento + render especial)
+- ConteudoTexto.tsx: diff d9ce5bc vs HEAD vazio (Task 87 intacta nele)
+- Transplante no SecaoObras.tsx ATUAL (base HEAD 758bead): +dadosLeiturasCriticas (6 itens), +dadosEstudosCriticos (2 itens), +roteamento leituras/estudos, +bloco de render "lista simples sem décadas" com link "Leia o texto →"
+- Loop ao vivo documentado: workspace local tinha 0 das 8 pastas críticas; remoto tinha 8 — rsync espelhou src/ (193 arquivos) e public/ (19) do remoto para o local; local agora = GitHub + resgate
+- Build OK: 88 páginas, 8 rotas críticas (6 leituras + 2 estudos) geradas
+
+Stage Summary:
+- PRIMEIRO PACOTE DO PROTOCOLO NOVO: gerado a partir do clone do GitHub, não do workspace amnésico
+- Pacote: download/resgate-criticas-pacote.zip (SecaoObras.tsx fundido + worklog)
+- Leituras e Estudos Críticos voltam ao ar com textos integrais linkados
