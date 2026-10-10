@@ -50,7 +50,12 @@ const cssEntrevistas = `
   .corpo-texto.corpo-entrevistas p.ent-pergunta {
     text-align: left;
   }
-  .corpo-texto p.ent-resposta { margin-bottom: 16px; }
+  .corpo-texto p.ent-resposta {
+    margin-bottom: 16px;
+    /* Pedido da usuária: o texto inteiro da entrevista (perguntas e
+       respostas) alinhado à esquerda, não justificado/direita */
+    text-align: left;
+  }
 
   /* Linha-lead do site legado (a frase de abertura da entrevista) */
   .corpo-texto p.ent-intro {

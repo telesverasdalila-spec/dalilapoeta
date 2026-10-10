@@ -669,3 +669,21 @@ Stage Summary:
 - Perguntas azuis alinhadas à esquerda em todas as 7 entrevistas
 - Pacote: download/entrevistas-completas-alinhamento-pacote.zip
 - PENDÊNCIAS: (a) leituras críticas / estudos críticos seguem no fallback de curadoria (dados só existiam no SecaoObras era pré-91; perguntar se a usuária tem cópia); (b) Task 92 adiada: contraste/acessibilidade
+
+---
+Task ID: 93-c
+Agent: Super Z (sessão de continuação)
+Task: Corrigir pacote anterior que só restaurou 2 entrevistas no ar (usuária: "só restaurou 2 entrevistas: saulo e Sinka, o resto não veio")
+
+Work Log:
+- Diagnóstico do zip download/entrevistas-completas-alinhamento-pacote.zip (14:11): continha APENAS ConteudoEntrevista.tsx + 5 dados.json — FALTOU o SecaoObras.tsx atualizado (7 cards); sem ele a subtab no ar segue com os 2 cards antigos (Selmo + Simka)
+- Fonte do conteúdo: 7 páginas do legado baixadas (scripts/ent_0{1..7}.html, cp1252) + extração limpa (scripts/extract_entrevistas.py)
+- Validação verbatim das 5 faltantes (scripts/valida_verbatim.py + valida_verbatim2.py, comparação por janelas sem espaços): IMES 97%, PD 95%, Floriano 99%, Álvaro 94%, Tarso 68% (diferença só na quebra de versos do poema NOSSO TEMPO — conteúdo integral presente); trechos suspeitos conferidos um a um: TODOS presentes
+- ConteudoEntrevista.tsx: .ent-resposta ganhou text-align:left (além das perguntas já à esquerda da 93-b) — pedido "o texto alinhado à esquerda não à direita" agora cobre perguntas E respostas; ent-intro continua centrado e assinatura à direita
+- Build validado: OK, 7 rotas /texto/entrevista-* geradas estáticas
+- Pacote novo COMPLETO: download/entrevistas-completas-v2.zip — inclui SecaoObras.tsx (7 cards) + ConteudoEntrevista.tsx + 7 dados.json + worklog
+
+Stage Summary:
+- Pacote anterior falhou por omissão do SecaoObras.tsx (lição: conferir conteúdo do zip com unzip -l antes de entregar)
+- Este pacote traz as 7 entrevistas (cards + páginas) e o alinhamento à esquerda do texto
+- PENDÊNCIAS mantidas: leituras/estudos críticos no fallback; Task 92 (contraste) adiada
