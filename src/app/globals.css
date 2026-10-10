@@ -253,6 +253,9 @@ body {
    ============================================================ */
 .estrada {
   position: relative;
+  /* Task 102 — respiro vertical: mesmo com lista curta,
+     a área das listas mantém altura mínima (nunca colada no rodapé) */
+  min-height: 55vh;
   padding: 40px 20px 100px 70px;
 }
 .estrada::before {

@@ -60,7 +60,7 @@ export default function Home() {
         textAlign: 'center',
         marginTop: 'auto'
       }}>
-        <p style={{ margin: 0, fontFamily: "'Inter', sans-serif", fontWeight: 300, fontSize: '0.90rem' }}>
+        <p style={{ margin: 0, fontFamily: "'Inter', sans-serif", fontWeight: 200, fontSize: '0.85rem' }}>
           dalila teles veras — © | {new Date().getFullYear()}
         </p>
       </footer>
