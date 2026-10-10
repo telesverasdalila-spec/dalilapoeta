@@ -216,7 +216,11 @@ const dadosEntrevistas: Livro[] = [
 ];
 
 const dadosTraducoes: Livro[] = [
-  { ano: 2000, titulo: "Traduções", descricao: "Antonio Machado e Mario Benedetti em versões bilíngues, publicadas na revista A Cigarra (nº 31, ago/1997; nº 35, jun/2000).", tipo: "Tradução", slug: "traducoes" }
+  // Restauração verbatim das duas linhas originais da subtab Traduções
+  // (commit c9af606 "inserir as páginas da aba traduções") — pedido da
+  // usuária: Machado e Benedetti como cards separados, não uma linha só
+  { ano: 2000, titulo: "Mario Benedetti", descricao: "Esse Grande Simulacro e Ah as Primícias em versões bilíngues, do volume El olvido está lleno de memoria (1994), publicados na revista A Cigarra (nº 35, jun/2000).", tipo: "Tradução", slug: "traducao-mario-benedetti" },
+  { ano: 1997, titulo: "Antonio Machado", descricao: "A Contradição da Modernidade: Antonio Machado e o poema El Crimen Fue en Granada em versões bilíngues, publicados na revista A Cigarra (nº 31, ago/1997).", tipo: "Tradução", slug: "traducao-antonio-machado" }
 ];
 
 const dadosVerbetes: Livro[] = [
