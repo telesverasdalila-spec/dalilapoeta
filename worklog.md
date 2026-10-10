@@ -724,3 +724,39 @@ Stage Summary:
 - PRIMEIRO PACOTE DO PROTOCOLO NOVO: gerado a partir do clone do GitHub, não do workspace amnésico
 - Pacote: download/resgate-criticas-pacote.zip (SecaoObras.tsx fundido + worklog)
 - Leituras e Estudos Críticos voltam ao ar com textos integrais linkados
+
+---
+Task ID: 96
+Agent: Super Z (sessão de continuação)
+Task: Diagnosticar regressão relatada ("voltou a ter só duas entrevistas; sem leituras/estudos críticos; duas linhas do traduções juntadas de novo") — primeiro diagnóstico 100% pelo protocolo novo (GitHub como fonte da verdade)
+
+Work Log:
+- Clone fresco do repo público (758bead HEAD, "inserção de entrevistas"): SecaoObras com 7 cards de entrevista ✓; 8 pastas de entrevistas; 6 leituras-criticas-* + 4 estudo-* + 2 traducao-* presentes no remoto
+- git log -S + contagem de cards por commit: d3d6925 tem 2 cards de entrevista, card "Traduções" JUNTADO e 0 dadosLeiturasCriticas — os 3 sintomas relatados batem 100% com d3d6925: o site no ar ainda é a versão antiga (deploys de 5f9dfc8/758bead não ocorreram ou falharam)
+- Build do estado exato do GitHub (node_modules via symlink): OK, 101 rotas /texto — o commit do ar constrói; falha de deploy não é problema de código
+- Merge final no SecaoObras.tsx (base local Task 95 que já tem críticas): dadosTraducoes redividido em 2 cards verbatim do commit c9af606 "inserir as páginas da aba traduções" (Mario Benedetti ano 2000 slug traducao-mario-benedetti; Antonio Machado ano 1997 slug traducao-antonio-machado) — roteamento genérico /texto/<slug> já cobre, pastas existem no remoto
+- Build local completo: 149 páginas; rotas contadas por pasta: entrevistas 8 (7 + 1 órfã), leituras-criticas 6/6, estudo-critico 2/2, traducao 2/2
+- Pacote: download/restauracao-final-v3.zip (10 arquivos conferidos com unzip -l): SecaoObras.tsx completo + ConteudoEntrevista.tsx (alinhamento) + 7 dados.json de entrevistas (seguro contra clone sujo) + worklog
+- NÃO incluído (fora de escopo): extras locais src/app/cronicas, obra/[id]/70-anos-poemas-leitores, texto/[id]/traducoes (pasta órfã do card juntado)
+
+Stage Summary:
+- Diagnóstico fechado: site no ar = d3d6925 (2 entrevistas, traduções juntadas, sem críticas); GitHub HEAD já tem entrevistas+conteúdo correto
+- Pacote v3 corrige os 3 sintomas de uma vez; após Commit & Sync a Vercel faz deploy fresco
+- PENDÊNCIAS: confirmar com usuária deploy + Ctrl+Shift+R; investigar por que deploys anteriores não foram publicados (verificar painel Vercel); pasta órfã entrevista-imes-noticias para limpeza futura; Task 92 (contraste) adiada
+
+---
+Task ID: 97
+Agent: Super Z (sessão de continuação)
+Task: Usuária reportou após novo deploy: "entrevistas voltaram, mas leituras/estudos críticos não; traduções continuam em uma linha só"
+
+Work Log:
+- git fetch: novo commit f4418e3 (12:22 -0300) = pacote ANTIGO da Task 95 (resgate-criticas-pacote), NÃO o v3 — SecaoObras commitado tem críticas ✓ mas traduções JUNTADA ✗
+- Estado no ar = 758bead (commit anterior): entrevistas 7 ✓ (por isso "voltaram"), críticas ✗, traduções juntas ✓ — batia 100% com o relato; Vercel publicando em câmera lenta/atrasada hoje
+- Verificações do f4418e3: CabecalhoObra.tsx linha 32 já tem os 4 botões de resenhas (Fortuna/Leituras/Estudos/Verbetes) desde antes do Task 95; roteamento leituras/estudos no SecaoObras ✓; bloco de render Task 87 ✓; build do commit exato: exit 0, 8 pastas de conteúdo crítico no git e rotas geradas no .next (32 arquivos) — código sadio
+- diff f4418e3 vs SecaoObras local (v3): APENAS o bloco das traduções (1 card juntado → 2 cards verbatim do c9af606)
+- Pacote enxuto entregue: download/pacote-traducoes-separadas.zip — 2 arquivos (SecaoObras.tsx v3 + worklog.md), conferido com unzip -l; menos arquivos = menos chance de erro de extração
+
+Stage Summary:
+- Código no GitHub está sadio; gargalo é o atraso dos deploys na Vercel + pacote antigo commitado por engano (provável confusão entre zips parecidos no extrair)
+- Faltou ao f4418e3 somente a divisão das traduções → coberta pelo pacote de 2 arquivos
+- PENDÊNCIAS: confirmar deploy do f4418e3 e do pacote novo; se deploys seguirem atrasando, verificar aba Deploys do painel Vercel; Task 92 (contraste) adiada; pasta órfã entrevista-imes-noticias para limpeza futura
