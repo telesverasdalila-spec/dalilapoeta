@@ -79,6 +79,8 @@ import dados70Anos from "./setenta-anos-poemas-leitores/dados.json";
 import dadosPontos from "./pontos/dados.json";
 import dadosFugaEUrgencias from "./fuga-e-urgencias/dados.json";
 import dadosDiuturnos from "./diuturnos/dados.json";
+// Task 108: layout do Diuturnos vive em arquivo próprio (anti-regressão) — NÃO remover este import
+import TrechosDiuturnos from "./TrechosDiuturnos";
 
 // Agregador central - reúne todos os livros num único objeto
 const livros: Record<string, Livro> = {
@@ -390,6 +392,11 @@ export default function ConteudoObra({ params }: { params: Promise<{ id: string 
                 {/* TAB TRECHOS - condicional */}
                 {abaAtiva === "trechos" && livro.trechos && livro.trechos.length > 0 && (
                   <div>
+                    {/* Task 108: Diuturnos usa layout próprio (meses empilhados sem tabs) */}
+                    {id === "diuturnos" ? (
+                      <TrechosDiuturnos trechos={livro.trechos} />
+                    ) : (
+                    <>
                     {livro.trechos.length > 1 && (
                       <div style={{ display: "flex", gap: "0", borderBottom: "1px solid #ebebeb", marginBottom: "25px", overflowX: "auto", scrollbarWidth: "none" }}>
                         {livro.trechos.map((t, i: number) => (
@@ -708,6 +715,8 @@ export default function ConteudoObra({ params }: { params: Promise<{ id: string 
                           </p>
                         )}
                       </div>
+                    )}
+                    </>
                     )}
                   </div>
                 )}

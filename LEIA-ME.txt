@@ -1,53 +1,57 @@
 =================================================================
-TASK 91 — REFINAMENTO DO LIVRO SETENTA (3 ajustes pedidos)
+TASK 108 — DIUTURNOS DE VOLTA AO JEITO CERTO (e agora à prova de regressão)
 =================================================================
 
-O QUE MUDA
-1) Título da página do livro agora é "SETENTA" e o subtítulo
-   "anos, poemas, leitores" aparece logo abaixo, em cinza discreto.
-2) A aba "Sobre" deixa de ser um item da ficha técnica (Dados da
-   Edição) e vira abinha própria, no mesmo padrão dos outros livros
-   (À Janela dos Dias, Apontamentos etc.).
-3) Texto do "Sobre" atualizado para o que você ditou:
-   "Poemas escolhidos por 70 leitores, para celebrar os 70 anos da
-   autora em 2016. Amigos, artistas, leitores e escritores, fazem a
-   curadoria da antologia que resulta numa obra que convida para
-   navegar no mundo poético de Dalila, que à época, contava com os
-   quinze títulos publicados."
+O QUE ACONTECEU
+Quando o livro "SETENTA anos, poemas, leitores" foi inserido, a
+edição do arquivo grande ConteudoObra.tsx partiu de uma versão
+antiga e, sem querer, apagou o layout empilhado do Diuturnos
+(aquele da Task 86). Resultado: o Diuturnos voltou a mostrar as
+abinhas por mês (janeiro, fevereiro...), em vez da aba Trecho(s)
+com os meses corridos e imagens intercaladas.
 
-ATENÇÃO — ROTA MUDOU DE NOME (leia antes de soltar)
-Como o link da lista de obras é derivado do título, a pasta do
-livro foi renomeada. No seu clone, na pasta
-  src/app/obra/[id]/
-  1. APAGUE a pasta antiga  70-anos-poemas-leitores
-  2. DEPOIS arraste a pasta nova  setenta-anos-poemas-leitores
-     (está aqui no pacote, dentro de src/app/obra/[id]/)
-Se a pasta antiga ficar, o site não compila (o código agora aponta
-para a pasta nova). A URL da página também muda para:
-  /obra/setenta-anos-poemas-leitores
+O QUE MUDA AGORA
+1) A aba Trecho(s) do Diuturnos volta a mostrar os 12 meses
+   EMPILHADOS, sem abinhas por mês.
+2) Título do mês em dourado escuro (#8b6914) com traço dourado.
+3) Imagens intercaladas: esquerda / direita / esquerda... e, como
+   você pediu, a ÚLTIMA imagem (dezembro, que é a réplica da de
+   janeiro) fecha À ESQUERDA — mesmo lado do primeiro poema,
+   fechando o ciclo do ano.
 
-OS OUTROS 2 ARQUIVOS DO PACOTE (substituir os existentes)
-- src/app/obra/[id]/ConteudoObra.tsx
-  (agora mostra o subtítulo sob o título; import/mapa atualizados)
-- src/app/components/SecaoObras.tsx
-  (card "SETENTA anos, poemas, leitores" com link direto certo)
+E COMO FAÇO PARA ISSO NÃO VOLTAR A ACONTECER? (a sua pergunta!)
+O layout agora mora num arquivo PEQUENO E PRÓPRIO:
+  src/app/obra/[id]/TrechosDiuturnos.tsx  (arquivo NOVO no pacote)
+O arquivo grande ConteudoObra.tsx só tem 3 linhas tocadas:
+  • o import do TrechosDiuturnos (não remover!)
+  • o desvio: se a obra for "diuturnos", usa o arquivo próprio;
+    senão, o layout de sempre.
+É como guardar o enfeite de Natal na caixinha etiquetada: quando
+derem uma geral na casa, ele não se perde. Se um dia as abinhas
+voltarem a aparecer, é sinal de que alguém apagou o import ou o
+desvio — o arquivo TrechosDiuturnos.tsx continua intacto, e é só
+reconectar.
 
-OBSERVAÇÃO TRANQUILA
-Com o subtítulo passando a ser exibido, os outros livros que têm
-subtítulo cadastrado também o mostram sob o título — é o caso de
-À Janela dos Dias ("Poesia quase toda") e Passageira ("Antologia
-Pessoal 1982-2024"), que na verdade completam o título real, e de
-Solilóquios/Vestígios/Diuturnos/Apontamentos, com uma nota discreta
-de gênero e ano. Nada mais muda neles.
+ARQUIVOS DO PACOTE (substituir os existentes; o novo só chegar)
+1. src/app/obra/[id]/TrechosDiuturnos.tsx   ← NOVO, é a caixinha
+2. src/app/obra/[id]/ConteudoObra.tsx       ← 3 linhas a mais
+3. LEIA-ME.txt (este arquivo)
 
-IMAGENS
-Capa e trecho (a uma rosa) continuam nos mesmos caminhos de
-public/imagens — nada a fazer por lá.
+NADA MAIS MUDA
+• Os outros livros com Trecho(s) (À Janela dos Dias, Apontamentos,
+  entrevistas etc.) continuam exatamente como estão, com suas
+  abinhas de sempre.
+• O JSON do Diuturnos não foi tocado (dezembro já apontava para a
+  imagem de janeiro; agora o código também garante, cinto e
+  suspensório).
+• Conferido com TypeScript: zero erros no site (src/).
 
 DEPLOY
 1. Solte o conteúdo do pacote na RAIZ do clone (a pasta src/ aqui
-   espelha a do projeto) e apague a pasta antiga citada acima.
+   espelha a do projeto).
 2. VS Code → Commit & Sync, nome sugerido:
-   "Setenta: título SETENTA, subtítulo e abinha Sobre"
-3. Aguarde ~2 min; se parecer antigo, Ctrl+Shift+R.
+   "Diuturnos: layout empilhado restaurado e protegido"
+3. Aguarde ~2 min e teste em janela anônima (Ctrl+Shift+N):
+   /obra/diuturnos → aba Trecho(s) → 12 meses empilhados,
+   imagens alternando, dezembro fechando à esquerda.
 =================================================================
