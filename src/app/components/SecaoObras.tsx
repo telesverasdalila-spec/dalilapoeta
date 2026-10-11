@@ -30,7 +30,7 @@ const dadosPoesia: Livro[] = [
   { titulo: "Elemento em Fúria", ano: 1989, descricao: "Teresina, PI: Academia Piauiense de Letras", tipo: "Livro" },
   { titulo: "Madeira: do Vinho à Saudade", ano: 1989, descricao: "Funchal, Madeira (Portugal)", tipo: "Livro" },
   { titulo: "Inventário Precoce", ano: 1983, descricao: "SP: Pannartz", tipo: "Livro" },
-  { titulo: "Lições de Tempo", ano: 1982, descricao: "SP: Pannartz", tipo: "Livro" }
+  { titulo: "Lições de Tempo", ano: 1983, descricao: "SP: Pannartz", tipo: "Livro" } // Task 107: ano conforme capa enviada pelo cliente (era 1982 no template)
 ];
 
 const dadosProsa: Livro[] = [
