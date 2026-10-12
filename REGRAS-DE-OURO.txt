@@ -1,0 +1,86 @@
+=================================================================
+REGRAS DE OURO — MANUAL DE CONVIVÊNCIO COM O SITE
+Dalila Teles Veras — Poeta | dalila-teles-poeta.vercel.app
+=================================================================
+
+Este arquivo mora na RAIZ do repositório e é fixo: ele não sai nos
+pacotes de ajuste, ele É parte do site. Leia antes de qualquer
+edição — vale para a gestora do site e para qualquer pessoa ou IA
+que vier a mexer aqui no futuro.
+
+-----------------------------------------------------------------
+REGRA 1 — PUXAR ANTES DE MEXER
+-----------------------------------------------------------------
+Antes de editar qualquer arquivo no VS Code: Sync/Pull primeiro.
+Editar sobre uma versão antiga é o que apagou o layout do Diuturnos
+uma vez (a edição partiu de uma "foto velha" e sobrescreveu coisa
+nova). Antes de escrever no caderno, copie a última página.
+
+-----------------------------------------------------------------
+REGRA 2 — ARQUIVOS PROTEGIDOS (AS CAIXINHAS ETIQUETADAS)
+-----------------------------------------------------------------
+Alguns layouts especiais moram em arquivos PRÓPRIOS e PEQUENOS,
+com aviso de proteção no topo. Hoje a lista é:
+
+  • src/app/obra/[id]/TrechosDiuturnos.tsx
+    (layout empilhado dos 12 meses do Diuturnos, sem abinhas;
+     zigzag esquerda/direita; última imagem = réplica de janeiro,
+     À ESQUERDA — pedido explícito da autora, 12/out/2026)
+
+  • src/app/components/CabecalhoObra.tsx
+    (menu da aba Obra; ordem: Obras Publicadas, Escritos &
+     Leituras, Colaborações Literárias — as três empilhadas —
+     depois Coletâneas e Resenhas. As chaves internas
+     obras/escritos/colaboracoes/coletaneas/resenhas NÃO devem
+     ser renomeadas: títulos e conteúdo dependem delas)
+
+Padrão do projeto: layout especial novo = arquivo novo pequeno.
+O arquivo grande ConteudoObra.tsx só recebe as linhas de conexão
+(import + desvio). Se um dia o layout sumir de novo, procure o
+arquivo da caixinha — ele provavelmente está intacto; faltou
+religar a conexão.
+
+-----------------------------------------------------------------
+REGRA 3 — O COFRE É O GITHUB
+-----------------------------------------------------------------
+Cada Commit & Sync guarda uma foto eterna de todo o site. Nada se
+perde de verdade enquanto os commits forem feitos a cada ajuste.
+Nome de commit curto e claro ajuda a achar a foto depois
+(ex.: "ajuste diuturno", "regua dourada").
+
+-----------------------------------------------------------------
+REGRA 4 — PACOTES SEMPRE TRAZEM BILHETE
+-----------------------------------------------------------------
+Todo pacote de ajuste vem com um LEIA-ME.txt dizendo o que muda,
+quais arquivos substituir e o nome sugerido do commit. Ler o
+bilhete ANTES de extrair é parte do processo. Diferente deste
+arquivo, o LEIA-ME muda a cada pacote — ele descreve só aquele
+ajuste; este aqui descreve as regras permanentes.
+
+-----------------------------------------------------------------
+REGRA 5 — TESTE EM JANELA ANÔNIMA
+-----------------------------------------------------------------
+Depois de cada deploy (aguarde ~2 min na Vercel): abrir o site em
+janela anônima (Ctrl+Shift+N). Muita "regressão falsa" é só cache
+do navegador teimando em mostrar foto antiga.
+
+-----------------------------------------------------------------
+REGRA 6 — RETRATO DE ÉPOCA (BACKUP)
+-----------------------------------------------------------------
+O GitHub é o cofre; e retratos datados completos (zip com todo o
+site + acervo de imagens) são gerados quando um marco é atingido
+(várias obras novas, grande aprovação). Um retrato mora com a
+gestora; outra cópia vai para a cliente — negativo numa casa,
+fotos impressas na outra.
+
+Para a gestora, um espelho do cofre é mantido pelo assistente
+Super Z nas sessões de trabalho: se algo se perder, peça a
+restauração — o histórico do git permite voltar a qualquer foto.
+
+-----------------------------------------------------------------
+RESUMO EM UMA FRASE
+-----------------------------------------------------------------
+Puxe antes de mexer, mexa só no que o bilhete diz, guarde a foto
+com Commit & Sync, teste no anônimo — e o site fica pronto para a
+Dalila sem sustos.
+=================================================================

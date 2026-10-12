@@ -1,57 +1,48 @@
 =================================================================
-TASK 108 — DIUTURNOS DE VOLTA AO JEITO CERTO (e agora à prova de regressão)
+TASK 110 — MENU DA ABA OBRA REORGANIZADO + REGRAS DE OURO NO COFRE
 =================================================================
 
-O QUE ACONTECEU
-Quando o livro "SETENTA anos, poemas, leitores" foi inserido, a
-edição do arquivo grande ConteudoObra.tsx partiu de uma versão
-antiga e, sem querer, apagou o layout empilhado do Diuturnos
-(aquele da Task 86). Resultado: o Diuturnos voltou a mostrar as
-abinhas por mês (janeiro, fevereiro...), em vez da aba Trecho(s)
-com os meses corridos e imagens intercaladas.
+O QUE MUDA
+1) Menu da aba Obra, nova ordem e nova formação de palavras:
+     1. Obras Publicadas        (empilhada, como já era)
+     2. Escritos & Leituras     (empilhada, como já era)
+     3. Colaborações Literárias (NOVA grafia, empilhada em duas
+        linhas — antes era só "Colaborações" em uma linha)
+     4. Coletâneas              (simples)
+     5. Resenhas                (simples)
+   No celular, as abas quebram em duas fileiras centralizadas
+   (comportamento que já existe, Task 80): as três empilhadas
+   tendem a ficar na fileira de cima e as duas simples embaixo —
+   o balanceamento que você desenhou.
+2) ARQUIVO NOVO FIXO: REGRAS-DE-OURO.txt na raiz do repositório —
+   o manual de convivência com o site (puxar antes de mexer,
+   caixinhas protegidas, cofre GitHub, bilhetes, teste anônimo,
+   retratos de época). Ele fica no site para sempre e orienta
+   qualquer pessoa ou IA que editar no futuro.
 
-O QUE MUDA AGORA
-1) A aba Trecho(s) do Diuturnos volta a mostrar os 12 meses
-   EMPILHADOS, sem abinhas por mês.
-2) Título do mês em dourado escuro (#8b6914) com traço dourado.
-3) Imagens intercaladas: esquerda / direita / esquerda... e, como
-   você pediu, a ÚLTIMA imagem (dezembro, que é a réplica da de
-   janeiro) fecha À ESQUERDA — mesmo lado do primeiro poema,
-   fechando o ciclo do ano.
-
-E COMO FAÇO PARA ISSO NÃO VOLTAR A ACONTECER? (a sua pergunta!)
-O layout agora mora num arquivo PEQUENO E PRÓPRIO:
-  src/app/obra/[id]/TrechosDiuturnos.tsx  (arquivo NOVO no pacote)
-O arquivo grande ConteudoObra.tsx só tem 3 linhas tocadas:
-  • o import do TrechosDiuturnos (não remover!)
-  • o desvio: se a obra for "diuturnos", usa o arquivo próprio;
-    senão, o layout de sempre.
-É como guardar o enfeite de Natal na caixinha etiquetada: quando
-derem uma geral na casa, ele não se perde. Se um dia as abinhas
-voltarem a aparecer, é sinal de que alguém apagou o import ou o
-desvio — o arquivo TrechosDiuturnos.tsx continua intacto, e é só
-reconectar.
+O QUE NÃO MUDA
+• As chaves internas das abas (obras/escritos/colaboracoes/
+  coletaneas/resenhas) estão intocadas — é por isso que nenhum
+  conteúdo, título de seção ou sub-aba mudou de lugar.
+• Títulos das páginas: quando você clica em "Colaborações
+  Literárias", o título grande continua sendo "Colaborações
+  Literárias" (agora aba e título ficam com a mesma grafia).
+• Os links "← Voltar para Escritos & Leituras" continuam corretos.
 
 ARQUIVOS DO PACOTE (substituir os existentes; o novo só chegar)
-1. src/app/obra/[id]/TrechosDiuturnos.tsx   ← NOVO, é a caixinha
-2. src/app/obra/[id]/ConteudoObra.tsx       ← 3 linhas a mais
-3. LEIA-ME.txt (este arquivo)
+1. src/app/components/CabecalhoObra.tsx  ← menu reorganizado
+2. REGRAS-DE-OURO.txt                    ← NOVO, raiz do projeto
+3. LEIA-ME.txt (este bilhete)
 
-NADA MAIS MUDA
-• Os outros livros com Trecho(s) (À Janela dos Dias, Apontamentos,
-  entrevistas etc.) continuam exatamente como estão, com suas
-  abinhas de sempre.
-• O JSON do Diuturnos não foi tocado (dezembro já apontava para a
-  imagem de janeiro; agora o código também garante, cinto e
-  suspensório).
-• Conferido com TypeScript: zero erros no site (src/).
+CONFERÊNCIA DE SEGURANÇA
+• TypeScript validado: zero erros em src/.
+• Nenhuma outra pasta foi tocada.
 
 DEPLOY
-1. Solte o conteúdo do pacote na RAIZ do clone (a pasta src/ aqui
-   espelha a do projeto).
+1. Solte o conteúdo do pacote na RAIZ do clone.
 2. VS Code → Commit & Sync, nome sugerido:
-   "Diuturnos: layout empilhado restaurado e protegido"
-3. Aguarde ~2 min e teste em janela anônima (Ctrl+Shift+N):
-   /obra/diuturnos → aba Trecho(s) → 12 meses empilhados,
-   imagens alternando, dezembro fechando à esquerda.
+   "menu obra reordenado + regras de ouro"
+3. Aguarde ~2 min e teste em janela anônima (Ctrl+Shift+N),
+   de preferência no CELULAR ou com a janela estreita:
+   aba Obra → conferir a ordem e as duas fileirinhas.
 =================================================================
