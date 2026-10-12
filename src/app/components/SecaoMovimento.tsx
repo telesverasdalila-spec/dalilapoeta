@@ -2,6 +2,9 @@
 import { useState, Fragment } from "react";
 import Link from "next/link";
 import ReguaTempo from "../components/ReguaTempo";              // ✅ fica igual
+// Task 112: conteúdo da aba Revista Livrespaço (texto + imagens intercaladas)
+// mora em arquivo próprio (anti-regressão) — NÃO remover este import
+import TextosLivrespaco from "./TextosLivrespaco";
 import { extrairAnoBase, calcularDecadas } from "../lib/tempo";  // ✅ CORRIGIDO
 import { getTagStyle } from "../lib/tags";           // ✅ CORRIGIDO
 
@@ -176,11 +179,7 @@ const textos: Record<Exclude<TabMovimento, "ativismo">, React.ReactNode[]> = {
     <div className="trecho" key="em5"><p style={{ marginTop: '20px' }}><strong>Colaboradores:</strong> Ademir Medici, Alexandre Takara, Antonio Possidonio Sampaio, Aristides Theodoro, Cláudio Feldman, Dalila Teles Veras, Inhadjara S. Yamamura, Irineu Volpato, Jurema Barreto de Souza, Iracema mendes Regis, Luís Allberto de Abreu, Luiz Roberto Alves, Maria de Lourdes Ruegger Silva, Marília Magalhães B. Pedrosa, Roberto Barbosa, Theresinha Malta e Valdecirio Teles Veras.</p></div>,
     <div className="trecho" key="em6"><p><strong>Desenhos:</strong> Mariano Amaral Netto e Perkins.<br /><strong>Editora:</strong> Dalila Teles Veras</p></div>
   ],
-  livrespaco: [
-    <div className="trecho" key="li1"><p>Mais do que uma publicação literária, a Livrespaço foi um sopro de <strong>resistência e descentralização cultural</strong> que marcou a história da literatura brasileira entre 1983 e 1994. Idealizada e capitaneada por Dalila Teles Veras na região do Grande ABC, a revista nasceu como um manifesto vivo contra o monopólio cultural do eixo Rio-São Paulo e o engessamento da crítica universitária tradicional.</p></div>,
-    <div className="trecho" key="li2"><p>Sob o lema de que o Brasil é feito de muitas vozes e de que <em>"na poesia, ninguém substitui ninguém, acrescenta"</em>, a Livrespaço abriu suas páginas para o novo, o independente e a pluralidade de vozes que a grande imprensa insistia em ignorar.</p></div>,
-    <div className="trecho" key="li3"><p>Esse trabalho incansável de mapeamento, edição e fomento à poesia viva e marginal foi reconhecido nacionalmente em 1993, quando o projeto foi agraciado com o prestigiado <strong>Prêmio APCA</strong> (Associação Paulista de Críticos de Arte) na categoria de Melhor Realização Cultural.</p></div>
-  ]
+  livrespaco: [], // Task 112: conteúdo movido para TextosLivrespaco.tsx (caixinha anti-regressão)
 };
 
 /* ============================================================
@@ -418,6 +417,8 @@ export default function SecaoMovimento() {
               <p style={{ fontStyle: "italic", color: "#333", fontSize: "1.1rem" }}>📝 Nenhum registro encontrado para esta categoria.</p>
             </div>
           )
+        ) : tabAtiva === "livrespaco" ? (
+          <TextosLivrespaco />
         ) : (
           textos[tabAtiva].map((texto, index) => (
             <Fragment key={index}>{texto}</Fragment>

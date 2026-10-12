@@ -1,31 +1,42 @@
 =================================================================
-TASK 111 — NOVA GEOGRAFIA DO MENU "PROJETOS CULTURAIS" (EIXO MOVIMENTO)
+TASK 112 — REVISTA LIVRESPAÇO: IMAGENS DE VOLTA ("tinha ficado bacana")
 =================================================================
 
-O QUE MUDA
-Menu da seção Projetos Culturais, nova ordem:
-  1. Núcleo ABC's          (empilhada, como já era)
-  2. Revista Livrespaço    (empilhada, como já era)
-  3. Boletim Abecês        (empilhada, como já era)
-  4. Em Movimento          (empilhada, como já era)
-  5. Alpharrabio           (simples, como já era)
-  6. Ativismo Cultural     (NOVIDADE: agora em UMA linha só,
-                            sem empilhar, e na última posição)
+A HISTÓRIA (porque sumiu mesmo!)
+No dia 6 de outubro, o layout da Revista Livrespaço foi criado com
+as imagens do site antigo (recorte de jornal, manifesto e capas).
+No dia seguinte, um ajuste nas abas do menu partiu de uma versão
+antiga do arquivo e apagou o layout — as imagens ficaram salvas no
+repositório, mas o código se perdeu. A mesma história do Diuturnos.
+Desta vez o layout foi ressuscitado DENTRO DE UM ARQUIVO PRÓPRIO,
+à prova de sobrescrita.
+
+O QUE A ABA REVISTA LIVRESPAÇO MOSTRA AGORA (como era no dia 6)
+1. Primeiro parágrafo (texto de resistência e descentralização).
+2. Recorte de jornal de 17/dez/1983 ("Grupo Livrespaço quer atuar
+   mais nas escolas") + página com o manifesto, lado a lado, com a
+   legenda "Revista Livrespaço".
+3. Segundo e terceiro parágrafos (lema e Prêmio APCA 1993).
+4. No fim do texto: as 4 capas da revista, lado a lado, com a
+   legenda "Capas da revista Livrespaço".
 
 O QUE NÃO MUDA
-• As chaves internas (nucleo/livrespaco/abeces/emmovimento/
-  alpharrabio/ativismo) estão intocadas — textos, sub-abas e
-  régua do tempo de cada aba continuam idênticos.
-• A página continua ABRINDO no Ativismo Cultural (mesmo conteúdo
-  de sempre; ele agora é a última tab do menu, só isso).
-  Se preferir que a página passe a abrir no Núcleo ABC's, é
-  um ajuste de uma linha — é só pedir.
-• Sub-abas do Ativismo (Palestras & Oficinas, Saras & Recitais...)
-  seguem no mesmo lugar.
+• As imagens já estão no repositório (public/images/livrespaco/) —
+  NÃO precisa enviar nada para lá, só os 2 arquivos de código.
+• O menu Projetos Culturais (geografia nova da Task 111) fica igual.
+• As outras abas (Alpharrabio, Núcleo, Boletim, Em Movimento,
+  Ativismo) continuam exatamente como estão.
 
-ARQUIVOS DO PACOTE (substituir o existente)
-1. src/app/components/SecaoMovimento.tsx
-2. LEIA-ME.txt (este bilhete)
+ARQUIVOS DO PACOTE
+1. src/app/components/TextosLivrespaco.tsx  ← NOVO (a caixinha)
+2. src/app/components/SecaoMovimento.tsx    ← 3 linhas de conexão
+3. LEIA-ME.txt (este bilhete)
+
+ATUALIZAÇÃO DO REGRAS-DE-OURO
+O arquivo REGRAS-DE-OURO.txt que já está no repositório lista as
+caixinhas protegidas — agora a lista ganhou um morador novo
+(TextosLivrespaco.tsx). Nada a fazer por aí: a próxima atualização
+do REGRAS-DE-OURO acompanha um pacote futuro.
 
 CONFERÊNCIA DE SEGURANÇA
 • TypeScript validado: zero erros em src/.
@@ -34,8 +45,8 @@ CONFERÊNCIA DE SEGURANÇA
 DEPLOY
 1. Solte o conteúdo do pacote na RAIZ do clone.
 2. VS Code → Commit & Sync, nome sugerido:
-   "geografia menu projetos culturais"
-3. Aguarde ~3 min desta vez (o deploy pode levar um pouquinho
-   mais) e teste em aba anônima: seção Projetos Culturais →
-   conferir a ordem e o Ativismo Cultural em uma linha.
+   "livrespaco imagens restauradas + caixinha"
+3. Aguarde ~3 min e teste em aba anônima:
+   Projetos Culturais → Revista Livrespaço → recorte + manifesto
+   após o 1º parágrafo, capas no fim do texto.
 =================================================================
