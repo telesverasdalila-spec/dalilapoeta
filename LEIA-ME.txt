@@ -1,57 +1,86 @@
 =================================================================
-PACOTE DE AJUSTE — TASK 113 (v3): ESFERINHA PRATEADA REFINADA
+PACOTE DE AJUSTE — TASK 113 (v4): TABS-MÃE UNIFORMES EM 2 LINHAS
 Site memorial Dalila Teles Veras | 13/out/2026
 =================================================================
 
 O QUE MUDA NESTE PACOTE
 -----------------------
-As tabs-mãe dos TRÊS eixos (Vida, Obra e Movimento) ganham o
-marcador calibrado com a autora:
+Percepção certeira da autora: misturar tabs de 1 linha e de 2
+linhas criava ritmo visual irregular. Este pacote uniformiza
+TUDO em conjuntos de 2 linhas e devolve o respiro entre as
+letras (o estreitamento da v3 foi desfeito):
 
-  1. Uma esferinha em degradê de cinza claro à esquerda de cada
-     label — como uma pérola de prata pequenininha, só para
-     informar no visual que ali estão as escolhas do menu;
-  2. O texto de cada tab continua alinhado À ESQUERDA, então os
-     nomes de duas linhas (Obras / Publicadas, Escritos & /
-     Leituras...) ficam organizados entre si;
-  3. Versão 3 (esta): a esfera cresceu um grau (9px) e as labels
-     de duas linhas ficaram com o entrelinhas mais apertadinho —
-     o bloco de texto fica compacto e a pérola não "some";
-  4. Histórico: v1 tracinho vertical (poluiu), v2 esfera 7px.
+  EIXO VIDA:
+    Crono / Biografia
+    Prêmios & / Reconhecimentos
+    Mídia & / Contato
+
+  EIXO OBRA:
+    Obras / Publicadas
+    Escritos & / Leituras
+    Colaborações / Literárias
+    Coletâneas & / Antologias   (antes: "Coletâneas" numa linha)
+    Resenhas & / Críticas       (antes: "Resenhas" numa linha)
+
+  EIXO MOVIMENTO:
+    Núcleo / ABC's
+    Revista / Livrespaço
+    Boletim / Abecês
+    Em / Movimento
+    Alpharrabio / Centro Cultural   (antes: "Alpharrabio")
+    Ativismo / Cultural             (antes: linha única)
+
+A esferinha prateada (9px) continua marcando cada tab-mãe, e o
+texto segue alinhado à esquerda. No celular as fileiras se
+reorganizam sozinhas — já testado.
 
 O QUE NÃO MUDA
 --------------
-  • Nada de conteúdo: as chaves internas das tabs continuam
-    exatamente as mesmas;
+  • As CHAVES INTERNAS das tabs continuam exatamente as mesmas
+    (crono/premios/imprensa; obras/escritos/colaboracoes/
+    coletaneas/resenhas; nucleo/livrespaco/abeces/emmovimento/
+    alpharrabio/ativismo) — mudou só o TEXTO VISÍVEL;
   • O que abre por padrão em cada eixo continua abrindo igual
     (CronoBiografia / Obras Publicadas+Poesia / Ativismo Cultural);
-  • As sub-abas (Poesia, Prosa, Ensaios...) não recebem marcador —
-    ele é só das tabs-mãe;
-  • No celular a esferinha fica proporcional (7px; 6px em telas
-    mínimas) e o entrelinhas compacto vem junto.
+  • Títulos grandes das páginas e conteúdo: intocados.
+
+NOTINHAS DA SUPER Z (para decidir depois, se quiser)
+----------------------------------------------------
+  1. "Mídia & Contato" promete um contato — se a página da tab
+     não tiver e-mail/redes hoje, vale um próximo passo de
+     conteúdo;
+  2. A tab virou "Resenhas & Críticas", mas o título grande da
+     página continua "Críticas & Resenhas" (ordem invertida) —
+     posso igualar se você quiser;
+  3. "Coletâneas & Antologias" já bate com o título da página —
+     ficou redondo.
 
 ARQUIVOS DESTE PACOTE (extraia na RAIZ do repositório)
 ------------------------------------------------------
   1. src/app/globals.css
-     (substituir — a mudança toda mora aqui, nos blocos
-      ".tab-btn" e ".tab-btn::before", com comentário Task 113;
-      uma regra só alimenta os 3 eixos de uma vez)
-  2. REGRAS-DE-OURO.txt
-     (substituir — entrou a caixinha TextosLivrespaco.tsx na
-      lista de arquivos protegidos + nota sobre o marcador)
+     (substituir — respiro entre as letras devolvido; esferinha
+      mantida; comentário Task 113 atualizado)
+  2. src/app/components/CabecalhoFixo.tsx
+     (substituir — labels do eixo Vida em 2 linhas)
+  3. src/app/components/CabecalhoObra.tsx
+     (substituir — labels do eixo Obra em 2 linhas; caixinha
+      protegida: chaves internas preservadas)
+  4. src/app/components/SecaoMovimento.tsx
+     (substituir — labels do eixo Movimento em 2 linhas)
+  5. REGRAS-DE-OURO.txt
+     (substituir — caderno atualizado com a v4)
 
 DEPOIS DE EXTRAIR
 -----------------
-  1. Confira que os 2 arquivos substituíram os antigos;
-  2. Commit & Sync com nome curto (sugestão: "esfera refinada tabs");
+  1. Confira que os 5 arquivos substituíram os antigos;
+  2. Commit & Sync com nome curto (sugestão: "tabs duas linhas");
   3. Espere ~2-3 min o deploy da Vercel terminar;
   4. Teste em janela anônima (Ctrl+Shift+N), de preferência com
-     Ctrl+Shift+R no desktop — e olhe os 3 eixos: Vida, Obra e
-     Movimento.
+     Ctrl+Shift+R no desktop — e olhe os 3 eixos no desktop E no
+     celular.
 
-SE QUISER TESTAR OUTRO MARCADOR
--------------------------------
-É uma calibragem de 1 minuto: o marcador morre num bloco único do
-globals.css (" .tab-btn::before"). Diga à Super Z qual forma deseja
-(diamante, aspas, só na aba ativa...) que o pacote sai novo.
+SE ALGO ESTRANHO APARECER
+-------------------------
+Os textos das tabs voltam com 1 palavra por arquivo, e o CSS é
+só estética. Nada de conteúdo está em jogo neste pacote.
 =================================================================

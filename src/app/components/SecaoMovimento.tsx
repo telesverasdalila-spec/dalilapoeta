@@ -340,15 +340,20 @@ export default function SecaoMovimento() {
         <div className="tabs-principal">
           {/* Task 111: nova geografia pedida pela autora —
               5 abas empilhadas primeiro, Ativismo Cultural por ÚLTIMO
-              e SEM empilhar (uma linha só).
+              (na v4 da Task 113 a autora pediu que ele também empilhe,
+              então hoje TODAS as 6 abas ficam em 2 linhas).
               ⚠️ As chaves internas (nucleo/livrespaco/abeces/emmovimento/
               alpharrabio/ativismo) NÃO mudam — textos e sub-abas dependem delas. */}
+          {/* Task 113 v4: todas as tabs em 2 linhas (ritmo visual uniforme, esquema da autora) —
+              Alpharrabio ganhou "Centro Cultural" (nome da instituição) e Ativismo empilhou.
+              ⚠️ Só o TEXTO visível mudou — as chaves (nucleo/livrespaco/abeces/emmovimento/
+              alpharrabio/ativismo) NÃO mudam: conteúdo das seções depende delas. */}
           <button className={"tab-btn " + (tabAtiva === "nucleo" ? "ativa" : "")} onClick={() => setTabAtiva("nucleo")}>Núcleo<br />ABC's</button>
           <button className={"tab-btn " + (tabAtiva === "livrespaco" ? "ativa" : "")} onClick={() => setTabAtiva("livrespaco")}>Revista<br />Livrespaço</button>
           <button className={"tab-btn " + (tabAtiva === "abeces" ? "ativa" : "")} onClick={() => setTabAtiva("abeces")}>Boletim<br />Abecês</button>
           <button className={"tab-btn " + (tabAtiva === "emmovimento" ? "ativa" : "")} onClick={() => setTabAtiva("emmovimento")}>Em<br />Movimento</button>
-          <button className={"tab-btn " + (tabAtiva === "alpharrabio" ? "ativa" : "")} onClick={() => setTabAtiva("alpharrabio")}>Alpharrabio</button>
-          <button className={"tab-btn " + (tabAtiva === "ativismo" ? "ativa" : "")} onClick={() => setTabAtiva("ativismo")}>Ativismo Cultural</button>
+          <button className={"tab-btn " + (tabAtiva === "alpharrabio" ? "ativa" : "")} onClick={() => setTabAtiva("alpharrabio")}>Alpharrabio<br />Centro Cultural</button>
+          <button className={"tab-btn " + (tabAtiva === "ativismo" ? "ativa" : "")} onClick={() => setTabAtiva("ativismo")}>Ativismo<br />Cultural</button>
         </div>
 
         {/* Sub-tabs (só no Ativismo) */}

@@ -68,20 +68,23 @@ export default function CabecalhoFixo({ abaAtiva, mudarAba }: CabecalhoFixoProps
         </div>
 
         <div className="tabs-principal">
+            {/* Task 113 v4: todas as tabs em 2 linhas (ritmo visual uniforme, esquema da autora).
+                ⚠️ Só o TEXTO visível mudou — as chaves (crono/premios/imprensa) NÃO mudam:
+                títulos e conteúdo das seções dependem delas. */}
             <button 
                 className={"tab-btn " + (abaAtiva === "crono" ? "ativa" : "")}
                 onClick={() => mudarAba("crono")}
-            >CronoBiografia</button>
+            >Crono<br/>Biografia</button>
             
             <button 
                 className={"tab-btn " + (abaAtiva === "premios" ? "ativa" : "")}
                 onClick={() => mudarAba("premios")}
-            >Prêmios e<br/>Reconhecimentos</button>
+            >Prêmios &<br/>Reconhecimentos</button>
             
             <button 
                 className={"tab-btn " + (abaAtiva === "imprensa" ? "ativa" : "")}
                 onClick={() => mudarAba("imprensa")}
-            >Mídia</button>
+            >Mídia &<br/>Contato</button>
         </div>
 
         {abaAtiva === "crono" && <ReguaTempo modo="decadas" decadas={decadasCrono} />}

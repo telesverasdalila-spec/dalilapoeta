@@ -41,13 +41,16 @@ export default function CabecalhoObra({ tabAtiva, mudarTab, subTabAtiva, mudarSu
         {/* Task 110: ordem pedida pela autora — 3 abas empilhadas primeiro,
             depois as 2 de palavra simples (no celular quebram em 2 fileiras
             centralizadas: empilhadas acima, simples embaixo).
+            Task 113 v4: todas em 2 linhas (ritmo visual uniforme, esquema da
+            autora) — "Coletâneas & Antologias" e "Resenhas & Críticas" agora
+            empilhadas como as irmãs.
             ⚠️ As chaves internas (obras/escritos/colaboracoes/coletaneas/resenhas)
             NÃO mudam — títulos e conteúdo das seções dependem delas. */}
         <button className={"tab-btn " + (tabAtiva === "obras" ? "ativa" : "")} onClick={() => mudarTab("obras")}>Obras<br/>Publicadas</button>
         <button className={"tab-btn " + (tabAtiva === "escritos" ? "ativa" : "")} onClick={() => mudarTab("escritos")}>Escritos &<br/>Leituras</button>
         <button className={"tab-btn " + (tabAtiva === "colaboracoes" ? "ativa" : "")} onClick={() => mudarTab("colaboracoes")}>Colaborações<br/>Literárias</button>
-        <button className={"tab-btn " + (tabAtiva === "coletaneas" ? "ativa" : "")} onClick={() => mudarTab("coletaneas")}>Coletâneas</button>
-        <button className={"tab-btn " + (tabAtiva === "resenhas" ? "ativa" : "")} onClick={() => mudarTab("resenhas")}>Resenhas</button>
+        <button className={"tab-btn " + (tabAtiva === "coletaneas" ? "ativa" : "")} onClick={() => mudarTab("coletaneas")}>Coletâneas &<br/>Antologias</button>
+        <button className={"tab-btn " + (tabAtiva === "resenhas" ? "ativa" : "")} onClick={() => mudarTab("resenhas")}>Resenhas &<br/>Críticas</button>
       </div>
 
       <div className="tabs-sub visivel" style={{ display: "flex" }}>

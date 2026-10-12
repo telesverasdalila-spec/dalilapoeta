@@ -145,10 +145,12 @@ body {
 .tabs-principal > :last-child { margin-right: auto; }
 .tabs-principal::-webkit-scrollbar { display: none; }
 
-/* Task 113 (v3 — esfera refinada): marcador prateado + label à esquerda (calibragem com a autora).
+/* Task 113 (v4 — uniforme): marcador prateado + label à esquerda (calibragem com a autora).
    Cada tab-mãe ganha uma esferinha em degradê cinza, como uma pérola de prata,
    só para informar no visual que ali estão as escolhas do menu.
-   v2: tracinho virou esfera; v3: esfera maior (9px) + entrelinhas 1.3 nas labels.
+   Histórico: v1 tracinho (poluiu); v2 esfera 7px; v3 esfera 9px + entrelinhas 1.3
+   (apertou demais — desfeito); v4 esfera 9px mantida + TODAS as tabs-mãe em 2
+   linhas (ritmo visual uniforme, esquema da autora — labels nos próprios componentes).
    ⚠️ Vale para os 3 eixos de uma vez (Vida, Obra e Movimento usam .tabs-principal).
    ⚠️ Só estética — chaves internas das tabs e conteúdo que abre por padrão não mudam. */
 .tab-btn {
@@ -167,7 +169,7 @@ body {
   align-items: center;
   gap: 9px;
   text-align: left;
-  line-height: 1.3; /* Task 113 v3: entrelinhas mais juntinho nas labels de 2 linhas — bloco compacto, esfera não “some” */
+  /* sem line-height próprio: herda o respiro original entre as letras (v4 desfez o 1.3 da v3) */
 }
 .tab-btn::before {
   content: "";

@@ -35,7 +35,9 @@ com aviso de proteção no topo. Hoje a lista é:
   • src/app/components/CabecalhoObra.tsx
     (menu da aba Obra; ordem: Obras Publicadas, Escritos &
      Leituras, Colaborações Literárias — as três empilhadas —
-     depois Coletâneas e Resenhas. As chaves internas
+     depois Coletâneas & Antologias e Resenhas & Críticas; desde
+     a Task 113 v4 TODAS as tabs-mãe dos 3 eixos ficam em 2
+     linhas. As chaves internas
      obras/escritos/colaboracoes/coletaneas/resenhas NÃO devem
      ser renomeadas: títulos e conteúdo dependem delas)
 
@@ -48,6 +50,10 @@ religar a conexão.
 Marcador das tabs-mãe (esferinha prateada): morre no globals.css
 (blocos ".tab-btn::before" e o comentário "Task 113"). Vale para
 Vida, Obra e Movimento de uma vez — mexer em um, mexe nos três.
+As TABS-MÃE ficam sempre em 2 linhas (ritmo visual uniforme) —
+os textos visíveis mudaram na v4 (Crono/Biografia, Mídia &
+Contato, Coletâneas & Antologias, Resenhas & Críticas,
+Alpharrabio Centro Cultural); as chaves internas NÃO mudam.
 
 -----------------------------------------------------------------
 REGRA 3 — O COFRE É O GITHUB
