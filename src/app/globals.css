@@ -145,6 +145,12 @@ body {
 .tabs-principal > :last-child { margin-right: auto; }
 .tabs-principal::-webkit-scrollbar { display: none; }
 
+/* Task 113: marcador prateado + label à esquerda (mockup da autora, feito no Canva).
+   Cada tab-mãe ganha um tracinho vertical em gradiente cinza claro, como
+   separadores de livro antigo; o texto encosta nele alinhado à esquerda,
+   então nomes de 2 linhas ficam organizados entre si.
+   ⚠️ Vale para os 3 eixos de uma vez (Vida, Obra e Movimento usam .tabs-principal).
+   ⚠️ Só estética — chaves internas das tabs e conteúdo que abre por padrão não mudam. */
 .tab-btn {
   font-family: 'Inter', sans-serif;
   font-size: 0.95rem; /* Task 80: um degrau menor (era 1.05) — equilíbrio com título e sub-abas */
@@ -157,6 +163,18 @@ body {
   border-bottom: 2px solid transparent;
   transition: all 0.3s ease;
   white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+}
+.tab-btn::before {
+  content: "";
+  width: 4px;
+  height: 2.35em;
+  border-radius: 2px;
+  background: linear-gradient(180deg, #d7d7d7, #a8a8a8);
+  flex-shrink: 0;
 }
 .tab-btn:hover { color: #8b4513; }
 .tab-btn.ativa {
@@ -504,7 +522,9 @@ span[data-ano].data-iluminada {
     font-size: 0.9rem !important; /* Task 80: um degrau menor no celular (era 0.95) */
     padding: 6px 10px !important;
     white-space: nowrap;
+    gap: 7px; /* Task 113: tracinho mais coladinho no celular */
   }
+  .tab-btn::before { height: 2.1em; } /* Task 113: proporcional ao bloco compacto */
 
   .ativismo-ativo .tabs-sub {
     display: flex !important;
@@ -633,7 +653,12 @@ span[data-ano].data-iluminada {
     /* fonte e largura herdadas do clamp do bloco @768 — nunca estoura */
     padding: 12px 6px !important;
   }
-  .tab-btn { font-size: 0.85rem !important; padding: 4px 6px !important; }
+  .tab-btn {
+    font-size: 0.85rem !important;
+    padding: 4px 6px !important;
+    gap: 5px; /* Task 113: respiro mínimo entre tracinho e texto */
+  }
+  .tab-btn::before { width: 3px; height: 1.9em; } /* Task 113: versão enxuta do marcador */
   .tab-sub-btn { font-size: 0.85rem !important; } /* mãe = sub no tamanho; hierarquia fica no peso e na cor */
   .estrada { padding: 15px 15px 40px 60px !important; }
   .estrada::before { left: 24px !important; }

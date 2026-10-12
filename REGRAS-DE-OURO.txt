@@ -27,6 +27,11 @@ com aviso de proteção no topo. Hoje a lista é:
      zigzag esquerda/direita; última imagem = réplica de janeiro,
      À ESQUERDA — pedido explícito da autora, 12/out/2026)
 
+  • src/app/components/TextosLivrespaco.tsx
+    (layout da Revista Livrespaço, eixo Movimento: recorte de
+     1983 + manifesto lado a lado, textos históricos e as 4 capas
+     com legenda no fim — restaurado em 12/out/2026)
+
   • src/app/components/CabecalhoObra.tsx
     (menu da aba Obra; ordem: Obras Publicadas, Escritos &
      Leituras, Colaborações Literárias — as três empilhadas —
@@ -39,6 +44,10 @@ O arquivo grande ConteudoObra.tsx só recebe as linhas de conexão
 (import + desvio). Se um dia o layout sumir de novo, procure o
 arquivo da caixinha — ele provavelmente está intacto; faltou
 religar a conexão.
+
+Marcador das tabs-mãe (tracinho prateado): morre no globals.css
+(blocos ".tab-btn::before" e o comentário "Task 113"). Vale para
+Vida, Obra e Movimento de uma vez — mexer em um, mexe nos três.
 
 -----------------------------------------------------------------
 REGRA 3 — O COFRE É O GITHUB

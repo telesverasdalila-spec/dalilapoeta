@@ -1,52 +1,53 @@
 =================================================================
-TASK 112 — REVISTA LIVRESPAÇO: IMAGENS DE VOLTA ("tinha ficado bacana")
+PACOTE DE AJUSTE — TASK 113: MARCADOR PRATEADO NAS TABS-MÃE
+Site memorial Dalila Teles Veras | 13/out/2026
 =================================================================
 
-A HISTÓRIA (porque sumiu mesmo!)
-No dia 6 de outubro, o layout da Revista Livrespaço foi criado com
-as imagens do site antigo (recorte de jornal, manifesto e capas).
-No dia seguinte, um ajuste nas abas do menu partiu de uma versão
-antiga do arquivo e apagou o layout — as imagens ficaram salvas no
-repositório, mas o código se perdeu. A mesma história do Diuturnos.
-Desta vez o layout foi ressuscitado DENTRO DE UM ARQUIVO PRÓPRIO,
-à prova de sobrescrita.
+O QUE MUDA NESTE PACOTE
+-----------------------
+As tabs-mãe dos TRÊS eixos (Vida, Obra e Movimento) ganham o
+refinamento desenhado pela autora no Canva:
 
-O QUE A ABA REVISTA LIVRESPAÇO MOSTRA AGORA (como era no dia 6)
-1. Primeiro parágrafo (texto de resistência e descentralização).
-2. Recorte de jornal de 17/dez/1983 ("Grupo Livrespaço quer atuar
-   mais nas escolas") + página com o manifesto, lado a lado, com a
-   legenda "Revista Livrespaço".
-3. Segundo e terceiro parágrafos (lema e Prêmio APCA 1993).
-4. No fim do texto: as 4 capas da revista, lado a lado, com a
-   legenda "Capas da revista Livrespaço".
+  1. Um tracinho vertical em gradiente de cinza claro (prateado)
+     à esquerda de cada label — como separadores de livro antigo;
+  2. O texto de cada tab passa a alinhar À ESQUERDA, encostado
+     no tracinho — assim os nomes de duas linhas (Obras /
+     Publicadas, Escritos & / Leituras...) ficam organizados
+     entre si, em qualquer tamanho de tela.
 
 O QUE NÃO MUDA
-• As imagens já estão no repositório (public/images/livrespaco/) —
-  NÃO precisa enviar nada para lá, só os 2 arquivos de código.
-• O menu Projetos Culturais (geografia nova da Task 111) fica igual.
-• As outras abas (Alpharrabio, Núcleo, Boletim, Em Movimento,
-  Ativismo) continuam exatamente como estão.
+--------------
+  • Nada de conteúdo: as chaves internas das tabs continuam
+    exatamente as mesmas;
+  • O que abre por padrão em cada eixo continua abrindo igual
+    (CronoBiografia / Obras Publicadas+Poesia / Ativismo Cultural);
+  • As sub-abas (Poesia, Prosa, Ensaios...) não recebem o
+    tracinho — o marcador é só das tabs-mãe, como no desenho;
+  • No celular os tracinhos ficam proporcionais (mais enxutos).
 
-ARQUIVOS DO PACOTE
-1. src/app/components/TextosLivrespaco.tsx  ← NOVO (a caixinha)
-2. src/app/components/SecaoMovimento.tsx    ← 3 linhas de conexão
-3. LEIA-ME.txt (este bilhete)
+ARQUIVOS DESTE PACOTE (extraia na RAIZ do repositório)
+------------------------------------------------------
+  1. src/app/globals.css
+     (substituir — a mudança toda mora aqui, nos blocos
+      ".tab-btn" e ".tab-btn::before", com comentário Task 113;
+      uma regra só alimenta os 3 eixos de uma vez)
+  2. REGRAS-DE-OURO.txt
+     (substituir — entrou a caixinha TextosLivrespaco.tsx na
+      lista de arquivos protegidos + nota sobre o marcador)
 
-ATUALIZAÇÃO DO REGRAS-DE-OURO
-O arquivo REGRAS-DE-OURO.txt que já está no repositório lista as
-caixinhas protegidas — agora a lista ganhou um morador novo
-(TextosLivrespaco.tsx). Nada a fazer por aí: a próxima atualização
-do REGRAS-DE-OURO acompanha um pacote futuro.
+DEPOIS DE EXTRAIR
+-----------------
+  1. Confira que os 2 arquivos substituíram os antigos;
+  2. Commit & Sync com nome curto (sugestão: "marcador prateado tabs");
+  3. Espere ~2-3 min o deploy da Vercel terminar;
+  4. Teste em janela anônima (Ctrl+Shift+N), de preferência com
+     Ctrl+Shift+R no desktop — e olhe os 3 eixos: Vida, Obra e
+     Movimento, cada um com seu tracinho prateado.
 
-CONFERÊNCIA DE SEGURANÇA
-• TypeScript validado: zero erros em src/.
-• Nenhuma outra pasta foi tocada.
-
-DEPLOY
-1. Solte o conteúdo do pacote na RAIZ do clone.
-2. VS Code → Commit & Sync, nome sugerido:
-   "livrespaco imagens restauradas + caixinha"
-3. Aguarde ~3 min e teste em aba anônima:
-   Projetos Culturais → Revista Livrespaço → recorte + manifesto
-   após o 1º parágrafo, capas no fim do texto.
+SE ALGO ESTRANHO APARECER
+-------------------------
+A mudança é só visual e mora num lugar só (globals.css). Basta
+devolver a versão anterior do arquivo pelo histórico do GitHub
+que o site volta a ser o que era — nada de conteúdo está em jogo
+neste pacote.
 =================================================================
