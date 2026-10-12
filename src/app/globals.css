@@ -145,9 +145,10 @@ body {
 .tabs-principal > :last-child { margin-right: auto; }
 .tabs-principal::-webkit-scrollbar { display: none; }
 
-/* Task 113 (v2 — esfera): marcador prateado + label à esquerda (calibragem com a autora).
-   Cada tab-mãe ganha uma esferazinha em degradê cinza, como uma pérola de prata,
+/* Task 113 (v3 — esfera refinada): marcador prateado + label à esquerda (calibragem com a autora).
+   Cada tab-mãe ganha uma esferinha em degradê cinza, como uma pérola de prata,
    só para informar no visual que ali estão as escolhas do menu.
+   v2: tracinho virou esfera; v3: esfera maior (9px) + entrelinhas 1.3 nas labels.
    ⚠️ Vale para os 3 eixos de uma vez (Vida, Obra e Movimento usam .tabs-principal).
    ⚠️ Só estética — chaves internas das tabs e conteúdo que abre por padrão não mudam. */
 .tab-btn {
@@ -164,13 +165,14 @@ body {
   white-space: nowrap;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 9px;
   text-align: left;
+  line-height: 1.3; /* Task 113 v3: entrelinhas mais juntinho nas labels de 2 linhas — bloco compacto, esfera não “some” */
 }
 .tab-btn::before {
   content: "";
-  width: 7px;
-  height: 7px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
   background: linear-gradient(135deg, #d6d6d6, #9c9c9c);
   flex-shrink: 0;
@@ -523,7 +525,7 @@ span[data-ano].data-iluminada {
     white-space: nowrap;
     gap: 7px; /* Task 113 v2: esfera mais coladinha no celular */
   }
-  .tab-btn::before { width: 6px; height: 6px; } /* Task 113 v2: pérola compacta no celular */
+  .tab-btn::before { width: 7px; height: 7px; } /* Task 113 v3: pérola compacta no celular */
 
   .ativismo-ativo .tabs-sub {
     display: flex !important;
@@ -657,7 +659,7 @@ span[data-ano].data-iluminada {
     padding: 4px 6px !important;
     gap: 5px; /* Task 113 v2: respiro mínimo entre esfera e texto */
   }
-  .tab-btn::before { width: 5px; height: 5px; } /* Task 113 v2: pérola enxuta em telas mínimas */
+  .tab-btn::before { width: 6px; height: 6px; } /* Task 113 v3: pérola enxuta em telas mínimas */
   .tab-sub-btn { font-size: 0.85rem !important; } /* mãe = sub no tamanho; hierarquia fica no peso e na cor */
   .estrada { padding: 15px 15px 40px 60px !important; }
   .estrada::before { left: 24px !important; }

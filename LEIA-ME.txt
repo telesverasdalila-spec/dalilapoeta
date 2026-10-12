@@ -1,5 +1,5 @@
 =================================================================
-PACOTE DE AJUSTE — TASK 113 (v2): ESFERINHA PRATEADA NAS TABS-MÃE
+PACOTE DE AJUSTE — TASK 113 (v3): ESFERINHA PRATEADA REFINADA
 Site memorial Dalila Teles Veras | 13/out/2026
 =================================================================
 
@@ -14,8 +14,10 @@ marcador calibrado com a autora:
   2. O texto de cada tab continua alinhado À ESQUERDA, então os
      nomes de duas linhas (Obras / Publicadas, Escritos & /
      Leituras...) ficam organizados entre si;
-  3. É a versão 2 do marcador: substitui o tracinho vertical da
-     primeira rodada, que a autora achou um pouco poluído.
+  3. Versão 3 (esta): a esfera cresceu um grau (9px) e as labels
+     de duas linhas ficaram com o entrelinhas mais apertadinho —
+     o bloco de texto fica compacto e a pérola não "some";
+  4. Histórico: v1 tracinho vertical (poluiu), v2 esfera 7px.
 
 O QUE NÃO MUDA
 --------------
@@ -25,8 +27,8 @@ O QUE NÃO MUDA
     (CronoBiografia / Obras Publicadas+Poesia / Ativismo Cultural);
   • As sub-abas (Poesia, Prosa, Ensaios...) não recebem marcador —
     ele é só das tabs-mãe;
-  • No celular a esferinha fica proporcional (6px; 5px em telas
-    mínimas).
+  • No celular a esferinha fica proporcional (7px; 6px em telas
+    mínimas) e o entrelinhas compacto vem junto.
 
 ARQUIVOS DESTE PACOTE (extraia na RAIZ do repositório)
 ------------------------------------------------------
@@ -41,7 +43,7 @@ ARQUIVOS DESTE PACOTE (extraia na RAIZ do repositório)
 DEPOIS DE EXTRAIR
 -----------------
   1. Confira que os 2 arquivos substituíram os antigos;
-  2. Commit & Sync com nome curto (sugestão: "esfera prateada tabs");
+  2. Commit & Sync com nome curto (sugestão: "esfera refinada tabs");
   3. Espere ~2-3 min o deploy da Vercel terminar;
   4. Teste em janela anônima (Ctrl+Shift+N), de preferência com
      Ctrl+Shift+R no desktop — e olhe os 3 eixos: Vida, Obra e
