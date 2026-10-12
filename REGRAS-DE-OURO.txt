@@ -45,7 +45,7 @@ O arquivo grande ConteudoObra.tsx só recebe as linhas de conexão
 arquivo da caixinha — ele provavelmente está intacto; faltou
 religar a conexão.
 
-Marcador das tabs-mãe (tracinho prateado): morre no globals.css
+Marcador das tabs-mãe (esferinha prateada): morre no globals.css
 (blocos ".tab-btn::before" e o comentário "Task 113"). Vale para
 Vida, Obra e Movimento de uma vez — mexer em um, mexe nos três.
 

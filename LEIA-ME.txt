@@ -1,19 +1,21 @@
 =================================================================
-PACOTE DE AJUSTE — TASK 113: MARCADOR PRATEADO NAS TABS-MÃE
+PACOTE DE AJUSTE — TASK 113 (v2): ESFERINHA PRATEADA NAS TABS-MÃE
 Site memorial Dalila Teles Veras | 13/out/2026
 =================================================================
 
 O QUE MUDA NESTE PACOTE
 -----------------------
 As tabs-mãe dos TRÊS eixos (Vida, Obra e Movimento) ganham o
-refinamento desenhado pela autora no Canva:
+marcador calibrado com a autora:
 
-  1. Um tracinho vertical em gradiente de cinza claro (prateado)
-     à esquerda de cada label — como separadores de livro antigo;
-  2. O texto de cada tab passa a alinhar À ESQUERDA, encostado
-     no tracinho — assim os nomes de duas linhas (Obras /
-     Publicadas, Escritos & / Leituras...) ficam organizados
-     entre si, em qualquer tamanho de tela.
+  1. Uma esferinha em degradê de cinza claro à esquerda de cada
+     label — como uma pérola de prata pequenininha, só para
+     informar no visual que ali estão as escolhas do menu;
+  2. O texto de cada tab continua alinhado À ESQUERDA, então os
+     nomes de duas linhas (Obras / Publicadas, Escritos & /
+     Leituras...) ficam organizados entre si;
+  3. É a versão 2 do marcador: substitui o tracinho vertical da
+     primeira rodada, que a autora achou um pouco poluído.
 
 O QUE NÃO MUDA
 --------------
@@ -21,9 +23,10 @@ O QUE NÃO MUDA
     exatamente as mesmas;
   • O que abre por padrão em cada eixo continua abrindo igual
     (CronoBiografia / Obras Publicadas+Poesia / Ativismo Cultural);
-  • As sub-abas (Poesia, Prosa, Ensaios...) não recebem o
-    tracinho — o marcador é só das tabs-mãe, como no desenho;
-  • No celular os tracinhos ficam proporcionais (mais enxutos).
+  • As sub-abas (Poesia, Prosa, Ensaios...) não recebem marcador —
+    ele é só das tabs-mãe;
+  • No celular a esferinha fica proporcional (6px; 5px em telas
+    mínimas).
 
 ARQUIVOS DESTE PACOTE (extraia na RAIZ do repositório)
 ------------------------------------------------------
@@ -38,16 +41,15 @@ ARQUIVOS DESTE PACOTE (extraia na RAIZ do repositório)
 DEPOIS DE EXTRAIR
 -----------------
   1. Confira que os 2 arquivos substituíram os antigos;
-  2. Commit & Sync com nome curto (sugestão: "marcador prateado tabs");
+  2. Commit & Sync com nome curto (sugestão: "esfera prateada tabs");
   3. Espere ~2-3 min o deploy da Vercel terminar;
   4. Teste em janela anônima (Ctrl+Shift+N), de preferência com
      Ctrl+Shift+R no desktop — e olhe os 3 eixos: Vida, Obra e
-     Movimento, cada um com seu tracinho prateado.
+     Movimento.
 
-SE ALGO ESTRANHO APARECER
--------------------------
-A mudança é só visual e mora num lugar só (globals.css). Basta
-devolver a versão anterior do arquivo pelo histórico do GitHub
-que o site volta a ser o que era — nada de conteúdo está em jogo
-neste pacote.
+SE QUISER TESTAR OUTRO MARCADOR
+-------------------------------
+É uma calibragem de 1 minuto: o marcador morre num bloco único do
+globals.css (" .tab-btn::before"). Diga à Super Z qual forma deseja
+(diamante, aspas, só na aba ativa...) que o pacote sai novo.
 =================================================================

@@ -145,10 +145,9 @@ body {
 .tabs-principal > :last-child { margin-right: auto; }
 .tabs-principal::-webkit-scrollbar { display: none; }
 
-/* Task 113: marcador prateado + label à esquerda (mockup da autora, feito no Canva).
-   Cada tab-mãe ganha um tracinho vertical em gradiente cinza claro, como
-   separadores de livro antigo; o texto encosta nele alinhado à esquerda,
-   então nomes de 2 linhas ficam organizados entre si.
+/* Task 113 (v2 — esfera): marcador prateado + label à esquerda (calibragem com a autora).
+   Cada tab-mãe ganha uma esferazinha em degradê cinza, como uma pérola de prata,
+   só para informar no visual que ali estão as escolhas do menu.
    ⚠️ Vale para os 3 eixos de uma vez (Vida, Obra e Movimento usam .tabs-principal).
    ⚠️ Só estética — chaves internas das tabs e conteúdo que abre por padrão não mudam. */
 .tab-btn {
@@ -165,15 +164,15 @@ body {
   white-space: nowrap;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   text-align: left;
 }
 .tab-btn::before {
   content: "";
-  width: 4px;
-  height: 2.35em;
-  border-radius: 2px;
-  background: linear-gradient(180deg, #d7d7d7, #a8a8a8);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #d6d6d6, #9c9c9c);
   flex-shrink: 0;
 }
 .tab-btn:hover { color: #8b4513; }
@@ -522,9 +521,9 @@ span[data-ano].data-iluminada {
     font-size: 0.9rem !important; /* Task 80: um degrau menor no celular (era 0.95) */
     padding: 6px 10px !important;
     white-space: nowrap;
-    gap: 7px; /* Task 113: tracinho mais coladinho no celular */
+    gap: 7px; /* Task 113 v2: esfera mais coladinha no celular */
   }
-  .tab-btn::before { height: 2.1em; } /* Task 113: proporcional ao bloco compacto */
+  .tab-btn::before { width: 6px; height: 6px; } /* Task 113 v2: pérola compacta no celular */
 
   .ativismo-ativo .tabs-sub {
     display: flex !important;
@@ -656,9 +655,9 @@ span[data-ano].data-iluminada {
   .tab-btn {
     font-size: 0.85rem !important;
     padding: 4px 6px !important;
-    gap: 5px; /* Task 113: respiro mínimo entre tracinho e texto */
+    gap: 5px; /* Task 113 v2: respiro mínimo entre esfera e texto */
   }
-  .tab-btn::before { width: 3px; height: 1.9em; } /* Task 113: versão enxuta do marcador */
+  .tab-btn::before { width: 5px; height: 5px; } /* Task 113 v2: pérola enxuta em telas mínimas */
   .tab-sub-btn { font-size: 0.85rem !important; } /* mãe = sub no tamanho; hierarquia fica no peso e na cor */
   .estrada { padding: 15px 15px 40px 60px !important; }
   .estrada::before { left: 24px !important; }
