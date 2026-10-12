@@ -339,12 +339,17 @@ export default function SecaoMovimento() {
 
         {/* Tabs principais */}
         <div className="tabs-principal">
-          <button className={"tab-btn " + (tabAtiva === "ativismo" ? "ativa" : "")} onClick={() => setTabAtiva("ativismo")}>Ativismo<br />Cultural</button>
-          <button className={"tab-btn " + (tabAtiva === "alpharrabio" ? "ativa" : "")} onClick={() => setTabAtiva("alpharrabio")}>Alpharrabio</button>
+          {/* Task 111: nova geografia pedida pela autora —
+              5 abas empilhadas primeiro, Ativismo Cultural por ÚLTIMO
+              e SEM empilhar (uma linha só).
+              ⚠️ As chaves internas (nucleo/livrespaco/abeces/emmovimento/
+              alpharrabio/ativismo) NÃO mudam — textos e sub-abas dependem delas. */}
           <button className={"tab-btn " + (tabAtiva === "nucleo" ? "ativa" : "")} onClick={() => setTabAtiva("nucleo")}>Núcleo<br />ABC's</button>
-          <button className={"tab-btn " + (tabAtiva === "abeces" ? "ativa" : "")} onClick={() => setTabAtiva("abeces")}>Boletim<br />Abecês</button>
           <button className={"tab-btn " + (tabAtiva === "livrespaco" ? "ativa" : "")} onClick={() => setTabAtiva("livrespaco")}>Revista<br />Livrespaço</button>
+          <button className={"tab-btn " + (tabAtiva === "abeces" ? "ativa" : "")} onClick={() => setTabAtiva("abeces")}>Boletim<br />Abecês</button>
           <button className={"tab-btn " + (tabAtiva === "emmovimento" ? "ativa" : "")} onClick={() => setTabAtiva("emmovimento")}>Em<br />Movimento</button>
+          <button className={"tab-btn " + (tabAtiva === "alpharrabio" ? "ativa" : "")} onClick={() => setTabAtiva("alpharrabio")}>Alpharrabio</button>
+          <button className={"tab-btn " + (tabAtiva === "ativismo" ? "ativa" : "")} onClick={() => setTabAtiva("ativismo")}>Ativismo Cultural</button>
         </div>
 
         {/* Sub-tabs (só no Ativismo) */}

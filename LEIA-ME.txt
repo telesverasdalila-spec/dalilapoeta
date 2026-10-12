@@ -1,38 +1,31 @@
 =================================================================
-TASK 110 — MENU DA ABA OBRA REORGANIZADO + REGRAS DE OURO NO COFRE
+TASK 111 — NOVA GEOGRAFIA DO MENU "PROJETOS CULTURAIS" (EIXO MOVIMENTO)
 =================================================================
 
 O QUE MUDA
-1) Menu da aba Obra, nova ordem e nova formação de palavras:
-     1. Obras Publicadas        (empilhada, como já era)
-     2. Escritos & Leituras     (empilhada, como já era)
-     3. Colaborações Literárias (NOVA grafia, empilhada em duas
-        linhas — antes era só "Colaborações" em uma linha)
-     4. Coletâneas              (simples)
-     5. Resenhas                (simples)
-   No celular, as abas quebram em duas fileiras centralizadas
-   (comportamento que já existe, Task 80): as três empilhadas
-   tendem a ficar na fileira de cima e as duas simples embaixo —
-   o balanceamento que você desenhou.
-2) ARQUIVO NOVO FIXO: REGRAS-DE-OURO.txt na raiz do repositório —
-   o manual de convivência com o site (puxar antes de mexer,
-   caixinhas protegidas, cofre GitHub, bilhetes, teste anônimo,
-   retratos de época). Ele fica no site para sempre e orienta
-   qualquer pessoa ou IA que editar no futuro.
+Menu da seção Projetos Culturais, nova ordem:
+  1. Núcleo ABC's          (empilhada, como já era)
+  2. Revista Livrespaço    (empilhada, como já era)
+  3. Boletim Abecês        (empilhada, como já era)
+  4. Em Movimento          (empilhada, como já era)
+  5. Alpharrabio           (simples, como já era)
+  6. Ativismo Cultural     (NOVIDADE: agora em UMA linha só,
+                            sem empilhar, e na última posição)
 
 O QUE NÃO MUDA
-• As chaves internas das abas (obras/escritos/colaboracoes/
-  coletaneas/resenhas) estão intocadas — é por isso que nenhum
-  conteúdo, título de seção ou sub-aba mudou de lugar.
-• Títulos das páginas: quando você clica em "Colaborações
-  Literárias", o título grande continua sendo "Colaborações
-  Literárias" (agora aba e título ficam com a mesma grafia).
-• Os links "← Voltar para Escritos & Leituras" continuam corretos.
+• As chaves internas (nucleo/livrespaco/abeces/emmovimento/
+  alpharrabio/ativismo) estão intocadas — textos, sub-abas e
+  régua do tempo de cada aba continuam idênticos.
+• A página continua ABRINDO no Ativismo Cultural (mesmo conteúdo
+  de sempre; ele agora é a última tab do menu, só isso).
+  Se preferir que a página passe a abrir no Núcleo ABC's, é
+  um ajuste de uma linha — é só pedir.
+• Sub-abas do Ativismo (Palestras & Oficinas, Saras & Recitais...)
+  seguem no mesmo lugar.
 
-ARQUIVOS DO PACOTE (substituir os existentes; o novo só chegar)
-1. src/app/components/CabecalhoObra.tsx  ← menu reorganizado
-2. REGRAS-DE-OURO.txt                    ← NOVO, raiz do projeto
-3. LEIA-ME.txt (este bilhete)
+ARQUIVOS DO PACOTE (substituir o existente)
+1. src/app/components/SecaoMovimento.tsx
+2. LEIA-ME.txt (este bilhete)
 
 CONFERÊNCIA DE SEGURANÇA
 • TypeScript validado: zero erros em src/.
@@ -41,8 +34,8 @@ CONFERÊNCIA DE SEGURANÇA
 DEPLOY
 1. Solte o conteúdo do pacote na RAIZ do clone.
 2. VS Code → Commit & Sync, nome sugerido:
-   "menu obra reordenado + regras de ouro"
-3. Aguarde ~2 min e teste em janela anônima (Ctrl+Shift+N),
-   de preferência no CELULAR ou com a janela estreita:
-   aba Obra → conferir a ordem e as duas fileirinhas.
+   "geografia menu projetos culturais"
+3. Aguarde ~3 min desta vez (o deploy pode levar um pouquinho
+   mais) e teste em aba anônima: seção Projetos Culturais →
+   conferir a ordem e o Ativismo Cultural em uma linha.
 =================================================================
