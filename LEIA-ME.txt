@@ -1,14 +1,14 @@
 =================================================================
-PACOTE DE AJUSTE — TASK 113 (v4): TABS-MÃE UNIFORMES EM 2 LINHAS
+PACOTE DE AJUSTE — TASK 113 (v5): DIAMANTE PRATEADO NAS TABS-MÃE
 Site memorial Dalila Teles Veras | 13/out/2026
 =================================================================
 
 O QUE MUDA NESTE PACOTE
 -----------------------
-Percepção certeira da autora: misturar tabs de 1 linha e de 2
-linhas criava ritmo visual irregular. Este pacote uniformiza
-TUDO em conjuntos de 2 linhas e devolve o respiro entre as
-letras (o estreitamento da v3 foi desfeito):
+Teste A/B pedido pela autora: a esferinha prateada vira um
+DIAMANTINHO prateado (quadrado lapidado a 45°) — visual
+editorial e sóbrio. Tudo o mais da v4 permanece: tabs-mãe em 2
+linhas, respiro entre as letras, texto alinhado à esquerda:
 
   EIXO VIDA:
     Crono / Biografia
@@ -30,9 +30,9 @@ letras (o estreitamento da v3 foi desfeito):
     Alpharrabio / Centro Cultural   (antes: "Alpharrabio")
     Ativismo / Cultural             (antes: linha única)
 
-A esferinha prateada (9px) continua marcando cada tab-mãe, e o
-texto segue alinhado à esquerda. No celular as fileiras se
-reorganizam sozinhas — já testado.
+O diamantinho prateado marca cada tab-mãe, e o texto segue
+alinhado à esquerda. No celular ele fica proporcional (6px; 5px
+em telas mínimas) e as fileiras se reorganizam sozinhas.
 
 O QUE NÃO MUDA
 --------------
@@ -58,8 +58,8 @@ NOTINHAS DA SUPER Z (para decidir depois, se quiser)
 ARQUIVOS DESTE PACOTE (extraia na RAIZ do repositório)
 ------------------------------------------------------
   1. src/app/globals.css
-     (substituir — respiro entre as letras devolvido; esferinha
-      mantida; comentário Task 113 atualizado)
+     (substituir — é aqui que a esfera vira diamante, bloco
+      ".tab-btn::before"; comentário Task 113 atualizado)
   2. src/app/components/CabecalhoFixo.tsx
      (substituir — labels do eixo Vida em 2 linhas)
   3. src/app/components/CabecalhoObra.tsx
@@ -73,14 +73,15 @@ ARQUIVOS DESTE PACOTE (extraia na RAIZ do repositório)
 DEPOIS DE EXTRAIR
 -----------------
   1. Confira que os 5 arquivos substituíram os antigos;
-  2. Commit & Sync com nome curto (sugestão: "tabs duas linhas");
+  2. Commit & Sync com nome curto (sugestão: "diamante prateado tabs");
   3. Espere ~2-3 min o deploy da Vercel terminar;
   4. Teste em janela anônima (Ctrl+Shift+N), de preferência com
      Ctrl+Shift+R no desktop — e olhe os 3 eixos no desktop E no
      celular.
 
-SE ALGO ESTRANHO APARECER
--------------------------
-Os textos das tabs voltam com 1 palavra por arquivo, e o CSS é
-só estética. Nada de conteúdo está em jogo neste pacote.
+SE PREFERIR VOLTAR PARA A ESFERINHA
+-----------------------------------
+É uma linha: diga à Super Z que o pacote sai novo na hora. O
+resto (2 linhas, respiro, alinhamento) fica como está.
+=================================================================
 =================================================================

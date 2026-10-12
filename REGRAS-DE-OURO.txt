@@ -47,9 +47,10 @@ O arquivo grande ConteudoObra.tsx só recebe as linhas de conexão
 arquivo da caixinha — ele provavelmente está intacto; faltou
 religar a conexão.
 
-Marcador das tabs-mãe (esferinha prateada): morre no globals.css
-(blocos ".tab-btn::before" e o comentário "Task 113"). Vale para
-Vida, Obra e Movimento de uma vez — mexer em um, mexe nos três.
+Marcador das tabs-mãe (diamantinho prateado, em teste A/B com a
+esferinha): morre no globals.css (blocos ".tab-btn::before" e o
+comentário "Task 113"). Vale para Vida, Obra e Movimento de uma
+vez — mexer em um, mexe nos três.
 As TABS-MÃE ficam sempre em 2 linhas (ritmo visual uniforme) —
 os textos visíveis mudaram na v4 (Crono/Biografia, Mídia &
 Contato, Coletâneas & Antologias, Resenhas & Críticas,
