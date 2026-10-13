@@ -1,14 +1,15 @@
 =================================================================
-PACOTE DE AJUSTE — TASK 113 (v5): DIAMANTE PRATEADO NAS TABS-MÃE
+PACOTE DE AJUSTE — TASK 113 (v6): LINHA FININHA NAS TABS-MÃE
 Site memorial Dalila Teles Veras | 13/out/2026
 =================================================================
 
 O QUE MUDA NESTE PACOTE
 -----------------------
-Teste A/B pedido pela autora: a esferinha prateada vira um
-DIAMANTINHO prateado (quadrado lapidado a 45°) — visual
-editorial e sóbrio. Tudo o mais da v4 permanece: tabs-mãe em 2
-linhas, respiro entre as letras, texto alinhado à esquerda:
+Olhar renovado da autora num novo dia: "quanto menos coisas
+melhor". O diamantinho dá lugar a uma LINHA VERTICAL FININHA
+(2px) em cinza bem claro — só uma base organizadora, quase um
+sussurro. Tudo o mais permanece: tabs-mãe em 2 linhas, respiro
+entre as letras, texto alinhado à esquerda:
 
   EIXO VIDA:
     Crono / Biografia
@@ -30,9 +31,9 @@ linhas, respiro entre as letras, texto alinhado à esquerda:
     Alpharrabio / Centro Cultural   (antes: "Alpharrabio")
     Ativismo / Cultural             (antes: linha única)
 
-O diamantinho prateado marca cada tab-mãe, e o texto segue
-alinhado à esquerda. No celular ele fica proporcional (6px; 5px
-em telas mínimas) e as fileiras se reorganizam sozinhas.
+A linha fininha marca cada tab-mãe, e o texto segue alinhado à
+esquerda. No celular ela fica proporcional e as fileiras se
+reorganizam sozinhas.
 
 O QUE NÃO MUDA
 --------------
@@ -58,8 +59,8 @@ NOTINHAS DA SUPER Z (para decidir depois, se quiser)
 ARQUIVOS DESTE PACOTE (extraia na RAIZ do repositório)
 ------------------------------------------------------
   1. src/app/globals.css
-     (substituir — é aqui que a esfera vira diamante, bloco
-      ".tab-btn::before"; comentário Task 113 atualizado)
+     (substituir — é aqui que o diamante vira linha fininha,
+      bloco ".tab-btn::before"; comentário Task 113 atualizado)
   2. src/app/components/CabecalhoFixo.tsx
      (substituir — labels do eixo Vida em 2 linhas)
   3. src/app/components/CabecalhoObra.tsx
@@ -73,7 +74,7 @@ ARQUIVOS DESTE PACOTE (extraia na RAIZ do repositório)
 DEPOIS DE EXTRAIR
 -----------------
   1. Confira que os 5 arquivos substituíram os antigos;
-  2. Commit & Sync com nome curto (sugestão: "diamante prateado tabs");
+  2. Commit & Sync com nome curto (sugestão: "linha sussurro tabs");
   3. Espere ~2-3 min o deploy da Vercel terminar;
   4. Teste em janela anônima (Ctrl+Shift+N), de preferência com
      Ctrl+Shift+R no desktop — e olhe os 3 eixos no desktop E no

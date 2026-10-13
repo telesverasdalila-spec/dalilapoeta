@@ -145,12 +145,12 @@ body {
 .tabs-principal > :last-child { margin-right: auto; }
 .tabs-principal::-webkit-scrollbar { display: none; }
 
-/* Task 113 (v5 — diamante): marcador prateado + label à esquerda (calibragem com a autora).
-   Cada tab-mãe ganha um diamantinho em degradê cinza (quadrado rotacionado 45°),
-   lapide editorial sóbria, só para informar no visual que ali estão as escolhas do menu.
-   Histórico: v1 tracinho (poluiu); v2 esfera 7px; v3 esfera 9px + entrelinhas 1.3
+/* Task 113 (v6 — linha sussurro): marcador prateado + label à esquerda (calibragem com a autora).
+   Cada tab-mãe ganha uma linha VERTICAL FININHA em cinza bem claro — só uma base
+   organizadora, quase um sussurro (“quanto menos coisas melhor”, filosofia da autora).
+   Histórico: v1 tracinho grosso (poluiu); v2 esfera 7px; v3 esfera 9px + entrelinhas 1.3
    (apertou demais — desfeito); v4 esfera 9px + TODAS as tabs-mãe em 2 linhas;
-   v5 esfera vira diamante (teste da autora).
+   v5 diamante (aprovado no dia, revisto no dia seguinte); v6 linha fina 2px cinza claro.
    ⚠️ Vale para os 3 eixos de uma vez (Vida, Obra e Movimento usam .tabs-principal).
    ⚠️ Só estética — chaves internas das tabs e conteúdo que abre por padrão não mudam. */
 .tab-btn {
@@ -173,11 +173,10 @@ body {
 }
 .tab-btn::before {
   content: "";
-  width: 7px;
-  height: 7px;
+  width: 2px;
+  height: 2.2em;
   border-radius: 1px;
-  background: linear-gradient(135deg, #d6d6d6, #9c9c9c);
-  transform: rotate(45deg); /* quadrado vira losango — a caixa continua 7px, a diagonal é que enxerga ~10px */
+  background: linear-gradient(180deg, #dedede, #bcbcbc); /* cinza bem clarinho — base, não destaque */
   flex-shrink: 0;
 }
 .tab-btn:hover { color: #8b4513; }
@@ -528,7 +527,7 @@ span[data-ano].data-iluminada {
     white-space: nowrap;
     gap: 7px; /* Task 113 v2: esfera mais coladinha no celular */
   }
-  .tab-btn::before { width: 6px; height: 6px; } /* Task 113 v5: diamante compacto no celular */
+  .tab-btn::before { height: 2em; } /* Task 113 v6: linha sussurro proporcional no celular */
 
   .ativismo-ativo .tabs-sub {
     display: flex !important;
@@ -662,7 +661,7 @@ span[data-ano].data-iluminada {
     padding: 4px 6px !important;
     gap: 5px; /* Task 113 v2: respiro mínimo entre esfera e texto */
   }
-  .tab-btn::before { width: 5px; height: 5px; } /* Task 113 v5: lapide enxuta em telas mínimas */
+  .tab-btn::before { height: 1.8em; } /* Task 113 v6: sussurro enxuto em telas mínimas */
   .tab-sub-btn { font-size: 0.85rem !important; } /* mãe = sub no tamanho; hierarquia fica no peso e na cor */
   .estrada { padding: 15px 15px 40px 60px !important; }
   .estrada::before { left: 24px !important; }
