@@ -1,88 +1,41 @@
 =================================================================
-PACOTE DE AJUSTE — TASK 113 (v6): LINHA FININHA NAS TABS-MÃE
-Site memorial Dalila Teles Veras | 13/out/2026
+ PACOTE — TASK 113 v7 (O FIO DE TEIA)  ·  13/out/2026
 =================================================================
 
-O QUE MUDA NESTE PACOTE
------------------------
-Olhar renovado da autora num novo dia: "quanto menos coisas
-melhor". O diamantinho dá lugar a uma LINHA VERTICAL FININHA
-(2px) em cinza bem claro — só uma base organizadora, quase um
-sussurro. Tudo o mais permanece: tabs-mãe em 2 linhas, respiro
-entre as letras, texto alinhado à esquerda:
+O QUE MUDOU
+-----------
+Só um detinho: a linha vertical que acompanha cada nome do menu
+ficou MAIS FININHA ainda — de 2px para 1px.
 
-  EIXO VIDA:
-    Crono / Biografia
-    Prêmios & / Reconhecimentos
-    Mídia & / Contato
+É um fio de teia: quase um sussurro, só organizando os nomes
+sem chamar atenção. A cor e a altura continuam as mesmas que
+você aprovou hoje de manhã ("ficou lindo!").
 
-  EIXO OBRA:
-    Obras / Publicadas
-    Escritos & / Leituras
-    Colaborações / Literárias
-    Coletâneas & / Antologias   (antes: "Coletâneas" numa linha)
-    Resenhas & / Críticas       (antes: "Resenhas" numa linha)
+Funciona nos 3 eixos de uma vez: Vida, Obra e Movimento.
+Nada de conteúdo mudou — as abas abrem do mesmo jeito de antes,
+as chaves internas continuam intocadas.
 
-  EIXO MOVIMENTO:
-    Núcleo / ABC's
-    Revista / Livrespaço
-    Boletim / Abecês
-    Em / Movimento
-    Alpharrabio / Centro Cultural   (antes: "Alpharrabio")
-    Ativismo / Cultural             (antes: linha única)
+ONDE MEXEMOS
+------------
+  src/app/globals.css   (marcador: 2px -> 1px + comentário v7)
+  REGRAS-DE-OURO.txt    (registro da calibragem v7)
 
-A linha fininha marca cada tab-mãe, e o texto segue alinhado à
-esquerda. No celular ela fica proporcional e as fileiras se
-reorganizam sozinhas.
+COMO INSTALAR (o ritual de sempre)
+----------------------------------
+  1. Baixe este zip e extraia na raiz do projeto
+     (a pasta que tem o package.json).
+  2. Ele vai perguntar se quer substituir: SIM.
+  3. No GitHub Desktop: escreva "fio de teia no menu" e
+     clique em "Commit & Sync" (ou Commit & Push).
+  4. Espere 2 a 3 minutinhos (a Vercel publivca sozinha).
+  5. Abra o site numa ABA ANÔNIMA e tecle Ctrl+Shift+R
+     para ver a novidade sem sombra do cache.
 
-O QUE NÃO MUDA
---------------
-  • As CHAVES INTERNAS das tabs continuam exatamente as mesmas
-    (crono/premios/imprensa; obras/escritos/colaboracoes/
-    coletaneas/resenhas; nucleo/livrespaco/abeces/emmovimento/
-    alpharrabio/ativismo) — mudou só o TEXTO VISÍVEL;
-  • O que abre por padrão em cada eixo continua abrindo igual
-    (CronoBiografia / Obras Publicadas+Poesia / Ativismo Cultural);
-  • Títulos grandes das páginas e conteúdo: intocados.
+SE QUISER VOLTAR
+----------------
+A v6 (linha de 2px) está no histórico do GitHub no commit
+"menu com tracinho vertical". É só pedir que eu preparo
+o pacote de volta.
 
-NOTINHAS DA SUPER Z (para decidir depois, se quiser)
-----------------------------------------------------
-  1. "Mídia & Contato" promete um contato — se a página da tab
-     não tiver e-mail/redes hoje, vale um próximo passo de
-     conteúdo;
-  2. A tab virou "Resenhas & Críticas", mas o título grande da
-     página continua "Críticas & Resenhas" (ordem invertida) —
-     posso igualar se você quiser;
-  3. "Coletâneas & Antologias" já bate com o título da página —
-     ficou redondo.
-
-ARQUIVOS DESTE PACOTE (extraia na RAIZ do repositório)
-------------------------------------------------------
-  1. src/app/globals.css
-     (substituir — é aqui que o diamante vira linha fininha,
-      bloco ".tab-btn::before"; comentário Task 113 atualizado)
-  2. src/app/components/CabecalhoFixo.tsx
-     (substituir — labels do eixo Vida em 2 linhas)
-  3. src/app/components/CabecalhoObra.tsx
-     (substituir — labels do eixo Obra em 2 linhas; caixinha
-      protegida: chaves internas preservadas)
-  4. src/app/components/SecaoMovimento.tsx
-     (substituir — labels do eixo Movimento em 2 linhas)
-  5. REGRAS-DE-OURO.txt
-     (substituir — caderno atualizado com a v4)
-
-DEPOIS DE EXTRAIR
------------------
-  1. Confira que os 5 arquivos substituíram os antigos;
-  2. Commit & Sync com nome curto (sugestão: "linha sussurro tabs");
-  3. Espere ~2-3 min o deploy da Vercel terminar;
-  4. Teste em janela anônima (Ctrl+Shift+N), de preferência com
-     Ctrl+Shift+R no desktop — e olhe os 3 eixos no desktop E no
-     celular.
-
-SE PREFERIR VOLTAR PARA A ESFERINHA
------------------------------------
-É uma linha: diga à Super Z que o pacote sai novo na hora. O
-resto (2 linhas, respiro, alinhamento) fica como está.
-=================================================================
+Calibragem da Task 113, v7 — mais um passo juntos! :)
 =================================================================
