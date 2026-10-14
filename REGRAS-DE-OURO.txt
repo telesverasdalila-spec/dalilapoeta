@@ -57,6 +57,13 @@ os textos visíveis mudaram na v4 (Crono/Biografia, Mídia &
 Contato, Coletâneas & Antologias, Resenhas & Críticas,
 Alpharrabio Centro Cultural); as chaves internas NÃO mudam.
 
+Cores calibradas na v8 (olhar de ourives, teste da autora):
+tabs-mãe #808080 (era #333), décadas da régua #b3b3b3 (era #333),
+e a régua ganhou respiro no celular (padding-top 16px, era 4px —
+encostava no menu). A aba/década ATIVA segue dourada: é ela a
+protagonista; o resto só apoia. Se um dia clarear mais, lembrar
+que o dourado da ativa é a bússola da hierarquia.
+
 -----------------------------------------------------------------
 REGRA 3 — O COFRE É O GITHUB
 -----------------------------------------------------------------

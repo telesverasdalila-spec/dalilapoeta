@@ -1,41 +1,51 @@
 =================================================================
- PACOTE — TASK 113 v7 (O FIO DE TEIA)  ·  13/out/2026
+ PACOTE — TASK 113 v8 (OLHAR DE OURIVES)  ·  14/out/2026
 =================================================================
 
 O QUE MUDOU
 -----------
-Só um detinho: a linha vertical que acompanha cada nome do menu
-ficou MAIS FININHA ainda — de 2px para 1px.
+Três lapidadas na mesma joia:
 
-É um fio de teia: quase um sussurro, só organizando os nomes
-sem chamar atenção. A cor e a altura continuam as mesmas que
-você aprovou hoje de manhã ("ficou lindo!").
+  1. RESPIRO DA RÉGUA NO CELULAR
+     A reguinha do tempo (décadas) estava espremida contra o
+     menu de cima. Agora ela tem seu espaço no topo, como no
+     computador.
+
+  2. RÉGUA MAIS LEVE
+     Os anos (1980-1989, 1990-1999...) passam de #333333 para
+     #b3b3b3 — cinza clarinho, no tom de "informação de apoio".
+     A década ATIVA continua dourada, brilhando como sempre.
+
+  3. TABS PRINCIPAIS MAIS LEVES
+     Os nomes das abas (Obras Publicadas, Escritos & Leituras...)
+     passam de #333333 para #808080 — cinza médio, mais leve.
+     A aba ATIVA continua dourada: a hierarquia fica toda com ela.
 
 Funciona nos 3 eixos de uma vez: Vida, Obra e Movimento.
-Nada de conteúdo mudou — as abas abrem do mesmo jeito de antes,
-as chaves internas continuam intocadas.
+Nada de conteúdo mudou — as abas abrem do mesmo jeito de antes.
 
 ONDE MEXEMOS
 ------------
-  src/app/globals.css   (marcador: 2px -> 1px + comentário v7)
-  REGRAS-DE-OURO.txt    (registro da calibragem v7)
+  src/app/globals.css   (cores + respiro da régua, comentário v8)
+  REGRAS-DE-OURO.txt    (registro das calibragens v8)
 
 COMO INSTALAR (o ritual de sempre)
 ----------------------------------
   1. Baixe este zip e extraia na raiz do projeto
      (a pasta que tem o package.json).
   2. Ele vai perguntar se quer substituir: SIM.
-  3. No GitHub Desktop: escreva "fio de teia no menu" e
+  3. No GitHub Desktop: escreva "cores mais leves + respiro da regua" e
      clique em "Commit & Sync" (ou Commit & Push).
-  4. Espere 2 a 3 minutinhos (a Vercel publivca sozinha).
+  4. Espere 2 a 3 minutinhos (a Vercel publica sozinha).
   5. Abra o site numa ABA ANÔNIMA e tecle Ctrl+Shift+R
      para ver a novidade sem sombra do cache.
 
 SE QUISER VOLTAR
 ----------------
-A v6 (linha de 2px) está no histórico do GitHub no commit
-"menu com tracinho vertical". É só pedir que eu preparo
-o pacote de volta.
+A v7 (fio de teia) está no histórico do GitHub no commit
+"menu fio de teia". É só pedir que eu preparo o pacote de volta.
 
-Calibragem da Task 113, v7 — mais um passo juntos! :)
+Teste de cores da v8 — se o #808080 ou o #b3b3b3 não ficarem do
+jeito que seu olhar quer, é só falar o tom desejado (ou pedir
+"mais claro / mais escuro") que lapidamos de novo! :)
 =================================================================
