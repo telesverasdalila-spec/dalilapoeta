@@ -108,3 +108,14 @@ Puxe antes de mexer, mexa só no que o bilhete diz, guarde a foto
 com Commit & Sync, teste no anônimo — e o site fica pronto para a
 Dalila sem sustos.
 =================================================================
+
+-----------------------------------------------------------------
+REGRA NOVA — O CRACHÁ DAS FICHAS (Task 114)
+-----------------------------------------------------------------
+O link "Conheça a obra" da lista de Obras Publicadas (SecaoObras.tsx)
+procura a ficha pelo id da pasta src/app/obra/[id]/. Se o apelido
+gerado do título não bater com o id real, cai na "Página em construção".
+Por isso existe o campo ficha: "id-real" na lista — quem o tem,
+vai direto pelo crachá completo. Quando criar ficha nova, testar o
+link na grade; se não abrir, acrescentar o campo ficha com o id
+exato da pasta.

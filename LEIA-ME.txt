@@ -1,51 +1,59 @@
 =================================================================
- PACOTE — TASK 113 v8 (OLHAR DE OURIVES)  ·  14/out/2026
+ PACOTE — TASK 114 (O CRACHÁ DAS FICHAS)  ·  20/out/2026
 =================================================================
+
+O QUE ERA O MISTÉRIO
+--------------------
+Você clicava em "Conheça a obra" do A Palavraparte (e de outros
+7 livros) e o site mostrava "Página em construção" — mas a ficha
+com a capa linda estava lá, inteira, no cofre!
+
+A CAUSA (um caso de apelido)
+----------------------------
+O site chama a ficha pelo "apelido" gerado do título da lista
+(ex.: "A Palavraparte" -> a-palavraparte). Mas o crachá completo
+da ficha é outro: a-palavraparte---pequenas-prosas-em-poemas.
+Apelido não bateu com o crachá -> o site não encontrava ninguém.
 
 O QUE MUDOU
 -----------
-Três lapidadas na mesma joia:
+Recebemos os crachás certinhos! 8 livros corrigidos na lista:
+  1. A Palavraparte
+  2. 70 anos poemas leitores
+  3. Poética das Circunstâncias
+  4. Forasteiros Registros Nordestinos
+  5. Elemento em Fúria
+  6. Madeira: do Vinho à Saudade
+  7. As Artes do Ofício
+  8. ponto(s)
 
-  1. RESPIRO DA RÉGUA NO CELULAR
-     A reguinha do tempo (décadas) estava espremida contra o
-     menu de cima. Agora ela tem seu espaço no topo, como no
-     computador.
-
-  2. RÉGUA MAIS LEVE
-     Os anos (1980-1989, 1990-1999...) passam de #333333 para
-     #b3b3b3 — cinza clarinho, no tom de "informação de apoio".
-     A década ATIVA continua dourada, brilhando como sempre.
-
-  3. TABS PRINCIPAIS MAIS LEVES
-     Os nomes das abas (Obras Publicadas, Escritos & Leituras...)
-     passam de #333333 para #808080 — cinza médio, mais leve.
-     A aba ATIVA continua dourada: a hierarquia fica toda com ela.
-
-Funciona nos 3 eixos de uma vez: Vida, Obra e Movimento.
-Nada de conteúdo mudou — as abas abrem do mesmo jeito de antes.
+Agora TODOS os "Conheça a obra" abrem a ficha de verdade,
+com capa, ano, editora e textos. Nada mais mudou — nem cores,
+nem menus, nem conteúdo.
 
 ONDE MEXEMOS
 ------------
-  src/app/globals.css   (cores + respiro da régua, comentário v8)
-  REGRAS-DE-OURO.txt    (registro das calibragens v8)
+  src/app/components/SecaoObras.tsx  (campo ficha nos 8 livros + regra do crachá)
+  REGRAS-DE-OURO.txt                 (REGRA NOVA: o crachá das fichas)
 
 COMO INSTALAR (o ritual de sempre)
 ----------------------------------
-  1. Baixe este zip e extraia na raiz do projeto
-     (a pasta que tem o package.json).
-  2. Ele vai perguntar se quer substituir: SIM.
-  3. No GitHub Desktop: escreva "cores mais leves + respiro da regua" e
-     clique em "Commit & Sync" (ou Commit & Push).
-  4. Espere 2 a 3 minutinhos (a Vercel publica sozinha).
-  5. Abra o site numa ABA ANÔNIMA e tecle Ctrl+Shift+R
-     para ver a novidade sem sombra do cache.
+  1. Baixe este zip e extraia na raiz do projeto.
+  2. Substituir tudo: SIM.
+  3. No GitHub Desktop: escreva "cracha das fichas - links conhec-a-obra" e
+     clique em "Commit & Sync".
+  4. Espere 2 a 3 minutinhos.
+  5. Teste em ABA ANÔNIMA (Ctrl+Shift+R):
+     Obra -> Poesia -> década 1990-1999 -> "Conheça a obra"
+     do A Palavraparte -> a capa kraft com letras verdes deve aparecer!
 
-SE QUISER VOLTAR
-----------------
-A v7 (fio de teia) está no histórico do GitHub no commit
-"menu fio de teia". É só pedir que eu preparo o pacote de volta.
+TAMBÉM VALE TESTAR
+------------------
+Os outros 7 corrigidos: 70 anos (década 2010-2019), Poética das
+Circunstâncias (1990-1999), Forasteiros (1990-1999), Elemento em
+Fúria (1980-1989), Madeira (1980-1989), As Artes do Ofício e
+Minudências Diuturnos (na aba PROSA), ponto(s) (2020-2029).
 
-Teste de cores da v8 — se o #808080 ou o #b3b3b3 não ficarem do
-jeito que seu olhar quer, é só falar o tom desejado (ou pedir
-"mais claro / mais escuro") que lapidamos de novo! :)
+Bônus da caçada: o pente-fino achou o ponto(s) escondidinho
+que também estava com apelido errado! :)
 =================================================================

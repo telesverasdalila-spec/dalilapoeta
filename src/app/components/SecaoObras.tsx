@@ -5,17 +5,19 @@ import CabecalhoObra from './CabecalhoObra';
 import { extrairAnoBase, calcularDecadas } from "../lib/tempo";
 
 type TabObra = "obras" | "coletaneas" | "colaboracoes" | "escritos" | "resenhas";
-interface Livro { ano: number | string; titulo: string; descricao: string; tipo: string; slug?: string; }
+interface Livro { ano: number | string; titulo: string; descricao: string; tipo: string; slug?: string; ficha?: string; }
+// Task 114: ficha = id real da pasta src/app/obra/[id]/ — corrige links "Conheça a obra"
+// cujo apelido gerado do título não bate com o crachá completo da ficha (ex.: A Palavraparte).
 
 const dadosPoesia: Livro[] = [
   { titulo: "Opções para morrer no espaço", ano: 2024, descricao: "Semifinalista do Prêmio Oceanos 2025. Poemas que lutam contra inimigos modernos.", tipo: "Livro" },
   { titulo: "Passageira – Antologia Pessoal 1982-2024", ano: 2026, descricao: "Reúne poemas selecionados de dezoito títulos. Uma travessia por quatro décadas.", tipo: "Livro" },
   { titulo: "Ínsulas", ano: 2026, descricao: "Breves poemas que sintetizam as linhas de força de uma voz admirável.", tipo: "Plaquete" },
-  { titulo: "ponto(s)", ano: 2022, descricao: "Alpharrabio Edições", tipo: "Plaquete" },
+  { titulo: "ponto(s)", ano: 2022, descricao: "Alpharrabio Edições", tipo: "Plaquete", ficha: "pontos" },
   { titulo: "fuga e urgências", ano: 2022, descricao: "Alpharrabio Edições", tipo: "Livro" },
   { titulo: "Tempo em Fúria", ano: 2019, descricao: "SP: Alpharrabio Edições", tipo: "Livro" },
   { titulo: "A Mulher Antiga", ano: 2017, descricao: "Coleção PerVersas", tipo: "Livro" },
-  { titulo: "70 anos poemas leitores", ano: 2016, descricao: "SP: Alpharrabio Edições", tipo: "Livro" },
+  { titulo: "70 anos poemas leitores", ano: 2016, descricao: "SP: Alpharrabio Edições", tipo: "Livro", ficha: "setenta-anos-poemas-leitores" },
   { titulo: "Solidões da Memória", ano: 2015, descricao: "Dobra e Alpharrabio Edições", tipo: "Livro" },
   { titulo: "Estranhas Formas de Vida", ano: 2013, descricao: "Dobra e Alpharrabio Edições", tipo: "Livro" },
   { titulo: "Retratos Falhados", ano: 2008, descricao: "Editora Escrituras", tipo: "Livro" },
@@ -24,11 +26,11 @@ const dadosPoesia: Livro[] = [
   { titulo: "Poesia do Intervalo", ano: 2005, descricao: "Com desenhos de Guedo Gallet", tipo: "Edição Artística" },
   { titulo: "Vestígios", ano: 2003, descricao: "200 exemplares numerados", tipo: "Plaquete" },
   { titulo: "À Janela dos dias", ano: 2002, descricao: "SP: Alpharrabio Edições", tipo: "Livro" },
-  { titulo: "A Palavraparte", ano: 1996, descricao: "SP: Alpharrabio Edições", tipo: "Livro" },
-  { titulo: "Poética das Circunstâncias", ano: 1996, descricao: "SP: Alpharrabio Edições", tipo: "Plaquete" },
-  { titulo: "Forasteiros Registros Nordestinos", ano: 1991, descricao: "SP: Livrespaço", tipo: "Plaquete" },
-  { titulo: "Elemento em Fúria", ano: 1989, descricao: "Teresina, PI: Academia Piauiense de Letras", tipo: "Livro" },
-  { titulo: "Madeira: do Vinho à Saudade", ano: 1989, descricao: "Funchal, Madeira (Portugal)", tipo: "Livro" },
+  { titulo: "A Palavraparte", ano: 1996, descricao: "SP: Alpharrabio Edições", tipo: "Livro", ficha: "a-palavraparte---pequenas-prosas-em-poemas" },
+  { titulo: "Poética das Circunstâncias", ano: 1996, descricao: "SP: Alpharrabio Edições", tipo: "Plaquete", ficha: "poeticas-das-circunstancias" },
+  { titulo: "Forasteiros Registros Nordestinos", ano: 1991, descricao: "SP: Livrespaço", tipo: "Plaquete", ficha: "forasteiros---registros-nordestinos" },
+  { titulo: "Elemento em Fúria", ano: 1989, descricao: "Teresina, PI: Academia Piauiense de Letras", tipo: "Livro", ficha: "elemento-furia" },
+  { titulo: "Madeira: do Vinho à Saudade", ano: 1989, descricao: "Funchal, Madeira (Portugal)", tipo: "Livro", ficha: "madeira---do-vinho-a-saudade" },
   { titulo: "Inventário Precoce", ano: 1983, descricao: "SP: Pannartz", tipo: "Livro" },
   { titulo: "Lições de Tempo", ano: 1983, descricao: "SP: Pannartz", tipo: "Livro" } // Task 107: ano conforme capa enviada pelo cliente (era 1982 no template)
 ];
@@ -39,7 +41,7 @@ const dadosProsa: Livro[] = [
   { titulo: "Anotações de Leituras", ano: 2006, descricao: "Comemorativa 14º aniversário", tipo: "Plaquete" },
   { titulo: "Alpharrabio 12 anos", ano: 2004, descricao: "Em coautoria com Luzia Maninha", tipo: "Livro" },
   { titulo: "Minudências", ano: 2000, descricao: "Diário. SP: Alpharrabio", tipo: "Livro" },
-  { titulo: "As Artes do Ofício", ano: 2000, descricao: "Crônicas. SP: Alpharrabio", tipo: "Livro" },
+  { titulo: "As Artes do Ofício", ano: 2000, descricao: "Crônicas. SP: Alpharrabio", tipo: "Livro", ficha: "as-artes-do-oficio---um-olhar-sobre-o-abc" },
   { titulo: "A Vida Crônica", ano: 1999, descricao: "Crônicas. SP: Alpharrabio", tipo: "Livro" }
 ];
 
@@ -381,7 +383,7 @@ export default function SecaoObras() {
                     </p>
                     {tabAtiva === "obras" && (
                       <Link 
-                        href={`/obra/${obra.titulo?.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[\s–—()]+/g, '-')}`}
+                        href={`/obra/${obra.ficha || obra.titulo?.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[\s–—()]+/g, '-')}`}
                         style={{ display: 'inline-block', marginTop: '10px', fontFamily: "'Inter', sans-serif", fontSize: '0.85rem', fontWeight: '500', color: '#7a3b5a', textDecoration: 'none', borderBottom: '1px solid transparent', transition: 'all 0.3s ease', paddingBottom: '1px' }}
                         onMouseOver={(e) => e.currentTarget.style.borderBottomColor = '#7a3b5a'}
                         onMouseOut={(e) => e.currentTarget.style.borderBottomColor = 'transparent'}
