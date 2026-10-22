@@ -1,49 +1,58 @@
 ==========================================================
-PACOTE 115 — LOMBADA DAS EDIÇÕES
-Ajustes nas fichas, a pedido da autora.
+PACOTE 116 — O LIVRO DE REGISTRO DAS FICHAS
+Religação das fichas "Alpharrabio 12 anos" e "Minudências"
 ==========================================================
 
-O QUE MUDA (5 fichas):
+O QUE ACONTECEU (a perícia):
 
-1. fuga e urgências ......... sai o selo "Esgotada" — volta a ficar
-                              disponível e ganha a aba "Adquira"
-2. À Janela dos Dias ........ sai o selo "Esgotada" — idem
-3. A Palavraparte ........... + Formato: 17 x 19 cm
-                              + Páginas: 80 pp
-                              + Desenhos: Constança Lucas
-4. Forasteiros - Registros
-   Nordestinos ............. + Formato: 11 x 21 cm
-                             + Páginas: 12 pp
-5. Elemento em Fúria ........ + Formato: 15 x 22,5 cm
-                              + Páginas: 44 pp
+As duas fichas nunca perderam o conteúdo — perderam o REGISTRO.
+A ficha só acende quando o livro está inscrito no mapa `livros`
+do arquivo ConteudoObra.tsx (import + linha "id": dadosX).
+Em duas ocasiões, esse arquivo foi salvo por cima com uma cópia
+velha (commits 9f04ff0 e b99c590) e as inscrições se perderam:
 
-O QUE NÃO PRECISA MUDAR:
+  • "Alpharrabio 12 anos": registrada no commit "inclusão do
+    livro prosa", apagada no ajuste de layout do Diuturnos.
+  • "Minudências": apagada no commit "refino no alinhamento".
 
-* SETENTA (anos, poemas, leitores) — a autora pediu "esgotado",
-  mas a ficha JÁ exibe o selo "Edição: Esgotada" (e não tem aba
-  Adquira). Testado no laboratório: já está como pedido. Nada a
-  fazer aqui — este zip não toca na SETENTA.
+Resultado na Vercel: a rota existe, mas mostra "Página em
+construção" — a obra e os dados "sumiram".
+
+O QUE ESTE PACOTE FAZ:
+
+1. src/app/obra/[id]/ConteudoObra.tsx
+   - Reinscreve as 2 fichas no livro de registro (4 linhas + 2
+     avisos "NÃO remover", como nas caixinhas protegidas).
+2. REGRAS-DE-OURO.txt
+   - Nova regra: "O LIVRO DE REGISTRO DAS FICHAS (Task 116)" —
+     ficha nova = 3 carimbos + crachá; se ficha sumir, suspeite
+     primeiro do registro.
+
+GANHO BÔNUS:
+
+  • "Alpharrabio 12 anos" é status "disponivel" — a ficha volta
+    com a aba "Adquira" (loja Alpharrabio).
+  • "Minudências" volta com o selo "Edição: Esgotada" e os dados
+    completos (16 x 23 cm, 136 pp).
 
 COMO APLICAR:
 
-1. Descompacte este zip na RAIZ do repositório (a pasta onde fica
-   o package.json). As pastas src/... se encaixam nos lugares certos.
+1. Descompacte na RAIZ do repositório (onde fica o package.json).
 2. Commit & Sync — sugestão de mensagem:
-   "atualiza edições: disponibilidade e formatos"
-3. Espere 2-3 minutos (Vercel construindo).
-4. Abra o site em janela anônima e force a atualização
-   (Ctrl+Shift+R).
+   "religa o registro das fichas alpharrabio 12 anos e minudencias"
+3. Espere 2-3 minutos (Vercel) e teste em janela anônima
+   (Ctrl+Shift+R):
+   - dalila-teles-poeta.vercel.app/obra/alpharrabio-12-anos
+   - dalila-teles-poeta.vercel.app/obra/minudencias
 
-NOTAS DE OFICINA:
+BILHETE AVULSO:
 
-* Nas fichas, o selo de livro indisponível sempre lê
-  "Edição: Esgotada" — é o padrão do site para todas as obras
-  (não dá para escrever "esgotado" só numa).
-* Forasteiros: apliquei "12 pp" exatamente como enviado. É uma
-  plaquete, então pode ser isso mesmo — mas se o número for outro
-  (ex.: 112 pp), me avise que troco num minuto.
-* Onde não havia Formato/Páginas, as etiquetas entram depois da
-  Editora, na ordem usada pelas demais fichas (14 x 19 cm etc.).
+O LEIA-ME.txt deste pacote (e o do anterior) acabou indo parar na
+raiz do repositório — ele é só bilhete, não faz parte do site.
+Pode apagá-lo do repositório quando quiser (no GitHub: abrir o
+arquivo → ícone de lixeira → commit). Eu passo a enviá-lo já
+avisando isso.
 
-Testado: TypeScript 0 erros; 13/13 verificações verdes no navegador
-nas 6 fichas visitadas.
+Testado: TypeScript 0 erros; varredura 37/37 fichas registradas;
+navegador confirmou as duas fichas completas + 1 ficha antiga de
+amostragem, tudo verde.

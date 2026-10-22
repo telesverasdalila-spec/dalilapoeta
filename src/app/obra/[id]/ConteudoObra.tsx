@@ -46,6 +46,8 @@ interface Livro {
 // Importação dinâmica dos dados de cada livro
 import dadosAJanelaDosDias from "./a-janela-dos-dias/dados.json";
 import dadosAVidaCronica from "./a-vida-cronica/dados.json";
+// Task 116: religação do registro (sumiu em sobrescritas com cópia velha) — NÃO remover
+import dadosAlpharrabio12Anos from "./alpharrabio-12-anos/dados.json";
 import dadosPassageira from "./passageira-antologia-pessoal-1982-2024/dados.json";
 import dadosAMulherAntiga from "./a-mulher-antiga/dados.json";
 import dadosAPalavraparte from "./a-palavraparte---pequenas-prosas-em-poemas/dados.json";
@@ -62,6 +64,8 @@ import dadosInventarioPrecoce from "./inventario-precoce/dados.json";
 import dadosLicoesDeTempo from "./licoes-de-tempo/dados.json";
 import dadosMadeira from "./madeira---do-vinho-a-saudade/dados.json";
 import dadosMeiaVidaInteira from "./meia-vida-inteira/dados.json";
+// Task 116: religação do registro (sumiu em sobrescritas com cópia velha) — NÃO remover
+import dadosMinudencias from "./minudencias/dados.json";
 import dadosOpcoesParaMorrerNoEspaco from "./opcoes-para-morrer-no-espaco/dados.json";
 import dadosPecados from "./pecados/dados.json";
 import dadosPoesiaDoIntervalo from "./poesia-do-intervalo/dados.json";
@@ -86,6 +90,7 @@ import TrechosDiuturnos from "./TrechosDiuturnos";
 const livros: Record<string, Livro> = {
   "a-janela-dos-dias": dadosAJanelaDosDias,
   "a-vida-cronica": dadosAVidaCronica,
+  "alpharrabio-12-anos": dadosAlpharrabio12Anos,
   "passageira-antologia-pessoal-1982-2024": dadosPassageira,
   "a-mulher-antiga": dadosAMulherAntiga,
   "a-palavraparte---pequenas-prosas-em-poemas": dadosAPalavraparte,
@@ -102,6 +107,7 @@ const livros: Record<string, Livro> = {
   "licoes-de-tempo": dadosLicoesDeTempo,
   "madeira---do-vinho-a-saudade": dadosMadeira,
   "meia-vida-inteira": dadosMeiaVidaInteira,
+  "minudencias": dadosMinudencias,
   "opcoes-para-morrer-no-espaco": dadosOpcoesParaMorrerNoEspaco,
   "pecados": dadosPecados,
   "poesia-do-intervalo": dadosPoesiaDoIntervalo,

@@ -119,3 +119,23 @@ Por isso existe o campo ficha: "id-real" na lista — quem o tem,
 vai direto pelo crachá completo. Quando criar ficha nova, testar o
 link na grade; se não abrir, acrescentar o campo ficha com o id
 exato da pasta.
+
+-----------------------------------------------------------------
+REGRA NOVA — O LIVRO DE REGISTRO DAS FICHAS (Task 116)
+-----------------------------------------------------------------
+Ter a pasta com dados.json NÃO basta: a ficha só acende quando o
+livro está inscrito no "livro de registro" — o mapa `livros` no
+ConteudoObra.tsx (uma linha de import + uma linha "id": dadosX).
+Sem inscrição, a rota até existe, mas a página mostra "Página em
+construção" — foi o que apagou "Alpharrabio 12 anos" e
+"Minudências" (ambas perderam o registro em sobrescritas com
+cópia velha do arquivo, commits 9f04ff0 e b99c590).
+
+Ficha nova = 3 carimbos + crachá:
+  (1) pasta + dados.json
+  (2) import no ConteudoObra.tsx
+  (3) linha "id": dadosX no mapa livros
+  (4) link na grade com campo ficha: "id" (Task 114)
+
+Se uma ficha "sumir" de novo, suspeite PRIMEIRO do livro de
+registro — a pasta e o JSON provavelmente estão intactos.
