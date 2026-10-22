@@ -1,49 +1,54 @@
-==========================================================
-PACOTE 115 — LOMBADA DAS EDIÇÕES
-Ajustes nas fichas, a pedido da autora.
-==========================================================
+TASK 117-v2 — COLEÇÃO MIMO (pacote corrigido)
+Site Dalila Teles Veras — aplicação no GitHub
 
-O QUE MUDA (5 fichas):
+O QUE ACONTECEU NA 1ª TENTATIVA
+O commit "criar categoria Colecao Mimo" (22/10) subiu APENAS o LEIA-ME.txt
+(o bilhete) — os 4 arquivos do site ficaram para trás no caminho. Por isso a
+sub-aba não apareceu. É um tropeço comum do upload web, sem mistério:
+o GitHub precisa receber AS PASTAS, não só o arquivo solto.
 
-1. fuga e urgências ......... sai o selo "Esgotada" — volta a ficar
-                              disponível e ganha a aba "Adquira"
-2. À Janela dos Dias ........ sai o selo "Esgotada" — idem
-3. A Palavraparte ........... + Formato: 17 x 19 cm
-                              + Páginas: 80 pp
-                              + Desenhos: Constança Lucas
-4. Forasteiros - Registros
-   Nordestinos ............. + Formato: 11 x 21 cm
-                             + Páginas: 12 pp
-5. Elemento em Fúria ........ + Formato: 15 x 22,5 cm
-                              + Páginas: 44 pp
+O QUE ESTE PACOTE FAZ
+Cria a sub-aba "Coleção Mimo" ao lado de Poesia e Prosa (na aba Obras
+Publicadas) e muda a publicação ponto(s) da gaveta Poesia para a nova
+Coleção Mimo, com a capa nova enviada pela autora (fios trançados sobre
+fundo negro).
 
-O QUE NÃO PRECISA MUDAR:
+ARQUIVOS DESTE PACOTE (4 arquivos + este bilhete)
+├── src/app/components/CabecalhoObra.tsx ............. botão "Coleção Mimo" nas sub-abas
+├── src/app/components/SecaoObras.tsx ................ gaveta dadosMimo + ponto(s) migrou da Poesia
+├── src/app/obra/[id]/pontos/dados.json .............. gênero "Coleção Mimo" + caminho da capa nova
+└── public/imagens/obras-publicadas/mimo/pontos.jpg .. capa nova (JPG, 400x600)
 
-* SETENTA (anos, poemas, leitores) — a autora pediu "esgotado",
-  mas a ficha JÁ exibe o selo "Edição: Esgotada" (e não tem aba
-  Adquira). Testado no laboratório: já está como pedido. Nada a
-  fazer aqui — este zip não toca na SETENTA.
+COMO SUBIR NO GITHUB (passo a passo para não faltar arquivo)
+1. Descompacte ESTE zip no seu computador. Vão aparecer duas PASTAS
+   (src e public) e este LEIA-ME.
+2. No GitHub, botão "Add file" → "Upload files".
+3. ARRASTE AS DUAS PASTAS (src e public) JUNTAS para a área de upload.
+   O GitHub preserva automaticamente as pastinhas internas (components,
+   obra, imagens...) — não precisa abrir pasta por pasta.
+4. ANTES de apertar "Commit changes", confira a lista de arquivos: devem
+   aparecer os 4 caminhos acima (pode rolar a lista para conferir).
+5. Mensagem sugerida do commit:
+   "aplica o pacote Coleção Mimo (sub-aba + ponto(s) + capa nova)"
+6. DEPOIS do commit, o resumo deve dizer "5 files changed" (os 4 arquivos +
+   este LEIA-ME, se você o subir junto). Se disser "1 file changed", só o
+   bilhete subiu — repita o arraste das pastas e avise a gente do site.
+7. Aguarde o deploy da Vercel (~2–3 min) e confira em janela anônima com
+   Ctrl+Shift+R:
+   - Obra → Obras Publicadas → sub-aba "Coleção Mimo" ao lado de Poesia | Prosa
+   - cartão ponto(s) dentro dela; Poesia sem ponto(s)
+   - ficha /obra/pontos com capa nova e gênero COLEÇÃO MIMO
 
-COMO APLICAR:
+NOTAS DA OFICINA
+- Chaves internas intactas: poesia/prosa não mudam; "mimo" é chave nova,
+  somada ao final. Conteúdo das demais abas intocado.
+- A ficha de ponto(s) continua mínima DE PROPÓSITO (Ano, Tipo, Editora +
+  selo "Edição: Esgotada", sem aba Adquira): o Sobre e os Dados da Edição
+  completos entram quando a autora enviar o material.
+- Bônus já no ar: Alpharrabio 12 anos com Dados da Edição completos
+  (confirmado ao vivo no Vercel nesta sessão).
+- Pendências amigas: confirmar as "12 pp" de Forasteiros (Task 115) e a
+  ficha de "Seduzir para a Poesia".
 
-1. Descompacte este zip na RAIZ do repositório (a pasta onde fica
-   o package.json). As pastas src/... se encaixam nos lugares certos.
-2. Commit & Sync — sugestão de mensagem:
-   "atualiza edições: disponibilidade e formatos"
-3. Espere 2-3 minutos (Vercel construindo).
-4. Abra o site em janela anônima e force a atualização
-   (Ctrl+Shift+R).
-
-NOTAS DE OFICINA:
-
-* Nas fichas, o selo de livro indisponível sempre lê
-  "Edição: Esgotada" — é o padrão do site para todas as obras
-  (não dá para escrever "esgotado" só numa).
-* Forasteiros: apliquei "12 pp" exatamente como enviado. É uma
-  plaquete, então pode ser isso mesmo — mas se o número for outro
-  (ex.: 112 pp), me avise que troco num minuto.
-* Onde não havia Formato/Páginas, as etiquetas entram depois da
-  Editora, na ordem usada pelas demais fichas (14 x 19 cm etc.).
-
-Testado: TypeScript 0 erros; 13/13 verificações verdes no navegador
-nas 6 fichas visitadas.
+Conteúdo idêntico ao pacote testado (14/14 verificações verdes no
+navegador, roteiro testa-117.sh).

@@ -13,7 +13,6 @@ const dadosPoesia: Livro[] = [
   { titulo: "Opções para morrer no espaço", ano: 2024, descricao: "Semifinalista do Prêmio Oceanos 2025. Poemas que lutam contra inimigos modernos.", tipo: "Livro" },
   { titulo: "Passageira – Antologia Pessoal 1982-2024", ano: 2026, descricao: "Reúne poemas selecionados de dezoito títulos. Uma travessia por quatro décadas.", tipo: "Livro" },
   { titulo: "Ínsulas", ano: 2026, descricao: "Breves poemas que sintetizam as linhas de força de uma voz admirável.", tipo: "Plaquete" },
-  { titulo: "ponto(s)", ano: 2022, descricao: "Alpharrabio Edições", tipo: "Plaquete", ficha: "pontos" },
   { titulo: "fuga e urgências", ano: 2022, descricao: "Alpharrabio Edições", tipo: "Livro" },
   { titulo: "Tempo em Fúria", ano: 2019, descricao: "SP: Alpharrabio Edições", tipo: "Livro" },
   { titulo: "A Mulher Antiga", ano: 2017, descricao: "Coleção PerVersas", tipo: "Livro" },
@@ -43,6 +42,14 @@ const dadosProsa: Livro[] = [
   { titulo: "Minudências", ano: 2000, descricao: "Diário. SP: Alpharrabio", tipo: "Livro" },
   { titulo: "As Artes do Ofício", ano: 2000, descricao: "Crônicas. SP: Alpharrabio", tipo: "Livro", ficha: "as-artes-do-oficio---um-olhar-sobre-o-abc" },
   { titulo: "A Vida Crônica", ano: 1999, descricao: "Crônicas. SP: Alpharrabio", tipo: "Livro" }
+];
+
+// Task 117 — Coleção Mimo: pequenas peças confeccionadas fora do catálogo
+// (concursos, comemorações, celebrações com eventos únicos e tiragem limitada),
+// pela editora Alpharrabio, sob as mãos de Luzia Maninha Teles Veras e
+// Dalila Teles Veras. ponto(s) migrou da gaveta Poesia a pedido da autora.
+const dadosMimo: Livro[] = [
+  { titulo: "ponto(s)", ano: 2022, descricao: "Alpharrabio Edições", tipo: "Plaquete", ficha: "pontos" }
 ];
 
 const coletaneasBrasil: Livro[] = [
@@ -290,7 +297,7 @@ export default function SecaoObras() {
 
   let obrasAtuais: Livro[] = [];
   if (tabAtiva === "obras") {
-    obrasAtuais = subTabAtiva === "poesia" ? dadosPoesia : dadosProsa;
+    obrasAtuais = subTabAtiva === "poesia" ? dadosPoesia : subTabAtiva === "mimo" ? dadosMimo : dadosProsa;
   } else if (tabAtiva === "coletaneas") {
     if (subTabAtiva === "brasil") obrasAtuais = coletaneasBrasil;
     else if (subTabAtiva === "portugal") obrasAtuais = coletaneasPortugal;

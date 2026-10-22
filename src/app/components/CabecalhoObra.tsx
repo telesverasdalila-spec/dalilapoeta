@@ -12,7 +12,10 @@ interface CabecalhoObraProps {
 export default function CabecalhoObra({ tabAtiva, mudarTab, subTabAtiva, mudarSubTab, anos }: CabecalhoObraProps) {
   let titulo = "Obras Publicadas";
   let subtitulo = "Relação das obras da autora, desde a primeira publicação";
-  let subtabs = [{ id: "poesia", label: "Poesia" }, { id: "prosa", label: "Prosa" }];
+  // Task 117: nova sub-aba "Coleção Mimo" a pedido da autora (peças fora do
+  // catálogo, tiragem limitada). ⚠️ Chaves internas (poesia/prosa) NÃO mudam;
+  // "mimo" é chave nova, só somada ao final.
+  let subtabs = [{ id: "poesia", label: "Poesia" }, { id: "prosa", label: "Prosa" }, { id: "mimo", label: "Coleção Mimo" }];
 
   if (tabAtiva === "coletaneas") {
     titulo = "Coletâneas & Antologias";
