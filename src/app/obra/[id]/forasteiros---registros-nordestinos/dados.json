@@ -17,6 +17,14 @@
     {
       "label": "Editora",
       "valor": "Livrespaço, SP"
+    },
+    {
+      "label": "Formato",
+      "valor": "11 x 21 cm"
+    },
+    {
+      "label": "Páginas",
+      "valor": "12 pp"
     }
   ]
 }

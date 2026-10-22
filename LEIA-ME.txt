@@ -1,59 +1,49 @@
-=================================================================
- PACOTE — TASK 114 (O CRACHÁ DAS FICHAS)  ·  20/out/2026
-=================================================================
+==========================================================
+PACOTE 115 — LOMBADA DAS EDIÇÕES
+Ajustes nas fichas, a pedido da autora.
+==========================================================
 
-O QUE ERA O MISTÉRIO
---------------------
-Você clicava em "Conheça a obra" do A Palavraparte (e de outros
-7 livros) e o site mostrava "Página em construção" — mas a ficha
-com a capa linda estava lá, inteira, no cofre!
+O QUE MUDA (5 fichas):
 
-A CAUSA (um caso de apelido)
-----------------------------
-O site chama a ficha pelo "apelido" gerado do título da lista
-(ex.: "A Palavraparte" -> a-palavraparte). Mas o crachá completo
-da ficha é outro: a-palavraparte---pequenas-prosas-em-poemas.
-Apelido não bateu com o crachá -> o site não encontrava ninguém.
+1. fuga e urgências ......... sai o selo "Esgotada" — volta a ficar
+                              disponível e ganha a aba "Adquira"
+2. À Janela dos Dias ........ sai o selo "Esgotada" — idem
+3. A Palavraparte ........... + Formato: 17 x 19 cm
+                              + Páginas: 80 pp
+                              + Desenhos: Constança Lucas
+4. Forasteiros - Registros
+   Nordestinos ............. + Formato: 11 x 21 cm
+                             + Páginas: 12 pp
+5. Elemento em Fúria ........ + Formato: 15 x 22,5 cm
+                              + Páginas: 44 pp
 
-O QUE MUDOU
------------
-Recebemos os crachás certinhos! 8 livros corrigidos na lista:
-  1. A Palavraparte
-  2. 70 anos poemas leitores
-  3. Poética das Circunstâncias
-  4. Forasteiros Registros Nordestinos
-  5. Elemento em Fúria
-  6. Madeira: do Vinho à Saudade
-  7. As Artes do Ofício
-  8. ponto(s)
+O QUE NÃO PRECISA MUDAR:
 
-Agora TODOS os "Conheça a obra" abrem a ficha de verdade,
-com capa, ano, editora e textos. Nada mais mudou — nem cores,
-nem menus, nem conteúdo.
+* SETENTA (anos, poemas, leitores) — a autora pediu "esgotado",
+  mas a ficha JÁ exibe o selo "Edição: Esgotada" (e não tem aba
+  Adquira). Testado no laboratório: já está como pedido. Nada a
+  fazer aqui — este zip não toca na SETENTA.
 
-ONDE MEXEMOS
-------------
-  src/app/components/SecaoObras.tsx  (campo ficha nos 8 livros + regra do crachá)
-  REGRAS-DE-OURO.txt                 (REGRA NOVA: o crachá das fichas)
+COMO APLICAR:
 
-COMO INSTALAR (o ritual de sempre)
-----------------------------------
-  1. Baixe este zip e extraia na raiz do projeto.
-  2. Substituir tudo: SIM.
-  3. No GitHub Desktop: escreva "cracha das fichas - links conhec-a-obra" e
-     clique em "Commit & Sync".
-  4. Espere 2 a 3 minutinhos.
-  5. Teste em ABA ANÔNIMA (Ctrl+Shift+R):
-     Obra -> Poesia -> década 1990-1999 -> "Conheça a obra"
-     do A Palavraparte -> a capa kraft com letras verdes deve aparecer!
+1. Descompacte este zip na RAIZ do repositório (a pasta onde fica
+   o package.json). As pastas src/... se encaixam nos lugares certos.
+2. Commit & Sync — sugestão de mensagem:
+   "atualiza edições: disponibilidade e formatos"
+3. Espere 2-3 minutos (Vercel construindo).
+4. Abra o site em janela anônima e force a atualização
+   (Ctrl+Shift+R).
 
-TAMBÉM VALE TESTAR
-------------------
-Os outros 7 corrigidos: 70 anos (década 2010-2019), Poética das
-Circunstâncias (1990-1999), Forasteiros (1990-1999), Elemento em
-Fúria (1980-1989), Madeira (1980-1989), As Artes do Ofício e
-Minudências Diuturnos (na aba PROSA), ponto(s) (2020-2029).
+NOTAS DE OFICINA:
 
-Bônus da caçada: o pente-fino achou o ponto(s) escondidinho
-que também estava com apelido errado! :)
-=================================================================
+* Nas fichas, o selo de livro indisponível sempre lê
+  "Edição: Esgotada" — é o padrão do site para todas as obras
+  (não dá para escrever "esgotado" só numa).
+* Forasteiros: apliquei "12 pp" exatamente como enviado. É uma
+  plaquete, então pode ser isso mesmo — mas se o número for outro
+  (ex.: 112 pp), me avise que troco num minuto.
+* Onde não havia Formato/Páginas, as etiquetas entram depois da
+  Editora, na ordem usada pelas demais fichas (14 x 19 cm etc.).
+
+Testado: TypeScript 0 erros; 13/13 verificações verdes no navegador
+nas 6 fichas visitadas.
