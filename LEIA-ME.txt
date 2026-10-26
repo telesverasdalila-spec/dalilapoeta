@@ -1,110 +1,50 @@
-==========================================================
-A SALA DE COSTURA — painel de edição para a autora
-Pacote v2 · Keystatic · reconstruído e testado em 27/10/2026
-==========================================================
+SALA DE COSTURA — PACOTE v3 (fecho do Keystatic Cloud)
+========================================================
 
-O QUE É ISTO:
+O que e este pacote?
+--------------------
+Um unico arquivo: keystatic.config.ts (atualizado).
 
-Uma salinha de costura atrás da vitrine. A autora abre um
-painel no navegador, escolhe o livro, edita a ficha e clica
-em SALVAR — e o site se atualiza sozinho, sem zip, sem
-arrastar pasta, sem commit manual. O que ela salvar vira
-registro no cofre GitHub, e o Vercel publica em ~3 minutos.
+Na Viagem 2 criamos o projeto "dalilapoeta" dentro do team "dalila"
+no Keystatic Cloud. Este pacote grava o endereco real desse cofre
+(project: 'dalila/dalilapoeta') no arquivo de configuracao do painel.
 
-O QUE ESTE PACOTE MEXE (e o que NÃO mexe):
+Tambem corrigimos a posicao do fecho: o campo "project" agora fica
+num bloco proprio "cloud", exatamente como o Keystatic pede
+(era a unica peca que faltava encaixar).
 
-- ADICIONA: o painel (rota /keystatic) e duas bibliotecas
-  novas no package.json (@keystatic/core, @keystatic/next)
-- NÃO TOCA em: nenhuma ficha, nenhuma página do site, nenhum
-  texto. O site continua exatamente como está até o painel
-  ser configurado.
+Como aplicar (o gesto de sempre)
+--------------------------------
+1. Descompacte este zip DENTRO da pasta local do site (a mesma pasta
+   que contem src, package.json etc.). O Windows vai perguntar se
+   quer substituir o arquivo existente — sim, substituir.
+2. No GitHub Desktop:
+   - Ele vai mostrar 1 arquivo alterado (keystatic.config.ts).
+   - Escreva a mensagem do commit: config cloud
+   - Clique em "Commit to main" e depois em "Push origin".
+3. Aguarde a Vercel reconstruir (2 a 3 minutos).
+4. Teste em janela anonima (Ctrl+Shift+R):
+   https://dalila-teles-poeta.vercel.app/keystatic
 
-==========================================================
-INSTALAÇÃO — 3 VIAGENS (siga na ordem)
-==========================================================
+O que vai acontecer no painel
+-----------------------------
+Agora, ao abrir /keystatic, o painel deve pedir login pelo
+Keystatic Cloud ("Sign in with GitHub" / entrar com sua conta).
+E o esperado: a Sala de Costura passou a conversar com o cofre.
 
-VIAGEM 1 — INSTALAR O PAINEL (o ritual de sempre)
+Detalhe carinhoso (sem urgencia)
+--------------------------------
+Depois que o painel estiver logando, vale conferir que o projeto no
+Keystatic Cloud tem o endereco do site preenchido ("Primary URL" =
+https://dalila-teles-poeta.vercel.app) — foi o passo que fizemos
+na tela de Settings do projeto.
 
-1. Descompacte este zip
-2. Copie o conteúdo para a raiz do repositório (a pasta que
-   tem o package.json) — substitua se perguntar
-3. No VS Code: Source Control → Commit & Sync
-   Mensagem: "instala a sala de costura (painel /keystatic)"
-4. Espere ~3 minutos (o Vercel publica)
-
-VIAGEM 2 — CONECTAR AO KEYSTATIC CLOUD (só uma vez)
-
-1. Abra:  https://dashboard.keystatic.cloud
-2. Clique em "Sign in with GitHub" e entre com a conta do
-   repositório (telesverasdalila-spec)
-3. Crie um TEAM (ex.: "dalila") e um PROJECT (ex.: "poeta")
-4. Em "Connect repository", conecte o repositório
-   telesverasdalila-spec/dalilapoeta (o GitHub vai pedir
-   autorização — aceitar)
-5. Na página do projeto, ache o trechinho de código pronto
-   (algo como:  project: 'dalila/poeta',)
-6. No VS Code, abra o arquivo keystatic.config.ts (na raiz do
-   repositório) e PROCURE esta linha:
-
-       project: 'SEU-TIME/SEU-PROJETO',
-
-   Troque por:  project: 'dalila/poeta',
-   (use os nomes que VOCÊ criou no passo 3)
-
-7. Commit & Sync de novo.
-   Mensagem: "conecta a sala de costura ao Keystatic Cloud"
-8. Espere ~3 minutos de novo.
-
-VIAGEM 3 — CONVIDAR A AUTORA
-
-1. No dashboard do Keystatic Cloud, vá no TEAM → "Members"
-2. Convide a autora pelo e-mail dela
-   (o plano gratuito cobre até 3 pessoas — estamos seguros)
-3. Pronto: ela vai receber o convite no e-mail
-
-==========================================================
-TESTE FINAL (fim a fim)
-
-1. Abra em janela anônima:  dalila-teles-poeta.vercel.app/keystatic
-2. Entre com a conta (via Keystatic Cloud)
-3. No menu, escolha um livro (ex.: A Janela dos Dias)
-4. Edite algo pequeno (ex.: um "Valor" nos Dados da Edição)
-5. Clique em SALVAR (canto superior direito)
-6. Abra o GitHub → o repositório terá um commit NOVO,
-   automático, sem ninguém ter mexido no VS Code!
-7. ~3 minutos depois, o site reflete a mudança. FIM! ✨
-
-==========================================================
-REGRAS DA CASA (para a autora)
-
-- O painel edita as FICHAS dos livros (Sobre, Dados da
-  Edição, status Disponível/Esgotada, trechos...)
-- CAPAS e TEXTOS (ensaios, poemas, crônicas) continuam sob
-  os cuidados da nossa ourives de plantão — é só pedir!
-- O campo "Capa — caminho da imagem" é delicado: não mexer
-  sem orientação.
-- Salvou e arrependeu? Tudo bem: o cofre guarda a história
-  de tudo — se recupera qualquer versão anterior.
-
-==========================================================
-SE ALGO TRAVAR (plano B)
-
-- Se o painel mostrar erro depois da Viagem 2: confira se a
-  linha do project foi colada certinha (as aspas simples
-  contam!)
-- Se preferir NÃO editar o arquivo: me mande os nomes do
-  team e do projeto que eu te devolvo o keystatic.config.ts
-  prontinho — é um único arquivo.
-
-Uma observação técnica para a posteridade: na primeira
-edição de algumas fichas, chaves vazias (como "subtitulo":
-"") deixam de existir no arquivo — é o jeito do painel
-organizar e não afeta o site em nada.
-
-----------------------------------------------------------
-Nota do rebuild (v2): este pacote foi reconstruído do cofre
-após um reset do ateliê e retestado de ponta a ponta: painel
-abre com os 8 grupos e as 37 fichas, edição do status do
-ponto(s) gravou diff mínimo, build de produção passou com
-146 páginas. É o mesmo projeto da versão anterior, agora
-com prova nova. 
+Lembretes que continuam valendo
+-------------------------------
+- O site continua lendo os dados de src/app/obra/[id]/*/dados.
+- Quando a autora salvar algo no painel, o Keystatic Cloud registra
+  a mudanca no repositorio GitHub, e a Vercel reconstrui o site
+  automaticamente (2 a 3 minutos para aparecer).
+- Chaves que estavam com texto vazio (ex.: "subtitulo": "") deixam
+  de existir no JSON depois da primeira edicao pela autora. Isso e
+  normal e nao afeta o site.

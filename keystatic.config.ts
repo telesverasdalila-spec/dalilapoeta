@@ -5,7 +5,9 @@ import { config, fields, singleton } from '@keystatic/core';
 export default config({
   storage: {
     kind: 'cloud',
-    project: 'SEU-TIME/SEU-PROJETO',
+  },
+  cloud: {
+    project: 'dalila/dalilapoeta',
   },
   ui: {
     navigation: {
