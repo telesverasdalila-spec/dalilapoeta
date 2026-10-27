@@ -153,36 +153,30 @@ export default function EstradaVida() {
           <div className="trecho">
             <p>Em dezembro de 2023 foi homenageada pela <strong>VI FELISA – Feira do Livro de Santo André</strong>, promovida pela Coopacesso, Sindicato dos Bancários de Santo André e Sindicato do Professores do ABC.</p>
           </div>
-                    <div className="trecho-citacao">
-            <span className="ano">2024</span>
+             <div className="trecho">
             <p>Em 11.5.2024, escritora homenageada do “Sarau da Fábrica de Cultura 04” – São Bernardo do Campo (instituição ligada ao Governo Estadual de SP).</p>
           </div>
 
-          <div className="trecho-citacao">
-            <span className="ano">2025</span>
+          <div className="trecho">
             <p>Em 12.7.2025, poeta homenageada no evento “Balbúrdia Poética 10”, coordenado e idealizado por Artur Gomes, realizado na Casa da Palavra Mário Quintana, em Santo André.</p>
           </div>
 
-          <div className="trecho-citacao">
-            <span className="ano">2025</span>
+          <div className="trecho">
             <p>Em 31.7.2025, foi a escritora homenageada da “Casa Gueto”, Editora Patuá, na FLIP – Festa Internacional de Paraty, RJ. A Antologia “Casa Gueto” traz como subtítulo “O dia segue não sendo mas há um corpo que resiste e é”, um verso de Dalila Teles Veras, bem como um dossiê em sua homenagem, com textos de Isabela Agrela Teles Veras, Tarso de Melo e Eduardo Lacerda e orelhas com textos de Rosana Chrispim e Ricardo Escudeiro.</p>
           </div>
 
-          <div className="trecho-citacao">
-            <span className="ano">2025</span>
+          <div className="trecho">
             <p>Em 11.10.2025, escritora homenageada do 2º Encontro Multicultural – Casa da Palavra, Santo André, SP, sob a curadoria de Ivete Neflindio.</p>
           </div>
 
-          <div className="trecho-citacao">
-            <span className="ano">2025</span>
+          <div className="trecho">
             <p>De 31.10 a 02.11.2025, escritora homenageada do VIII Encontro Nacional do Mulherio das Letras, realizado em Florianópolis, SC.</p>
           </div>
 
-          <div className="trecho-citacao">
-            <span className="ano">2026</span>
+          <div className="trecho">
             <p>Homenageada da Feira Literária de Ribeirão Pires – FLIRP 2026. A escritora, editora e ativista cultural Dalila Teles Veras, uma das principais referências da literatura e da vida cultural do Grande ABC. Nascida no Funchal, na Ilha da Madeira, em Portugal, em 1946, e residente no Brasil desde os onze anos, Dalila é autora de mais de duas dezenas de livros de poesia, crônica, diários e ensaios memorialísticos, com trabalhos publicados no Brasil e no exterior.</p>
           </div>
-          
+
         </div>
 
       </div>
