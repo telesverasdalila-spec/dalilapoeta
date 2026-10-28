@@ -1,45 +1,69 @@
-SALA DE COSTURA — PACOTE v5 (painel com rotulos visuais)
-=========================================================
+=============================================================
+PACOTE 6 — PAINEL COM OS 3 EIXOS + PRÊMIOS DADIFICADOS (Task 104)
+Site Memorial Dalila Teles Veras
+=============================================================
 
-O que e este pacote?
---------------------
-Um presente para os seus olhos no painel: em vez de "Item 1, Item 2...",
-a ficha CronoBiografia agora nomeia tudo pelo proprio nome:
+O QUE MUDA NESTE PACOTE
+-----------------------
+1) O MENU DO PAINEL agora espelha o site (3 Eixos):
+   - Eixo Vida: CronoBiografia + Prêmios e Reconhecimento (NOVO)
+   - Obra · Poesia (25 fichas) / Poesia — Antologia / Prosa /
+     Coleção Mimo / Antologia Coletiva / Caixa Artística / Homenagens
+   - Escritos · Crônicas / Viagem
+   (os nomes dos grupos mudaram, MAS nenhuma ficha se alterou —
+    nada foi renomeado por dentro, só o "letreiro da gaveta")
 
-- Na lista de gavetas: 1940, 1950, 1960... 2020
-- Dentro de cada gaveta, cada peca mostra o tipo e o comeco:
-  "Narrativo — Em 11.5.2024, escritora homenageada..."
-  "Citacao (1946) — O mundo juntava seus cacos..."
+2) PRÊMIOS E RECONHECIMENTO é agora uma ficha editável:
+   - 21 itens (1984 a 2024), cada um com Ano + Texto
+   - Cada item aparece na lista como "ano — começo do texto"
+   - O site continua IGUAL — só a fonte dos dados mudou de lugar
 
-IMPORTANTE: NADA muda no site. Este pacote so arruma o interior do
-painel — o site continua exatamente como esta.
-
-Este pacote muda 2 arquivos
----------------------------
-1. keystatic.config.ts — os rotulos visuais na ficha (testados de verdade:
-   abri a ficha, expandi as decadas de 1940 e 2020, tudo nomeado)
-2. worklog.md — diario de bordo em dia (Tasks 102 e 103)
-
-Obs.: este pacote JA INCLUI o diario de bordo do zip anterior
-(diario-de-bordo-task102.zip) — se ainda nao aplicou aquele,
-pode ignorar e aplicar so este.
-
-Como aplicar (o gesto de sempre)
---------------------------------
-1. Descompacte este zip DENTRO da pasta local do site.
-   Substitua os 2 arquivos quando o Windows perguntar.
-2. No VS Code, painel Source Control (o tronquinho):
-   - "+" nos 2 arquivos
-   - Mensagem: rotulos visuais no painel
-   - Commit (visto) e depois Sync Changes
-3. Aguarde a Vercel (2 a 3 minutos).
-4. Abra o painel em janela anonima (Ctrl+Shift+R):
+COMO APLICAR (passo a passo de sempre)
+--------------------------------------
+1. Descompacte este zip DENTRO da pasta do projeto
+   (C:\Users\Windows 10\Desktop\dalila-teles-veras),
+   por cima do que existe — confirme "Substituir"
+   São 5 arquivos:
+     keystatic.config.ts
+     src/app/data/vida/premios.json
+     src/app/components/SecaoPremios.tsx
+     src/app/components/CabecalhoFixo.tsx
+     worklog.md
+2. No VS Code: ícone do tronquinho (Source Control)
+   -> "+" em cada arquivo (ou em Changes, todos de uma vez)
+   -> caixinha de Message: "painel com 3 eixos + premios dadificado"
+   -> botão ✓ Commit
+   -> Sync Changes
+3. Aguarde a Vercel reconstruir (2-3 minutos)
+4. Abra o painel em JANELA ANÔNIMA:
    https://dalila-teles-poeta.vercel.app/keystatic
-   Eixo Vida > CronoBiografia — as gavetas agora tem nome!
+   Ctrl+Shift+R para recarregar sem cache
 
-Lembretes que continuam valendo
--------------------------------
-- Cada Salvar no painel = commit no GitHub = Vercel reconstrui = site
-  atualiza em 2 a 3 minutos (com janela anonima para evitar cache).
-- O rótulo "Institucional" tambem ja esta pronto: quando a autora
-  criar a primeira peça desse tipo, a lista nomeia do mesmo jeito.
+COMO USAR A NOVA FICHA (Prêmios)
+--------------------------------
+- ABRIR: menu do painel -> Eixo Vida -> Prêmios e Reconhecimento
+- EDITAR um prêmio: clique na linha -> mude Ano ou Texto -> Save
+- ADICIONAR: botão "Add" na lista -> preencha -> Save
+- APAGAR: clique na lixeirinha à direita da linha -> Save
+  (pronto: o prêmio sai da lista e do site na próxima
+   reconstrução — sem código, sem programador)
+- IMPORTANTE: sempre clique em SAVE depois de qualquer mudança
+
+TRANQUILIDADE (cinto de segurança)
+----------------------------------
+- Cada Save vira um commit no cofre (GitHub). Se algo for
+  apagado sem querer, NADA se perde: o histórico guarda cada
+  versão e a gente restaura — é só avisar.
+- Recomendo olhar a aba "Commits" em https://keystatic.cloud
+  de vez em quando: é o diário de bordo automático do cofre.
+
+O QUE VEM DEPOIS (roteiro combinado)
+------------------------------------
+- Etapa 2: Mídia/Imprensa vira ficha (Eixo Vida)
+- Etapa 3: Movimento — Atividades Culturais com tags (Eixo Movimento)
+- Etapa 4: Vitrine da Obra — Coletâneas com categoria Países,
+  Ensaios, Crônicas, Traduções e COLABORAÇÕES LITERÁRIAS
+  (antes dessa, uma conversa de desenho, como combinado)
+
+=============================================================
+Qualquer estranheza: me chame antes de desfazer algo. :)

@@ -6,7 +6,8 @@ interface Premio { ano: number; texto: string; }
 
 export default function SecaoPremios() {
   // Ordem crescente, igual à CronoBiografia (1984 -> 2024)
-  const itens: Premio[] = [...dadosPremios].sort((a, b) => a.ano - b.ano);
+  // Task 104: dados agora vivem dentro de "itens" (ficha no painel Keystatic)
+  const itens: Premio[] = [...dadosPremios.itens].sort((a, b) => a.ano - b.ano);
 
   // Agrupa por década em secao-decada — a MESMA estrutura da CronoBiografia:
   // .estrada (linha vertical dourada) > .secao-decada[id=c-XXXX] (âncora da

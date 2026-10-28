@@ -1,4 +1,5 @@
-[
+{
+  "itens": [
   {
     "ano": 1984,
     "texto": "Homenagem recebida da Assembleia Legislativa de Goiás, pelo mérito em encabeçar a indicação de Cora Coralina ao Prêmio Juca Pato, bem como divulgar o nome da escritora em diversos veículos da imprensa nacional. Goiânia, 11.10.1984."
@@ -83,4 +84,5 @@
     "ano": 2024,
     "texto": "Escritora homenageada do Sarau da Fábrica de Cultura. 11.5.2024."
   }
-]
+  ]
+}

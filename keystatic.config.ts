@@ -10,16 +10,23 @@ export default config({
     project: 'dalila/dalilapoeta',
   },
   ui: {
+    // Task 104: menu espelhado nos 3 Eixos do site (o painel só aceita um nível
+    // de grupos, então o eixo entra como prefixo: "Obra · Poesia" etc.).
+    // As chaves NÃO mudaram — só os nomes dos grupos e a ordem.
     navigation: {
-      'Eixo Vida': ['cronobiografia'],
-      'Poesia': ['passageiraAntologiaPessoal19822024', 'aMulherAntiga', 'aPalavrapartePequenasProsasEmPoemas', 'cidadeAssassinadaTributoACelsoDaniel', 'elementoFuria', 'estranhasFormasDeVida', 'forasteirosRegistrosNordestinos', 'iara', 'insulas', 'inventarioPrecoce', 'licoesDeTempo', 'madeiraDoVinhoASaudade', 'opcoesParaMorrerNoEspaco', 'poesiaDoIntervalo', 'poeticasDasCircunstancias', 'retratosFalhados', 'se', 'solidoesDaMemoria', 'soliloquios', 'sonhoDeHaPouco', 'tempoEmFuria', 'marielleDalila', 'vestigios', 'fugaEUrgencias', 'diuturnos'],
-      'Poesia (Antologia)': ['aJanelaDosDias'],
-      'Prosa': ['aVidaCronica', 'alpharrabio12Anos', 'anotacoesDeLeituras', 'asArtesDoOficioUmOlharSobreOAbc', 'minudencias'],
-      'Antologia Coletiva': ['caixaPoeticas'],
-      'Caixa Artística': ['pecados'],
-      'Crônicas / Viagem': ['apontamentosAlbumDeViagens'],
-      'Homenagem': ['meiaVidaInteira', 'setentaAnosPoemasLeitores'],
-      'Coleção Mimo': ['pontos'],
+      // ─── EIXO VIDA ───
+      'Eixo Vida': ['cronobiografia', 'premios'],
+      // ─── EIXO OBRA — OBRAS PUBLICADAS ───
+      'Obra · Poesia': ['passageiraAntologiaPessoal19822024', 'aMulherAntiga', 'aPalavrapartePequenasProsasEmPoemas', 'cidadeAssassinadaTributoACelsoDaniel', 'elementoFuria', 'estranhasFormasDeVida', 'forasteirosRegistrosNordestinos', 'iara', 'insulas', 'inventarioPrecoce', 'licoesDeTempo', 'madeiraDoVinhoASaudade', 'opcoesParaMorrerNoEspaco', 'poesiaDoIntervalo', 'poeticasDasCircunstancias', 'retratosFalhados', 'se', 'solidoesDaMemoria', 'soliloquios', 'sonhoDeHaPouco', 'tempoEmFuria', 'marielleDalila', 'vestigios', 'fugaEUrgencias', 'diuturnos'],
+      'Obra · Poesia — Antologia': ['aJanelaDosDias'],
+      'Obra · Prosa': ['aVidaCronica', 'alpharrabio12Anos', 'anotacoesDeLeituras', 'asArtesDoOficioUmOlharSobreOAbc', 'minudencias'],
+      'Obra · Coleção Mimo': ['pontos'],
+      'Obra · Antologia Coletiva': ['caixaPoeticas'],
+      'Obra · Caixa Artística': ['pecados'],
+      'Obra · Homenagens': ['meiaVidaInteira', 'setentaAnosPoemasLeitores'],
+      // ─── EIXO OBRA — ESCRITOS E LEITURAS ───
+      'Escritos · Crônicas / Viagem': ['apontamentosAlbumDeViagens'],
+      // (Eixo Movimento entra na Etapa 3, com as atividades culturais + tags)
     },
   },
   singletons: {
@@ -83,6 +90,34 @@ export default config({
             label: 'Décadas',
             // Rótulo de cada década na lista: a própria dezena (ex.: 1940-1949)
             itemLabel: (props) => String(props.fields.dezena.value) || 'Década',
+          }
+        ),
+      },
+    }),
+    // Task 104: Prêmios e Reconhecimento dadificado (21 itens {ano, texto}).
+    // O JSON existente era um array puro; agora vive dentro de "itens" —
+    // SecaoPremios e CabecalhoFixo foram ajustados na mesma remessa.
+    premios: singleton({
+      label: 'Prêmios e Reconhecimento',
+      path: 'src/app/data/vida/premios',
+      format: { data: 'json' },
+      schema: {
+        itens: fields.array(
+          fields.object({
+            ano: fields.integer({ label: 'Ano (ex.: 1984)' }),
+            texto: fields.text({ label: 'Prêmio / Homenagem (texto completo)', multiline: true }),
+          }),
+          {
+            label: 'Prêmios e homenagens',
+            // Rótulo de cada item na lista: ano + começo do texto
+            itemLabel: (props) => {
+              const plano = String(props.fields.texto.value || '')
+                .replace(/<[^>]+>/g, ' ')
+                .replace(/\s+/g, ' ')
+                .trim();
+              const resumo = plano.length > 46 ? `${plano.slice(0, 46)}…` : plano;
+              return `${props.fields.ano.value ?? 'Ano'} — ${resumo}`;
+            },
           }
         ),
       },

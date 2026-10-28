@@ -15,7 +15,8 @@ export default function CabecalhoFixo({ abaAtiva, mudarAba }: CabecalhoFixoProps
   const decadasCrono = useMemo(() => calcularDecadas(ANOS_BIOGRAFIA, "crescente"), []);
 
   const decadasPremios = useMemo(() => {
-    const anos = premios.map((p) => p.ano).sort((a, b) => a - b);
+    // Task 104: dados agora vivem dentro de "itens" (ficha no painel Keystatic)
+    const anos = premios.itens.map((p) => p.ano).sort((a, b) => a - b);
     return calcularDecadas(anos, "crescente");
   }, []);
 

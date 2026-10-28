@@ -863,3 +863,25 @@ Stage Summary:
 - NADA muda no site (itemLabel é só UI do painel); dados intactos
 - Pacote: download/painel-rotulos-visuais.zip (keystatic.config.ts + worklog.md + LEIA-ME.txt)
 - Nota: este pacote JÁ INCLUI o diário de bordo da Task 102 (zip anterior pode ser ignorado)
+
+---
+Task ID: 104
+Agent: Super Z (sessão de continuação)
+Task: Menu do painel espelhado nos 3 Eixos + Fatia 1 dadificada (Prêmios e Reconhecimento)
+
+Work Log:
+- Pedido da usuária: criar os 3 Eixos no painel espelhando o site (Vida / Obra / Movimento) e dadificar todas as estruturas restantes, incluindo as Colaborações Literárias; dúvidas: atualizar e DELETAR itens pelo painel
+- Resposta registrada: atualizar = propósito do painel; deletar item de lista = lixeirinha em cada linha (padrão já conhecido das décadas); livros inteiros (página própria) = desenho da Fatia 4; cofre (GitHub) guarda histórico — nada se perde
+- Menu reorganizado (ui.navigation é flat → eixo como prefixo do grupo): "Eixo Vida" [cronobiografia, premios]; "Obra · Poesia" (25), "Obra · Poesia — Antologia", "Obra · Prosa" (5), "Obra · Coleção Mimo", "Obra · Antologia Coletiva", "Obra · Caixa Artística", "Obra · Homenagens"; "Escritos · Crônicas / Viagem"; chaves inalteradas (diff mínimo), Eixo Movimento entra na Etapa 3
+- Fatia 1 — premios.json (21 itens {ano, texto}) virou ficha: singleton premios, path src/app/data/vida/premios, fields.array de {ano: fields.integer, texto: fields.text multiline}, itemLabel "ano — começo do texto" (com limpeza de HTML, padrão da Task 103)
+- JSON precisou de envoltório: array puro → {"itens": [...]} (singleton Keystatic exige objeto); consumidores ajustados: SecaoPremios.tsx ([...dadosPremios.itens]) e CabecalhoFixo.tsx (premios.itens.map) — régua de décadas do cabeçalho segue funcionando
+- SecaoMovimento.tsx tem import de dadosPremios SEM uso (morto) — intocado aqui, anotado para a Fatia 3
+- TESTE REAL (storage local temporário + next dev 3199 + agent-browser): sidebar com os 3 Eixos; ficha Prêmios abre com 21 itens rotulados ("1984 — Homenagem recebida…"); item expandido = Ano (integer) + Texto (multiline); TESTE DE GRAVAÇÃO: ano 1984→1985 + Save → POST /api/keystatic/update 200 → JSON reescrito com {"itens": [...]}, ano como NUMBER puro (exibição "1,984" é só cosmética do browser); git checkout desfaz o teste — e a lição: git checkout no JSON apaga o envoltório (voltou o array puro e a home quebrou 500 "reading 'map'"), wrap refeito
+- Site end-to-end: home 200; aba Prêmios renderiza 1984–2024 ("Homenagem recebida da Assembleia…" → "Fábrica de Cultura"); aba CronoBiografia com citação de 1946 intacta; ficha CronoBiografia abre no painel (regressão zero)
+- storage revertido para cloud; npm run build OK (type check + 146 páginas); pacote: keystatic.config.ts, premios.json, SecaoPremios.tsx, CabecalhoFixo.tsx + worklog.md
+
+Stage Summary:
+- Painel agora tem a hierarquia dos 3 Eixos e os Prêmios são ficha editável (editar/adicionar/apagar item = lixeirinha, sem código)
+- Zero mudança visual no site (só a fonte dos dados de Prêmios mudou de lugar)
+- Pacote: download/painel-eixos-premios.zip (pacote 6) + LEIA-ME.txt
+- Próximas fatias: 2 = Mídia/Imprensa (hardcoded → ficha); 3 = Movimento (11 JSONs → ficha com tags); 4 = Vitrine da Obra (coletâneas com Países, ensaios, crônicas, traduções, Colaborações — conversa de desenho antes)
