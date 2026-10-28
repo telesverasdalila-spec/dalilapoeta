@@ -885,3 +885,22 @@ Stage Summary:
 - Zero mudança visual no site (só a fonte dos dados de Prêmios mudou de lugar)
 - Pacote: download/painel-eixos-premios.zip (pacote 6) + LEIA-ME.txt
 - Próximas fatias: 2 = Mídia/Imprensa (hardcoded → ficha); 3 = Movimento (11 JSONs → ficha com tags); 4 = Vitrine da Obra (coletâneas com Países, ensaios, crônicas, traduções, Colaborações — conversa de desenho antes)
+
+---
+Task ID: 105
+Agent: Super Z (sessão de continuação)
+Task: Perícia do pacote 6 (aplicado pela usuária) + Fatia 2 dadificada — Mídia/Imprensa vira ficha "Mídia e Contato"
+
+Work Log:
+- Ambiente resetou (3ª vez) — reclonado; commit 4759570 da usuária verificado ponto a ponto: storage cloud, menu dos 3 Eixos, singleton premios, JSON com {"itens":[...]} (21 itens, ano como number), consumidores .itens → PACOTE 6 NO AR, site vivo (WebFetch: título, eixos, sem erros)
+- Fatia 2 — SecaoImprensa.tsx (81 linhas hardcoded) lida agora de src/app/data/vida/imprensa.json: {introducao, grupos[{titulo, links[{rotulo,url,descricao}]}], enderecoTitulo, enderecoLinha}
+- Ficha no painel: singleton imprensa "Mídia e Contato" no Eixo Vida (3ª gaveta, ao lado de CronoBiografia e Prêmios); dois níveis de itemLabel (grupos "✍️ Blogs"… e links "📖 À Janela dos Dias"…); lixeirinha em grupo e em link (pedido de deletar da usuária atendido nesse nível também)
+- Componente reescrito com estilos extraídos do JSX original (pixel a pixel): mesmo h3 dourado, links vinho com underline no hover, descrição 0.9rem, endereço em negrito; mailto sem target/_blank (regra original), http com target+noopener
+- TESTE REAL (storage local + next dev 3199 + agent-browser): painel mostra ficha com 3 grupos rotulados, link expandido com rotulo/url/descricao corretos; site: aba "Mídia & Contato" com 8 pontos de conteúdo conferidos (intro, blog, descrição, Alpharrabio, Instagram, Facebook, e-mail, endereço) e hrefs cravados (blog, insta, mailto)
+- storage revertido para cloud; npm run build OK; pacote: keystatic.config.ts, SecaoImprensa.tsx, imprensa.json (novo), worklog.md
+
+Stage Summary:
+- Eixo Vida completo no painel: CronoBiografia + Prêmios + Mídia e Contato — canais oficiais editáveis (adicionar link, mudar url, apagar com lixeirinha)
+- Site visualmente idêntico (dados apenas mudaram de lugar)
+- Pacote: download/painel-midia-contato.zip (pacote 7) + LEIA-ME.txt
+- Próximas: Fatia 3 = Movimento (11 JSONs → ficha com tags); Fatia 4 = Vitrine da Obra (coletâneas com Países, ensaios, crônicas, traduções, Colaborações — conversa antes)

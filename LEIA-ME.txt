@@ -1,21 +1,21 @@
 =============================================================
-PACOTE 6 — PAINEL COM OS 3 EIXOS + PRÊMIOS DADIFICADOS (Task 104)
+PACOTE 7 — MÍDIA E CONTATO VIRA FICHA (Task 105)
 Site Memorial Dalila Teles Veras
 =============================================================
 
 O QUE MUDA NESTE PACOTE
 -----------------------
-1) O MENU DO PAINEL agora espelha o site (3 Eixos):
-   - Eixo Vida: CronoBiografia + Prêmios e Reconhecimento (NOVO)
-   - Obra · Poesia (25 fichas) / Poesia — Antologia / Prosa /
-     Coleção Mimo / Antologia Coletiva / Caixa Artística / Homenagens
-   - Escritos · Crônicas / Viagem
-   (os nomes dos grupos mudaram, MAS nenhuma ficha se alterou —
-    nada foi renomeado por dentro, só o "letreiro da gaveta")
+1) O EIXO VIDA no painel fica completo, com 3 gavetas:
+   - CronoBiografia
+   - Prêmios e Reconhecimento
+   - Mídia e Contato (NOVA!)
 
-2) PRÊMIOS E RECONHECIMENTO é agora uma ficha editável:
-   - 21 itens (1984 a 2024), cada um com Ano + Texto
-   - Cada item aparece na lista como "ano — começo do texto"
+2) A página Mídia & Contato do site agora vem da ficha:
+   - Frase de abertura
+   - 3 grupos (✍️ Blogs / 🔗 Sites e Redes Sociais / 📧 Contato)
+     com os 5 links de sempre (blog, Alpharrabio, Instagram,
+     Facebook, e-mail)
+   - Linha final com nome em negrito + cidade
    - O site continua IGUAL — só a fonte dos dados mudou de lugar
 
 COMO APLICAR (passo a passo de sempre)
@@ -23,47 +23,46 @@ COMO APLICAR (passo a passo de sempre)
 1. Descompacte este zip DENTRO da pasta do projeto
    (C:\Users\Windows 10\Desktop\dalila-teles-veras),
    por cima do que existe — confirme "Substituir"
-   São 5 arquivos:
+   São 4 arquivos:
      keystatic.config.ts
-     src/app/data/vida/premios.json
-     src/app/components/SecaoPremios.tsx
-     src/app/components/CabecalhoFixo.tsx
+     src/app/components/SecaoImprensa.tsx
+     src/app/data/vida/imprensa.json   (arquivo NOVO)
      worklog.md
-2. No VS Code: ícone do tronquinho (Source Control)
-   -> "+" em cada arquivo (ou em Changes, todos de uma vez)
-   -> caixinha de Message: "painel com 3 eixos + premios dadificado"
-   -> botão ✓ Commit
-   -> Sync Changes
-3. Aguarde a Vercel reconstruir (2-3 minutos)
-4. Abra o painel em JANELA ANÔNIMA:
+2. No VS Code: tronquinho -> "+" em cada arquivo
+   -> caixinha Message: "midia e contato dadificado"
+   -> ✓ Commit -> Sync Changes
+3. Aguarde a Vercel (2-3 min) e abra o painel em JANELA ANÔNIMA:
    https://dalila-teles-poeta.vercel.app/keystatic
-   Ctrl+Shift+R para recarregar sem cache
+   Ctrl+Shift+R
 
-COMO USAR A NOVA FICHA (Prêmios)
---------------------------------
-- ABRIR: menu do painel -> Eixo Vida -> Prêmios e Reconhecimento
-- EDITAR um prêmio: clique na linha -> mude Ano ou Texto -> Save
-- ADICIONAR: botão "Add" na lista -> preencha -> Save
-- APAGAR: clique na lixeirinha à direita da linha -> Save
-  (pronto: o prêmio sai da lista e do site na próxima
-   reconstrução — sem código, sem programador)
+COMO USAR A FICHA MÍDIA E CONTATO
+---------------------------------
+- ABRIR: Eixo Vida -> Mídia e Contato
+- EDITAR um link: clique no grupo (ex.: 🔗 Sites e Redes Sociais)
+  -> clique no link -> mude Nome / Endereço / Descrição -> Save
+- ADICIONAR um link novo: abra o grupo -> botão "Add" na lista
+  "Links do grupo" -> preencha Nome e Endereço -> Save
+  (dica: pode usar emoji no nome — 🎥 YouTube, 🎵 Spotify...)
+- APAGAR um link: abra o grupo -> lixeirinha à direita do link
+  -> Save. APAGAR um grupo inteiro: lixeirinha ao lado do
+  título do grupo -> Save
+- E-MAIL: o endereço começa com "mailto:" (ex.:
+  mailto:nome@exemplo.com.br) — assim vira link clicável
+- A "Linha final" é opcional: se apagar o conteúdo e salvar,
+  o bloco do endereço some da página
 - IMPORTANTE: sempre clique em SAVE depois de qualquer mudança
 
 TRANQUILIDADE (cinto de segurança)
 ----------------------------------
-- Cada Save vira um commit no cofre (GitHub). Se algo for
-  apagado sem querer, NADA se perde: o histórico guarda cada
-  versão e a gente restaura — é só avisar.
-- Recomendo olhar a aba "Commits" em https://keystatic.cloud
-  de vez em quando: é o diário de bordo automático do cofre.
+- Cada Save vira um commit no cofre (GitHub). Apagou sem querer?
+  NADA se perde — o histórico guarda cada versão, é só avisar.
 
 O QUE VEM DEPOIS (roteiro combinado)
 ------------------------------------
-- Etapa 2: Mídia/Imprensa vira ficha (Eixo Vida)
-- Etapa 3: Movimento — Atividades Culturais com tags (Eixo Movimento)
+- Etapa 3: Movimento — Atividades Culturais com tags
 - Etapa 4: Vitrine da Obra — Coletâneas com categoria Países,
-  Ensaios, Crônicas, Traduções e COLABORAÇÕES LITERÁRIAS
-  (antes dessa, uma conversa de desenho, como combinado)
+  Ensaios, Crônicas, Traduções e Colaborações Literárias
+  (com uma conversa de desenho antes, como combinado)
 
 =============================================================
 Qualquer estranheza: me chame antes de desfazer algo. :)

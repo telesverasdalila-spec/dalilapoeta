@@ -15,7 +15,7 @@ export default config({
     // As chaves NÃO mudaram — só os nomes dos grupos e a ordem.
     navigation: {
       // ─── EIXO VIDA ───
-      'Eixo Vida': ['cronobiografia', 'premios'],
+      'Eixo Vida': ['cronobiografia', 'premios', 'imprensa'],
       // ─── EIXO OBRA — OBRAS PUBLICADAS ───
       'Obra · Poesia': ['passageiraAntologiaPessoal19822024', 'aMulherAntiga', 'aPalavrapartePequenasProsasEmPoemas', 'cidadeAssassinadaTributoACelsoDaniel', 'elementoFuria', 'estranhasFormasDeVida', 'forasteirosRegistrosNordestinos', 'iara', 'insulas', 'inventarioPrecoce', 'licoesDeTempo', 'madeiraDoVinhoASaudade', 'opcoesParaMorrerNoEspaco', 'poesiaDoIntervalo', 'poeticasDasCircunstancias', 'retratosFalhados', 'se', 'solidoesDaMemoria', 'soliloquios', 'sonhoDeHaPouco', 'tempoEmFuria', 'marielleDalila', 'vestigios', 'fugaEUrgencias', 'diuturnos'],
       'Obra · Poesia — Antologia': ['aJanelaDosDias'],
@@ -120,6 +120,40 @@ export default config({
             },
           }
         ),
+      },
+    }),
+    // Task 105: Mídia/Imprensa dadificada — grupos de canais (Blogs, Sites e
+    // Redes, Contato) + linha de endereço. Dados em src/app/data/vida/imprensa.json.
+    imprensa: singleton({
+      label: 'Mídia e Contato',
+      path: 'src/app/data/vida/imprensa',
+      format: { data: 'json' },
+      schema: {
+        introducao: fields.text({ label: 'Frase de abertura da página' }),
+        grupos: fields.array(
+          fields.object({
+            titulo: fields.text({ label: 'Título do grupo (com emoji)' }),
+            links: fields.array(
+              fields.object({
+                rotulo: fields.text({ label: 'Nome do link (com emoji)' }),
+                url: fields.text({ label: 'Endereço (https://… site/rede, ou mailto:… para e-mail)' }),
+                descricao: fields.text({ label: 'Descrição embaixo do link (opcional)', multiline: true }),
+              }),
+              {
+                label: 'Links do grupo',
+                // Rótulo de cada link na lista: o próprio nome
+                itemLabel: (props) => String(props.fields.rotulo.value) || 'Link',
+              }
+            ),
+          }),
+          {
+            label: 'Grupos de canais',
+            // Rótulo de cada grupo na lista: o próprio título
+            itemLabel: (props) => String(props.fields.titulo.value) || 'Grupo',
+          }
+        ),
+        enderecoTitulo: fields.text({ label: 'Linha final — nome em negrito (opcional)' }),
+        enderecoLinha: fields.text({ label: 'Linha final — cidade, local (opcional)' }),
       },
     }),
     aJanelaDosDias: singleton({

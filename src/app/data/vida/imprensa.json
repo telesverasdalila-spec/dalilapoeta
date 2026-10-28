@@ -1,0 +1,47 @@
+{
+  "introducao": "Acompanhe o trabalho de Dalila Teles Veras através dos canais oficiais:",
+  "grupos": [
+    {
+      "titulo": "✍️ Blogs",
+      "links": [
+        {
+          "rotulo": "📖 À Janela dos Dias",
+          "url": "https://dalilatelesveras.blogspot.com",
+          "descricao": "Blog literário e cultural desde 2009."
+        }
+      ]
+    },
+    {
+      "titulo": "🔗 Sites e Redes Sociais",
+      "links": [
+        {
+          "rotulo": "🏛️ Alpharrabio — Livraria, Editora e Espaço Cultural",
+          "url": "https://www.alpharrabio.com.br",
+          "descricao": ""
+        },
+        {
+          "rotulo": "📸 Instagram",
+          "url": "https://www.instagram.com/dalilatelesveras",
+          "descricao": ""
+        },
+        {
+          "rotulo": "👍 Facebook",
+          "url": "https://www.facebook.com/dalilatelesveras",
+          "descricao": ""
+        }
+      ]
+    },
+    {
+      "titulo": "📧 Contato",
+      "links": [
+        {
+          "rotulo": "📧 dalila@alpharrabio.com.br",
+          "url": "mailto:dalila@alpharrabio.com.br",
+          "descricao": ""
+        }
+      ]
+    }
+  ],
+  "enderecoTitulo": "Alpharrabio Livraria, Editora e Espaço Cultural",
+  "enderecoLinha": "📍 Santo André, SP — Brasil"
+}
