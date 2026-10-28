@@ -1,0 +1,31 @@
+SALA DE COSTURA — DIARIO DE BORDO (Task 102)
+=============================================
+
+O que e este pacote?
+--------------------
+So o worklog.md (o diario de bordo do projeto) atualizado.
+NAO muda nada no site: nenhum componente, nenhum dado, nada visual.
+
+Ele registra a boa noticia de hoje: a Etapa B (CronoBiografia no
+painel) foi aplicada, commitada ("cronobiografia no painel", meio-dia)
+e a Vercel ja publicou — confirmei o site no ar com as 9 decadas e
+suas homenagens 2024-2026.
+
+Como aplicar (o gesto de sempre)
+--------------------------------
+1. Descompacte este zip DENTRO da pasta local do site.
+   Ele vai substituir apenas o worklog.md
+   (o LEIA-ME-diario.txt pode apagar depois, sem problema).
+2. No VS Code, painel Source Control (o tronquinho):
+   - "+" no worklog.md
+   - Mensagem: diario de bordo task 102
+   - Commit (visto) e depois Sync Changes
+3. Sem pressa: pode aplicar agora ou juntar com a proxima costura.
+
+Lembrete dos dois enderecos do painel
+-------------------------------------
+- Painel de edicao (o do dia a dia):
+  https://dalila-teles-poeta.vercel.app/keystatic
+- Sala de contas do cofre (team, projeto, usuarios, commits):
+  https://keystatic.cloud
+  (sem "dashboard." — esse endereco nao existe)

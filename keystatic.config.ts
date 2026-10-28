@@ -59,10 +59,31 @@ export default config({
                   }),
                 }
               ),
-              { label: 'Peças da década' }
+              {
+                label: 'Peças da década',
+                // Rótulo de cada peça na lista: tipo + ano/começo do texto
+                // (conditional entrega discriminant/value direto no props)
+                itemLabel: (props: any) => {
+                  const resumo = (t: string) => {
+                    const plano = t.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+                    return plano.length > 42 ? `${plano.slice(0, 42)}…` : plano;
+                  };
+                  if (props.discriminant === 'citacao') {
+                    return `Citação (${String(props.value.fields.ano.value)}) — ${resumo(String(props.value.fields.texto.value))}`;
+                  }
+                  if (props.discriminant === 'institucional') {
+                    return `Institucional — ${resumo(String(props.value.fields.texto.value))}`;
+                  }
+                  return `Narrativo — ${resumo(String(props.value.fields.texto.value))}`;
+                },
+              }
             ),
           }),
-          { label: 'Décadas' }
+          {
+            label: 'Décadas',
+            // Rótulo de cada década na lista: a própria dezena (ex.: 1940-1949)
+            itemLabel: (props) => String(props.fields.dezena.value) || 'Década',
+          }
         ),
       },
     }),

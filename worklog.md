@@ -826,3 +826,40 @@ Work Log:
 
 Stage Summary:
 - Rodapé final: assinatura enxuta com registro autoral — "dalila teles veras — © ano" na fonte das tabs
+
+---
+Task ID: 102
+Agent: Super Z (sessão de continuação)
+Task: Etapa B no ar — perícia pós-commit "cronobiografia no painel" (5c6725f) + dúvida da usuária sobre o link do Keystatic Cloud
+
+Work Log:
+- Protocolo GitHub-first: repo reclonado (HEAD 5c6725f, hoje 12:09, autor telesverasdalila-spec — aplicação do pacote v4 pela usuária)
+- Commit 5c6725f = exatamente o pacote v4: keystatic.config.ts (+44, grupo "Eixo Vida" + singleton cronobiografia), EstradaVida.tsx (reescrito lendo do JSON), cronobiografia.json (+355, 9 décadas / 41 peças), LEIA-ME.txt v4
+- Perícia do site ao vivo: home já renderiza a ficha nova — 9 décadas na régua (1940-1949 ... 2020-2029) e as homenagens 2024-2026 presentes (Fábrica de Cultura 11.5.2024, Balbúrdia Poética 10 12.7.2025, Casa Gueto/FLIP 31.7.2025, FLIRP 2026) → deploy Vercel OK
+- Caça ao link errado: "dashboard.keystatic.cloud" NÃO existe em nenhum arquivo do repo (grep em ts/tsx/txt/md/json) — origem foi endereço passado errado pelo assistente na Viagem 2; o correto é https://keystatic.cloud (site solto, não fica dentro de nenhum painel)
+- Dúvida da usuária respondida: 2 endereços distintos — keystatic.cloud (sala de contas do cofre: team, projeto, Users, Commits) vs dalila-teles-poeta.vercel.app/keystatic (painel de edição do dia a dia)
+
+Stage Summary:
+- ETAPA B CONFIRMADA NO AR: CronoBiografia agora é ficha editável (grupo "Eixo Vida", primeiro item do menu do painel), com tipo de peça por escolha (Narrativo / Citação com ano / Institucional)
+- Visual idêntico ao original (pacote v4 testado byte a byte); perícia independente de hoje confirma renderização fiel no ar
+- Pacote burocrático entregue (worklog em dia): download/diario-de-bordo-task102.zip — sem mudança no site, aplicação opcional, pode juntar com a próxima costura
+
+---
+Task ID: 103
+Agent: Super Z (sessão de continuação)
+Task: Rótulos visuais na ficha CronoBiografia (itemLabel) — pedido da usuária "posso renomear esses itens para ficar mais visual?"
+
+Work Log:
+- itemLabel adicionado nos dois fields.array da ficha: décadas mostram a dezena (1940…2020) e peças mostram tipo + ano/começo do texto
+- Cuidado: itemLabel do conditional usa props.discriminant/props.value DIRETOS (sem .fields) — 1ª tentativa com props.fields.discriminant quebrou a ficha no browser ("Cannot read properties of undefined (reading 'discriminant')"); corrigido e revalidado
+- resumo() limpa tags HTML (<strong>/<em>) e quebras antes de cortar 42 chars — rótulos sem código vazando
+- TESTE VISUAL REAL (storage local temporário + next dev + agent-browser): décadas 1940…2020 na lista; 1940 expandida = "Narrativo — DALILA TELES VERAS, nome literário…" e "Citação (1946) — O mundo juntava seus cacos…"; 2020 expandida = 9 peças rotuladas (incl. 6 homenagens 2024-2026)
+- Acervo atual: 9 décadas / 41 peças, tipos narrativo+citação (0 institucional — ramo do itemLabel pronto e simétrico, exercitado quando a autora criar a 1ª)
+- Faxina do ambiente: disco 100% (browser não subia) — apagados zips antigos de download/ (2.4G, tudo já aplicado/commitado), /tmp (3.4G) e cache npm; mantido só diario-de-bordo-task102.zip
+- storage revertido para cloud; build final OK (146 páginas); diff do pacote: keystatic.config.ts + worklog.md (next-env.d.ts é artefato local, fora do pacote)
+
+Stage Summary:
+- Painel agora nomeia as gavetas: décadas por número e peças por tipo/ano/texto — navegação da autora muito mais fácil
+- NADA muda no site (itemLabel é só UI do painel); dados intactos
+- Pacote: download/painel-rotulos-visuais.zip (keystatic.config.ts + worklog.md + LEIA-ME.txt)
+- Nota: este pacote JÁ INCLUI o diário de bordo da Task 102 (zip anterior pode ser ignorado)
