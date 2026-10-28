@@ -40,6 +40,45 @@ const esquemaAtivismo = () => ({
   ),
 });
 
+// Task 107: molde das gavetas da Vitrine da Obra (Fatia 4) — espelha o formato
+// Livro lido por SecaoObras.tsx: {ano, titulo, descricao, tipo, slug?, ficha?}.
+// `ano` é TEXTO porque existem intervalos ("1999-2004") e peças sem data —
+// o site extrai o ano base sozinho para a régua de décadas.
+function rotuloPeca(props: any) {
+  const titulo = String(props.fields.titulo.value || '')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+  const ano = String(props.fields.ano.value || '').trim();
+  return `${titulo || 'Peça'}${ano ? ` (${ano})` : ''}`;
+}
+const esquemaVitrine = (tipos: { label: string; value: string }[]) => () => ({
+  itens: fields.array(
+    fields.object({
+      ano: fields.text({ label: 'Ano (ex.: 2024; intervalo 1999-2004; vazio = sem data)' }),
+      titulo: fields.text({ label: 'Título' }),
+      descricao: fields.text({ label: 'Descrição (editora, organização, prêmio…)' }),
+      tipo: fields.select({ label: 'Tipo da peça', options: tipos, defaultValue: tipos[0].value }),
+      ficha: fields.text({ label: 'Ficha — id da página do livro (opcional)', description: 'Só para livros com página própria; ex.: tempo-em-furia. Alimenta o link "Conheça a obra".' }),
+      slug: fields.text({ label: 'Slug do texto integral (opcional)', description: 'Ex.: saramago-e-a-poetica-do-humano. Alimenta o link "Leia o texto".' }),
+    }),
+    { label: 'Peças', itemLabel: (props) => rotuloPeca(props) }
+  ),
+});
+// Coletâneas: molde próprio com seletor de País (define a aba da home).
+const esquemaColetaneas = () => ({
+  itens: fields.array(
+    fields.object({
+      ano: fields.text({ label: 'Ano (ex.: 2024; vazio = sem data)' }),
+      titulo: fields.text({ label: 'Título' }),
+      descricao: fields.text({ label: 'Descrição (editora, organização, cidade…)' }),
+      tipo: fields.select({ label: 'Tipo da peça', options: [{ label: 'Coletânea', value: 'Coletânea' }, { label: 'Revista', value: 'Revista' }], defaultValue: 'Coletânea' }),
+      pais: fields.select({ label: 'País (define a aba da home)', options: [{ label: 'Brasil', value: 'Brasil' }, { label: 'Portugal', value: 'Portugal' }, { label: 'Outros países', value: 'Outros países' }], defaultValue: 'Brasil' }),
+    }),
+    { label: 'Peças', itemLabel: (props) => rotuloPeca(props) }
+  ),
+});
+
 // Gerado sob medida a partir das 37 fichas reais (regra: só as chaves existentes,
 // ordem fiel -> diff mínimo ao salvar). Não editar à mão.
 export default config({
@@ -64,6 +103,10 @@ export default config({
       'Obra · Antologia Coletiva': ['caixaPoeticas'],
       'Obra · Caixa Artística': ['pecados'],
       'Obra · Homenagens': ['meiaVidaInteira', 'setentaAnosPoemasLeitores'],
+      // ─── EIXO OBRA — VITRINE DA HOME (Fatia 4) ───
+      'Obra · Vitrine — Prateleiras': ['vitrinePoesia', 'vitrineProsa', 'vitrineMimo', 'coletaneas', 'colaboracoes'],
+      'Obra · Vitrine — Escritos': ['ensaios', 'cronicas', 'entrevistas', 'traducoes'],
+      'Obra · Vitrine — Resenhas': ['fortunaCritica', 'verbetes', 'leiturasCriticas', 'estudosCriticos'],
       // ─── EIXO OBRA — ESCRITOS E LEITURAS ───
       'Escritos · Crônicas / Viagem': ['apontamentosAlbumDeViagens'],
       // ─── EIXO MOVIMENTO ───
@@ -812,6 +855,86 @@ export default config({
         dados: fields.array(fields.object({ label: fields.text({ label: 'Rótulo' }), valor: fields.text({ label: 'Valor' }) })),
         trechos: fields.array(fields.object({ titulo: fields.text({ label: 'Título' }), imagem_mes: fields.text({ label: 'Imagem_mes' }), texto: fields.text({ label: 'Texto', multiline: true }) })),
       },
+    }),
+
+    // ─── Task 107: Vitrine da Obra (Fatia 4) — 13 gavetas, dados da home ───
+    vitrinePoesia: singleton({
+      label: 'Vitrine · Poesia',
+      path: 'src/app/data/obra/vitrine-poesia',
+      format: { data: 'json' },
+      schema: esquemaVitrine([{ label: 'Livro', value: 'Livro' }, { label: 'Plaquete', value: 'Plaquete' }, { label: 'Caixa Artística', value: 'Caixa Artística' }, { label: 'Edição Artística', value: 'Edição Artística' }])(),
+    }),
+    vitrineProsa: singleton({
+      label: 'Vitrine · Prosa',
+      path: 'src/app/data/obra/vitrine-prosa',
+      format: { data: 'json' },
+      schema: esquemaVitrine([{ label: 'Livro', value: 'Livro' }, { label: 'Plaquete', value: 'Plaquete' }])(),
+    }),
+    vitrineMimo: singleton({
+      label: 'Vitrine · Mimo',
+      path: 'src/app/data/obra/vitrine-mimo',
+      format: { data: 'json' },
+      schema: esquemaVitrine([{ label: 'Plaquete', value: 'Plaquete' }])(),
+    }),
+    coletaneas: singleton({
+      label: 'Vitrine · Coletâneas (Países)',
+      path: 'src/app/data/obra/coletaneas',
+      format: { data: 'json' },
+      schema: esquemaColetaneas(),
+    }),
+    colaboracoes: singleton({
+      label: 'Vitrine · Colaborações Literárias',
+      path: 'src/app/data/obra/colaboracoes',
+      format: { data: 'json' },
+      schema: esquemaVitrine([{ label: 'Apresentação', value: 'Apresentação' }, { label: 'Prefácio', value: 'Prefácio' }, { label: 'Orelha', value: 'Orelha' }, { label: 'Posfácio', value: 'Posfácio' }, { label: 'Adaptação', value: 'Adaptação' }, { label: 'Ensaio', value: 'Ensaio' }, { label: 'Resenha', value: 'Resenha' }])(),
+    }),
+    ensaios: singleton({
+      label: 'Vitrine · Ensaios',
+      path: 'src/app/data/obra/ensaios',
+      format: { data: 'json' },
+      schema: esquemaVitrine([{ label: 'Ensaio', value: 'Ensaio' }, { label: 'Palestra', value: 'Palestra' }, { label: 'Comunicação', value: 'Comunicação' }, { label: 'Discurso', value: 'Discurso' }, { label: 'Artigo', value: 'Artigo' }, { label: 'Depoimento', value: 'Depoimento' }])(),
+    }),
+    cronicas: singleton({
+      label: 'Vitrine · Crônicas',
+      path: 'src/app/data/obra/cronicas',
+      format: { data: 'json' },
+      schema: esquemaVitrine([{ label: 'Crônica', value: 'Crônica' }])(),
+    }),
+    entrevistas: singleton({
+      label: 'Vitrine · Entrevistas',
+      path: 'src/app/data/obra/entrevistas',
+      format: { data: 'json' },
+      schema: esquemaVitrine([{ label: 'Entrevista', value: 'Entrevista' }])(),
+    }),
+    traducoes: singleton({
+      label: 'Vitrine · Traduções',
+      path: 'src/app/data/obra/traducoes',
+      format: { data: 'json' },
+      schema: esquemaVitrine([{ label: 'Tradução', value: 'Tradução' }])(),
+    }),
+    verbetes: singleton({
+      label: 'Vitrine · Verbetes',
+      path: 'src/app/data/obra/verbetes',
+      format: { data: 'json' },
+      schema: esquemaVitrine([{ label: 'Verbete', value: 'Verbete' }])(),
+    }),
+    fortunaCritica: singleton({
+      label: 'Vitrine · Fortuna Crítica',
+      path: 'src/app/data/obra/fortuna-critica',
+      format: { data: 'json' },
+      schema: esquemaVitrine([{ label: 'Resenha', value: 'Resenha' }])(),
+    }),
+    leiturasCriticas: singleton({
+      label: 'Vitrine · Leituras Críticas',
+      path: 'src/app/data/obra/leituras-criticas',
+      format: { data: 'json' },
+      schema: esquemaVitrine([{ label: 'Leitura Crítica', value: 'Leitura Crítica' }])(),
+    }),
+    estudosCriticos: singleton({
+      label: 'Vitrine · Estudos Críticos',
+      path: 'src/app/data/obra/estudos-criticos',
+      format: { data: 'json' },
+      schema: esquemaVitrine([{ label: 'Estudo Crítico', value: 'Estudo Crítico' }])(),
     }),
   },
 });

@@ -1,0 +1,340 @@
+{
+  "itens": [
+    {
+      "ano": "2024",
+      "titulo": "Manto da Transição",
+      "descricao": "De Adélia Nicolete. Alpharrabio Edições.",
+      "tipo": "Prefácio"
+    },
+    {
+      "ano": "2023",
+      "titulo": "Curtidiano",
+      "descricao": "De Zhô Bertolini. Alpharrabio Edições.",
+      "tipo": "Apresentação"
+    },
+    {
+      "ano": "2023",
+      "titulo": "Cidade Cativa",
+      "descricao": "De Deise Assumpção. Alpharrabio Edições.",
+      "tipo": "Resenha"
+    },
+    {
+      "ano": "2022",
+      "titulo": "Justa Causa",
+      "descricao": "De Giovana Damaceno. Editora Penalux.",
+      "tipo": "Orelha"
+    },
+    {
+      "ano": "2022",
+      "titulo": "O Sino Mágico",
+      "descricao": "De Renata Moré (memória da Cia. Do Nó). Alpharrabio Edições.",
+      "tipo": "Prefácio"
+    },
+    {
+      "ano": "2022",
+      "titulo": "Ensaio na Translocal",
+      "descricao": "Conferência na abertura do Curso de Doutorado, Univ. da Madeira.",
+      "tipo": "Ensaio"
+    },
+    {
+      "ano": "2021",
+      "titulo": "Xilogravura de Pássaros",
+      "descricao": "De Carvalho Junior. Editora Penalux (publicado postumamente).",
+      "tipo": "Orelha"
+    },
+    {
+      "ano": "2019",
+      "titulo": "Rastros",
+      "descricao": "De Tarso de Melo. Martelo Casa Editorial.",
+      "tipo": "Orelha"
+    },
+    {
+      "ano": "2018",
+      "titulo": "A mulher de Ló",
+      "descricao": "De Carlos Machado. Coleção Donizete Galvão, Ed. Patuá.",
+      "tipo": "Posfácio"
+    },
+    {
+      "ano": "2017",
+      "titulo": "o avesso da lâmpada",
+      "descricao": "De Demetrios Galvão. Editora Moinhos, MG.",
+      "tipo": "Orelha"
+    },
+    {
+      "ano": "2017",
+      "titulo": "Caderno de Intermitências",
+      "descricao": "De Rosana Chrispim. Editora Patuá.",
+      "tipo": "Prefácio"
+    },
+    {
+      "ano": "2014",
+      "titulo": "Poesia use várias vezes ao dia",
+      "descricao": "De Constança Lucas. Editora Patuá.",
+      "tipo": "Prefácio"
+    },
+    {
+      "ano": "2012",
+      "titulo": "Hugo Eduardo Vespúcio",
+      "descricao": "Texto transformado em plaquete por Luzia Maninha, ofertada a Hugo Eduardo nos seus 60 anos.",
+      "tipo": "Apresentação"
+    },
+    {
+      "ano": "2012",
+      "titulo": "Memórias sentimentais de um silva no rio de suas manhãs",
+      "descricao": "Sobre o livro o rio de minhas manhãs, de Joaquim Celso Freire.",
+      "tipo": "Resenha"
+    },
+    {
+      "ano": "2012",
+      "titulo": "Mariano do Amaral",
+      "descricao": "Exposição uma certa livraria, no Espaço Cultural Gambalaia, Santo André.",
+      "tipo": "Apresentação"
+    },
+    {
+      "ano": "2011",
+      "titulo": "Políticas de Governança",
+      "descricao": "De Luiz Roberto Alves. ABCDMaior Editora.",
+      "tipo": "Prefácio"
+    },
+    {
+      "ano": "2011",
+      "titulo": "Os Livros",
+      "descricao": "Exposição de arte-postal, organização de Constança Lucas. Galeria Gravura Brasileira.",
+      "tipo": "Apresentação"
+    },
+    {
+      "ano": "2010",
+      "titulo": "Bem mais Perto",
+      "descricao": "Exposição de Sueli Moraes. Casa do Olhar, Santo André.",
+      "tipo": "Apresentação"
+    },
+    {
+      "ano": "2010",
+      "titulo": "Monocromia",
+      "descricao": "De Jurema Barreto de Souza. Ed. A Cigarra.",
+      "tipo": "Apresentação"
+    },
+    {
+      "ano": "2009",
+      "titulo": "Livro fotografias",
+      "descricao": "De José de Souza Martins. Ed. USP. Leitura na livraria Alpharrabio.",
+      "tipo": "Apresentação"
+    },
+    {
+      "ano": "2009",
+      "titulo": "Tramas de Formas",
+      "descricao": "Exposição de Cristina Suzuki. Alpharrabio, Santo André.",
+      "tipo": "Apresentação"
+    },
+    {
+      "ano": "2009",
+      "titulo": "Grande ABC: culturas que excedem o lugar culturalizado",
+      "descricao": "De Luiz Roberto Alves. Alpharrabio Edições.",
+      "tipo": "Prefácio"
+    },
+    {
+      "ano": "2008",
+      "titulo": "Espólio de Rubervam",
+      "descricao": "Ed. Scortecci.",
+      "tipo": "Orelha"
+    },
+    {
+      "ano": "2008",
+      "titulo": "O livro de Sophia",
+      "descricao": "De Álvaro Alves de Faria. Leitura crítica em carta ao autor.",
+      "tipo": "Resenha"
+    },
+    {
+      "ano": "2007",
+      "titulo": "Um Silva de A a Z",
+      "descricao": "De Joaquim Celso Freire. Alpharrabio Edições.",
+      "tipo": "Prefácio"
+    },
+    {
+      "ano": "2007",
+      "titulo": "Revista literária A Cigarra",
+      "descricao": "Artigo/apresentação para número especial (25 anos).",
+      "tipo": "Apresentação"
+    },
+    {
+      "ano": "2003",
+      "titulo": "Entretempo",
+      "descricao": "De Rosana Chrispim.",
+      "tipo": "Orelha"
+    },
+    {
+      "ano": "2003",
+      "titulo": "Vitrines da cidade",
+      "descricao": "De Silvia Passarelli. Alpharrabio Edições.",
+      "tipo": "Orelha"
+    },
+    {
+      "ano": "2002",
+      "titulo": "Poéticas sociais",
+      "descricao": "Catálogo de exposição (Amadasi, Suzuki, Massenzi, Giarfi). Diadema.",
+      "tipo": "Apresentação"
+    },
+    {
+      "ano": "2001",
+      "titulo": "Inventor de Paisagens",
+      "descricao": "De Milton Andrade. Alpharrabio Edições.",
+      "tipo": "Orelha"
+    },
+    {
+      "ano": "2001",
+      "titulo": "Paisagens do Olhar",
+      "descricao": "De Paulo Franco. Ed. Alpharrabio.",
+      "tipo": "Orelha"
+    },
+    {
+      "ano": "2000",
+      "titulo": "Brazilírica Pereira: A Traição das Metáforas",
+      "descricao": "De Arthur Gomes. Alpharrabio Edições.",
+      "tipo": "Prefácio"
+    },
+    {
+      "ano": "1999",
+      "titulo": "A História de Augusto Matraga",
+      "descricao": "Peça teatral. Direção Silene Pignagrandi.",
+      "tipo": "Adaptação"
+    },
+    {
+      "ano": "1998",
+      "titulo": "Não Há Neblina na Colina",
+      "descricao": "De Fábio Souza, Roseli Aguiar e Ivone Mariano. Edição dos autores.",
+      "tipo": "Apresentação"
+    },
+    {
+      "ano": "1998",
+      "titulo": "À margem",
+      "descricao": "Coletânea. Alpharrabio Edições. Org. Luzia Teles Veras.",
+      "tipo": "Apresentação"
+    },
+    {
+      "ano": "1996",
+      "titulo": "A ARTE DE LEILA E AS FORÇAS INCOMPATÍVEIS DO UNIVERSO",
+      "descricao": "Catálogo de exposição de Leila Luli. Cine Teatro Carlos Gomes.",
+      "tipo": "Apresentação"
+    },
+    {
+      "ano": "1996",
+      "titulo": "Moacyr",
+      "descricao": "Dentro do projeto Talentos Emergentes. Livraria Alpharrabio.",
+      "tipo": "Orelha"
+    },
+    {
+      "ano": "1996",
+      "titulo": "Talentos Emergentes",
+      "descricao": "Coletânea de novos escritores. Alpharrabio Edições.",
+      "tipo": "Prefácio"
+    },
+    {
+      "ano": "1996",
+      "titulo": "Coleção Prosas",
+      "descricao": "6 volumes em caixa (Valdecirio T. Veras, A. P. Sampaio, etc). Alpharrabio Edições.",
+      "tipo": "Apresentação"
+    },
+    {
+      "ano": "1996",
+      "titulo": "Coleção Poéticas",
+      "descricao": "5 volumes em caixa manual. Alpharrabio Edições.",
+      "tipo": "Apresentação"
+    },
+    {
+      "ano": "1996",
+      "titulo": "Recado",
+      "descricao": "Monólogo com poemas de A Palavraparte. Ator Marcos Lemes, dir. Paulo Henrique Sarro. (Biblioteca Mário de Andrade, Alpharrabio, Teatro Municipal de Santo André, etc).",
+      "tipo": "Adaptação"
+    },
+    {
+      "ano": "1996",
+      "titulo": "A Palavraparte",
+      "descricao": "Monólogo com Artur Gomes. Direção de Hamir Haddad. Alpharrabio.",
+      "tipo": "Adaptação"
+    },
+    {
+      "ano": "1995",
+      "titulo": "Pessoa",
+      "descricao": "Espetáculo teatral de Silvio Vieira com ator Marcos Lemes.",
+      "tipo": "Apresentação"
+    },
+    {
+      "ano": "1995",
+      "titulo": "Trovas Madeirenses",
+      "descricao": "De Maria Lourdes Agrela. Alpharrabio Edições (1ª e 2ª edições).",
+      "tipo": "Prefácio"
+    },
+    {
+      "ano": "1994",
+      "titulo": "Sem Ensaio",
+      "descricao": "De Zhô Bertholini. Edição do autor.",
+      "tipo": "Prefácio"
+    },
+    {
+      "ano": "1991",
+      "titulo": "Cores de vidro",
+      "descricao": "De Corinne Marian. Edições Livrespaço.",
+      "tipo": "Prefácio"
+    },
+    {
+      "ano": "1990",
+      "titulo": "Leila Luli",
+      "descricao": "Catálogo de exposição. Cine Teatro Carlos Gomes, Santo André.",
+      "tipo": "Apresentação"
+    },
+    {
+      "ano": "1983",
+      "titulo": "Concurso Magister de Poesias",
+      "descricao": "Coletânea do Colégio Magister, São Caetano do Sul.",
+      "tipo": "Prefácio"
+    },
+    {
+      "ano": "0",
+      "titulo": "DA viagem à LILA",
+      "descricao": "Colagem com poemas, crônicas e diários. Grupo Ponto de Fiandeiras. (Museu de Santo André, Alpharrabio, UFABC).",
+      "tipo": "Adaptação"
+    },
+    {
+      "ano": "0",
+      "titulo": "Coedição Alpharrabio / Prefeitura de Diadema",
+      "descricao": "Coletânea de novos escritores.",
+      "tipo": "Prefácio"
+    },
+    {
+      "ano": "0",
+      "titulo": "Roupa nova",
+      "descricao": "De Gilberto Tadeu de Lima. Alpharrabio Edições.",
+      "tipo": "Orelha"
+    },
+    {
+      "ano": "0",
+      "titulo": "Rosana Chrispim",
+      "descricao": "Vol. Coleção micro Alpharrabio, nos 40 anos da poeta.",
+      "tipo": "Apresentação"
+    },
+    {
+      "ano": "0",
+      "titulo": "Margarita Lo Russo",
+      "descricao": "Coleção micro Alpharrabio.",
+      "tipo": "Prefácio"
+    },
+    {
+      "ano": "0",
+      "titulo": "A profissão dos peixes",
+      "descricao": "De Rubervam du Nascimento. 2ª edição.",
+      "tipo": "Apresentação"
+    },
+    {
+      "ano": "0",
+      "titulo": "Juca Arteiro",
+      "descricao": "De Daniel Henrique Esteves Grando.",
+      "tipo": "Prefácio"
+    },
+    {
+      "ano": "0",
+      "titulo": "Thiago Sandes Pereira",
+      "descricao": "Livro de menino autista.",
+      "tipo": "Apresentação"
+    }
+  ]
+}

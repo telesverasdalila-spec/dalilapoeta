@@ -1,0 +1,18 @@
+{
+  "itens": [
+    {
+      "ano": "0",
+      "titulo": "Resistência e Assimilação em Dalila Teles Veras",
+      "descricao": "Por Clara Moura Lourenço – Universidade de Coimbra.",
+      "tipo": "Estudo Crítico",
+      "slug": "estudo-critico-resistencia-e-assimilacao"
+    },
+    {
+      "ano": "2002",
+      "titulo": "Dalila Teles Veras",
+      "descricao": "Por José Armando Pereira da Silva.",
+      "tipo": "Estudo Crítico",
+      "slug": "estudo-critico-dalila-teles-veras"
+    }
+  ]
+}

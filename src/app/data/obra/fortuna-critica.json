@@ -1,0 +1,64 @@
+{
+  "itens": [
+    {
+      "ano": "1983",
+      "titulo": "Tantos caminhos ainda por seguir",
+      "descricao": "Francisco Miguel de Moura, Jornal da Manhã, pg.06, Teresina, PI.",
+      "tipo": "Resenha"
+    },
+    {
+      "ano": "1986",
+      "titulo": "A eterna curiosidade de descobrir o que está do outro lado",
+      "descricao": "Dalila Teles Veras – Uma poetisa madeirense no Brasil. Marina Caldas, Diário de Notícias, Funchal, pg.2.",
+      "tipo": "Resenha"
+    },
+    {
+      "ano": "1989",
+      "titulo": "Madeira: do vinho à saudade",
+      "descricao": "Nair Lacerda, A Tribuna, Santos, SP.",
+      "tipo": "Resenha"
+    },
+    {
+      "ano": "2000",
+      "titulo": "Em torno de um livro de crônicas",
+      "descricao": "Caio Porfírio Carneiro, Jornal Linguagem Viva, janeiro de 2000. (VC)",
+      "tipo": "Resenha"
+    },
+    {
+      "ano": "2001",
+      "titulo": "Poeta Crônica",
+      "descricao": "Fabiano Calixto, Jornal Linguagem Viva, fev. 2001. (VC)",
+      "tipo": "Resenha"
+    },
+    {
+      "ano": "2008",
+      "titulo": "Pintura do Cotidiano",
+      "descricao": "Álvaro Alves de Faria, Jornal Rascunho, 104, dez/2008. (RF)",
+      "tipo": "Resenha"
+    },
+    {
+      "ano": "2013",
+      "titulo": "A estranheza poética dos fatos no cotidiano em Dalila",
+      "descricao": "Luiz Roberto Alves, Jornal Linguagem Viva, junho de 2013. (EFV)",
+      "tipo": "Resenha"
+    },
+    {
+      "ano": "2016",
+      "titulo": "Paixão movida por compromisso",
+      "descricao": "Rubens Shirassu Júnior, Jornal Linguagem Viva, no. 328, dezembro de 2016. (70)",
+      "tipo": "Resenha"
+    },
+    {
+      "ano": "2016",
+      "titulo": "Solidões da memória",
+      "descricao": "Fernando Py, Tribuna de Petrópolis, 4.11.2016. (SM)",
+      "tipo": "Resenha"
+    },
+    {
+      "ano": "2017",
+      "titulo": "Geografia dos sentidos",
+      "descricao": "Valdomiro Santana, Suplemento Literário de Minas Gerais, Ed. 1.370, pgs. 12-15, Belo Horizonte, MG. (SM)",
+      "tipo": "Resenha"
+    }
+  ]
+}

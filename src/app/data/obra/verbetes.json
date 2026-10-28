@@ -1,0 +1,76 @@
+{
+  "itens": [
+    {
+      "ano": "2021",
+      "titulo": "As Mulheres Poetas na Literatura Brasileira",
+      "descricao": "Rubens Jardim (org.). Arribaçã, Cajazeiras, PB.",
+      "tipo": "Verbete"
+    },
+    {
+      "ano": "2010",
+      "titulo": "Gente do ABCD – 100 crônicas do jornal ABCD Maior",
+      "descricao": "Sobre lideranças populares na região. Verbete por Daniel Brazil. ABCDMaior.",
+      "tipo": "Verbete"
+    },
+    {
+      "ano": "2008",
+      "titulo": "Imprensa Alternativa no ABC – A história contada pelos independentes",
+      "descricao": "Olga Defavari. Prefeitura de Santo André, SP.",
+      "tipo": "Verbete"
+    },
+    {
+      "ano": "2003",
+      "titulo": "O Vinho da Madeira na voz dos apreciadores e literatos",
+      "descricao": "In A Vinha e o Vinho na História da Madeira, Séculos XV a XX. Alberto Vieira. Centro de Estudos de História do Atlântico, Funchal, Portugal.",
+      "tipo": "Verbete"
+    },
+    {
+      "ano": "2002",
+      "titulo": "Dicionário Crítico de Escritoras Brasileiras",
+      "descricao": "Nelly Novaes Coelho. Escrituras, SP (verbete crítico pgs. 148 e 149).",
+      "tipo": "Verbete"
+    },
+    {
+      "ano": "2001",
+      "titulo": "Enciclopédia de Literatura Brasileira",
+      "descricao": "Vols. I e II. Afrânio Coutinho e J. Galante de Souza. Global/Ministério da Cultura, Academia Brasileira de Letras.",
+      "tipo": "Verbete"
+    },
+    {
+      "ano": "2000",
+      "titulo": "História da Literatura em Santo André – um ensaio através do tempo",
+      "descricao": "Tarso de Melo. Prefeitura Municipal de Santo André.",
+      "tipo": "Verbete"
+    },
+    {
+      "ano": "1999",
+      "titulo": "Dicionário de Mulheres",
+      "descricao": "Hilda Agnes Hübner Flores. RS: Ed. Nova Dimensão, 1ª ed. (verbete pg. 763). 2ª ed. revista e ampliada, Editora Mulheres, Florianópolis, 2011.",
+      "tipo": "Verbete"
+    },
+    {
+      "ano": "1994",
+      "titulo": "Anuário da Poesia Brasileira, 1994",
+      "descricao": "CODPOE – Cooperativa de Poetas e Escritores, Rio de Janeiro.",
+      "tipo": "Verbete"
+    },
+    {
+      "ano": "1993",
+      "titulo": "Ensaístas Brasileiras - Mulheres que escreveram sobre literatura e artes de 1860 a 1991",
+      "descricao": "Heloísa Buarque de Holanda e Lúcia Nascimento Araújo (org.). RJ: Ed. Rocco.",
+      "tipo": "Verbete"
+    },
+    {
+      "ano": "1992",
+      "titulo": "Antologia da Nova Poesia Brasileira",
+      "descricao": "Organização, seleção, notas e apresentação de Olga Savary, com 334 poetas de todas as regiões do Brasil. Fundação Rio/RioArte, Editora Hipocampo.",
+      "tipo": "Verbete"
+    },
+    {
+      "ano": "1988",
+      "titulo": "Dicionário de Poetas Contemporâneos",
+      "descricao": "Francisco Igreja (org.). RJ: Oficina Letras & Artes (2ª ed., RJ: Oficina Cadernos de Poesia, 1991).",
+      "tipo": "Verbete"
+    }
+  ]
+}

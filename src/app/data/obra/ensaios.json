@@ -1,0 +1,206 @@
+{
+  "itens": [
+    {
+      "ano": "2016",
+      "titulo": "Emigração, memória e as tarefas da poesia",
+      "descricao": "Comunicação apresentada no Funchal, Madeira (Portugal), em 10.11.2016.",
+      "tipo": "Palestra",
+      "slug": "emigracao-memoria-e-as-tarefas-da-poesia"
+    },
+    {
+      "ano": "2015",
+      "titulo": "Os Congressos de História do Grande ABC e as tarefas da poesia",
+      "descricao": "Palestra proferida na abertura do XIII Congresso de História do Grande ABC, 2015.",
+      "tipo": "Palestra",
+      "slug": "os-congressos-de-historia-do-grande-abc-e-as-tarefas-da-poesia"
+    },
+    {
+      "ano": "2011",
+      "titulo": "A AMÁLIA E O FADO - Estranhas formas de vida",
+      "descricao": "Ensaio publicado na revista nanico 22, maio de 2011.",
+      "tipo": "Ensaio",
+      "slug": "a-amalia-e-o-fado-estranhas-formas-de-vida"
+    },
+    {
+      "ano": "2010",
+      "titulo": "Saramago e a poética do humano",
+      "descricao": "Ensaio sobre a trajetória de José Saramago.",
+      "tipo": "Ensaio",
+      "slug": "saramago-e-a-poetica-do-humano"
+    },
+    {
+      "ano": "2010",
+      "titulo": "Pessoa e Saramago - A palavra (re)veladora",
+      "descricao": "Palestra no evento Saramago & Pessoa, SESCSP, 17.09.2010.",
+      "tipo": "Palestra",
+      "slug": "pessoa-e-saramago-a-palavra-re-veladora"
+    },
+    {
+      "ano": "2008",
+      "titulo": "A vez da utopia na agenda cultural",
+      "descricao": "Ensaio publicado na obra coletiva Nosso Século XXI, Vol. 2 (2008).",
+      "tipo": "Ensaio",
+      "slug": "a-vez-da-utopia-na-agenda-cultural"
+    },
+    {
+      "ano": "2008",
+      "titulo": "Joaquim de Montezuma de Carvalho: Embaixador Cultural",
+      "descricao": "Comunicação no Colóquio 400 Anos de Padre António Vieira, 24.04.2008.",
+      "tipo": "Comunicação",
+      "slug": "joaquim-de-montezuma-de-carvalho-embaixador-cultural"
+    },
+    {
+      "ano": "2007",
+      "titulo": "Café, verso e história",
+      "descricao": "Roteiro de palestra no SESC São Caetano (Projeto Estação Café).",
+      "tipo": "Palestra",
+      "slug": "cafe-verso-e-historia"
+    },
+    {
+      "ano": "2004",
+      "titulo": "Cidadã Andreense",
+      "descricao": "Discurso na Câmara Municipal de Santo André, 17.03.2004.",
+      "tipo": "Discurso",
+      "slug": "cidada-andreense"
+    },
+    {
+      "ano": "2003",
+      "titulo": "João Ramalho: um luso na história e na literatura do Brasil",
+      "descricao": "Ensaio sobre a polêmica figura do fundador de Santo André (1553).",
+      "tipo": "Ensaio",
+      "slug": "joao-ramalho-um-luso-na-historia-e-na-literatura-do-brasil"
+    },
+    {
+      "ano": "2002",
+      "titulo": "Ser Editor e Poeta no Grande ABC",
+      "descricao": "Palestra na I Semana do Editor (FAENAC, 2002).",
+      "tipo": "Palestra",
+      "slug": "ser-editor-e-poeta-no-grande-abc"
+    },
+    {
+      "ano": "2001",
+      "titulo": "As palavras aí estão, uma por uma...",
+      "descricao": "Depoimento na Casa da Palavra, 07.11.2001.",
+      "tipo": "Depoimento",
+      "slug": "as-palavras-ai-estao-uma-por-uma"
+    },
+    {
+      "ano": "2001",
+      "titulo": "A Cultura na Pauta da Agenda Regional",
+      "descricao": "Ensaio na coletânea Nosso Século XXI (2001).",
+      "tipo": "Ensaio",
+      "slug": "a-cultura-na-pauta-da-agenda-regional"
+    },
+    {
+      "ano": "2000",
+      "titulo": "Pessoa Entranhado",
+      "descricao": "Depoimento no encontro dos 60 anos da morte de Pessoa, 25.11.2000.",
+      "tipo": "Depoimento",
+      "slug": "pessoa-entranhado"
+    },
+    {
+      "ano": "2000",
+      "titulo": "Eu nunca estive em Macau",
+      "descricao": "Comunicação no Colóquio de Macau, 18.08.2000.",
+      "tipo": "Comunicação",
+      "slug": "eu-nunca-estive-em-macau"
+    },
+    {
+      "ano": "2000",
+      "titulo": "Poesia Madeirense",
+      "descricao": "Comunicação no III Encontro Luso-Afro-Brasileiro (2000).",
+      "tipo": "Comunicação",
+      "slug": "poesia-madeirense"
+    },
+    {
+      "ano": "2000",
+      "titulo": "Seduzir para a poesia: a experiência do grupo Livrespaço",
+      "descricao": "Texto no Encontro de Escritores em Fortaleza, 02.06.2000.",
+      "tipo": "Comunicação",
+      "slug": "seduzir-para-a-poesia-a-experiencia-do-grupo-livrespaco-1983-1993"
+    },
+    {
+      "ano": "1999",
+      "titulo": "A Criação literária como matéria de memória e esquecimento",
+      "descricao": "Texto-roteiro no Seminário Literatura & Memória, out/1999.",
+      "tipo": "Palestra",
+      "slug": "a-criacao-literaria-como-materia-de-memoria-e-esquecimento"
+    },
+    {
+      "ano": "1998",
+      "titulo": "Revistas Literárias",
+      "descricao": "Ensaio na revista A Cigarra no. 33 (1998).",
+      "tipo": "Ensaio",
+      "slug": "revistas-literarias"
+    },
+    {
+      "ano": "1998",
+      "titulo": "Os impróprios nomes próprios como matéria para poesia",
+      "descricao": "Ensaio na RL – Revista Literatura, no. 11, 1998.",
+      "tipo": "Ensaio",
+      "slug": "os-improprios-nomes-proprios-como-materia-para-poesia"
+    },
+    {
+      "ano": "1997",
+      "titulo": "Beats e Marginais - as últimas escolas",
+      "descricao": "Ensaio na revista A Cigarra, no. 30, 1997.",
+      "tipo": "Ensaio",
+      "slug": "beats-e-marginais-as-ultimas-escolas"
+    },
+    {
+      "ano": "1997",
+      "titulo": "Poesia feita por mulheres",
+      "descricao": "Palestra proferida na RECAP (Refinaria Capuava), Santo André, 5.04.1997.",
+      "tipo": "Palestra",
+      "slug": "poesia-feita-por-mulheres"
+    },
+    {
+      "ano": "1996",
+      "titulo": "Para além do Bojador",
+      "descricao": "Comunicação no II Encontro de Artistas Portugueses no Brasil, 1996.",
+      "tipo": "Comunicação",
+      "slug": "para-alem-do-bojador"
+    },
+    {
+      "ano": "1995",
+      "titulo": "A evocação de Oswald",
+      "descricao": "Texto no Evento Retalhos Imortais do SerAfim, out/1995.",
+      "tipo": "Palestra",
+      "slug": "a-evocacao-de-oswald"
+    },
+    {
+      "ano": "1991",
+      "titulo": "A imprensa alternativa no Brasil como resistência cultural",
+      "descricao": "Texto no Colóquio na UNESCO, Paris, jun/1991.",
+      "tipo": "Comunicação",
+      "slug": "a-imprensa-alternativa-no-brasil-como-resistencia-cultural"
+    },
+    {
+      "ano": "1991",
+      "titulo": "A Literatura no ABC (Da contemplação à resistência)",
+      "descricao": "Artigo na Revista Raízes no. 4, jan/1991.",
+      "tipo": "Artigo",
+      "slug": "a-literatura-no-abc-da-contemplacao-a-resistencia"
+    },
+    {
+      "ano": "1990",
+      "titulo": "O escritor luso-brasileiro: entre duas pátrias",
+      "descricao": "Comunicação no I Encontro de Intelectuais Portugueses no Brasil, mai/1990.",
+      "tipo": "Comunicação"
+    },
+    {
+      "ano": "0",
+      "titulo": "Sentir-se Português na Diáspora",
+      "descricao": "Ensaio sobre a diáspora portuguesa e a identidade luso-brasileira.",
+      "tipo": "Ensaio",
+      "slug": "sentir-se-portugues-na-diaspora"
+    },
+    {
+      "ano": "0",
+      "titulo": "O Poeta e a Cidade",
+      "descricao": "Anotações para uma conversa sobre a relação entre o poeta e a cidade.",
+      "tipo": "Palestra",
+      "slug": "o-poeta-e-a-cidade"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "itens": [
+    {
+      "ano": "2013",
+      "titulo": "Estranhas formas de vida",
+      "descricao": "Por Luiz Roberto Alves. A estranheza poética dos fatos no cotidiano em Dalila.",
+      "tipo": "Leitura Crítica",
+      "slug": "leituras-criticas-estranhas-formas-de-vida"
+    },
+    {
+      "ano": "2009",
+      "titulo": "Retratos Falhados",
+      "descricao": "Textos de Irene Lucília Andrade e Álvaro Alves de Faria.",
+      "tipo": "Leitura Crítica",
+      "slug": "leituras-criticas-retratos-falhados"
+    },
+    {
+      "ano": "2002",
+      "titulo": "À Janela dos Dias",
+      "descricao": "Textos de Joaquim Branco, Francisco Miguel de Moura, j. geraldo neres e outros autores.",
+      "tipo": "Leitura Crítica",
+      "slug": "leituras-criticas-a-janela-dos-dias"
+    },
+    {
+      "ano": "2003",
+      "titulo": "Vestígios",
+      "descricao": "Mensagens de leitores e resenha de Nicodemos Sena.",
+      "tipo": "Leitura Crítica",
+      "slug": "leituras-criticas-vestigios"
+    },
+    {
+      "ano": "2007",
+      "titulo": "As Artes do Ofício",
+      "descricao": "Textos de Luís Alberto de Abreu, Rosana Chrispim e Fabiano Calixto.",
+      "tipo": "Leitura Crítica",
+      "slug": "leituras-criticas-as-artes-do-oficio"
+    },
+    {
+      "ano": "1999",
+      "titulo": "A Vida Crônica",
+      "descricao": "Textos de Tarso de Melo, Caio Porfírio Carneiro e Fabiano Calixto.",
+      "tipo": "Leitura Crítica",
+      "slug": "leituras-criticas-a-vida-cronica"
+    }
+  ]
+}

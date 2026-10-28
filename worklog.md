@@ -926,3 +926,27 @@ Stage Summary:
 - Tags livres: ela digita qualquer tag nova no registro; cores pelo mapa do site (tags desconhecidas ganham cor padrão)
 - Pacote: download/painel-movimento-ativismo.zip (pacote 8) + LEIA-ME.txt
 - Próxima: Fatia 4 = Vitrine da Obra (coletâneas com Países, ensaios, crônicas, traduções, Colaborações Literárias — conversa de desenho antes)
+
+---
+Task ID: 107
+Agent: Super Z (sessão de continuação)
+Task: Perícia do pacote 8 (aplicado pela usuária) + Fatia 4 dadificada — Vitrine da Obra: as 13 gavetas da home (213 peças)
+
+Work Log:
+- Perícia 9026b4f: pacote 8 aplicado fiel (3 arquivos; storage cloud; 10 gavetas esquemaAtivismo; grupo Movimento no fim do menu) e site vivo (WebFetch: 3 eixos no cabeçalho) → MOVIMENTO NO AR; OS 3 EIXOS COMPLETOS no painel
+- Radiografia da Vitrine: SecaoObras.tsx (429 linhas) com 15 listas hardcoded e 213 peças no formato Livro {ano, titulo, descricao, tipo, slug?, ficha?}; 24 tipos distintos; coletâneas em 3 listas por país; colaborações filtradas por tipo exato nas sub-abas (Apresentação/Ensaio/Resenha | Prefácio/Orelha/Posfácio | Adaptação); 11 anos-intervalo "1999-2004" (crônicas) + 2 anos vazios (entrevistas) → ano NÃO pode ser integer
+- Extrator (scripts/extrair-obras.js): 15 listas → 13 JSONs em src/app/data/obra/ com envoltório {"itens":[...]}; coletâneas fundidas em 1 JSON com campo pais (Brasil 35 / Portugal 8 / Outros países 7); contagens auditadas no console (vitrinePoesia 22, vitrineProsa 7, vitrineMimo 1, coletaneas 50, colaboracoes 56, ensaios 29, cronicas 9, entrevistas 7, traducoes 2, verbetes 12, fortunaCritica 10, leiturasCriticas 6, estudosCriticos 2)
+- Revestidor (scripts/revestir-obras.js): troca as 15 consts por leituras dos JSONs com MESMOS nomes de variáveis (render intocado); interface Livro ganha pais?; comentários Task 114/117 preservados, Task 107 movida para junto da const; proteção nova: link "Leia o texto" do bloco leituras/estudos condicionado a slug (hoje todos têm — visual idêntico)
+- Config: molde esquemaVitrine(tipos) com select de Tipo POR FICHA (opções fechadas = protege os filtros de sub-aba de colaborações), ano como fields.text (intervalos), ficha/slug opcionais com description; molde próprio esquemaColetaneas() com seletor País (Brasil/Portugal/Outros países); rotuloPeca() = "Título (ano)"; 13 singletons + 3 grupos no menu: 'Obra · Vitrine — Prateleiras' (5), '— Escritos' (4), '— Resenhas' (4); 61 gavetas no total
+- TESTE REAL (storage local + next dev 3199 + agent-browser): SITE — 5 abas com nomes completos, régua de décadas OK, poesia 5/5 testes, coletâneas Brasil 3/3 Portugal 3/3 Outros 3/3, colaborações Apresentações/Prefácios(Manto)/Adaptações OK, ensaios (Saramago + 4 sub-abas), crônicas com grupo "1999-2004" e 9 links "Leia o texto", entrevistas com "Data não informada", leituras com 6 links — regressão zero; PAINEL — menu com 3 grupos novos, ficha Coletâneas com 50 peças rotuladas, item aberto com Ano/Título/Descrição/Tipo/País; TESTE DE GRAVAÇÃO: ano 2023→2024 + Save (POST update 200) → JSON reescrito com as 5 chaves preservadas, 50 itens; desfeito na mão (jsons novos não commitados — git checkout não pega; anotado)
+- INCIDENTE/CORREÇÃO: fields.text exige ano STRING — primeira versão dos JSONs com ano number deu "Field validation failed: itens.N.ano: Must be a string" em TODA a ficha; script anonizar-obras.js converteu 202 anos para string (extrairAnoBase já parseia string: "1999-2004"→1999, ""→0); site re-testado OK
+- Lição de rota: URL do singleton é /keystatic/singleton/<chave> no SINGULAR (singletons plural dá "Not found" com menu bonito — pega o artista)
+- storage cloud; build OK (146 páginas); next-env.d.ts limpo; pacote: keystatic.config.ts + SecaoObras.tsx + 13 JSONs + worklog.md
+
+Stage Summary:
+- FATIA 4 ENTREGUE: a vitrine inteira da home (5 abas, 13 sub-abas, 213 peças) é agora editável no painel
+- Coletâneas: seletor País move a peça entre Brasil/Portugal/Outros países sozinha
+- Colaborações: select de Tipo (7 opções) direciona a peça para a sub-aba certa
+- Anos aceitam número, intervalo ("1999-2004") e vazio — o site extrai o ano base para a régua de décadas
+- Pacote: download/painel-vitrine-obra.zip (pacote 9) + LEIA-ME.txt
+- Próxima: jornada "dadificar" COMPLETA — 4 fatias (Vida, Mídia, Movimento, Vitrine). Segue a fase de conferência da usuária (amanhã, cabeça fresca)

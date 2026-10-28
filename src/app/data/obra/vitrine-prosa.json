@@ -1,0 +1,47 @@
+{
+  "itens": [
+    {
+      "titulo": "Diuturnos",
+      "ano": "2012",
+      "descricao": "Diário. SP: Alpharrabio",
+      "tipo": "Livro"
+    },
+    {
+      "titulo": "Seduzir para a Poesia",
+      "ano": "2008",
+      "descricao": "Trajetória Grupo Livrespaço",
+      "tipo": "Livro"
+    },
+    {
+      "titulo": "Anotações de Leituras",
+      "ano": "2006",
+      "descricao": "Comemorativa 14º aniversário",
+      "tipo": "Plaquete"
+    },
+    {
+      "titulo": "Alpharrabio 12 anos",
+      "ano": "2004",
+      "descricao": "Em coautoria com Luzia Maninha",
+      "tipo": "Livro"
+    },
+    {
+      "titulo": "Minudências",
+      "ano": "2000",
+      "descricao": "Diário. SP: Alpharrabio",
+      "tipo": "Livro"
+    },
+    {
+      "titulo": "As Artes do Ofício",
+      "ano": "2000",
+      "descricao": "Crônicas. SP: Alpharrabio",
+      "tipo": "Livro",
+      "ficha": "as-artes-do-oficio---um-olhar-sobre-o-abc"
+    },
+    {
+      "titulo": "A Vida Crônica",
+      "ano": "1999",
+      "descricao": "Crônicas. SP: Alpharrabio",
+      "tipo": "Livro"
+    }
+  ]
+}

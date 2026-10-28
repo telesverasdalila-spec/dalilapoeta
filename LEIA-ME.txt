@@ -1,85 +1,86 @@
 =============================================================
-PACOTE 8 — EIXO MOVIMENTO NO PAINEL: ATIVISMO CULTURAL (Task 106)
+PACOTE 9 — VITRINE DA OBRA NO PAINEL (Task 107)
 Site Memorial Dalila Teles Veras
 =============================================================
 
 O QUE MUDA NESTE PACOTE
 -----------------------
-O painel agora tem OS 3 EIXOS COMPLETOS! Entra o:
-   MOVIMENTO · ATIVISMO CULTURAL, com 10 gavetas:
-   - Palestras  e  Oficinas & Workshops
-     (as duas juntas formam a sub-aba "Palestras & Oficinas" do site)
-   - Saraus & Recitais
-   - Congressos & Seminários
-   - Conferências & Mesas
-   - Institucionais  e  Atividades Culturais
-     (as duas juntas formam a sub-aba "Encontros & Reuniões")
-   - Programas & Entrevistas
-   - Curadoria & Consultoria
-   - Leituras Poéticas
+A ÚLTIMA E MAIOR FATIA! A vitrine inteira da home (seção Obra)
+virou fichas editáveis no painel. São 3 grupos novos:
 
-SÃO 46 REGISTROS de eventos, todos agora editáveis:
-cada registro tem Título, Data, Local, Cidade, Estado, País,
-Tags, Texto original...
+   OBRA · VITRINE — PRATELEIRAS
+   - Vitrine · Poesia (22 peças)
+   - Vitrine · Prosa (7 peças)
+   - Vitrine · Mimo (1 peça)
+   - Vitrine · Coletâneas (Países) (50 peças!)
+   - Vitrine · Colaborações Literárias (56 peças!)
 
-O SITE CONTINUA IGUAL — só a fonte dos dados mudou de lugar.
-(Só 2 arquivos no pacote: o painel e o diário de bordo.)
+   OBRA · VITRINE — ESCRITOS
+   - Ensaios (29) · Crônicas (9) · Entrevistas (7) · Traduções (2)
+
+   OBRA · VITRINE — RESENHAS
+   - Fortuna Crítica (10) · Verbetes (12)
+   - Leituras Críticas (6) · Estudos Críticos (2)
+
+SÃO 213 PEÇAS, todas com: Ano, Título, Descrição, Tipo.
+E cada gaveta tem lixeirinha e botão Add, como nas demais.
+
+AS TRÊS MAGIAS DESTE PACOTE
+---------------------------
+1. COLETÂNEAS COM PAÍS: cada peça tem um seletor
+   "País (define a aba da home)": Brasil, Portugal ou
+   Outros países. A peça cai na sub-aba certa sozinha!
+
+2. COLABORAÇÕES COM TIPO: o campo "Tipo da peça"
+   (Apresentação, Prefácio, Orelha, Posfácio, Adaptação,
+   Ensaio, Resenha) direciona a peça para a sub-aba certa
+   da home. Use sempre uma das opções da lista!
+
+3. ANOS FLEXÍVEIS: o Ano aceita número (2024), intervalo
+   ("1999-2004" — como nas crônicas) e até vazio (a peça
+   fica em "Data não informada"). O site entende tudo!
+
+DOIS CAMPOS ESPECIAIS (opcional, deixar vazio na dúvida)
+--------------------------------------------------------
+- "Ficha — id da página do livro": só para livros que têm
+  página própria no site (ex.: tempo-em-furia). Alimenta o
+  link "Conheça a obra".
+- "Slug do texto integral": ex.: saramago-e-a-poetica-do-
+  humano. Alimenta o link "Leia o texto" em Ensaios,
+  Crônicas, Entrevistas, Traduções, Leituras e Estudos.
+
+O SITE CONTINUA IGUAL — pixel a pixel. Só a fonte dos dados
+mudou de lugar (13 JSONs novos em src/app/data/obra/).
+O site também continua reordenando as peças por ano e
+agrupando por década sozinho — pode adicionar em qualquer
+ordem!
+
+ARQUIVOS NESTE PACOTE
+---------------------
+- keystatic.config.ts   (13 gavetas novas + 3 grupos no menu)
+- src/app/components/SecaoObras.tsx  (agora lê dos JSONs)
+- src/app/data/obra/*.json  (13 arquivos novos com os dados)
+- worklog.md            (diário de bordo)
+- LEIA-ME.txt           (este arquivo)
 
 COMO APLICAR (passo a passo de sempre)
 --------------------------------------
 1. Descompacte este zip DENTRO da pasta do projeto
    (C:\Users\Windows 10\Desktop\dalila-teles-veras),
-   por cima — confirme "Substituir"
-   São 2 arquivos:
-     keystatic.config.ts
-     worklog.md
-2. VS Code: tronquinho -> "+" -> Message:
-   "eixo movimento no painel - ativismo cultural"
-   -> ✓ Commit -> Sync Changes
-3. Vercel 2-3 min -> painel em JANELA ANÔNIMA:
-   https://dalila-teles-poeta.vercel.app/keystatic
-   Ctrl+Shift+R
+   por cima, substituindo tudo.
+2. No VS Code: tronquinho → "+" em tudo → caixinha Message
+   → "vitrine da obra no painel" → ✓ commit.
+3. Sync Changes (botão embaixo à esquerda).
+4. Espere a Vercel publicar (2-3 min).
+5. Abra o site em janela anônima com Ctrl+Shift+R.
+6. Abra o painel (/keystatic) e veja os 3 grupos novos!
 
-COMO USAR AS FICHAS DO MOVIMENTO
---------------------------------
-- ABRIR: menu -> Movimento · Ativismo Cultural -> escolha a gaveta
-- CADA REGISTRO aparece na lista como "Título (ano)" — ex.:
-  "Sarau Poesia sem Quartel! (2016)"
-- EDITAR: clique no registro -> mude o campo -> Save
-- ADICIONAR evento novo: botão "Add" na lista "Registros (eventos)"
-  -> preencha Título, Data (AAAA-MM-DD), Local... -> Save
-- APAGAR: lixeirinha à direita do registro -> Save
-  (a lixeirinha também funciona na gaveta inteira, se um dia
-   precisar esvaziar uma categoria — mas recomendo NÃO apagar
-   gavetas: elas são a estrutura do site)
+DEPOIS DE APLICAR — o roteiro de conferência de amanhã
+------------------------------------------------------
+- Menu do painel: os 3 grupos "Vitrine" logo após Homenagens
+- Vitrine · Coletâneas (Países): 50 peças; abra uma e teste
+  o seletor de País (sem salvar, se quiser só olhar!)
+- Site: aba Obra → Coletâneas → as três sub-abas de países
+- Qualquer coisa fora do lugar: me chama que eu resolvo!
 
-AS TAGS (o que você pediu!)
----------------------------
-- Cada evento tem a lista "Tags do evento" — são LIVRES:
-  clique em Add e digite qualquer tag (sarau, palestra, oficina,
-  residência, lançamento... o que quiser!)
-- A cor de cada tag vem do mapa de cores do site; tags novas
-  ganham a cor padrão. Se um dia quiser uma COR batizada para
-  uma tag nova, é só me pedir (mudança de código, 5 minutos)
-- "Tags comuns" no topo da ficha é só um lembrete informativo
-
-CAMPINHOS COM "(não mexer)"
----------------------------
-- ID único, Número de ordem, Categoria interna/principal,
-  Total de registros e Slug do texto: são engrenagens internas.
-  Pode olhar, mas não recomendo alterar — em caso de dúvida,
-  me chame antes de salvar.
-
-TRANQUILIDADE (cinto de segurança)
-----------------------------------
-- Cada Save vira um commit no cofre (GitHub). Apagou sem querer?
-  NADA se perde — o histórico guarda cada versão, é só avisar.
-
-O QUE VEM DEPOIS
-----------------
-- Etapa 4 (a grande final): Vitrine da Obra — Coletâneas com
-  categoria Países, Ensaios, Crônicas, Traduções e as
-  COLABORAÇÕES LITERÁRIAS (com uma conversa de desenho antes)
-
-=============================================================
-Qualquer estranheza: me chame antes de desfazer algo. :)
+FIM DA JORNADA "DADIFICAR" — os 3 Eixos inteiros no painel!

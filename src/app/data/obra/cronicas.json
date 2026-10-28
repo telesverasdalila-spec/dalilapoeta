@@ -1,0 +1,67 @@
+{
+  "itens": [
+    {
+      "ano": "1999-2004",
+      "titulo": "A Língua, a pátria possível",
+      "descricao": "Crônicas escritas para coluna Viaverbo, entre 1999-2004.",
+      "tipo": "Crônica",
+      "slug": "a-lingua-a-patria-possivel"
+    },
+    {
+      "ano": "1999-2004",
+      "titulo": "Anotações de Leituras IV",
+      "descricao": "Crônicas escritas para coluna Viaverbo, entre 1999-2004.",
+      "tipo": "Crônica",
+      "slug": "anotacoes-de-leituras-iv"
+    },
+    {
+      "ano": "1999-2004",
+      "titulo": "Anotações de Leituras III",
+      "descricao": "Crônicas escritas para coluna Viaverbo, entre 1999-2004.",
+      "tipo": "Crônica",
+      "slug": "anotacoes-de-leituras-iii"
+    },
+    {
+      "ano": "1999-2004",
+      "titulo": "Anotações de Leituras II",
+      "descricao": "Crônicas escritas para coluna Viaverbo, entre 1999-2004.",
+      "tipo": "Crônica",
+      "slug": "anotacoes-de-leituras-ii"
+    },
+    {
+      "ano": "1999-2004",
+      "titulo": "Anotações de Leituras I",
+      "descricao": "Crônicas escritas para coluna Viaverbo, entre 1999-2004.",
+      "tipo": "Crônica",
+      "slug": "anotacoes-de-leituras-i"
+    },
+    {
+      "ano": "1999-2004",
+      "titulo": "Biblocasa",
+      "descricao": "Crônicas escritas para coluna Viaverbo, entre 1999-2004.",
+      "tipo": "Crônica",
+      "slug": "bibliocasa"
+    },
+    {
+      "ano": "1999-2004",
+      "titulo": "O Direito ao Silêncio",
+      "descricao": "Crônicas escritas para coluna Viaverbo, entre 1999-2004.",
+      "tipo": "Crônica",
+      "slug": "o-direito-ao-silencio"
+    },
+    {
+      "ano": "1999-2004",
+      "titulo": "Crônica de Outono",
+      "descricao": "Crônicas escritas para coluna Viaverbo, entre 1999-2004.",
+      "tipo": "Crônica",
+      "slug": "cronica-de-outono"
+    },
+    {
+      "ano": "1999-2004",
+      "titulo": "A Cidade do Meu Desejo",
+      "descricao": "Crônicas escritas para coluna Viaverbo, entre 1999-2004.",
+      "tipo": "Crônica",
+      "slug": "a-cidade-do-meu-desejo"
+    }
+  ]
+}
