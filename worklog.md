@@ -904,3 +904,25 @@ Stage Summary:
 - Site visualmente idêntico (dados apenas mudaram de lugar)
 - Pacote: download/painel-midia-contato.zip (pacote 7) + LEIA-ME.txt
 - Próximas: Fatia 3 = Movimento (11 JSONs → ficha com tags); Fatia 4 = Vitrine da Obra (coletâneas com Países, ensaios, crônicas, traduções, Colaborações — conversa antes)
+
+---
+Task ID: 106
+Agent: Super Z (sessão de continuação)
+Task: Perícia do pacote 7 (aplicado pela usuária) + Fatia 3 dadificada — Eixo Movimento: as 10 gavetas do Ativismo Cultural
+
+Work Log:
+- Perícia 91d3754: pacote 7 aplicado fiel (5 arquivos; storage cloud; Eixo Vida com 3 gavetas; imprensa.json com 3 grupos/5 links) e site vivo (WebFetch OK) → MÍDIA E CONTATO NO AR
+- Radiografia do Movimento: SecaoMovimento.tsx lê 11 JSONs em formato ArquivoCategoria {categoria, total_registros, descricao, tags_comuns, registros[{id, numero_ordem, titulo_evento, data, data_fim, local, cidade, estado, pais, categoria_principal, tags, slug_texto, texto_original}]}; mapeadas todas as chaves e tipos (sem nulls); ativismo.json = lista legado de 263 itens NO formato antigo e SEM consumidor (import morto no componente) → fora do painel de propósito
+- Config: molde compartilhado esquemaAtivismo() (função = molde fresco por ficha, sem reaproveitar instâncias) + 10 singletons: palestras, oficinasWorkshops, sarausRecitais, congressosSeminarios, conferenciasMesas, institucionais, encontrosAtividades, programasEntrevistas, curadoriaConsultoria, leiturasPoeticas — paths case-sensitive exatos; grupo "Movimento · Ativismo Cultural" no fim do menu (ordem Vida → Obra → Movimento)
+- Fusões do site continuam automáticas (Palestras+Oficinas → sub-aba "Palestras & Oficinas"; Institucionais+Encontros → "Encontros & Reuniões", dedup por id): editar qualquer uma das duas fichas alimenta a sub-aba certa
+- itemLabel dos registros: "Título do evento (ano)" com limpeza de HTML; descoberta nova documentada: em fields.array ESCALAR o itemLabel recebe props.value DIRETO (como o conditional) — "sarau", "virtual" no lugar de "Item 1"
+- TESTE REAL (storage local + next dev 3199 + agent-browser): menu com as 10 gavetas; ficha Saraus & Recitais abre (categoria/total/descrição/5 registros rotulados com ano); registro expandido com 13 campos poblados; TESTE DE GRAVAÇÃO: cidade São Paulo→Santo André + Save → JSON reescrito com as 11 chaves do registro preservadas, numero_ordem int, tags intactas (nenhuma chave perdida); git checkout desfaz o teste
+- Site: aba Movimento → Ativismo Cultural → sub-abas "Palestras & Oficinas" e "Encontros & Reuniões" na tela; sub-aba Saraus com os 3 saraus + tag #sarau + Casa das Rosas — regressão zero
+- INCIDENTE DOCUMENTADO: ambiente resetou em plena sessão e o HEAD local voltou a 4759570 (o pull do 91d3754 não colou de vez); config da Task 106 salvaguardado em /tmp, git reset --hard + merge origin/main (ff para 91d3754) + config recolocado — nada perdido, lição: salvaguardar em /tmp antes de qualquer realinhamento
+- storage cloud; build OK (146 páginas); pacote: keystatic.config.ts + worklog.md (SÓ 2 arquivos — JSONs do movimento intocados, componente intocado)
+
+Stage Summary:
+- OS 3 EIXOS COMPLETOS no painel: Vida (3 fichas) + Obra (10 grupos, 37 fichas) + Movimento (10 fichas do Ativismo Cultural)
+- Tags livres: ela digita qualquer tag nova no registro; cores pelo mapa do site (tags desconhecidas ganham cor padrão)
+- Pacote: download/painel-movimento-ativismo.zip (pacote 8) + LEIA-ME.txt
+- Próxima: Fatia 4 = Vitrine da Obra (coletâneas com Países, ensaios, crônicas, traduções, Colaborações Literárias — conversa de desenho antes)

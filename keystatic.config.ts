@@ -1,5 +1,45 @@
 import { config, fields, singleton } from '@keystatic/core';
 
+// Task 106: molde compartilhado das gavetas do Ativismo Cultural (Eixo Movimento).
+// Função devolve um molde FRESCO por ficha (não reaproveita instâncias).
+// Espelha o formato ArquivoCategoria lido por SecaoMovimento.tsx — chaves fiéis.
+const esquemaAtivismo = () => ({
+  categoria: fields.text({ label: 'Categoria interna (não mexer)' }),
+  total_registros: fields.integer({ label: 'Total de registros (informativo — não mexer)' }),
+  descricao: fields.text({ label: 'Descrição da categoria (informativa)' }),
+  tags_comuns: fields.array(fields.text({ label: 'Tag' }), { label: 'Tags comuns da categoria (informativo)', itemLabel: (props: any) => String(props.value) || 'Tag' }),
+  registros: fields.array(
+    fields.object({
+      id: fields.text({ label: 'ID único (não repetir — não mexer)' }),
+      numero_ordem: fields.integer({ label: 'Número de ordem (não mexer)' }),
+      titulo_evento: fields.text({ label: 'Título do evento' }),
+      data: fields.text({ label: 'Data (AAAA-MM-DD; 0000-00-00 = sem data)' }),
+      data_fim: fields.text({ label: 'Data final (opcional — AAAA-MM-DD)' }),
+      local: fields.text({ label: 'Local' }),
+      cidade: fields.text({ label: 'Cidade (opcional)' }),
+      estado: fields.text({ label: 'Estado (opcional — sigla, ex.: SP)' }),
+      pais: fields.text({ label: 'País (ex.: Brasil)' }),
+      categoria_principal: fields.text({ label: 'Categoria principal (não mexer)' }),
+      tags: fields.array(fields.text({ label: 'Tag' }), { label: 'Tags do evento (ex.: sarau, palestra, oficina)', itemLabel: (props: any) => String(props.value) || 'Tag' }),
+      slug_texto: fields.text({ label: 'Slug do texto em Ensaios — gera o link "Leia o texto" (não mexer sem orientação)' }),
+      texto_original: fields.text({ label: 'Texto original do registro', multiline: true }),
+    }),
+    {
+      label: 'Registros (eventos)',
+      // Rótulo de cada registro: título + ano (quando a data tem ano válido)
+      itemLabel: (props) => {
+        const titulo = String(props.fields.titulo_evento.value || '')
+          .replace(/<[^>]+>/g, ' ')
+          .replace(/\s+/g, ' ')
+          .trim();
+        const data = String(props.fields.data.value || '');
+        const ano = /^\d{4}/.test(data) && !data.startsWith('0000') ? ` (${data.slice(0, 4)})` : '';
+        return `${titulo || 'Registro'}${ano}`;
+      },
+    }
+  ),
+});
+
 // Gerado sob medida a partir das 37 fichas reais (regra: só as chaves existentes,
 // ordem fiel -> diff mínimo ao salvar). Não editar à mão.
 export default config({
@@ -26,7 +66,8 @@ export default config({
       'Obra · Homenagens': ['meiaVidaInteira', 'setentaAnosPoemasLeitores'],
       // ─── EIXO OBRA — ESCRITOS E LEITURAS ───
       'Escritos · Crônicas / Viagem': ['apontamentosAlbumDeViagens'],
-      // (Eixo Movimento entra na Etapa 3, com as atividades culturais + tags)
+      // ─── EIXO MOVIMENTO ───
+      'Movimento · Ativismo Cultural': ['palestras', 'oficinasWorkshops', 'sarausRecitais', 'congressosSeminarios', 'conferenciasMesas', 'institucionais', 'encontrosAtividades', 'programasEntrevistas', 'curadoriaConsultoria', 'leiturasPoeticas'],
     },
   },
   singletons: {
@@ -155,6 +196,72 @@ export default config({
         enderecoTitulo: fields.text({ label: 'Linha final — nome em negrito (opcional)' }),
         enderecoLinha: fields.text({ label: 'Linha final — cidade, local (opcional)' }),
       },
+    }),
+    // Task 106: Eixo Movimento — as 10 gavetas do Ativismo Cultural.
+    // Formato fiel a ArquivoCategoria; Palestras+Oficinas viram a sub-aba
+    // "Palestras & Oficinas" e Institucionais+EncontrosAtividades viram
+    // "Encontros & Reuniões" (fusões já feitas pelo site, dedup por id).
+    // O arquivo legado ativismo.json (263 itens, formato antigo, sem uso
+    // no site) fica FORA do painel de propósito.
+    palestras: singleton({
+      label: 'Palestras',
+      path: 'src/app/data/movimento/Palestras',
+      format: { data: 'json' },
+      schema: esquemaAtivismo(),
+    }),
+    oficinasWorkshops: singleton({
+      label: 'Oficinas & Workshops',
+      path: 'src/app/data/movimento/OficinasWorkshops',
+      format: { data: 'json' },
+      schema: esquemaAtivismo(),
+    }),
+    sarausRecitais: singleton({
+      label: 'Saraus & Recitais',
+      path: 'src/app/data/movimento/SarausRecitais',
+      format: { data: 'json' },
+      schema: esquemaAtivismo(),
+    }),
+    congressosSeminarios: singleton({
+      label: 'Congressos & Seminários',
+      path: 'src/app/data/movimento/CongressosSeminariosSimposios',
+      format: { data: 'json' },
+      schema: esquemaAtivismo(),
+    }),
+    conferenciasMesas: singleton({
+      label: 'Conferências & Mesas',
+      path: 'src/app/data/movimento/ConferenciasMesas',
+      format: { data: 'json' },
+      schema: esquemaAtivismo(),
+    }),
+    institucionais: singleton({
+      label: 'Institucionais (Encontros & Reuniões)',
+      path: 'src/app/data/movimento/Institucionais',
+      format: { data: 'json' },
+      schema: esquemaAtivismo(),
+    }),
+    encontrosAtividades: singleton({
+      label: 'Atividades Culturais (Encontros & Reuniões)',
+      path: 'src/app/data/movimento/EncontrosAtividadesCulturais',
+      format: { data: 'json' },
+      schema: esquemaAtivismo(),
+    }),
+    programasEntrevistas: singleton({
+      label: 'Programas & Entrevistas',
+      path: 'src/app/data/movimento/ProgramasEntrevistas',
+      format: { data: 'json' },
+      schema: esquemaAtivismo(),
+    }),
+    curadoriaConsultoria: singleton({
+      label: 'Curadoria & Consultoria',
+      path: 'src/app/data/movimento/CuradoriaConsultoria',
+      format: { data: 'json' },
+      schema: esquemaAtivismo(),
+    }),
+    leiturasPoeticas: singleton({
+      label: 'Leituras Poéticas',
+      path: 'src/app/data/movimento/LeiturasPoeticas',
+      format: { data: 'json' },
+      schema: esquemaAtivismo(),
     }),
     aJanelaDosDias: singleton({
       label: 'À Janela dos Dias',
