@@ -1,50 +1,65 @@
-SALA DE COSTURA — PACOTE v3 (fecho do Keystatic Cloud)
+SALA DE COSTURA — PACOTE v4 (CronoBiografia no painel)
 ========================================================
 
 O que e este pacote?
 --------------------
-Um unico arquivo: keystatic.config.ts (atualizado).
+A ETAPA B: a CronoBiografia (Eixo Vida) agora e uma ficha editavel
+no painel. A autora podera acrescentar, corrigir, reordenar e apagar
+pecas sem tocar em codigo, escolhendo o tipo de cada peca:
 
-Na Viagem 2 criamos o projeto "dalilapoeta" dentro do team "dalila"
-no Keystatic Cloud. Este pacote grava o endereco real desse cofre
-(project: 'dalila/dalilapoeta') no arquivo de configuracao do painel.
+- Trecho narrativo (voz da biografia, terceira pessoa)
+- Citacao com ano (voz da autora, primeira pessoa, ano na beirada)
+- Trecho institucional (letreiro menor)
 
-Tambem corrigimos a posicao do fecho: o campo "project" agora fica
-num bloco proprio "cloud", exatamente como o Keystatic pede
-(era a unica peca que faltava encaixar).
+O visual do site fica EXATAMENTE como esta — o novo componente
+renderiza o mesmo HTML do antigo (testado byte a byte).
 
-Como aplicar (o gesto de sempre)
---------------------------------
-1. Descompacte este zip DENTRO da pasta local do site (a mesma pasta
-   que contem src, package.json etc.). O Windows vai perguntar se
-   quer substituir o arquivo existente — sim, substituir.
-2. No GitHub Desktop:
-   - Ele vai mostrar 1 arquivo alterado (keystatic.config.ts).
-   - Escreva a mensagem do commit: config cloud
-   - Clique em "Commit to main" e depois em "Push origin".
-3. Aguarde a Vercel reconstruir (2 a 3 minutos).
-4. Teste em janela anonima (Ctrl+Shift+R):
-   https://dalila-teles-poeta.vercel.app/keystatic
+Este pacote muda 3 arquivos
+---------------------------
+1. keystatic.config.ts              — a ficha CronoBiografia no painel
+                                      (novo grupo "Eixo Vida", no topo do menu)
+2. src/app/components/EstradaVida.tsx — componente que le os dados da ficha
+3. src/app/data/vida/cronobiografia.json — as 9 decadas e 41 pecas migradas
+                                      (incluindo suas homenagens 2024-2026)
 
-O que vai acontecer no painel
------------------------------
-Agora, ao abrir /keystatic, o painel deve pedir login pelo
-Keystatic Cloud ("Sign in with GitHub" / entrar com sua conta).
-E o esperado: a Sala de Costura passou a conversar com o cofre.
+Como aplicar
+------------
+1. Descompacte este zip DENTRO da pasta local do site (a pasta que
+   contem src, package.json etc.). O Windows pergunta sobre mesclar
+   pastas e substituir arquivos — sim a tudo.
+2. No Source Control do VS Code: ele mostra 3 arquivos alterados.
+   Marque todos com "+".
+3. Mensagem do commit: cronobiografia no painel
+4. Commit (✓) e Sync Changes.
+5. Aguarde a Vercel (2 a 3 minutos).
 
-Detalhe carinhoso (sem urgencia)
---------------------------------
-Depois que o painel estiver logando, vale conferir que o projeto no
-Keystatic Cloud tem o endereco do site preenchido ("Primary URL" =
-https://dalila-teles-poeta.vercel.app) — foi o passo que fizemos
-na tela de Settings do projeto.
+Como conferir (a parte divertida)
+---------------------------------
+1. Abra https://dalila-teles-poeta.vercel.app/keystatic (logada);
+2. No menu esquerdo, o novo grupo "Eixo Vida" esta no topo — clique
+   em CronoBiografia;
+3. Confira: 9 decadas, 41 pecas, do 1946 ate a FLIRP 2026;
+4. Teste seguro sugerido: dentro da decada 2020, clique
+   "Adicionar item" → Tipo "Trecho narrativo" → Texto: PECA DE TESTE
+   (qualquer coisa) → Save. Veja o commit surgir no GitHub e, em
+   2-3 minutos, o texto no fim do Eixo Vida do site.
+5. Depois apague a peca de teste (lixeira do item) e salve de novo —
+   pronto, voce ja sabe operar a maquina nova!
 
-Lembretes que continuam valendo
--------------------------------
-- O site continua lendo os dados de src/app/obra/[id]/*/dados.
-- Quando a autora salvar algo no painel, o Keystatic Cloud registra
-  a mudanca no repositorio GitHub, e a Vercel reconstrui o site
-  automaticamente (2 a 3 minutos para aparecer).
-- Chaves que estavam com texto vazio (ex.: "subtitulo": "") deixam
-  de existir no JSON depois da primeira edicao pela autora. Isso e
-  normal e nao afeta o site.
+Regrinhas do tecido
+-------------------
+- Varias paragrafos numa peca: separe-os com UMA LINHA EM BRANCO.
+- Nos textos, evite os simbolos < e & (tem significado especial no
+  tecido). Aspas, travessoes, acentos: livres.
+- Os textos antigos podem mostrar <strong> e </strong> — sao os
+  negritos migrados; nao precisa mexer neles.
+- No PRIMEIRO Salvar da ficha, o painel pode reorganizar a formatacao
+  interna do arquivo (espacos e quebras de linha). E normal: o
+  conteudo e o site ficam iguais.
+- Cada Salvar = um registro no GitHub. Nada se perde; qualquer versao
+  pode ser recuperada.
+
+E o que ficou para depois
+-------------------------
+- Premios e Movimento (Etapa A) e Imprensa (Etapa C) ainda nao estao
+  no painel — proximas costuras quando quiserem.

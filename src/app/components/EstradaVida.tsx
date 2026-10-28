@@ -1,184 +1,74 @@
+// CronoBiografia — agora lida da ficha editável no painel (Sala de Costura).
+// Fonte dos dados: src/app/data/vida/cronobiografia.json
+// (mesmo shape que o Keystatic grava: array > object > conditional {discriminant, value}).
+// Visual idêntico ao original hardcoded: container-vida > estrada > secao-decada >
+// trecho (p + spans.institucional) e trecho-citacao (span.ano + p).
+// Textos podem conter tags simples (<strong>, <em>) migradas do original.
+import dadosCronobiografia from "../data/vida/cronobiografia.json";
+
+type Peca = { discriminant: string; value: Record<string, unknown> };
+
+function html(texto: string) {
+  return { __html: texto };
+}
+
+function paragrafos(value: Record<string, unknown>) {
+  const bruto = String(value.texto ?? "");
+  return bruto.split(/\n\n+/).filter((t) => t.trim().length > 0);
+}
+
+function Peca({ peca }: { peca: Peca }) {
+  const { discriminant, value } = peca;
+
+  if (discriminant === "citacao") {
+    return (
+      <div className="trecho-citacao">
+        <span className="ano">{String(value.ano ?? "")}</span>
+        {paragrafos(value).map((p, i) => (
+          <p key={i} dangerouslySetInnerHTML={html(p)} />
+        ))}
+      </div>
+    );
+  }
+
+  if (discriminant === "institucional") {
+    return (
+      <div className="trecho">
+        <span
+          className="institucional"
+          dangerouslySetInnerHTML={html(String(value.texto ?? ""))}
+        />
+      </div>
+    );
+  }
+
+  // narrativo: parágrafos + letreiros institucionais anexos (podem ser 0)
+  const insts = Array.isArray(value.institucionais)
+    ? (value.institucionais as unknown[]).map((t) => String(t))
+    : [];
+  return (
+    <div className="trecho">
+      {paragrafos(value).map((p, i) => (
+        <p key={i} dangerouslySetInnerHTML={html(p)} />
+      ))}
+      {insts.map((t, i) => (
+        <span key={i} className="institucional" dangerouslySetInnerHTML={html(t)} />
+      ))}
+    </div>
+  );
+}
+
 export default function EstradaVida() {
   return (
     <div className="container-vida">
       <div className="estrada">
-
-        <div id="c-1940" className="secao-decada">
-          <div className="trecho">
-            <p><strong>DALILA TELES VERAS</strong>, nome literário de Dalila Isabel Agrela Teles Veras, natural do Funchal, Ilha da Madeira, Portugal, (02.07.1946).</p>
+        {dadosCronobiografia.decadas.map((decada) => (
+          <div id={`c-${decada.dezena}`} className="secao-decada" key={decada.dezena}>
+            {decada.pecas.map((peca, i) => (
+              <Peca peca={peca as Peca} key={i} />
+            ))}
           </div>
-          <div className="trecho-citacao">
-            <span className="ano">1946</span>
-            <p>O mundo juntava seus cacos no desafio de uma nova ordem, sentimentos inclusos. Fruto legítimo dos acertos após guerra, vim atada ao cordão puxado no desespero da hora, a maresia atlântica impregnando-me as asas. Instigando outros saberes, o sabor do funcho que deu nome à minha cidade natal, Funchal, na exótica Madeira.</p>
-          </div>
-        </div>
-
-        <div id="c-1950" className="secao-decada">
-          <div className="trecho">
-            <p>Emigrou com a família para o Brasil (São Paulo, Capital) aos 11 anos de idade (1957).</p>
-          </div>
-          <div className="trecho-citacao">
-            <span className="ano">1957</span>
-            <p>Contaminados pelo vírus da aventura, transmitido certamente pelos ancestrais descobridores João Gonçalves Zarco e Tristão Vaz Teixeira, os madeirenses estão sempre a caminho de novas descobertas. O mar e o seu fascínio. A eterna curiosidade em descobrir o que há do outro lado. Os Agrela cruzam o Atlântico, no transatlântico Santa Maria, repetindo os desígnios e a história, como tantos, e sentindo na pele o novo papel, o de imigrantes.</p>
-          </div>
-        </div>
-
-        <div id="c-1960" className="secao-decada">
-          <div className="trecho-citacao">
-            <span className="ano">1968</span>
-            <p>O espanto, a tomada de consciência. O mundo em mutação, o Brasil em efervescência. Os versos se fazem, toscos – leituras ainda não assimiladas. A poesia como imperativo categórico, necessidade vital, questão de sobrevivência.</p>
-          </div>
-        </div>
-
-        <div id="c-1970" className="secao-decada">
-          <div className="trecho-citacao">
-            <span className="ano">1971</span>
-            <p>Portugal revisitado – emoção descontrolada, as raízes. A dúvida: portuguesa ou brasileira? Na terra onde nasci sou brasileira (o sotaque assim o quer), na terra que adotei, portuguesa (o RNE e as raízes assim o determinam).</p>
-          </div>
-          <div className="trecho-citacao">
-            <span className="ano">1972</span>
-            <p>O amor e o casamento com um brasileiro. O nordeste e a brasilidade, o legado lusíada, amalgamados.</p>
-          </div>
-          <div className="trecho">
-            <p>Em <span data-ano="1972">1972</span>, após seu casamento com o advogado e escritor Valdecirio Teles Veras, radicou-se em Santo André, SP, cidade onde nasceram suas três filhas, Carolina, Isabela e Alice, e seus cinco netos, Filipe, Murilo, André, Iara e Catarina, onde reside e trabalha até o presente.</p>
-          </div>
-          <div className="trecho-citacao">
-            <span className="ano">1974</span>
-            <p>Portugal novamente, o Velho Mundo exercendo sua função atávica. Mas é na América que estão todos os motivos. Não existe mais dúvida, o Brasil é o lugar, Madeira é a memória de um lugar.</p>
-          </div>
-          <div className="trecho-citacao">
-            <span className="ano">1976</span>
-            <p>Primeiro parto, indivisível momento-magia. Carolina, inteligência e meiguice, promessa viva.</p>
-          </div>
-          <div className="trecho-citacao">
-            <span className="ano">1977</span>
-            <p>Segundo parto, novamente a sensação de universalidade e absoluta solidão. Isabela, caráter forte a demarcar seu próprio espaço.</p>
-          </div>
-          <div className="trecho-citacao">
-            <span className="ano">1979</span>
-            <p>Terceiro parto, a família já um clã. Alice, beleza e alegria a serviço da vida. Minhas eternas três meninas, obra à qual dedico a vida.</p>
-          </div>
-        </div>
-
-        <div id="c-1980" className="secao-decada">
-          <div className="trecho">
-            <p>Publicou mais de duas dezenas de livros, nos gêneros poesia, crônica, diários literários e ensaios memorialísticos. Integra inúmeras antologias no país e no exterior. Possui trabalhos (artigos, ensaios e textos literários) publicados em livros, jornais e revistas do país e no exterior.</p>
-          </div>
-          <div className="trecho">
-            <p>Cofundadora do Grupo Livrespaço de Poesia que manteve intensa atuação (1983-1994) na divulgação da poesia e, entre inúmeras ações com a comunidade, publicou cinco coletâneas com trabalhos de seus membros. Foi uma das editoras da revista literária Livrespaço, ganhadora do Prêmio APCA - Associação Paulista de Críticos de Arte, como melhor realização cultural de 1993.</p>
-          </div>
-          <div className="trecho">
-            <span className="institucional">Filiada à União Brasileira de Escritores, SP, entidade onde ocupou os cargos de Secretária Geral, Diretora e membro do Conselho, nas gestões de 1986/88, 1990/92 e 1994/96.</span>
-            <span className="institucional">Filiada ao Instituto de Estudos Americanos Fernando Pessoa, fundado pelo intelectual luso-brasileiro João Alves das Neves, onde também ocupou cargos de Diretoria e Vice-Presidência, colaborou na organização e realização de diversos encontros de escritores e intelectuais luso-brasileiros promovidos por aquela instituição em alguns estados brasileiros e em Portugal.</span>
-          </div>
-          <div className="trecho">
-            <p>Ativista cultural, desde os anos 1980, colabora na organização de cursos, seminários e congressos. É frequentemente convidada a proferir palestras e participar de debates e Seminários em Universidades e instituições culturais, bem como a assessorar e criar projetos literários, ciclos de debates, exposições, mesas redondas.</p>
-            <span className="institucional">Participou de inúmeros concursos como integrante do júri.</span>
-          </div>
-          <div className="trecho-citacao">
-            <span className="ano">1982</span>
-            <p>Primeiro ensaio do que viria a ser ofício: Lições de Tempo. A partir daí, tudo é literatura. A vida e suas circunstâncias em livros: bibliovida.</p>
-          </div>
-          <div className="trecho">
-            <p>Participou, como convidada, do Colóquio Imprensa de Língua Portuguesa no Mundo, realizado em junho de 1991, na UNESCO, em Paris, com a comunicação "A Imprensa Alternativa no Brasil como resistência cultural".</p>
-          </div>
-          <div className="trecho">
-            <p>Coordenou dezenas de oficinas de criação literária, dentre as quais, “O Laboratório da Paixão”, na Oficina da Palavra, Casa Mário de Andrade, SP, anos 1990.</p>
-            <span className="institucional">Integrou o Projeto O Escritor nas Bibliotecas (1993/1994) da Secretaria Municipal de Cultura de São Paulo, bem como do Escritor 96 – promovido pela mesma Instituição.</span>
-          </div>
-        </div>
-
-        <div id="c-1990" className="secao-decada">
-          <div className="trecho">
-            <p>Assinou, de maio de 1995 a dezembro de 1999, a coluna semanal Viaverbo, no Caderno Cultura & Lazer do Diário do Grande ABC, o maior jornal regional do país.</p>
-          </div>
-          <div className="trecho">
-            <p>Desde 1992 é diretora-proprietária da Alpharrabio Livraria, Editora e Espaço Cultural, em Santo André, SP, reconhecida referência na região do Grande ABC, onde promove constante atividade voltada à difusão da cultura, do livro e da leitura, das artes e do debate de ideias. Dirige igualmente a Alpharrabio Edições, cujo catálogo já se aproxima de duas centenas de títulos. Muitos desses autores estão, hoje, inseridos e resenhados entre os melhores da sua geração.</p>
-            <span className="institucional">Foi editora da revista de debates Em Movimento e do jornal literário Abecês, ambos ligados à Alpharrabio.</span>
-          </div>
-          <div className="trecho">
-            <p>Em março de 2004, ao lado de Alice Ruiz, Maria Rita Kehl e Renata Pallotini, participou do projeto “São Paulo em Versos Femininos”. Os poemas dessas escritoras, impressos em cartazes, circularam nos ônibus da cidade de SP.</p>
-          </div>
-          <div className="trecho">
-            <p>Coordenou, de 2007 a 2017, o Fórum Permanente de Debates Culturais do Grande ABC, com intervenções e ações importanti nelle sete cidades da região, em relação às políticas públicas da cultura e preservação da memória.</p>
-            <span className="institucional">Parecerista do programa Raio X das Câmaras, uma iniciativa do Diário do Grande ABC que visou o acompanhamento do trabalho das Câmaras Municipais e dos vereadores para contribuir com a melhoria da atividade política da região (sete cidades) e relevância ou não dos projetos apresentados pelos vereadores. Esse corpo de pareceristas foi composto por especialistas e entidades ligadas às várias áreas abrangidas pelas políticas públicas (1997), Iniciativa do Diretor Alexandre Polesi e do Prof. (USP) Dr. Luís Roberto Alves.</span>
-            <span className="institucional">Recebeu Voto de Congratulações pelos trabalhos desenvolvidos na implantação e formação do Conselho Municipal de Cultura de Santo André. Esse voto foi inserido em Ata dos trabalhos da Câmara Municipal de Santo André em 20 de outubro de 1998. Integrou o primeiro mandato do Conselho.</span>
-          </div>
-          <div className="trecho">
-            <p>Dentre os inúmeros projetos sob a sua direção e produção, destaca-se o projeto <strong>7 Anos 7 Cidades – Culturas</strong>, comemorativo aos 7 anos da Livraria Alpharrabio (1999) que durante sete meses dedicou um mês a cada uma das cidades da Região do Grande ABC, mostrando diversos artistas e discutindo aspetos da cultura de cada uma delas. Desse projeto participaram diretamente mais de 100 pessoas (artistas, produtores e pessoas ligadas à cultura regional), merecendo enorme destaque na imprensa e menção honrosa das Câmaras Municipais das Cidades de Santo André, Rio Grande da Serra e Ribeirão Pires.</p>
-            <span className="institucional">Participou, a convite, como curadora da área de literatura, do projeto Plataforma ABC, em três diferentes edições, bem como no PALAVRAPONTOCOM, ambos promovidos pelo SESC, unidade São Caetano do Sul, SP.</span>
-            <span className="institucional">Compôs o Conselho do Laboratório de Gestão Regional, do Centro de Aperfeiçoamento e Pós-graduação do IMES – Instituto Municipal de Ensino Superior de São Caetano do Sul, como membro representante da comunidade externa que, dentre outras incumbências, tinha a apreciação dos planos de pesquisa e de extensão desenvolvidos junto ao Mestrado em Administração, bem como oferecia sugestões para o aperfeiçoamento das questões dos projetos de extensão na Gestão Regional, em especial nos quesitos das mudanças e discussões culturais. 1999 / 2001.</span>
-            <span className="institucional">Integrou o Conselho Editorial da publicação Cadernos CEAPOG - Centro de Estudos de Pós-Graduação, publicação semestral do IMES – Instituto Municipal de Ensino Superior de São Caetano do Sul, sendo responsável por uma página literária ilustrada nos 12 números daquela publicação.</span>
-          </div>
-          <div className="trecho">
-            <p><strong>Em 2004, a Câmara Municipal outorgou-lhe o título de Cidadã Honorária do Município de Santo André</strong>, “em reconhecimento ao seu inestimável trabalho para o enriquecimento da literatura na Região do ABC e valiosa contribuição nelle áreas artística e cultural do nosso município”.</p>
-          </div>
-        </div>
-
-        <div id="c-2000" className="secao-decada">
-          <div className="trecho">
-            <p>De 24.08.2007 a 01.04.2009, foi responsável pelo quadro semanal <strong>Janela Cultural</strong>, entrevistas, do programa ABCD MAIOR em Revista, transmitido pela RedeTV (nacional) e TVNet ABC (local). No total, foram entrevistadas 54 personalidades do mundo das artes e da cultura regional, revelando, em seu conjunto, uma rica pluralidade de visões e fazeres, precioso documento para o estudo da cartografia cultural da época na região do ABC.</p>
-          </div>
-          <div className="trecho">
-            <p>Em 2009, seu livro <strong>Retratos Falhados</strong>, coleção Ponte Velha, Editora Escrituras, SP, foi apresentado na Feira do Livro do Funchal, pela escritora Irene Lucília. O mesmo livro também foi apresentado no Gabinete Português de Leitura do Recife pela escritora Maria de Lourdes Hortas, diretora daquela instituição.</p>
-          </div>
-          <div className="trecho">
-            <p>De agosto de 2006 a janeiro de 2023, assinou o blog http://blog.alpharrio.com.br/, “um caderno de registros, apropriações, inquietudes, intervenções” que reflete a atmosfera cultural do Centro Cultural Alpharrabio e seu entorno.</p>
-            <p>Mantém o blog literário e cultural À Janela dos Dias desde janeiro de 2009. http://dalilatelesveras.blogspot.com/</p>
-          </div>
-        </div>
-
-        <div id="c-2010" className="secao-decada">
-          <div className="trecho">
-            <span className="institucional">Por cinco mandatos de dois anos cada, integrou o Comitê de Extensão e Cultura – CEC, da UFABC – Universidade Federal do ABC (de 2013 a 2023), como representante da comunidade externa.</span>
-          </div>
-          <div className="trecho">
-            <p>Em 2016, seu livro <strong>Solidões da Memória</strong> foi apresentado na Galeria Porta33, na cidade do Funchal, Portugal. O evento foi organizado e promovido pela escritora Maria Fernandes, editora da Revista eletrônica A.Poética. A apresentação do livro ficou a cargo das Professoras e escritoras Ana Salgueiro, Teresa Jardim e Irene Lucília.</p>
-          </div>
-          <div className="trecho">
-            <p>Integra o <strong>Movimento Feminista Mulherio das Letras</strong>, desde sua fundação, em 2017 que reúne mais de 7.500 mulheres de todo o país e do exterior, com núcleos regionais atuantes em vários estados brasileiros. O Mulherio das Letras já realizou sete encontros regionais nos estados da Paraíba (João Pessoa, duas vezes) Rio Grande do Norte (Natal), São Paulo (Guarujá) e Rio de Janeiro (RJ).</p>
-          </div>
-          <div className="trecho">
-            <p>Em 2019, participou, a convite, da 45ª Feira do Livro do Funchal, Ilha da Madeira. Na ocasião, seu livro <strong>Tempo em Fúria</strong> foi apresentado pelas escritoras e pesquisadoras Irene Lucília e Ana Salgueiro.</p>
-          </div>
-        </div>
-
-        <div id="c-2020" className="secao-decada">
-          <div className="trecho">
-            <p><strong>“Por Ato decisório nº 181 de 1° de novembro de 2019, do egrégio Conselho Universitário, outorga o título de Doutora Honoris Causa a Dalila Isabel Agrela Teles Veras, em reconhecimento à pesquisa e ao amparo à produção cultural da região do Grande ABC, pela sua representatividade na comunidade literária e pela inestimável contribuição ao movimento para a criação da UFABC”</strong>, recebido em cerimônia oficial em 21.9.2021 (adiamento em razão do período da pandemia do Covid19).</p>
-          </div>
-          <div className="trecho">
-            <p><strong>Em 2022, recebeu o Colar Guilherme de Almeida</strong>, honraria concedida pela Câmara Municipal de São Paulo e a Casa Guilherme de Almeida “por sua valiosa contribuição à cultura paulista”.</p>
-          </div>
-          <div className="trecho">
-            <p>Em dezembro de 2023 foi homenageada pela <strong>VI FELISA – Feira do Livro de Santo André</strong>, promovida pela Coopacesso, Sindicato dos Bancários de Santo André e Sindicato do Professores do ABC.</p>
-          </div>
-             <div className="trecho">
-            <p>Em 11.5.2024, escritora homenageada do “Sarau da Fábrica de Cultura 04” – São Bernardo do Campo (instituição ligada ao Governo Estadual de SP).</p>
-          </div>
-
-          <div className="trecho">
-            <p>Em 12.7.2025, poeta homenageada no evento “Balbúrdia Poética 10”, coordenado e idealizado por Artur Gomes, realizado na Casa da Palavra Mário Quintana, em Santo André.</p>
-          </div>
-
-          <div className="trecho">
-            <p>Em 31.7.2025, foi a escritora homenageada da “Casa Gueto”, Editora Patuá, na FLIP – Festa Internacional de Paraty, RJ. A Antologia “Casa Gueto” traz como subtítulo “O dia segue não sendo mas há um corpo que resiste e é”, um verso de Dalila Teles Veras, bem como um dossiê em sua homenagem, com textos de Isabela Agrela Teles Veras, Tarso de Melo e Eduardo Lacerda e orelhas com textos de Rosana Chrispim e Ricardo Escudeiro.</p>
-          </div>
-
-          <div className="trecho">
-            <p>Em 11.10.2025, escritora homenageada do 2º Encontro Multicultural – Casa da Palavra, Santo André, SP, sob a curadoria de Ivete Neflindio.</p>
-          </div>
-
-          <div className="trecho">
-            <p>De 31.10 a 02.11.2025, escritora homenageada do VIII Encontro Nacional do Mulherio das Letras, realizado em Florianópolis, SC.</p>
-          </div>
-
-          <div className="trecho">
-            <p>Homenageada da Feira Literária de Ribeirão Pires – FLIRP 2026. A escritora, editora e ativista cultural Dalila Teles Veras, uma das principais referências da literatura e da vida cultural do Grande ABC. Nascida no Funchal, na Ilha da Madeira, em Portugal, em 1946, e residente no Brasil desde os onze anos, Dalila é autora de mais de duas dezenas de livros de poesia, crônica, diários e ensaios memorialísticos, com trabalhos publicados no Brasil e no exterior.</p>
-          </div>
-
-        </div>
-
+        ))}
       </div>
     </div>
   );

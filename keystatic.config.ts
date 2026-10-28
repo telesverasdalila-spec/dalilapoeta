@@ -11,6 +11,7 @@ export default config({
   },
   ui: {
     navigation: {
+      'Eixo Vida': ['cronobiografia'],
       'Poesia': ['passageiraAntologiaPessoal19822024', 'aMulherAntiga', 'aPalavrapartePequenasProsasEmPoemas', 'cidadeAssassinadaTributoACelsoDaniel', 'elementoFuria', 'estranhasFormasDeVida', 'forasteirosRegistrosNordestinos', 'iara', 'insulas', 'inventarioPrecoce', 'licoesDeTempo', 'madeiraDoVinhoASaudade', 'opcoesParaMorrerNoEspaco', 'poesiaDoIntervalo', 'poeticasDasCircunstancias', 'retratosFalhados', 'se', 'solidoesDaMemoria', 'soliloquios', 'sonhoDeHaPouco', 'tempoEmFuria', 'marielleDalila', 'vestigios', 'fugaEUrgencias', 'diuturnos'],
       'Poesia (Antologia)': ['aJanelaDosDias'],
       'Prosa': ['aVidaCronica', 'alpharrabio12Anos', 'anotacoesDeLeituras', 'asArtesDoOficioUmOlharSobreOAbc', 'minudencias'],
@@ -22,6 +23,49 @@ export default config({
     },
   },
   singletons: {
+    cronobiografia: singleton({
+      label: 'CronoBiografia',
+      path: 'src/app/data/vida/cronobiografia',
+      format: { data: 'json' },
+      schema: {
+        decadas: fields.array(
+          fields.object({
+            dezena: fields.text({ label: 'Década (ex.: 2020)' }),
+            pecas: fields.array(
+              fields.conditional(
+                fields.select({
+                  label: 'Tipo da peça',
+                  options: [
+                    { label: 'Trecho narrativo (voz da biografia)', value: 'narrativo' },
+                    { label: 'Citação com ano (voz da autora)', value: 'citacao' },
+                    { label: 'Trecho institucional (letreiro menor)', value: 'institucional' },
+                  ],
+                  defaultValue: 'narrativo',
+                }),
+                {
+                  narrativo: fields.object({
+                    texto: fields.text({ label: 'Texto (vários parágrafos? Separe com uma linha em branco)', multiline: true }),
+                    institucionais: fields.array(
+                      fields.text({ label: 'Letreiro institucional' }),
+                      { label: 'Letreiros institucionais anexos (opcional)' }
+                    ),
+                  }),
+                  citacao: fields.object({
+                    ano: fields.text({ label: 'Ano (ex.: 1946)' }),
+                    texto: fields.text({ label: 'Texto (voz da autora)', multiline: true }),
+                  }),
+                  institucional: fields.object({
+                    texto: fields.text({ label: 'Texto (letreiro menor)', multiline: true }),
+                  }),
+                }
+              ),
+              { label: 'Peças da década' }
+            ),
+          }),
+          { label: 'Décadas' }
+        ),
+      },
+    }),
     aJanelaDosDias: singleton({
       label: 'À Janela dos Dias',
       path: 'src/app/obra/[id]/a-janela-dos-dias/dados',
