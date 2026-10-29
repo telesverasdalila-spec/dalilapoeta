@@ -93,23 +93,29 @@ export default config({
     // de grupos, então o eixo entra como prefixo: "Obra · Poesia" etc.).
     // As chaves NÃO mudaram — só os nomes dos grupos e a ordem.
     navigation: {
-      // ─── EIXO VIDA ───
-      'Eixo Vida': ['cronobiografia', 'premios', 'imprensa'],
-      // ─── EIXO OBRA — OBRAS PUBLICADAS ───
-      'Obra · Poesia': ['passageiraAntologiaPessoal19822024', 'aMulherAntiga', 'aPalavrapartePequenasProsasEmPoemas', 'cidadeAssassinadaTributoACelsoDaniel', 'elementoFuria', 'estranhasFormasDeVida', 'forasteirosRegistrosNordestinos', 'iara', 'insulas', 'inventarioPrecoce', 'licoesDeTempo', 'madeiraDoVinhoASaudade', 'opcoesParaMorrerNoEspaco', 'poesiaDoIntervalo', 'poeticasDasCircunstancias', 'retratosFalhados', 'se', 'solidoesDaMemoria', 'soliloquios', 'sonhoDeHaPouco', 'tempoEmFuria', 'marielleDalila', 'vestigios', 'fugaEUrgencias', 'diuturnos'],
-      'Obra · Poesia — Antologia': ['aJanelaDosDias'],
-      'Obra · Prosa': ['aVidaCronica', 'alpharrabio12Anos', 'anotacoesDeLeituras', 'asArtesDoOficioUmOlharSobreOAbc', 'minudencias'],
-      'Obra · Coleção Mimo': ['pontos'],
-      'Obra · Antologia Coletiva': ['caixaPoeticas'],
-      'Obra · Caixa Artística': ['pecados'],
-      'Obra · Homenagens': ['meiaVidaInteira', 'setentaAnosPoemasLeitores'],
-      // ─── EIXO OBRA — VITRINE DA HOME (Fatia 4) ───
-      'Obra · Vitrine — Prateleiras': ['vitrinePoesia', 'vitrineProsa', 'vitrineMimo', 'coletaneas', 'colaboracoes'],
-      'Obra · Vitrine — Escritos': ['ensaios', 'cronicas', 'entrevistas', 'traducoes'],
-      'Obra · Vitrine — Resenhas': ['fortunaCritica', 'verbetes', 'leiturasCriticas', 'estudosCriticos'],
-      // ─── EIXO OBRA — ESCRITOS E LEITURAS ───
-      'Escritos · Crônicas / Viagem': ['apontamentosAlbumDeViagens'],
-      // ─── EIXO MOVIMENTO ───
+      // ─── MENU DO SITE ESPELHADO (Task 109) ───
+      // Grupos = abas EXATAS do site (Hero: Vida · Obra · Movimento; sub-abas viram sufixo).
+      // ⚠️ SÓ RÓTULOS E ORDEM mudam — as chaves das fichas NÃO mudam.
+      // ─── EIXO VIDA — abas: CronoBiografia | Prêmios & Reconhecimentos | Mídia & Contato ───
+      'Vida · CronoBiografia': ['cronobiografia'],
+      'Vida · Prêmios & Reconhecimentos': ['premios'],
+      'Vida · Mídia & Contato': ['imprensa'],
+      // ─── EIXO OBRA — aba "Obras Publicadas" (sub-abas: Poesia | Prosa | Coleção Mimo) ───
+      // "Edições Especiais" = modelos sem sub-aba própria no site (antologias, caixas,
+      // homenagens, álbum de viagens) — detalhe explicado no manual de instruções da autora.
+      'Obra · Obras Publicadas · Poesia': ['vitrinePoesia', 'passageiraAntologiaPessoal19822024', 'aMulherAntiga', 'aPalavrapartePequenasProsasEmPoemas', 'cidadeAssassinadaTributoACelsoDaniel', 'elementoFuria', 'estranhasFormasDeVida', 'forasteirosRegistrosNordestinos', 'iara', 'insulas', 'inventarioPrecoce', 'licoesDeTempo', 'madeiraDoVinhoASaudade', 'opcoesParaMorrerNoEspaco', 'poesiaDoIntervalo', 'poeticasDasCircunstancias', 'retratosFalhados', 'se', 'solidoesDaMemoria', 'soliloquios', 'sonhoDeHaPouco', 'tempoEmFuria', 'marielleDalila', 'vestigios', 'fugaEUrgencias', 'diuturnos'],
+      'Obra · Obras Publicadas · Prosa': ['vitrineProsa', 'aVidaCronica', 'alpharrabio12Anos', 'anotacoesDeLeituras', 'asArtesDoOficioUmOlharSobreOAbc', 'minudencias'],
+      'Obra · Obras Publicadas · Coleção Mimo': ['vitrineMimo', 'pontos'],
+      'Obra · Obras Publicadas · Edições Especiais': ['aJanelaDosDias', 'caixaPoeticas', 'pecados', 'meiaVidaInteira', 'setentaAnosPoemasLeitores', 'apontamentosAlbumDeViagens'],
+      // ─── EIXO OBRA — aba "Escritos & Leituras" (Ensaios | Crônicas | Entrevistas | Traduções) ───
+      'Obra · Escritos & Leituras': ['ensaios', 'cronicas', 'entrevistas', 'traducoes'],
+      // ─── EIXO OBRA — aba "Colaborações Literárias" ───
+      'Obra · Colaborações Literárias': ['colaboracoes'],
+      // ─── EIXO OBRA — aba "Coletâneas & Antologias" (Brasil | Portugal | Outros Países) ───
+      'Obra · Coletâneas & Antologias': ['coletaneas'],
+      // ─── EIXO OBRA — aba "Resenhas & Críticas" (Fortuna | Leituras | Estudos | Verbetes) ───
+      'Obra · Resenhas & Críticas': ['fortunaCritica', 'verbetes', 'leiturasCriticas', 'estudosCriticos'],
+      // ─── EIXO MOVIMENTO — aba "Ativismo Cultural" (as outras 5 abas do site não têm ficha) ───
       'Movimento · Ativismo Cultural': ['palestras', 'oficinasWorkshops', 'sarausRecitais', 'congressosSeminarios', 'conferenciasMesas', 'institucionais', 'encontrosAtividades', 'programasEntrevistas', 'curadoriaConsultoria', 'leiturasPoeticas'],
     },
   },
@@ -182,7 +188,7 @@ export default config({
     // O JSON existente era um array puro; agora vive dentro de "itens" —
     // SecaoPremios e CabecalhoFixo foram ajustados na mesma remessa.
     premios: singleton({
-      label: 'Prêmios e Reconhecimento',
+      label: 'Prêmios & Reconhecimentos',
       path: 'src/app/data/vida/premios',
       format: { data: 'json' },
       schema: {
@@ -209,7 +215,7 @@ export default config({
     // Task 105: Mídia/Imprensa dadificada — grupos de canais (Blogs, Sites e
     // Redes, Contato) + linha de endereço. Dados em src/app/data/vida/imprensa.json.
     imprensa: singleton({
-      label: 'Mídia e Contato',
+      label: 'Mídia & Contato',
       path: 'src/app/data/vida/imprensa',
       format: { data: 'json' },
       schema: {

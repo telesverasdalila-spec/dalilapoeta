@@ -1,51 +1,75 @@
-=============================================================
-PACOTE 10 — CORES POR EIXO NO PAINEL (Task 108)
-Site Memorial Dalila Teles Veras
-=============================================================
+================================================================
+ PACOTE 11 — MENU DO PAINEL ESPELHADO NO MENU DO SITE
+ Dalila Teles Veras — Sala de Costura (painel Keystatic)
+================================================================
 
-O QUE MUDA NESTE PACOTE
------------------------
-SÓ O PAINEL FICA MAIS BONITO E FÁCIL DE ENXERGAR!
+O QUE MUDA
+----------
+A barra lateral do painel (/keystatic) agora usa os NOMES EXATOS
+das abas do site, na MESMA ORDEM, com as fichas embaixo de cada
+grupo. As cores por Eixo continuam: Vida verde, Obra vinho,
+Movimento azul.
 
-A barra lateral do painel ganhou cores por Eixo:
-   - VERDE  → Eixo Vida (CronoBiografia, Prêmios, Mídia)
-   - VINHO  → Eixo Obra (todas as gavetas: Poesia, Prosa,
-              Mimo, Vitrine, Escritos, Movimento tem azul...)
-   - AZUL   → Eixo Movimento (Ativismo Cultural, 10 gavetas)
+⚠️ Só rótulos mudaram. As chaves das 63 fichas NÃO mudaram —
+nenhum conteúdo, link ou dado do site foi tocado.
 
-Cada grupo ganhou também uma barrinha colorida à esquerda
-e um fundinho suave — é só apontar o olho e achar a gaveta!
-
-O SITE PÚBLICO NÃO MUDA NADA. Nenhum dado é mexido.
-
-COMO FUNCIONA (para as curiosas)
---------------------------------
-Um pequeno pintor (PainelTema.tsx) mora no layout do painel
-e pinta cada grupo pela cor certa — se um dia criarmos
-grupos novos ou trocarmos a ordem, ele se adapta sozinho.
-
-ARQUIVOS NESTE PACOTE
+ARQUIVOS DESTE PACOTE
 ---------------------
-- src/app/keystatic/PainelTema.tsx  (novo — o pintor)
-- src/app/keystatic/layout.tsx      (convida o pintor)
-- worklog.md                        (diário de bordo)
-- LEIA-ME.txt                       (este arquivo)
+1. keystatic.config.ts      (menu novo + 2 rótulos de ficha alinhados)
+2. src/app/keystatic/PainelTema.tsx  (regra da cor verde atualizada)
+3. worklog.md               (Task 109 registrada)
 
-COMO APLICAR (passo a passo de sempre)
---------------------------------------
-1. Descompacte este zip DENTRO da pasta do projeto
-   (C:\Users\Windows 10\Desktop\dalila-teles-veras),
-   por cima, substituindo tudo.
-2. No VS Code: tronquinho → "+" em tudo → caixinha Message
-   → "cores por eixo no painel" → ✓ commit.
-3. Sync Changes (botão embaixo à esquerda).
-4. Espere a Vercel publicar (2-3 min).
-5. Abra o painel (/keystatic) em janela anônima com
-   Ctrl+Shift+R — e veja as cores!
+COMO APLICAR
+------------
+1. Descompacte este zip na raiz do seu projeto local
+   (substitua os arquivos quando perguntar).
+2. No VS Code: ícone do tronquinho → + (stage all) → mensagem
+   "menu do painel espelhado no site" → ✓ Commit → Sync Changes.
+3. Espere 2-3 min (Vercel) e abra o painel em janela anônima:
+   Ctrl+Shift+R para limpar cache.
 
-ROTEIRO DE CONFERÊNCIA (de ontem, continua valendo)
----------------------------------------------------
-- Gavetas por cor: verde, vinho, azul
-- Vitrine · Coletâneas (Países): 50 peças, seletor de País
-- Site: aba Obra → Coletâneas → três sub-abas de países
-- Qualquer coisa estranha: me chama!
+MAPA PAINEL ↔ SITE (prontinho pro seu manual)
+---------------------------------------------
+EIXO VIDA (verde)  — abas do site no cabeçalho do Eixo Vida:
+  Vida · CronoBiografia            = aba "CronoBiografia"
+  Vida · Prêmios & Reconhecimentos = aba "Prêmios & Reconhecimentos"
+  Vida · Mídia & Contato           = aba "Mídia & Contato"
+
+EIXO OBRA (vinho) — abas do cabeçalho do Eixo Obra:
+  Obra · Obras Publicadas · Poesia        = aba "Obras Publicadas", sub-aba "Poesia"
+  Obra · Obras Publicadas · Prosa         = aba "Obras Publicadas", sub-aba "Prosa"
+  Obra · Obras Publicadas · Coleção Mimo  = aba "Obras Publicadas", sub-aba "Coleção Mimo"
+  Obra · Escritos & Leituras              = aba "Escritos & Leituras"
+  Obra · Colaborações Literárias          = aba "Colaborações Literárias"
+  Obra · Coletâneas & Antologias          = aba "Coletâneas & Antologias"
+  Obra · Resenhas & Críticas              = aba "Resenhas & Críticas"
+
+EIXO MOVIMENTO (azul):
+  Movimento · Ativismo Cultural = aba "Ativismo Cultural"
+
+SÓ DOIS DETALHES PRA ANOTAR NO SEU MANUAL
+-----------------------------------------
+1) "Obra · Obras Publicadas · Edições Especiais" é o ÚNICO grupo
+   sem gêmeo no site. Juntamos ali as edições sem sub-aba própria:
+   À Janela dos Dias (antologia pessoal), Caixa Poéticas (antologia
+   coletiva), Pecados (caixa artística), Meia Vida Inteira e SETENTA
+   (homenagens) e Apontamentos — Álbum de Viagens. No site, o
+   visitante chega neles pelos links das prateleiras ("Conheça a
+   obra") e pelas páginas de cada livro.
+
+2) O Eixo Movimento tem 5 abas que NÃO têm ficha no painel (ficam
+   fora do espelho porque o conteúdo delas ainda não é editável):
+   Núcleo ABC's, Revista Livrespaço, Boletim Abecês, Em Movimento
+   e Alpharrabio Centro Cultural. Quem usa o painel e não as achar
+   entenderá visitando o site.
+
+COMO CONFERIR (5 min)
+---------------------
+1. Abra /keystatic e olhe a barra lateral: 12 grupos coloridos,
+   na ordem do mapa acima.
+2. Clique em "Vida · Mídia & Contato" → abre a ficha normalmente.
+3. Clique em "Obra · Obras Publicadas · Poesia" → as 26 fichas da
+   prateleira de poesia (Vitrine · Poesia + 25 livros) aparecem
+   embaixo, com os títulos dos livros.
+4. Nada mais precisa ser testado: site e dados intocados.
+================================================================

@@ -8,7 +8,7 @@ import { useEffect } from "react";
 
 const CORES: { casa: (t: string) => boolean; cor: string; fundo: string }[] = [
   {
-    casa: (t) => t.startsWith("EIXO VIDA"),
+    casa: (t) => t.startsWith("VIDA"), // Task 109: grupos agora se chamam "Vida · <aba do site>"
     cor: "#3f7d54", // verde vida — brota, cresce
     fundo: "rgba(63, 125, 84, 0.08)",
   },

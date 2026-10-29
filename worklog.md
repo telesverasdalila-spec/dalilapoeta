@@ -971,3 +971,27 @@ Stage Summary:
 - Zero mudança no site público; zero mudança de dados; só a barra lateral do painel ganhou cor
 - Pacote: download/painel-cores-eixos.zip (pacote 10) + LEIA-ME.txt
 - Próxima: conferência das gavetas pela usuária (roteiro no LEIA-ME do pacote 9)
+
+---
+Task ID: 109
+Agent: Super Z (sessão de continuação)
+Task: Menu do painel espelhado EXATAMENTE no menu do site
+
+Work Log:
+- Pedido da usuária: "reproduzir EXATAMENTE o menu do site" — grupos do painel com o nome exato das abas, fichas organizadas embaixo
+- Perícia do menu do site: Hero = Vida · Obra · Movimento; Vida tem 3 abas (CabecalhoFixo); Obra tem 5 abas com sub-abas (CabecalhoObra); Movimento tem 6 abas (SecaoMovimento)
+- Mapeamento: cada grupo do painel = aba do site (sub-aba virou sufixo: "Obra · Obras Publicadas · Poesia"); ordem dos grupos = ordem das abas no site
+- Grupos antigos aposentados: "Eixo Vida", "Obra · Poesia", "Obra · Poesia — Antologia", "Obra · Prosa", "Obra · Coleção Mimo", "Obra · Antologia Coletiva", "Obra · Caixa Artística", "Obra · Homenagens", "Obra · Vitrine — Prateleiras/Escritos/Resenhas", "Escritos · Crônicas / Viagem"
+- Grupos novos: Vida · CronoBiografia / Vida · Prêmios & Reconhecimentos / Vida · Mídia & Contato / Obra · Obras Publicadas · Poesia / · Prosa / · Coleção Mimo / · Edições Especiais / Obra · Escritos & Leituras / Obra · Colaborações Literárias / Obra · Coletâneas & Antologias / Obra · Resenhas & Críticas / Movimento · Ativismo Cultural
+- "Edições Especiais" (único grupo sem gêmeo no site): À Janela dos Dias, Caixa Poéticas, Pecados, Meia Vida Inteira, SETENTA, Apontamentos — modelos sem sub-aba própria; usuária documenta no manual
+- Labels de ficha alinhados ao site: 'Prêmios e Reconhecimento' → 'Prêmios & Reconhecimentos'; 'Mídia e Contato' → 'Mídia & Contato' (rótulos só — chaves intocadas)
+- PainelTema.tsx: regra verde "EIXO VIDA" → "VIDA" (nomes novos começam com "Vida ·"); OBRA e MOVIMENTO já casavam
+- Conferência por script: 63 fichas no menu = 63 singletons definidos, zero duplicadas, zero fantasmas
+- TESTE REAL (storage local + dev 3199 + agent-browser): 12 grupos renderizados na ordem do site, fichas com nome exato embaixo; cores conferidas via getComputedStyle — Vida verde rgb(63,125,84), Obra vinho rgb(156,79,110), Movimento azul rgb(63,109,142); ficha vitrinePoesia abre em /keystatic/singleton/vitrinePoesia sem Not found
+- storage cloud restaurado; build OK (146 páginas); next-env.d.ts checkout (fora do pacote)
+
+Stage Summary:
+- Painel agora é um espelho do site: mesmo nome de aba, mesma ordem, cores por Eixo mantidas
+- Zero mudança no site público; zero mudança de dados; chaves das 63 fichas preservadas
+- Pacote: download/painel-menu-site.zip (pacote 11) + LEIA-ME.txt com o mapa painel ↔ site
+- Próxima: aplicar e conferir; usuária documenta os "fora do espelho" no manual dela
