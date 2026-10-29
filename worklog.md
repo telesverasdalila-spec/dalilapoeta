@@ -950,3 +950,24 @@ Stage Summary:
 - Anos aceitam número, intervalo ("1999-2004") e vazio — o site extrai o ano base para a régua de décadas
 - Pacote: download/painel-vitrine-obra.zip (pacote 9) + LEIA-ME.txt
 - Próxima: jornada "dadificar" COMPLETA — 4 fatias (Vida, Mídia, Movimento, Vitrine). Segue a fase de conferência da usuária (amanhã, cabeça fresca)
+
+---
+Task ID: 108
+Agent: Super Z (sessão de continuação)
+Task: Cores por Eixo na barra lateral do painel — Vida verde, Obra vinho, Movimento azul
+
+Work Log:
+- Pedido da usuária: painel confuso, quer cores para separar os Eixos na visualização
+- Ambiente resetou no início da task (reclonagem padrão; commit 0e9712a da usuária confirmado no cofre — pacote 9 aplicado fiel)
+- Keystatic não tem API de tema: solução = PainelTema.tsx (client component) incluído no layout do Keystatic (src/app/keystatic/layout.tsx), pinta o sidebar via DOM
+- Identificação pelo TEXTO do título do grupo (não pela posição): sobrevive a reordenação/acréscimo de grupos; grupos do Eixo Obra reconhecidos por prefixo "OBRA" e "ESCRI" (Escritos · Crônicas/Viagem é Obra)
+- Paleta (funciona no tema claro e escuro do Keystatic): Vida verde #3f7d54, Obra vinho #9c4f6e (cor das citações do site), Movimento azul #3f6d8e; cada grupo ganha borda esquerda 3px + fundinho translúcido (alpha 0.08) + raio 6px
+- MutationObserver no body (childList+subtree) re-pinta nas navegações SPA do Keystatic; sem laço (mudanças de style não disparam childList)
+- TESTE REAL (storage local + dev 3199 + agent-browser eval getComputedStyle): 14 headings conferidos — Eixo Vida verde, 10 grupos Obra + Escritos vinho, Movimento azul, headings de ficha intocados (CronoBiografia default); navegação à ficha Prêmios: cor persistente + main visível + sem Not found
+- storage cloud; build OK (146 páginas); pacote: PainelTema.tsx (novo) + layout.tsx + worklog.md
+
+Stage Summary:
+- Painel com identidade visual dos 3 Eixos: verde (Vida), vinho (Obra), azul (Movimento)
+- Zero mudança no site público; zero mudança de dados; só a barra lateral do painel ganhou cor
+- Pacote: download/painel-cores-eixos.zip (pacote 10) + LEIA-ME.txt
+- Próxima: conferência das gavetas pela usuária (roteiro no LEIA-ME do pacote 9)

@@ -1,67 +1,35 @@
 =============================================================
-PACOTE 9 — VITRINE DA OBRA NO PAINEL (Task 107)
+PACOTE 10 — CORES POR EIXO NO PAINEL (Task 108)
 Site Memorial Dalila Teles Veras
 =============================================================
 
 O QUE MUDA NESTE PACOTE
 -----------------------
-A ÚLTIMA E MAIOR FATIA! A vitrine inteira da home (seção Obra)
-virou fichas editáveis no painel. São 3 grupos novos:
+SÓ O PAINEL FICA MAIS BONITO E FÁCIL DE ENXERGAR!
 
-   OBRA · VITRINE — PRATELEIRAS
-   - Vitrine · Poesia (22 peças)
-   - Vitrine · Prosa (7 peças)
-   - Vitrine · Mimo (1 peça)
-   - Vitrine · Coletâneas (Países) (50 peças!)
-   - Vitrine · Colaborações Literárias (56 peças!)
+A barra lateral do painel ganhou cores por Eixo:
+   - VERDE  → Eixo Vida (CronoBiografia, Prêmios, Mídia)
+   - VINHO  → Eixo Obra (todas as gavetas: Poesia, Prosa,
+              Mimo, Vitrine, Escritos, Movimento tem azul...)
+   - AZUL   → Eixo Movimento (Ativismo Cultural, 10 gavetas)
 
-   OBRA · VITRINE — ESCRITOS
-   - Ensaios (29) · Crônicas (9) · Entrevistas (7) · Traduções (2)
+Cada grupo ganhou também uma barrinha colorida à esquerda
+e um fundinho suave — é só apontar o olho e achar a gaveta!
 
-   OBRA · VITRINE — RESENHAS
-   - Fortuna Crítica (10) · Verbetes (12)
-   - Leituras Críticas (6) · Estudos Críticos (2)
+O SITE PÚBLICO NÃO MUDA NADA. Nenhum dado é mexido.
 
-SÃO 213 PEÇAS, todas com: Ano, Título, Descrição, Tipo.
-E cada gaveta tem lixeirinha e botão Add, como nas demais.
-
-AS TRÊS MAGIAS DESTE PACOTE
----------------------------
-1. COLETÂNEAS COM PAÍS: cada peça tem um seletor
-   "País (define a aba da home)": Brasil, Portugal ou
-   Outros países. A peça cai na sub-aba certa sozinha!
-
-2. COLABORAÇÕES COM TIPO: o campo "Tipo da peça"
-   (Apresentação, Prefácio, Orelha, Posfácio, Adaptação,
-   Ensaio, Resenha) direciona a peça para a sub-aba certa
-   da home. Use sempre uma das opções da lista!
-
-3. ANOS FLEXÍVEIS: o Ano aceita número (2024), intervalo
-   ("1999-2004" — como nas crônicas) e até vazio (a peça
-   fica em "Data não informada"). O site entende tudo!
-
-DOIS CAMPOS ESPECIAIS (opcional, deixar vazio na dúvida)
---------------------------------------------------------
-- "Ficha — id da página do livro": só para livros que têm
-  página própria no site (ex.: tempo-em-furia). Alimenta o
-  link "Conheça a obra".
-- "Slug do texto integral": ex.: saramago-e-a-poetica-do-
-  humano. Alimenta o link "Leia o texto" em Ensaios,
-  Crônicas, Entrevistas, Traduções, Leituras e Estudos.
-
-O SITE CONTINUA IGUAL — pixel a pixel. Só a fonte dos dados
-mudou de lugar (13 JSONs novos em src/app/data/obra/).
-O site também continua reordenando as peças por ano e
-agrupando por década sozinho — pode adicionar em qualquer
-ordem!
+COMO FUNCIONA (para as curiosas)
+--------------------------------
+Um pequeno pintor (PainelTema.tsx) mora no layout do painel
+e pinta cada grupo pela cor certa — se um dia criarmos
+grupos novos ou trocarmos a ordem, ele se adapta sozinho.
 
 ARQUIVOS NESTE PACOTE
 ---------------------
-- keystatic.config.ts   (13 gavetas novas + 3 grupos no menu)
-- src/app/components/SecaoObras.tsx  (agora lê dos JSONs)
-- src/app/data/obra/*.json  (13 arquivos novos com os dados)
-- worklog.md            (diário de bordo)
-- LEIA-ME.txt           (este arquivo)
+- src/app/keystatic/PainelTema.tsx  (novo — o pintor)
+- src/app/keystatic/layout.tsx      (convida o pintor)
+- worklog.md                        (diário de bordo)
+- LEIA-ME.txt                       (este arquivo)
 
 COMO APLICAR (passo a passo de sempre)
 --------------------------------------
@@ -69,18 +37,15 @@ COMO APLICAR (passo a passo de sempre)
    (C:\Users\Windows 10\Desktop\dalila-teles-veras),
    por cima, substituindo tudo.
 2. No VS Code: tronquinho → "+" em tudo → caixinha Message
-   → "vitrine da obra no painel" → ✓ commit.
+   → "cores por eixo no painel" → ✓ commit.
 3. Sync Changes (botão embaixo à esquerda).
 4. Espere a Vercel publicar (2-3 min).
-5. Abra o site em janela anônima com Ctrl+Shift+R.
-6. Abra o painel (/keystatic) e veja os 3 grupos novos!
+5. Abra o painel (/keystatic) em janela anônima com
+   Ctrl+Shift+R — e veja as cores!
 
-DEPOIS DE APLICAR — o roteiro de conferência de amanhã
-------------------------------------------------------
-- Menu do painel: os 3 grupos "Vitrine" logo após Homenagens
-- Vitrine · Coletâneas (Países): 50 peças; abra uma e teste
-  o seletor de País (sem salvar, se quiser só olhar!)
-- Site: aba Obra → Coletâneas → as três sub-abas de países
-- Qualquer coisa fora do lugar: me chama que eu resolvo!
-
-FIM DA JORNADA "DADIFICAR" — os 3 Eixos inteiros no painel!
+ROTEIRO DE CONFERÊNCIA (de ontem, continua valendo)
+---------------------------------------------------
+- Gavetas por cor: verde, vinho, azul
+- Vitrine · Coletâneas (Países): 50 peças, seletor de País
+- Site: aba Obra → Coletâneas → três sub-abas de países
+- Qualquer coisa estranha: me chama!
