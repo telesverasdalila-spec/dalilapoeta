@@ -124,7 +124,6 @@
         {
           "discriminant": "narrativo",
           "value": {
-            "texto": "",
             "institucionais": [
               "Filiada à União Brasileira de Escritores, SP, entidade onde ocupou os cargos de Secretária Geral, Diretora e membro do Conselho, nas gestões de 1986/88, 1990/92 e 1994/96.",
               "Filiada ao Instituto de Estudos Americanos Fernando Pessoa, fundado pelo intelectual luso-brasileiro João Alves das Neves, onde também ocupou cargos de Diretoria e Vice-Presidência, colaborou na organização e realização de diversos encontros de escritores e intelectuais luso-brasileiros promovidos por aquela instituição em alguns estados brasileiros e em Portugal."
@@ -253,7 +252,6 @@
         {
           "discriminant": "narrativo",
           "value": {
-            "texto": "",
             "institucionais": [
               "Por cinco mandatos de dois anos cada, integrou o Comitê de Extensão e Cultura – CEC, da UFABC – Universidade Federal do ABC (de 2013 a 2023), como representante da comunidade externa."
             ]
@@ -346,6 +344,15 @@
           "value": {
             "texto": "Homenageada da Feira Literária de Ribeirão Pires – FLIRP 2026. A escritora, editora e ativista cultural Dalila Teles Veras, uma das principais referências da literatura e da vida cultural do Grande ABC. Nascida no Funchal, na Ilha da Madeira, em Portugal, em 1946, e residente no Brasil desde os onze anos, Dalila é autora de mais de duas dezenas de livros de poesia, crônica, diários e ensaios memorialísticos, com trabalhos publicados no Brasil e no exterior.",
             "institucionais": []
+          }
+        },
+        {
+          "discriminant": "narrativo",
+          "value": {
+            "texto": " 31/10/2026 - A exposição #somostodasdalila nasce como um gesto de afeto, reconhecimento e celebração dos 80 anos de Dalila Teles Veras, poeta, artista, editora, ativista cultural e uma das vozes mais importantes da memória afetiva e cultural do ABC Paulista.\n\n",
+            "institucionais": [
+              "exposição #Somostodasdalila"
+            ]
           }
         }
       ]
