@@ -995,3 +995,21 @@ Stage Summary:
 - Zero mudança no site público; zero mudança de dados; chaves das 63 fichas preservadas
 - Pacote: download/painel-menu-site.zip (pacote 11) + LEIA-ME.txt com o mapa painel ↔ site
 - Próxima: aplicar e conferir; usuária documenta os "fora do espelho" no manual dela
+
+## Task 110 (pacote 12) — Script build:hostinger para teste na Hostinger
+- Contexto: família comprou plano Node.js da Hostinger (link nodejs-hosting) + domínio dalilatelesveras.com.br no Registro.br; decisão: testar o site na Hostinger antes de apontar o domínio
+- 1º build na Hostinger falhou: pânico do Turbopack ao processar globals.css via PostCSS ("node process exited before we could connect") — worker do @tailwindcss/postcss morre no ambiente de build deles; mesmo código builda OK na Vercel
+- Diagnóstico do suporte Hostinger confirmou: crash interno Turbopack/PostCSS, não é erro do projeto
+- Campo "Comando de construção" no hPanel é um DROPDOWN que lista os scripts do package.json (não aceita comando custom) → solução: script novo no cofre
+- package.json: novo script "build:hostinger": "next build --webpack && cp -r .next/static .next/standalone/.next/ && cp -r public .next/standalone/" (assador sênior webpack em vez de Turbopack; mantém os cp do standalone)
+- Next 16 mantém opção --webpack documentada ("opt out with next build --webpack")
+- TESTE LOCAL: npm install + npm run build:hostinger → BUILD COMPLETO OK (todas as rotas: home, obra/[id] 37 páginas, texto/[id] 101+, /keystatic, APIs) com Node 24 no sandbox
+- next-env.d.ts checkout + rm -rf .next server.log (fora do pacote)
+- Fluxo da usuária: aplicar pacote → sync GitHub → no hPanel trocar "Comando de construção" para npm run build:hostinger → Redeploy
+- Decisões de arquitetura da conversa: Vercel segue como casa do site durante o teste; Hostinger recebe depois (se o teste passar) ou fica para alpharrabio.com (site do centro cultural) + e-mail profissional; .com.br NUNCA sai do Registro.br (apontar ≠ transferir)
+- Site na Vercel intocado durante todo o processo; nenhum dado alterado
+
+Stage Summary:
+- package.json ganha script build:hostinger (webpack, assador sênior) testado localmente
+- Pacote: download/pacote-12-build-hostinger.zip + LEIA-ME.txt com o passo a passo do hPanel
+- Próxima: usuária aplica → sync → troca dropdown no hPanel → Redeploy → teste de fogo (home + aba + /keystatic no endereço temporário)

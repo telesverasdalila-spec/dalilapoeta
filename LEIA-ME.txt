@@ -1,75 +1,55 @@
-================================================================
- PACOTE 11 — MENU DO PAINEL ESPELHADO NO MENU DO SITE
- Dalila Teles Veras — Sala de Costura (painel Keystatic)
+PACOTE 12 — Script de construção para a fornalha da Hostinger
 ================================================================
 
-O QUE MUDA
-----------
-A barra lateral do painel (/keystatic) agora usa os NOMES EXATOS
-das abas do site, na MESMA ORDEM, com as fichas embaixo de cada
-grupo. As cores por Eixo continuam: Vida verde, Obra vinho,
-Movimento azul.
+O QUE TEM AQUI?
+- package.json : ganhou um script novo chamado "build:hostinger"
+  (é um comando de construção que usa o "assador sênior" webpack,
+  porque o assador novo, Turbopack, engasga na fornalha da Hostinger)
+- worklog.md   : diário da ourives (Task 110)
 
-⚠️ Só rótulos mudaram. As chaves das 63 fichas NÃO mudaram —
-nenhum conteúdo, link ou dado do site foi tocado.
+O QUE MUDA NO SITE?
+- NADA para o visitante. O site na Vercel segue intocado.
+- Este script só serve para o TESTE na Hostinger.
 
-ARQUIVOS DESTE PACOTE
----------------------
-1. keystatic.config.ts      (menu novo + 2 rótulos de ficha alinhados)
-2. src/app/keystatic/PainelTema.tsx  (regra da cor verde atualizada)
-3. worklog.md               (Task 109 registrada)
+JÁ FOI TESTADO?
+- SIM! O bolo inteiro foi assado com este script na bancada:
+  todas as páginas, o painel /keystatic, as APIs — tudo OK.
 
-COMO APLICAR
-------------
+================================================================
+PASSO A PASSO (a rotina de sempre, + 2 cliques novos)
+================================================================
+
 1. Descompacte este zip na raiz do seu projeto local
-   (substitua os arquivos quando perguntar).
-2. No VS Code: ícone do tronquinho → + (stage all) → mensagem
-   "menu do painel espelhado no site" → ✓ Commit → Sync Changes.
-3. Espere 2-3 min (Vercel) e abra o painel em janela anônima:
-   Ctrl+Shift+R para limpar cache.
+   (os arquivos por cima dos antigos — é só 1 arquivo de código).
 
-MAPA PAINEL ↔ SITE (prontinho pro seu manual)
----------------------------------------------
-EIXO VIDA (verde)  — abas do site no cabeçalho do Eixo Vida:
-  Vida · CronoBiografia            = aba "CronoBiografia"
-  Vida · Prêmios & Reconhecimentos = aba "Prêmios & Reconhecimentos"
-  Vida · Mídia & Contato           = aba "Mídia & Contato"
+2. No VS Code:
+   - clica no tronquinho (Source Control)
+   - botão +
+   - mensagem: "script build:hostinger para teste na Hostinger"
+   - Commit e depois Sync Changes
 
-EIXO OBRA (vinho) — abas do cabeçalho do Eixo Obra:
-  Obra · Obras Publicadas · Poesia        = aba "Obras Publicadas", sub-aba "Poesia"
-  Obra · Obras Publicadas · Prosa         = aba "Obras Publicadas", sub-aba "Prosa"
-  Obra · Obras Publicadas · Coleção Mimo  = aba "Obras Publicadas", sub-aba "Coleção Mimo"
-  Obra · Escritos & Leituras              = aba "Escritos & Leituras"
-  Obra · Colaborações Literárias          = aba "Colaborações Literárias"
-  Obra · Coletâneas & Antologias          = aba "Coletâneas & Antologias"
-  Obra · Resenhas & Críticas              = aba "Resenhas & Críticas"
+3. No hPanel da Hostinger:
+   - Websites → seu app dalilapoeta
+   - Abra as configurações de compilação/deploy (a tela com o
+     campo "Comando de construção")
+   - No menu do campo, AGORA vai aparecer uma opção nova:
+       npm run build:hostinger   ← escolha ESSA
+   - Salvar e clicar Redeploy (Reimplantar)
 
-EIXO MOVIMENTO (azul):
-  Movimento · Ativismo Cultural = aba "Ativismo Cultural"
+4. Quando o build passar (barra verde), abra o endereço
+   temporário do app e teste:
+   - a home abre?
+   - uma aba da Obra abre?
+   - o painel: endereço + /keystatic  ← o teste de fogo!
 
-SÓ DOIS DETALHES PRA ANOTAR NO SEU MANUAL
------------------------------------------
-1) "Obra · Obras Publicadas · Edições Especiais" é o ÚNICO grupo
-   sem gêmeo no site. Juntamos ali as edições sem sub-aba própria:
-   À Janela dos Dias (antologia pessoal), Caixa Poéticas (antologia
-   coletiva), Pecados (caixa artística), Meia Vida Inteira e SETENTA
-   (homenagens) e Apontamentos — Álbum de Viagens. No site, o
-   visitante chega neles pelos links das prateleiras ("Conheça a
-   obra") e pelas páginas de cada livro.
+5. Me traga o resultado (ou o print do log, se engasgar).
 
-2) O Eixo Movimento tem 5 abas que NÃO têm ficha no painel (ficam
-   fora do espelho porque o conteúdo delas ainda não é editável):
-   Núcleo ABC's, Revista Livrespaço, Boletim Abecês, Em Movimento
-   e Alpharrabio Centro Cultural. Quem usa o painel e não as achar
-   entenderá visitando o site.
-
-COMO CONFERIR (5 min)
----------------------
-1. Abra /keystatic e olhe a barra lateral: 12 grupos coloridos,
-   na ordem do mapa acima.
-2. Clique em "Vida · Mídia & Contato" → abre a ficha normalmente.
-3. Clique em "Obra · Obras Publicadas · Poesia" → as 26 fichas da
-   prateleira de poesia (Vitrine · Poesia + 25 livros) aparecem
-   embaixo, com os títulos dos livros.
-4. Nada mais precisa ser testado: site e dados intocados.
+================================================================
+LEMBRETES
+================================================================
+- Se a opção "npm run build:hostinger" NÃO aparecer no menu,
+  atualize a página (F5) — o hPanel lê os scripts do cofre.
+- O domínio dalilatelesveras.com.br só será apontado DEPOIS
+  de o teste passar. Placa nova só com bolo assado!
+- Nada aqui mexe no painel, nas fichas ou no Keystatic Cloud.
 ================================================================
