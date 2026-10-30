@@ -1013,3 +1013,20 @@ Stage Summary:
 - package.json ganha script build:hostinger (webpack, assador sênior) testado localmente
 - Pacote: download/pacote-12-build-hostinger.zip + LEIA-ME.txt com o passo a passo do hPanel
 - Próxima: usuária aplica → sync → troca dropdown no hPanel → Redeploy → teste de fogo (home + aba + /keystatic no endereço temporário)
+
+## Task 111 (pacote 13) — Fontes locais para o build na Hostinger
+- Com build:hostinger (webpack) rodando no hPanel, novo erro: TypeError "Cannot read properties of null (reading '1')" no next/font/google (layout.tsx) — o loader busca metadados no Google Fonts em tempo de build e a rede da fornalha da Hostinger não entrega (Vercel nunca sofreu isso)
+- Solução estrutural (não gambiarra): trocar next/font/google por next/font/local — arquivos woff2 OFICIAIS do Google Fonts dentro do cofre (src/app/fonts/)
+- Fontes baixadas via css2 API: Inter e Cormorant Garamond servidas como VARIÁVEIS (mesma hash em todos os pesos — confirmado por md5sum)
+- Cofre agora: src/app/fonts/inter-var.woff2 (weight 100-700) + cormorant-var.woff2 (300-700); mesmo conjunto de pesos que antes; variáveis CSS --font-inter / --font-cormorant preservadas (Tailwind/globals.css intocados)
+- layout.tsx: import localFont; comentário Task 111 no código
+- TESTE LOCAL: npm run build:hostinger completo OK (todas as rotas, 146 páginas, /keystatic, APIs)
+- Efeito colateral bom: Vercel também fica mais robusta (build sem dependência de rede externa)
+- next-env.d.ts checkout + rm -rf .next (fora do pacote)
+- Fluxo da usuária: aplicar pacote → sync → o auto-deploy da Hostinger dispara SOZINHO (app já está com build:hostinger no dropdown) → teste de fogo no endereço temporário
+- Nota futura (fora do escopo hoje): metadataBase/OpenGraph url ainda apontam a vercel.app; atualizar quando o domínio final estiver definido
+
+Stage Summary:
+- Fontes vestem o site de dentro do cofre: build à prova de fornalha (nem Hostinger nem Vercel consultam o Google Fonts)
+- Pacote: download/pacote-13-fontes-locais.zip (pacote 13) + LEIA-ME.txt
+- Próxima: aplicar → sync → auto-deploy → se passar, teste de fogo (home + aba + /keystatic) e então a placa no Registro.br

@@ -1,17 +1,22 @@
 import type { Metadata } from "next";
-import { Inter, Cormorant_Garamond } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const inter = Inter({
+// Task 111: fontes locais (arquivos no cofre) — o build não depende mais da
+// internet para buscar metadados no Google Fonts (a fornalha da Hostinger
+// bloqueia/quebra essa busca; a Vercel também ganha robustez).
+// inter-var.woff2 e cormorant-var.woff2 são fontes VARIÁVEIS oficiais do
+// Google Fonts (mesmos pesos que antes: Inter 100-700, Cormorant 300-700).
+const inter = localFont({
   variable: "--font-inter",
-  subsets: ["latin"],
-  weight: ["100", "300", "400", "500", "600", "700"],
+  display: "swap",
+  src: [{ path: "./fonts/inter-var.woff2", weight: "100 700", style: "normal" }],
 });
 
-const cormorant = Cormorant_Garamond({
+const cormorant = localFont({
   variable: "--font-cormorant",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
+  src: [{ path: "./fonts/cormorant-var.woff2", weight: "300 700", style: "normal" }],
 });
 
 export const metadata: Metadata = {

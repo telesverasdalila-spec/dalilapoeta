@@ -1,55 +1,57 @@
-PACOTE 12 — Script de construção para a fornalha da Hostinger
+PACOTE 13 — Fontes costuradas no cofre (à prova de fornalha)
 ================================================================
 
 O QUE TEM AQUI?
-- package.json : ganhou um script novo chamado "build:hostinger"
-  (é um comando de construção que usa o "assador sênior" webpack,
-  porque o assador novo, Turbopack, engasga na fornalha da Hostinger)
-- worklog.md   : diário da ourives (Task 110)
+- src/app/layout.tsx ........... troca a busca de fontes na internet
+                                  por fontes locais (next/font/local)
+- src/app/fonts/inter-var.woff2 ...... fonte Inter (oficial Google Fonts)
+- src/app/fonts/cormorant-var.woff2 .. fonte Cormorant Garamond (oficial)
+- worklog.md / LEIA-ME.txt ..... diário e bilhete
+
+POR QUÊ?
+- O build novo (webpack) já passou pelo CSS, mas morreu na porta
+  seguinte: o site pedia as fontes AO GOOGLE, pela internet, a cada
+  build — e a fornalha da Hostinger não alcança essa porta.
+- Agora as fontes moram DENTRO do cofre: nenhum build depende
+  mais de internet. Na Vercel, só fica mais robusto também.
 
 O QUE MUDA NO SITE?
-- NADA para o visitante. O site na Vercel segue intocado.
-- Este script só serve para o TESTE na Hostinger.
+- NADA para o olho: são os mesmos arquivos oficiais do Google
+  Fonts, mesmos pesos, mesmas variáveis de cor/tipografia.
 
 JÁ FOI TESTADO?
-- SIM! O bolo inteiro foi assado com este script na bancada:
-  todas as páginas, o painel /keystatic, as APIs — tudo OK.
+- SIM! Bolo inteiro assado na bancada com este código: todas as
+  páginas, o painel /keystatic, as APIs — tudo OK.
 
 ================================================================
-PASSO A PASSO (a rotina de sempre, + 2 cliques novos)
+PASSO A PASSO
 ================================================================
 
 1. Descompacte este zip na raiz do seu projeto local
-   (os arquivos por cima dos antigos — é só 1 arquivo de código).
+   (mantém as pastas: src/app/... — os arquivos entram no lugar).
 
 2. No VS Code:
-   - clica no tronquinho (Source Control)
-   - botão +
-   - mensagem: "script build:hostinger para teste na Hostinger"
-   - Commit e depois Sync Changes
+   - tronquinho → + → mensagem:
+     "fontes locais para build na Hostinger"
+   - Commit → Sync Changes
 
-3. No hPanel da Hostinger:
-   - Websites → seu app dalilapoeta
-   - Abra as configurações de compilação/deploy (a tela com o
-     campo "Comando de construção")
-   - No menu do campo, AGORA vai aparecer uma opção nova:
-       npm run build:hostinger   ← escolha ESSA
-   - Salvar e clicar Redeploy (Reimplantar)
+3. NÃO PRECISA MEXER NA HOSTINGER! O redeploy dispara sozinho
+   quando o sync sobe (o app já está com build:hostinger).
+   Só espie a aba Implantações e veja a barra de build andar.
 
-4. Quando o build passar (barra verde), abra o endereço
-   temporário do app e teste:
-   - a home abre?
+4. Quando ficar verde, abra o endereço temporário e teste:
+   - a home abre com as letras bonitas?
    - uma aba da Obra abre?
    - o painel: endereço + /keystatic  ← o teste de fogo!
 
-5. Me traga o resultado (ou o print do log, se engasgar).
+5. Me traga o resultado (ou print do log, se engasgar).
 
 ================================================================
 LEMBRETES
 ================================================================
-- Se a opção "npm run build:hostinger" NÃO aparecer no menu,
-  atualize a página (F5) — o hPanel lê os scripts do cofre.
-- O domínio dalilatelesveras.com.br só será apontado DEPOIS
-  de o teste passar. Placa nova só com bolo assado!
+- O visual pode demorar 1-2 minutos a mais para o build (as
+  fontes agora são colocadas com calma, peça por peça).
 - Nada aqui mexe no painel, nas fichas ou no Keystatic Cloud.
+- O domínio dalilatelesveras.com.br só recebe a placa DEPOIS
+  de o teste de fogo passar. ✨
 ================================================================
