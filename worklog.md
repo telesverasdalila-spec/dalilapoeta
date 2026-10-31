@@ -1052,3 +1052,24 @@ Stage Summary:
 - Pacote: download/pacote-14-menu-principal-calibragem.zip + LEIA-ME.txt
 - Próxima: autora valida no domínio (www.dalilatelesveras.com.br) e decide se
   calibra mais um fio (valores e linha documentados no LEIA-ME)
+
+## Task 119 (pacote 15) — Padronização do menu do eixo Vida (fim da linha dupla)
+- Reparo da autora: acima da régua de décadas, o Vida mostrava LINHA DUPLA
+  (cinza das abas-mãe + filete dourado da régua); Obra e Movimento mostram
+  uma linha só — a cinza delas fica longe, separada pelas sub-abas
+- Causa: .tabs-principal tem border-bottom cinza (#ebebeb) nos 3 eixos; no
+  Vida não existem sub-abas, então a régua (.regua-tempo, border-top dourado
+  rgba(212,175,55,0.3)) encosta nela — gap de 10px (61px na Obra, 110px no
+  Movimento, medido no dev)
+- Corte (só no Vida): CabecalhoFixo.tsx ganha classe "sem-separador" nas
+  tabs-mãe; globals.css: .tabs-principal.sem-separador { border-bottom: none }
+  com comentário Task 119 — Obra e Movimento INTACTOS (border cinza mantido)
+- Resultado: nos 3 eixos, acima das décadas fica uma linha só (o filete
+  dourado suave da régua) — padrão único
+- VERIFICAÇÃO (dev + prints): Vida tabs 0px/none, régua dourada intacta;
+  Obra e Movimento 1px solid rgb(235,235,235) preservado; print do Vida
+  confirma linha única
+- TESTE LOCAL: npm run build:hostinger completo OK (motor webpack da
+  Hostinger)
+- Pacote: download/pacote-15-menu-vida-padronizado.zip + LEIA-ME.txt
+- Próxima: autora valida no domínio junto com a Task 118 (pacote 14)

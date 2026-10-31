@@ -1,35 +1,42 @@
-PACOTE 14 — TASK 118: CALIBRAGEM DOS MENUS PRINCIPAIS
-=======================================================
+PACOTE 15 — TASK 119: MENU DO EIXO VIDA PADRONIZADO
+=====================================================
 
 O que muda
-  Nos rótulos de 2 linhas das abas principais (Vida, Obra e Movimento
-  de uma vez — usam a mesma classe .tab-btn):
-    1. Cor mais clara:  #808080 -> #9c9c9c
-    2. Fonte menor:     0.95rem -> 0.88rem
-    3. Entrelinhas:     agora 1.15 (antes herdava o padrão)
-  Hover dourado e aba ativa (dourado escuro) NÃO mudam.
-  Nada de conteúdo é tocado — só o vestido dos menus.
+  Acima da régua de décadas, o eixo Vida mostrava LINHA DUPLA
+  (a cinza das abas + o filete dourado da régua, coladas).
+  Agora fica uma linha só — o mesmo padrão dos eixos Obra e
+  Movimento, que não mudam NADA.
+
+  Arquivos:
+    src/app/components/CabecalhoFixo.tsx  (classe nova "sem-separador")
+    src/app/globals.css                   (regra .sem-separador + Task 118)
+
+  ⚠️ Este pacote JÁ INCLUI a Task 118 (menus mais leves). Se você ainda
+  não aplicou o pacote 14, pode pular direto para este — o resultado
+  no ar fica igual a aplicar os dois.
 
 Como aplicar (seu ciclo de sempre)
   1. No VS Code do SEU projeto: Pull primeiro (sempre)
   2. Descompacte este zip FORA da pasta do projeto
   3. Copie por cima:
-       src/app/globals.css   ->   src/app/globals.css
-       worklog.md            ->   worklog.md
-  4. Confira o diff no VS Code (só globals.css deve mostrar 3 fios)
+       src/app/components/CabecalhoFixo.tsx  ->  mesmo caminho
+       src/app/globals.css                   ->  mesmo caminho
+       worklog.md                            ->  mesmo caminho
+  4. Confira o diff no VS Code (só esses 3 arquivos)
   5. Commit sugerido:
-       "Task 118: menus principais mais leves (cor, tamanho, entrelinhas)"
-  6. Sync Changes -> a Hostinger publica sozinha em alguns minutos
-  7. www.dalilatelesveras.com.br -> Ctrl+Shift+R
+       "Task 119: menu do eixo Vida padronizado (fim da linha dupla)"
+  6. Sync Changes -> a Hostinger reconstrói sozinha (aguarde alguns min)
+  7. www.dalilatelesveras.com.br -> eixo Vida -> Ctrl+Shift+R
 
-Para calibrar mais um fio (se quiser)
-  Os 3 valores moram em src/app/globals.css, procure por ".tab-btn":
-     font-size: 0.88rem;   (menor: 0.82rem / de volta: 0.95rem)
-     color: #9c9c9c;       (mais claro: #adadad / de volta: #808080)
-     line-height: 1.15;    (mais juntas: 1.08 / de volta: normal)
-  E confira como fica no ar com Ctrl+Shift+R a cada ajuste.
+O que conferir no ar
+  Eixo Vida: UMA linha só acima das décadas (1940-1949, 1950-1959...)
+  Eixo Obra e Movimento: exatamente como estavam
 
-Nota
-  As sub-abas (Poesia, Prosa, Ensaios...) ficaram como estão.
-  Se quiser clareá-las também, é o próximo passo.
-  Teste local já feito: build completo OK (mesmo motor da Hostinger).
+Receita da calibragem (se um dia quiser retomar a linha no Vida)
+  globals.css, procure ".tabs-principal.sem-separador" e apague a regra
+  (a linha cinza volta). Para mexer na dourada da régua: ".regua-tempo",
+  propriedade border-top.
+
+Nunca
+  git checkout / git reset --hard / apagar pasta do projeto
+  Dúvida? Pare e pergunte antes.

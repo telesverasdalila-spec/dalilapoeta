@@ -145,6 +145,14 @@ body {
 .tabs-principal > :last-child { margin-right: auto; }
 .tabs-principal::-webkit-scrollbar { display: none; }
 
+/* Task 119: variante "sem-separador" (só no eixo Vida, via CabecalhoFixo).
+   A linha cinza das abas-mãe existe para separar abas de SUB-abas (Obra e
+   Movimento têm; Vida não). Sem sub-abas, ela caía a 10px do filete dourado
+   da .regua-tempo — linha dupla acima das décadas (reparo da autora).
+   Aqui ela não se pinta: o Vida fica com uma linha só, igual aos irmãos.
+   ⚠️ Só estética — chaves das abas e conteúdo intocados. */
+.tabs-principal.sem-separador { border-bottom: none; }
+
 /* Task 113 (v7 — fio de teia): marcador prateado + label à esquerda (calibragem com a autora).
    Cada tab-mãe ganha uma linha VERTICAL ULTRAFINA (1px) em cinza bem claro — só uma base
    organizadora, quase um sussurro (“quanto menos coisas melhor”, filosofia da autora).

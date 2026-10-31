@@ -68,7 +68,12 @@ export default function CabecalhoFixo({ abaAtiva, mudarAba }: CabecalhoFixoProps
             : "Da Madeira ao Brasil: A poesia como ato de resistência"}
         </div>
 
-        <div className="tabs-principal">
+        {/* Task 119: classe "sem-separador" — no Vida não há sub-abas, então a
+            linha cinza das abas-mãe caía colada no filete dourado da régua
+            (linha dupla acima das décadas). Sem ela, o Vida fica igual aos
+            irmãos Obra e Movimento. ⚠️ Só a costura visual — chaves
+            (crono/premios/imprensa) e conteúdo NÃO mudam. */}
+        <div className="tabs-principal sem-separador">
             {/* Task 113 v4: todas as tabs em 2 linhas (ritmo visual uniforme, esquema da autora).
                 ⚠️ Só o TEXTO visível mudou — as chaves (crono/premios/imprensa) NÃO mudam:
                 títulos e conteúdo das seções dependem delas. */}
