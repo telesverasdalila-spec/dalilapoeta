@@ -153,13 +153,15 @@ body {
    v5 diamante; v6 linha fina 2px (aprovada); v7 fio de 1px (no ar).
    v8 refinamentos de cor/régua (olhar de ourives): respiro da régua no celular,
    tabs-mãe #333 -> #808080, décadas #333 -> #b3b3b3 (régua mais leve).
+   v9 calibragem pedida pela autora (Task 118): menus principais mais leves —
+   cinza #808080 -> #9c9c9c, fonte 0.95 -> 0.88rem, entrelinhas 1.15 (rótulos de 2 linhas).
    ⚠️ Vale para os 3 eixos de uma vez (Vida, Obra e Movimento usam .tabs-principal).
    ⚠️ Só estética — chaves internas das tabs e conteúdo que abre por padrão não mudam. */
 .tab-btn {
   font-family: 'Inter', sans-serif;
-  font-size: 0.95rem; /* Task 80: um degrau menor (era 1.05) — equilíbrio com título e sub-abas */
+  font-size: 0.88rem; /* Task 118: mais um degrau menor (era 0.95) — pedido da autora */
   font-weight: 500;
-  color: #808080; /* Task 113 v8: cinza médio (era #333) — hierarquia fica no dourado da aba ativa */
+  color: #9c9c9c; /* Task 118: clareada (era #808080) — hierarquia segue no dourado da aba ativa */
   cursor: pointer;
   padding: 8px 10px;
   border: none;
@@ -171,7 +173,9 @@ body {
   align-items: center;
   gap: 9px;
   text-align: left;
-  /* sem line-height próprio: herda o respiro original entre as letras (v4 desfez o 1.3 da v3) */
+  /* Task 118: entrelinhas mais juntas nos rótulos de 2 linhas (pedido da autora;
+     nota histórica: a v3 já usou 1.3 e foi desfeito por apertar demais) */
+  line-height: 1.15;
 }
 .tab-btn::before {
   content: "";

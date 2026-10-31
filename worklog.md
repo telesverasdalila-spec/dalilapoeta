@@ -1030,3 +1030,25 @@ Stage Summary:
 - Fontes vestem o site de dentro do cofre: build à prova de fornalha (nem Hostinger nem Vercel consultam o Google Fonts)
 - Pacote: download/pacote-13-fontes-locais.zip (pacote 13) + LEIA-ME.txt
 - Próxima: aplicar → sync → auto-deploy → se passar, teste de fogo (home + aba + /keystatic) e então a placa no Registro.br
+
+## Task 118 (pacote 14) — Calibragem dos menus principais (mais leves)
+- Pedido da autora em sessão de prática do ciclo completo: nos rótulos de 2 linhas
+  das abas principais (tab-btn, os 3 eixos de uma vez) — clarear o tom, diminuir
+  um pouco o tamanho e diminuir o entrelinhas
+- globals.css .tab-btn (3 fios, nada mais):
+  1) cor #808080 -> #9c9c9c (v9 do bloco de histórico do fio de teia)
+  2) fonte 0.95rem -> 0.88rem (mais um degrau menor, era 1.05 na Task 80)
+  3) line-height 1.15 explícito (antes herdava; nota: v3 usou 1.3 e foi desfeito)
+- Hierarquia preservada: hover #8b4513 e aba ativa #8b6914/dourado intocados;
+  fio de teia ::before escala sozinho (2.2em); sub-abas (tab-sub-btn 0.95rem)
+  ficaram como estão — calibragem separada se a autora quiser
+- TESTE LOCAL: npm run build:hostinger completo OK (146 rotas) — motor webpack
+  idêntico ao da Hostinger; calibragem confirmada no CSS compilado
+- Fluxo da usuária: Pull -> aplicar pacote -> conferir -> sync -> auto-deploy
+  Hostinger -> Ctrl+Shift+R (prática guiada do ciclo de edição de código)
+
+Stage Summary:
+- Menus principais vestem um tom mais leve; chaves internas e conteúdo intactos
+- Pacote: download/pacote-14-menu-principal-calibragem.zip + LEIA-ME.txt
+- Próxima: autora valida no domínio (www.dalilatelesveras.com.br) e decide se
+  calibra mais um fio (valores e linha documentados no LEIA-ME)

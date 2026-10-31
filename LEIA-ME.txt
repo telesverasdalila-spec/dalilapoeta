@@ -1,57 +1,35 @@
-PACOTE 13 — Fontes costuradas no cofre (à prova de fornalha)
-================================================================
+PACOTE 14 — TASK 118: CALIBRAGEM DOS MENUS PRINCIPAIS
+=======================================================
 
-O QUE TEM AQUI?
-- src/app/layout.tsx ........... troca a busca de fontes na internet
-                                  por fontes locais (next/font/local)
-- src/app/fonts/inter-var.woff2 ...... fonte Inter (oficial Google Fonts)
-- src/app/fonts/cormorant-var.woff2 .. fonte Cormorant Garamond (oficial)
-- worklog.md / LEIA-ME.txt ..... diário e bilhete
+O que muda
+  Nos rótulos de 2 linhas das abas principais (Vida, Obra e Movimento
+  de uma vez — usam a mesma classe .tab-btn):
+    1. Cor mais clara:  #808080 -> #9c9c9c
+    2. Fonte menor:     0.95rem -> 0.88rem
+    3. Entrelinhas:     agora 1.15 (antes herdava o padrão)
+  Hover dourado e aba ativa (dourado escuro) NÃO mudam.
+  Nada de conteúdo é tocado — só o vestido dos menus.
 
-POR QUÊ?
-- O build novo (webpack) já passou pelo CSS, mas morreu na porta
-  seguinte: o site pedia as fontes AO GOOGLE, pela internet, a cada
-  build — e a fornalha da Hostinger não alcança essa porta.
-- Agora as fontes moram DENTRO do cofre: nenhum build depende
-  mais de internet. Na Vercel, só fica mais robusto também.
+Como aplicar (seu ciclo de sempre)
+  1. No VS Code do SEU projeto: Pull primeiro (sempre)
+  2. Descompacte este zip FORA da pasta do projeto
+  3. Copie por cima:
+       src/app/globals.css   ->   src/app/globals.css
+       worklog.md            ->   worklog.md
+  4. Confira o diff no VS Code (só globals.css deve mostrar 3 fios)
+  5. Commit sugerido:
+       "Task 118: menus principais mais leves (cor, tamanho, entrelinhas)"
+  6. Sync Changes -> a Hostinger publica sozinha em alguns minutos
+  7. www.dalilatelesveras.com.br -> Ctrl+Shift+R
 
-O QUE MUDA NO SITE?
-- NADA para o olho: são os mesmos arquivos oficiais do Google
-  Fonts, mesmos pesos, mesmas variáveis de cor/tipografia.
+Para calibrar mais um fio (se quiser)
+  Os 3 valores moram em src/app/globals.css, procure por ".tab-btn":
+     font-size: 0.88rem;   (menor: 0.82rem / de volta: 0.95rem)
+     color: #9c9c9c;       (mais claro: #adadad / de volta: #808080)
+     line-height: 1.15;    (mais juntas: 1.08 / de volta: normal)
+  E confira como fica no ar com Ctrl+Shift+R a cada ajuste.
 
-JÁ FOI TESTADO?
-- SIM! Bolo inteiro assado na bancada com este código: todas as
-  páginas, o painel /keystatic, as APIs — tudo OK.
-
-================================================================
-PASSO A PASSO
-================================================================
-
-1. Descompacte este zip na raiz do seu projeto local
-   (mantém as pastas: src/app/... — os arquivos entram no lugar).
-
-2. No VS Code:
-   - tronquinho → + → mensagem:
-     "fontes locais para build na Hostinger"
-   - Commit → Sync Changes
-
-3. NÃO PRECISA MEXER NA HOSTINGER! O redeploy dispara sozinho
-   quando o sync sobe (o app já está com build:hostinger).
-   Só espie a aba Implantações e veja a barra de build andar.
-
-4. Quando ficar verde, abra o endereço temporário e teste:
-   - a home abre com as letras bonitas?
-   - uma aba da Obra abre?
-   - o painel: endereço + /keystatic  ← o teste de fogo!
-
-5. Me traga o resultado (ou print do log, se engasgar).
-
-================================================================
-LEMBRETES
-================================================================
-- O visual pode demorar 1-2 minutos a mais para o build (as
-  fontes agora são colocadas com calma, peça por peça).
-- Nada aqui mexe no painel, nas fichas ou no Keystatic Cloud.
-- O domínio dalilatelesveras.com.br só recebe a placa DEPOIS
-  de o teste de fogo passar. ✨
-================================================================
+Nota
+  As sub-abas (Poesia, Prosa, Ensaios...) ficaram como estão.
+  Se quiser clareá-las também, é o próximo passo.
+  Teste local já feito: build completo OK (mesmo motor da Hostinger).
