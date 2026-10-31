@@ -337,7 +337,12 @@ export default function SecaoMovimento() {
         <div className="header-subtitle" id="subtitulo-pagina">Projetos, Ativismo e Iniciativas</div>
 
         {/* Tabs principais */}
-        <div className="tabs-principal">
+        {/* Task 120: "sem-separador" nas abas SEM sub-abas (Núcleo, Revista, Boletim,
+            Em Movimento, Alpharrabio) — a régua vazia (dourada) encostava na linha
+            cinza das abas = linha dupla, mesmo defeito que a autora viu no Vida
+            (Task 119). Com sub-abas (Ativismo) a cinza fica, separando mãe/filha
+            como no Obra. ⚠️ Só estética — chaves e conteúdo NÃO mudam. */}
+        <div className={"tabs-principal" + (tabAtiva === "ativismo" ? "" : " sem-separador")}>
           {/* Task 111: nova geografia pedida pela autora —
               5 abas empilhadas primeiro, Ativismo Cultural por ÚLTIMO
               (na v4 da Task 113 a autora pediu que ele também empilhe,
@@ -357,8 +362,11 @@ export default function SecaoMovimento() {
         </div>
 
         {/* Sub-tabs (só no Ativismo) */}
+        {/* Task 120: borderBottom cinza removido — as sub-abas encostavam na régua
+            (filete dourado) e formavam a linha dupla acima das décadas que a autora
+            pediu para padronizar. Agora fica só a dourada, como no Vida e no Obra. */}
         {tabAtiva === "ativismo" && (
-          <div className="tabs-sub visivel" style={{ display: "flex", flexWrap: "wrap", rowGap: "2px", paddingTop: "4px", paddingBottom: "4px", borderBottom: "1px solid #ebebeb" }}>
+          <div className="tabs-sub visivel" style={{ display: "flex", flexWrap: "wrap", rowGap: "2px", paddingTop: "4px", paddingBottom: "4px" }}>
             {ordemSubAbas.map((sub) => (
               <button
                 key={sub}

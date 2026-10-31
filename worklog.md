@@ -1073,3 +1073,28 @@ Stage Summary:
   Hostinger)
 - Pacote: download/pacote-15-menu-vida-padronizado.zip + LEIA-ME.txt
 - Próxima: autora valida no domínio junto com a Task 118 (pacote 14)
+
+## Task 120 (pacote 16) — Eixo Movimento: mesma padronização de linhas do Vida
+- Reparo da autora: acima das décadas, o Movimento também mostrava LINHA DUPLA
+  (cinza + dourada); pedido: deixar só a dourada, como no Vida e no Obra
+- Medição no dev achou a dupla em DOIS casos:
+  1) Ativismo Cultural: as sub-abas tinham borderBottom cinza INLINE
+     (SecaoMovimento.tsx, "1px solid #ebebeb") e encostavam na régua
+     (filete dourado) com gap de 10px — o caso que a autora viu
+  2) Abas SEM sub-abas (Núcleo, Revista, Boletim, Em Movimento, Alpharrabio):
+     a régua vazia (sempreVisivel, decadas=[]) desenha o filete dourado e
+     encostava na linha cinza das abas-mãe — mesmo gap de 10px, mesmo
+     defeito que a Task 119 corrigiu no Vida
+- Cortes (só no SecaoMovimento.tsx):
+  1) borderBottom inline das sub-abas removido (fica só a dourada da régua;
+     a cinza das abas-mãe fica — separa mãe/filha como no Obra)
+  2) classe "sem-separador" (regra já criada na Task 119 em globals.css,
+     pacote 15) nas abas-mãe quando NÃO há sub-abas — régua vazia fica com
+     uma linha só, a dourada
+- ⚠️ DEPENDE DO PACOTE 15 (a regra .tabs-principal.sem-separador está no
+  globals.css do pacote 15) — aplicar 15 antes, ou 15+16 juntos
+- VERIFICAÇÃO (dev + prints): Ativismo sub-abas 0px, régua dourada intacta;
+  Núcleo "sem-separador" 0px; Vida (sem-separador 0px) e Obra (cinza 1px)
+  INTACTOS; print confirma linha única acima das décadas
+- TESTE LOCAL: npm run build:hostinger completo OK
+- Pacote: download/pacote-16-movimento-padronizado.zip + LEIA-ME.txt

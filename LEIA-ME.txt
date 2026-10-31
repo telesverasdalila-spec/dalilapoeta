@@ -1,41 +1,53 @@
-PACOTE 15 — TASK 119: MENU DO EIXO VIDA PADRONIZADO
-=====================================================
+PACOTE 16 — TASK 120: EIXO MOVIMENTO PADRONIZADO (SÓ A LINHA DOURADA)
+======================================================================
 
 O que muda
-  Acima da régua de décadas, o eixo Vida mostrava LINHA DUPLA
-  (a cinza das abas + o filete dourado da régua, coladas).
-  Agora fica uma linha só — o mesmo padrão dos eixos Obra e
-  Movimento, que não mudam NADA.
+  No eixo Movimento, acima das décadas havia LINHA DUPLA (uma cinza e
+  uma dourada). Agora fica somente a dourada — igual ao eixo Vida e ao
+  eixo Obra. Vida e Obra NÃO mudam nada.
 
-  Arquivos:
-    src/app/components/CabecalhoFixo.tsx  (classe nova "sem-separador")
-    src/app/globals.css                   (regra .sem-separador + Task 118)
+  Foram dois cortes no mesmo arquivo:
+    1. Ativismo Cultural: a linha cinza embaixo das sub-abas
+       (Palestras & Oficinas, Saraus & Recitais...) foi removida —
+       era ela que formava a dupla com a régua.
+    2. Nas abas sem sub-abas (Núcleo ABC's, Revista Livrespaço, Boletim
+       Abecês, Em Movimento, Alpharrabio): a régua vazia desenha a linha
+       dourada, que colava na cinza das abas — a cinza não se pinta
+       nesses casos (mesmo reparo que o Vida recebeu no pacote 15).
 
-  ⚠️ Este pacote JÁ INCLUI a Task 118 (menus mais leves). Se você ainda
-  não aplicou o pacote 14, pode pular direto para este — o resultado
-  no ar fica igual a aplicar os dois.
+  Arquivo:
+    src/app/components/SecaoMovimento.tsx
+
+  ⚠️ APLICAR DEPOIS DO PACOTE 15 — a regra de CSS que o corte 2 usa
+  (.sem-separador) está no globals.css do pacote 15. Se ainda não
+  aplicou o 15, aplique os dois juntos (15 primeiro).
 
 Como aplicar (seu ciclo de sempre)
   1. No VS Code do SEU projeto: Pull primeiro (sempre)
   2. Descompacte este zip FORA da pasta do projeto
   3. Copie por cima:
-       src/app/components/CabecalhoFixo.tsx  ->  mesmo caminho
-       src/app/globals.css                   ->  mesmo caminho
-       worklog.md                            ->  mesmo caminho
-  4. Confira o diff no VS Code (só esses 3 arquivos)
+       src/app/components/SecaoMovimento.tsx  ->  mesmo caminho
+       worklog.md                             ->  mesmo caminho
+  4. Confira o diff no VS Code (só esses 2 arquivos)
   5. Commit sugerido:
-       "Task 119: menu do eixo Vida padronizado (fim da linha dupla)"
+       "Task 120: eixo Movimento padronizado (só a linha dourada)"
   6. Sync Changes -> a Hostinger reconstrói sozinha (aguarde alguns min)
-  7. www.dalilatelesveras.com.br -> eixo Vida -> Ctrl+Shift+R
+  7. www.dalilatelesveras.com.br -> eixo Movimento -> Ctrl+Shift+R
 
 O que conferir no ar
-  Eixo Vida: UMA linha só acima das décadas (1940-1949, 1950-1959...)
-  Eixo Obra e Movimento: exatamente como estavam
+  Movimento > Ativismo Cultural: UMA linha só (dourada) entre as
+    sub-abas e as décadas (1980-1989, 1990-1999...)
+  Movimento > Núcleo ABC's (e as outras abas): UMA linha só (dourada)
+  Eixos Vida e Obra: exatamente como estavam
 
-Receita da calibragem (se um dia quiser retomar a linha no Vida)
-  globals.css, procure ".tabs-principal.sem-separador" e apague a regra
-  (a linha cinza volta). Para mexer na dourada da régua: ".regua-tempo",
-  propriedade border-top.
+Receita da calibragem (se um dia quiser as linhas de volta)
+  1. Sub-abas do Ativismo: em SecaoMovimento.tsx, procure
+     "borderBottom" (comentário Task 120) e recoloque
+     borderBottom: "1px solid #ebebeb" no estilo inline.
+  2. Abas sem sub-abas: em SecaoMovimento.tsx, procure
+     "sem-separador" (comentário Task 120) e troque
+     (tabAtiva === "ativismo" ? "" : " sem-separador")
+     por "" (some a lógica, a linha cinza volta).
 
 Nunca
   git checkout / git reset --hard / apagar pasta do projeto
