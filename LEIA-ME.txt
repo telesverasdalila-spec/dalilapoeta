@@ -1,53 +1,59 @@
-PACOTE 16 — TASK 120: EIXO MOVIMENTO PADRONIZADO (SÓ A LINHA DOURADA)
+PACOTE 17 — TASK 121: SEGURANÇA (DEPENDÊNCIAS ATUALIZADAS E TESTADAS)
 ======================================================================
 
-O que muda
-  No eixo Movimento, acima das décadas havia LINHA DUPLA (uma cinza e
-  uma dourada). Agora fica somente a dourada — igual ao eixo Vida e ao
-  eixo Obra. Vida e Obra NÃO mudam nada.
+O que é
+  A Hostinger apontou 15 vulnerabilidades nas dependências do site
+  (2 críticas, 9 altas, 4 moderadas). Este pacote atualiza as
+  bibliotecas com as correções — testado por completo na oficina
+  antes (build inteiro + servidor no ar respondendo tudo).
 
-  Foram dois cortes no mesmo arquivo:
-    1. Ativismo Cultural: a linha cinza embaixo das sub-abas
-       (Palestras & Oficinas, Saraus & Recitais...) foi removida —
-       era ela que formava a dupla com a régua.
-    2. Nas abas sem sub-abas (Núcleo ABC's, Revista Livrespaço, Boletim
-       Abecês, Em Movimento, Alpharrabio): a régua vazia desenha a linha
-       dourada, que colava na cinza das abas — a cinza não se pinta
-       nesses casos (mesmo reparo que o Vida recebeu no pacote 15).
+  ⚠️ NÃO crie o pull request do painel da Hostinger!
+  No diálogo "Correção automática", clique em FECHAR.
+  Motivo: o PR deles mexe nos MESMOS arquivos e cobre só 4 dos 15
+  avisos; este pacote cobre 12 dos 15 (tudo que o PR cobria e mais).
+  Criar os dois = conflito. Um só caminho: este pacote.
 
-  Arquivo:
-    src/app/components/SecaoMovimento.tsx
+O que muda (só 2 arquivos; NENHUM código de página mexido)
+  package.json        — versões novas + 2 "overrides" de higiene
+  package-lock.json   — o registro exato do que foi testado aqui
+  worklog.md          — anotação da Task 121
 
-  ⚠️ APLICAR DEPOIS DO PACOTE 15 — a regra de CSS que o corte 2 usa
-  (.sem-separador) está no globals.css do pacote 15. Se ainda não
-  aplicou o 15, aplique os dois juntos (15 primeiro).
+  next   16.3.8 -> 16.4.4   (as 2 críticas + 1 alta do Next: resolvidas)
+  zod     4.6.5 -> 4.6.7    (1 alta: resolvida)
+  sharp   0.34.5 -> 0.35.5  (3 altas do processador de imagens: resolvidas)
+  js-yaml 4.1.1 -> 4.3.2    (3 altas + 1 moderada: resolvidas)
+  prismjs 1.27.0 -> 1.30.0  (1 moderada: resolvida)
+  Resumo: 12 de 15 avisos somem do painel na próxima varredura.
+  Os 3 que ficam (minimatch 2x e deepmerge-ts 1x) são de ferramentas
+  de BUILD — não rodam no servidor que atende as visitas; risco real
+  praticamente zero. Documentados no worklog, ficam pra um dia de
+  manutenção maior (exigem saltos de versão maiores, com teste dedicado).
 
 Como aplicar (seu ciclo de sempre)
   1. No VS Code do SEU projeto: Pull primeiro (sempre)
   2. Descompacte este zip FORA da pasta do projeto
   3. Copie por cima:
-       src/app/components/SecaoMovimento.tsx  ->  mesmo caminho
-       worklog.md                             ->  mesmo caminho
-  4. Confira o diff no VS Code (só esses 2 arquivos)
+       package.json        ->  mesmo caminho
+       package-lock.json   ->  mesmo caminho
+       worklog.md          ->  mesmo caminho
+  4. Confira o diff no VS Code (só esses 3 arquivos)
   5. Commit sugerido:
-       "Task 120: eixo Movimento padronizado (só a linha dourada)"
+       "Task 121: atualizacoes de seguranca (next 16.4.4, zod 4.6.7,
+        sharp 0.35.5 + higiene js-yaml/prismjs)"
   6. Sync Changes -> a Hostinger reconstrói sozinha (aguarde alguns min)
-  7. www.dalilatelesveras.com.br -> eixo Movimento -> Ctrl+Shift+R
+  7. www.dalilatelesveras.com.br -> Ctrl+Shift+R -> navega pelos 3 eixos
+  8. Depois de uns minutos, rode a varredura de novo no painel
+     (Segurança > Vulnerabilidades): os avisos devem despencar de 15 p/ 3
 
-O que conferir no ar
-  Movimento > Ativismo Cultural: UMA linha só (dourada) entre as
-    sub-abas e as décadas (1980-1989, 1990-1999...)
-  Movimento > Núcleo ABC's (e as outras abas): UMA linha só (dourada)
-  Eixos Vida e Obra: exatamente como estavam
+E se eu JÁ tiver clicado em "Crie pull request"?
+  Se criou mas NÃO fundiu: vá no GitHub e feche/rejeite o PR, depois
+  aplique este pacote.
+  Se JÁ fundiu: faça Pull no VS Code, me avise, e eu preparo o pacote
+  seguinte já casando com esse estado (sem conflito).
 
-Receita da calibragem (se um dia quiser as linhas de volta)
-  1. Sub-abas do Ativismo: em SecaoMovimento.tsx, procure
-     "borderBottom" (comentário Task 120) e recoloque
-     borderBottom: "1px solid #ebebeb" no estilo inline.
-  2. Abas sem sub-abas: em SecaoMovimento.tsx, procure
-     "sem-separador" (comentário Task 120) e troque
-     (tabAtiva === "ativismo" ? "" : " sem-separador")
-     por "" (some a lógica, a linha cinza volta).
+O que conferir no ar (igual ao teste da oficina)
+  Home abre com o nome da autora; os 3 eixos navegam; imagens carregam.
+  Nada muda visualmente — este pacote é só a parte de baixo do concreto.
 
 Nunca
   git checkout / git reset --hard / apagar pasta do projeto

@@ -1098,3 +1098,37 @@ Stage Summary:
   INTACTOS; print confirma linha única acima das décadas
 - TESTE LOCAL: npm run build:hostinger completo OK
 - Pacote: download/pacote-16-movimento-padronizado.zip + LEIA-ME.txt
+
+## Task 121 (pacote 17) — Segurança: raio-x da Hostinger e correções testadas
+- Contexto: painel Hostinger reportou 15 vulnerabilidades após a implantação
+  (2 críticas, 9 altas, 4 moderadas) em next, sharp, zod, js-yaml, deepmerge-ts,
+  minimatch, prismjs; painel oferecia correção automática (PR) só p/ next + zod
+- Verificação dos 4 avisos principais em fontes oficiais (blog Next.js 14/10/2026,
+  advisories GitHub, NVD):
+  * GHSA-673q-mjm6-r5xr (crítico, 9.5): RCE não autenticado — SÓ atinge apps com
+    Cache Components + função "use cache"; nosso código não tem NENHUMA ocorrência
+  * GHSA-2464-fhr4-w9xw / CVE-2026-96889 (crítico, 9.5): RCE via otimização de
+    imagem com SVG malicioso (glibc Linux) — o site não tem upload público, mas
+    o endpoint /_next/image está vivo (sonda 200) → exposição prática baixa,
+    reparo na versão nova
+  * CVE-2026-94482 (alto): DoS por CPU em App Router COM Server Actions —
+    nenhuma "use server" no nosso código
+  * CVE-2023-54404 (alto): zod esgota memória validando coleções gigantes de
+    input hostil — o site não valida input público com zod
+- Importante (worklog T82): plano Node.js da Hostinger → o servidor Next.js RODA
+  de verdade (não é site estático); por isso as críticas merecem correção logo
+- CORTES (package.json + package-lock.json, nenhum arquivo de código):
+  * next ^16.1.1 → ^16.4.1 (npm resolveu 16.4.4, contém os 3 reparos)
+  * zod ^4.0.2 → ^4.6.6 (resolvido 4.6.7)
+  * sharp ^0.34.3 → ^0.35.5 (limpa os 3 avisos do sharp: librsvg/libheif/libvips)
+  * overrides de higiene (mesmo major, seguros): js-yaml ^4.3.2 (limpa 4 avisos),
+    prismjs ^1.30.0 (limpa 1)
+  * SEM override: minimatch (3.1.5 e 10.2.6 — majors incompatíveis) e
+    deepmerge-ts (7→8 major) → 3 avisos ficam, todos de ferramentas de BUILD
+    (não rodam no servidor que atende visitantes) = risco real ~zero
+- Painel esperado após deploy: 12 de 15 avisos somem; 3 restantes documentados
+- ⚠️ FLUXO: NÃO criar/fundir o PR da Hostinger (Fechar no diálogo) — o pacote 17
+  cobre tudo que o PR cobria E MAIS; fundir os dois = conflito nos mesmos arquivos
+- TESTE LOCAL: npm install + build:hostinger COMPLETO OK + servidor standalone
+  no ar (home 200 com título, ?eixo=obra 200, /_next/image 200) = remédio provado
+- Pacote: download/pacote-17-seguranca-dependencias.zip + LEIA-ME.txt
